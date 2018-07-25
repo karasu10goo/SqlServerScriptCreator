@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.SqlServer.DmfSqlClrWrapper</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.SqlServer.Management.Dmf.PolicyEvaluationWrapper">
+      <summary>ポリシー評価のラッパー クラスを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Dmf.PolicyEvaluationWrapper.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Dmf.PolicyEvaluationWrapper" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Dmf.PolicyEvaluationWrapper.EvaluateAutomatedPolicy(System.String,System.Data.SqlTypes.SqlXml,System.Int64@)">
+      <summary>自動ポリシーを評価します。</summary>
+      <returns>ポリシー評価の成功を判断する <see cref="T:System.Int32" /> 値です。</returns>
+      <param name="policy">評価するポリシーを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="eventData">ポリシーを評価する際に生成されるイベントを含む <see cref="T:Microsoft.Data.SqlTypes.SqlXml" /> システム オブジェクトの値です。</param>
+      <param name="historyId">評価履歴 ID 値を含む <see cref="T:System.Int64" /> 値です。</param>
+    </member>
+  </members>
+</doc>

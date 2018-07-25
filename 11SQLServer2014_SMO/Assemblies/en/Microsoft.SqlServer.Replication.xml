@@ -1,0 +1,1356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.SqlServer.Replication</name>
+  </assembly>
+  <members>
+    <member name="E:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ComStatus">
+      <summary>Occurs when the Merge Agent returns synchronization Com status information.</summary>
+    </member>
+    <member name="E:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status">
+      <summary>Occurs when the Merge Agent returns synchronization status information. </summary>
+    </member>
+    <member name="E:Microsoft.SqlServer.Replication.TransSynchronizationAgent.ComStatus">
+      <summary>Occurs when the Distribution Agent returns synchronization Com status information.</summary>
+    </member>
+    <member name="E:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status">
+      <summary>Occurs when the Distribution Agent returns synchronization status information.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.AlternateSynchronizationPartner.#ctor">
+      <summary>Creates an instance of the <see cref="T:Microsoft.SqlServer.Replication.AlternateSynchronizationPartner" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.AlternateSynchronizationPartner.#ctor(System.String,System.String,System.String,System.String,System.String)">
+      <summary>Creates an instance of the <see cref="T:Microsoft.SqlServer.Replication.AlternateSynchronizationPartner" /> class with all required properties.</summary>
+      <param name="publisher">Name of the alternate Publisher.</param>
+      <param name="publisherDatabase">Name of the publication database.</param>
+      <param name="publication">Name of the publication.</param>
+      <param name="distributor">Name of the Distributor.</param>
+      <param name="friendlyName">Friendly name for the association of Publisher, publication, and Distributor that makes up an alternate synchronization partner. </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ComErrorException.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Replication.ComErrorException" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ComErrorException.#ctor(System.Int32,System.String,System.Int32,System.String,System.String,System.Guid,System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Replication.ComErrorException" /> class.</summary>
+      <param name="comHResult">The error code (HRESULT) value associated with this exception.</param>
+      <param name="description">Description of the error.</param>
+      <param name="helpContext">The context of a topic in a Help file.</param>
+      <param name="helpFile">The fully qualified path to a Help file.</param>
+      <param name="source">The name of the source of the error.</param>
+      <param name="interfaceId">The identifier of the COM interface that is the source of the error. </param>
+      <param name="errorMessage">The error message string.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ComErrorException.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Replication.ComErrorException" /> class with a specified error message.</summary>
+      <param name="message">A message that describes the error. </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ComErrorException.#ctor(System.String,System.Exception)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Replication.ComErrorException" /> class with a specified error message and a reference to the inner exception that is the cause of this exception.</summary>
+      <param name="message">The error message that explains the reason for the exception. </param>
+      <param name="innerException">The exception that is the cause of the current exception. </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ComErrorException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Sets the specified <see cref="T:System.Runtime.Serialization.SerializationInfo" /> with information about the exception.</summary>
+      <param name="info">The object that holds the serialized object data.</param>
+      <param name="context">The contextual information about the source or destination.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ComErrorRecord.#ctor">
+      <summary>Creates an instance of the <see cref="T:Microsoft.SqlServer.Replication.ComErrorRecord" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ComErrorRecord.#ctor(System.String,System.String,System.Int32)">
+      <summary>Creates an instance of the <see cref="T:Microsoft.SqlServer.Replication.ComErrorRecord" /> class and settings properties of the error.</summary>
+      <param name="sourceType">Value that identifies the source of the error.</param>
+      <param name="description">Description of the error.</param>
+      <param name="errorNumber">Numeric error code.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ConnectionFailureException.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Replication.ConnectionFailureException" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ConnectionFailureException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Replication.ConnectionFailureException" /> class with serialized data.</summary>
+      <param name="info">The object that holds the serialized object data.</param>
+      <param name="context">The contextual information about the source or destination.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ConnectionFailureException.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Replication.ConnectionFailureException" /> class with a specified error message.</summary>
+      <param name="message">A message that describes the error. </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ConnectionFailureException.#ctor(System.String,System.Exception)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Replication.ConnectionFailureException" /> class with a specified error message and a reference to the inner exception that is the cause of this exception.</summary>
+      <param name="message">The error message that explains the reason for the exception. </param>
+      <param name="innerException">The exception that is the cause of the current exception. </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.FciException.#ctor">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.FciException" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.FciException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.FciException" /> class with serialized data.</summary>
+      <param name="info">The object that holds the serialized object data.</param>
+      <param name="context">The contextual information about the source or destination.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.FciException.#ctor(System.String)">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.FciException" /> class with a specified error message.</summary>
+      <param name="message">A message that describes the error. </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.FciException.#ctor(System.String,System.Exception)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Replication.FciException" /> class with a specified error message and a reference to the inner exception that is the cause of this exception.</summary>
+      <param name="message">The error message that explains the reason for the exception. </param>
+      <param name="innerException">The exception that is the cause of the current exception. </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.#ctor">
+      <summary>Creates an instance of the <see cref="T:Microsoft.SqlServer.Replication.MergeSynchronizationAgent" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Abort">
+      <summary>Aborts the synchronization.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ClearAllTraceFlags">
+      <summary>Clears all the trace flags used by the synchronization agent.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ClearTraceFlag(System.Int32)">
+      <summary>Clears a trace flag.</summary>
+      <param name="traceFlag">The trace flag to clear.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Dispose">
+      <summary>Releases the unmanaged resources that are used by <see cref="T:Microsoft.SqlServer.Replication.MergeSynchronizationAgent" />.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Dispose(System.Boolean)">
+      <summary>Releases the unmanaged resources that are used by <see cref="T:Microsoft.SqlServer.Replication.MergeSynchronizationAgent" />.</summary>
+      <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.EnableTraceFlag(System.Int32)">
+      <summary>Enables the flag tracing.</summary>
+      <param name="traceFlag">The trace flag to be enabled.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Finalize">
+      <summary>Finalizes the agent.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.IsSnapshotRequired">
+      <summary>Connects to the Publisher or Distributor and the Subscriber to determine whether a new snapshot will be applied during the next agent synchronization.</summary>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether a new snapshot will be applied. </returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ProcessMessagesAtPublisher">
+      <summary>Processes the messages at publisher.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ProcessMessagesAtSubscriber">
+      <summary>Processes the messages at subscriber.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize">
+      <summary>Starts the Merge Agent to synchronize the subscription.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.NativeSqlConnectionException.#ctor">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.NativeSqlConnectionException" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.NativeSqlConnectionException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.NativeSqlConnectionException" /> class with serialized data.</summary>
+      <param name="info">The object that holds the serialized object data.</param>
+      <param name="context">The contextual information about the source or destination.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.NativeSqlConnectionException.#ctor(System.String)">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.NativeSqlConnectionException" /> class with a specified error message.</summary>
+      <param name="message">A message that describes the error. </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.NativeSqlConnectionException.#ctor(System.String,System.Exception)">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.NativeSqlConnectionException" /> class with a specified error message and a reference to the inner exception that is the cause of this exception.</summary>
+      <param name="message">The error message that explains the reason for the exception. </param>
+      <param name="innerException">The exception that is the cause of the current exception. </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.NativeSqlConnectionException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Sets the specified <see cref="T:System.Runtime.Serialization.SerializationInfo" /> with information about the exception.</summary>
+      <param name="info">The object that holds the serialized object data.</param>
+      <param name="context">The contextual information about the source or destination.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.OciException.#ctor">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.OciException" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.OciException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.OciException" /> class with serialized data.</summary>
+      <param name="info">The object that holds the serialized object data.</param>
+      <param name="context">The contextual information about the source or destination.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.OciException.#ctor(System.String)">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.OciException" /> class with a specified error message.</summary>
+      <param name="message">A message that describes the error. </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.OciException.#ctor(System.String,System.Exception)">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.OciException" /> class with a specified error message and a reference to the inner exception that is the cause of this exception.</summary>
+      <param name="message">The error message that explains the reason for the exception. </param>
+      <param name="innerException">The exception that is the cause of the current exception. </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.OSException.#ctor">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.OSException" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.OSException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.OSException" /> class with serialized data.</summary>
+      <param name="info">The object that holds the serialized object data.</param>
+      <param name="context">The contextual information about the source or destination.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.OSException.#ctor(System.String)">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.OSException" /> class with a specified error message.</summary>
+      <param name="message">A message that describes the error. </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.OSException.#ctor(System.String,System.Exception)">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.OSException" /> class with a specified error message and a reference to the inner exception that is the cause of this exception.</summary>
+      <param name="message">The error message that explains the reason for the exception. </param>
+      <param name="innerException">The exception that is the cause of the current exception. </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ParameterValueOutOfRangeException.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Replication.ParameterValueOutOfRangeException" /> class by using default values.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ParameterValueOutOfRangeException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Replication.ParameterValueOutOfRangeException" /> class when given information and context parameters.</summary>
+      <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo" /> object to populate with data.</param>
+      <param name="context">The destination (see <see cref="T:System.Runtime.Serialization.StreamingContext" />) for this serialization.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ParameterValueOutOfRangeException.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Replication.ParameterValueOutOfRangeException" /> class when given a message parameter.</summary>
+      <param name="message">A description of the error.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ParameterValueOutOfRangeException.#ctor(System.String,System.Exception)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Replication.ParameterValueOutOfRangeException" /> class when given message and inner exception parameters.</summary>
+      <param name="message">A description of the error.</param>
+      <param name="innerException">A wrapped exception from an external component.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.PasswordWriteOnlyException.#ctor">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.PasswordWriteOnlyException" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.PasswordWriteOnlyException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.PasswordWriteOnlyException" /> class with serialized data.</summary>
+      <param name="info">The object that holds the serialized object data.</param>
+      <param name="context">The contextual information about the source or destination.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.PasswordWriteOnlyException.#ctor(System.String)">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.PasswordWriteOnlyException" /> class with a specified error message.</summary>
+      <param name="message">A message that describes the error. </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.PasswordWriteOnlyException.#ctor(System.String,System.Exception)">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.PasswordWriteOnlyException" /> class with a specified error message and a reference to the inner exception that is the cause of this exception.</summary>
+      <param name="message">The error message that explains the reason for the exception. </param>
+      <param name="innerException">The exception that is the cause of the current exception. </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentContainerException.#ctor">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.ReplicationAgentContainerException" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentContainerException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.ReplicationAgentContainerException" /> class with specified information and context..</summary>
+      <param name="info">The information.</param>
+      <param name="context">The context.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentContainerException.#ctor(System.String)">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.ReplicationAgentContainerException" /> class with a specified error message.</summary>
+      <param name="message">A message that describes the error. </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentContainerException.#ctor(System.String,System.Exception)">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.ReplicationAgentContainerException" /> class with a specified error message and a reference to the inner exception that is the cause of this exception.</summary>
+      <param name="message">The error message that explains the reason for the exception. </param>
+      <param name="innerException">The exception that is the cause of the current exception. </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentContainerException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Sets the specified <see cref="T:System.Runtime.Serialization.SerializationInfo" /> with information about the exception.</summary>
+      <param name="info">The object that holds the serialized object data.</param>
+      <param name="context">The contextual information about the source or destination. </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentContainerWithWatsonException.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Replication.ReplicationAgentContainerWithWatsonException" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentContainerWithWatsonException.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Replication.ReplicationAgentContainerWithWatsonException" /> class with specified message.</summary>
+      <param name="message">The message.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentContainerWithWatsonException.#ctor(System.String,System.Exception)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.SqlServer.Replication.ReplicationAgentContainerWithWatsonException" /> class with specified message and inner exception.</summary>
+      <param name="message">The message.</param>
+      <param name="innerException">The inner exception</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentException.#ctor">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.ReplicationAgentException" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.ReplicationAgentException" /> class with serialized data.</summary>
+      <param name="info">The object that holds the serialized object data.</param>
+      <param name="context">The contextual information about the source or destination.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentException.#ctor(System.String)">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.ReplicationAgentException" /> class with a specified error message.</summary>
+      <param name="message">A message that describes the error. </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentException.#ctor(System.String,System.Exception)">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.ReplicationAgentException" /> class with a specified error message and a reference to the inner exception that is the cause of this exception.</summary>
+      <param name="message">The error message that explains the reason for the exception. </param>
+      <param name="innerException">The exception that is the cause of the current exception. </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Sets the specified <see cref="T:System.Runtime.Serialization.SerializationInfo" /> with information about the exception.</summary>
+      <param name="info">The object that holds the serialized object data.</param>
+      <param name="context">The contextual information about the source or destination. </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.StatusEventArgs.#ctor">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.StatusEventArgs" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.StatusEventArgs.#ctor(System.String,System.Byte,Microsoft.SqlServer.Replication.MessageStatus)">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.SqlServer.Replication.StatusEventArgs" /> class with the provided replication agent status information.</summary>
+      <param name="message">The status message returned by the replication agent.</param>
+      <param name="percentCompleted">A <see cref="T:System.Byte" /> value that indicates estimated amount of the overall synchronization that has completed.</param>
+      <param name="messageStatus">A <see cref="T:Microsoft.SqlServer.Replication.MessageStatus" /> value that indicates the current operational status of the replication agent.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.TransSynchronizationAgent.#ctor">
+      <summary>Creates an instance of the <see cref="T:Microsoft.SqlServer.Replication.TransSynchronizationAgent" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Abort">
+      <summary>Aborts the <see cref="T:Microsoft.SqlServer.Replication.TransSynchronizationAgent" /> operation.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Dispose">
+      <summary>Releases all resources used by the current instance of the <see cref="T:Microsoft.SqlServer.Replication.TransSynchronizationAgent" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Dispose(System.Boolean)">
+      <summary>Releases all resources used by the <see cref="T:Microsoft.SqlServer.Replication.TransSynchronizationAgent" /> class.</summary>
+      <param name="">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Finalize">
+      <summary>Finalizes the <see cref="T:Microsoft.SqlServer.Replication.TransSynchronizationAgent" />.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.TransSynchronizationAgent.IsSnapshotRequired">
+      <summary>Connects to the Distributor and the Subscriber to determine whether a new snapshot will be applied during the next agent synchronization.</summary>
+      <returns>true if a new snapshot will be applied; otherwise, false.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize">
+      <summary>Starts the Distribution Agent to synchronize the subscription.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.DumpClient.GetDumper">
+      <summary>Returns a dumper associated with the <see cref="T:Microsoft.SqlServer.SqlDumper.DumpClient" />.</summary>
+      <returns>A dumper associated with the <see cref="T:Microsoft.SqlServer.SqlDumper.DumpClient" />.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.DumpClient.Initialize">
+      <summary>Initializes the current <see cref="T:Microsoft.SqlServer.SqlDumper.DumpClient" /> object.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.DumpClient.InitializeStandalone">
+      <summary>Initializes a standalone dump client.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.DumpClient.IsInitialized">
+      <summary>Indicates whether the <see cref="T:Microsoft.SqlServer.SqlDumper.DumpClient" /> is initialized.</summary>
+      <returns>true it the <see cref="T:Microsoft.SqlServer.SqlDumper.DumpClient" /> is initialized; otherwise, false.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.DumpClient.SetDefaultExceptionHandling(System.AppDomain)">
+      <summary>Sets the default exception handling.</summary>
+      <param name="appDomain">The application domain.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.AddMemoryRaw(System.IntPtr,System.Int32)">
+      <summary>Adds a memory raw.</summary>
+      <param name="pData">The data.</param>
+      <param name="size">The size of the memory raw.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.Dispose">
+      <summary>Releases the resources used by the <see cref="T:Microsoft.SqlServer.SqlDumper.Dumper" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.Dump">
+      <summary>Dumps files.</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.GetDumpResultText">
+      <summary>Returns a dump result text.</summary>
+      <returns>A dump result text.</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.RemoveMemoryRaw(System.IntPtr,System.Int32)">
+      <summary>Removes the memory raw.</summary>
+      <param name="pData">The data.</param>
+      <param name="size">The size of the memory raw.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetAppImageName(System.String)">
+      <summary>Sets the application image of the dumper.</summary>
+      <param name="appImageName">The name of the application image.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetAppVersion(System.Int32,System.Int32)">
+      <summary>Sets the application version of the dumper.</summary>
+      <param name="mostSignificant">The most significant version.</param>
+      <param name="leastSignificant">The least significant version.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetBucket(System.Int32,System.Int32)">
+      <summary>Sets the bucket of the dumper.</summary>
+      <param name="framesToInclude">The frames to include.</param>
+      <param name="framesToSkip">The frames to skip.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetBucketingParameters(System.Int32,System.Int32)">
+      <summary>Sets the bucketing parameters of the dumper.</summary>
+      <param name="offset">The offset.</param>
+      <param name="signature">The signature.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetDirectory(System.String)">
+      <summary>Sets the directory of the dumper.</summary>
+      <param name="dirPath">The directory path.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetErrorDetails(System.String)">
+      <summary>Sets the error details of the dumper.</summary>
+      <param name="errorDetail">The detail of the error.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetErrorText(System.String)">
+      <summary>Sets the error text of the dumper.</summary>
+      <param name="errorText">The error text.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetException(System.Exception)">
+      <summary>Sets an exception of the dumper.</summary>
+      <param name="ex">The exception.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetExtraFile(System.String)">
+      <summary>Sets the extra file of the dumper.</summary>
+      <param name="fileName">The name of the extra file.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetFileName(System.String)">
+      <summary>Sets the filename of the dumper.</summary>
+      <param name="fileName">The filename.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetFlags(Microsoft.SqlServer.SqlDumper.DumperFlags,Microsoft.SqlServer.SqlDumper.DumperFlags)">
+      <summary>Sets the specified flags of the dumper.</summary>
+      <param name="flagsTurnOn">The flags are turned on.</param>
+      <param name="flagsTurnOff">The flags are turned off.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetInstanceName(System.String)">
+      <summary>Sets the instance name of the dumper.</summary>
+      <param name="instanceName">The instance name.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetLogFile(System.String,System.Int32)">
+      <summary>Sets the log file of the dumper.</summary>
+      <param name="logName">The log name.</param>
+      <param name="size">The size of the log file.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetMiniDumpFlags(Microsoft.SqlServer.SqlDumper.MiniDumpFlags,Microsoft.SqlServer.SqlDumper.MiniDumpFlags)">
+      <summary>Sets the mini dump flags.</summary>
+      <param name="miniDumpFlagsTurnOn">The mini dump flags is on.</param>
+      <param name="miniDumpFlagsTurnOff">The mini dump flags is off.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetServiceName(System.String)">
+      <summary>Sets the service name of the dumper.</summary>
+      <param name="serviceName">The service name.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetThreadId(System.Int32)">
+      <summary>Sets the thread identifier of the dumper.</summary>
+      <param name="threadId">The thread identifier.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetTitleName(System.String)">
+      <summary>Sets the title name of the dumper.</summary>
+      <param name="titleName">The title name.</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetWaitTime(System.Int32)">
+      <summary>Sets the wait time for the dumper.</summary>
+      <param name="waitTime">The wait time.</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.AlternateSynchronizationPartner.Distributor">
+      <summary>The name of the Distributor.</summary>
+      <returns>A <see cref="T:System.String" /> value.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.AlternateSynchronizationPartner.FriendlyName">
+      <summary>A friendly name for the association of Publisher, publication, and Distributor that makes up an alternate synchronization partner </summary>
+      <returns>A <see cref="T:System.String" /> value.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.AlternateSynchronizationPartner.Publication">
+      <summary>The name of the publication.</summary>
+      <returns>A <see cref="T:System.String" /> value.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.AlternateSynchronizationPartner.Publisher">
+      <summary>The name of the alternate Publisher.</summary>
+      <returns>A <see cref="T:System.String" /> value.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.AlternateSynchronizationPartner.PublisherDatabase">
+      <summary>The name of the publication database.</summary>
+      <returns>A <see cref="T:System.String" /> value.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ComErrorException.ComHResult">
+      <summary>Gets the error code (HRESULT) value associated with this exception.</summary>
+      <returns>The error code (HRESULT).</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ComErrorException.Description">
+      <summary>Gets a description of the error.</summary>
+      <returns>A description of the error.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ComErrorException.ErrorMessage">
+      <summary>Gets the error message string.</summary>
+      <returns>The error message.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ComErrorException.HelpContext">
+      <summary>Gets the context of a topic in a Help file.</summary>
+      <returns>The context of a topic in a Help file.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ComErrorException.HelpFile">
+      <summary>Gets the fully qualified path to a Help file.</summary>
+      <returns>The fully qualified path to a Help file.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ComErrorException.InterfaceId">
+      <summary>Gets the identifier of the COM interface that is the source of the error. </summary>
+      <returns>The identifier of the COM interface.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ComErrorException.Source">
+      <summary>Gets the name of the object or application that is the source of the error.</summary>
+      <returns>The name of the object or application that is the source of the error.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ComErrorRecord.Description">
+      <summary>A description of the error.</summary>
+      <returns>A <see cref="T:System.String" /> value.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ComErrorRecord.ErrorNumber">
+      <summary>The numeric error code.</summary>
+      <returns>An <see cref="T:System.Int32" /> value.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ComErrorRecord.SourceType">
+      <summary>A value that identifies the source of the error.</summary>
+      <returns>A <see cref="T:System.String" /> value.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.AlternateSynchronizationPartnerCollection">
+      <summary>Gets the alternate synchronization partners for a subscription.</summary>
+      <returns>The alternate synchronization partners for a subscription.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.AltSnapshotFolder">
+      <summary>Gets or sets the alternate snapshot folder for the subscription.</summary>
+      <returns>A <see cref="T:System.String" /> value that is the path of the alternate snapshot folder.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ComErrorCollection">
+      <summary>Gets a collection of errors generated by the replication agent.</summary>
+      <returns>A <see cref="T:System.Collections.IEnumerable" /> collection of <see cref="T:Microsoft.SqlServer.Replication.ComErrorRecord" /> objects.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor">
+      <summary>Gets or sets the name of the instance of Microsoft SQL Server that is acting as the Distributor for the subscription.</summary>
+      <returns>A <see cref="T:System.String" /> value that is the name of the Distributor.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorAddress">
+      <summary>Gets or sets the network address that is used to connect to the Distributor when the <see cref="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorNetwork" /> property is specified.</summary>
+      <returns>A <see cref="T:System.String" /> value that represents the Distributor address.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorEncryptedPassword">
+      <summary>Gets or sets the distributor encrypted password.</summary>
+      <returns>The distributor encrypted password</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin">
+      <summary>Gets or sets the login name that is used when connecting to the Distributor using SQL Server Authentication.</summary>
+      <returns>A <see cref="T:System.String" /> value that is the login name.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorNetwork">
+      <summary>Gets or sets the client Net-Library that is used when connecting to the Distributor.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Replication.NetworkType" /> value that indicates the Net-Library to use.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword">
+      <summary>Sets the password that is used when connecting to the Distributor using SQL Server Authentication.</summary>
+      <returns>The password.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode">
+      <summary>Gets or sets the security mode used when connecting to the Distributor.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Replication.SecurityMode" /> value that represents the security mode.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DownloadGenerationsPerBatch">
+      <summary>Gets or sets the number of generations to be processed in a single batch while downloading changes from the Publisher to the Subscriber. A generation is defined as a logical group of changes per article.</summary>
+      <returns>The number of generations per batch.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DynamicSnapshotLocation">
+      <summary>Gets or sets the location of the partitioned snapshot for this Subscriber.</summary>
+      <returns>The full path of the location of the partitioned snapshot files.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType">
+      <summary>Gets or sets how data is exchanged during synchronization.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Replication.MergeExchangeType" /> value.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.FileTransferType">
+      <summary>Gets or sets how the initial snapshot files are transferred to the Subscriber.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Replication.FileTransferOption" /> value.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName">
+      <summary>Gets or sets the value used by the Merge Agent when it evaluates a parameterized filter that uses the HOST_NAME function. </summary>
+      <returns>The value used by the Merge Agent.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InputMessageFile">
+      <summary>Gets or sets the input message file.</summary>
+      <returns>The input message file.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetLogin">
+      <summary>Gets or sets the login name that is used with Web synchronization when connecting to the Publisher by using Internet authentication.</summary>
+      <returns>A <see cref="T:System.String" /> value.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetPassword">
+      <summary>Sets the password for the <see cref="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetLogin" /> property that is used with Web synchronization when connecting to the Publisher by using Internet authentication.</summary>
+      <returns>The password for the <see cref="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetLogin" /> property.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetProxyLogin">
+      <summary>Gets or sets the login name that is used with Web synchronization when connecting to the Web server by using an Internet proxy server.</summary>
+      <returns>The login name that is used with Web synchronization.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetProxyPassword">
+      <summary>Sets the password for the login that is used with Web synchronization when connecting to the Web server by using an Internet proxy server.</summary>
+      <returns>The password for the login.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetProxyServer">
+      <summary>Gets or sets the name of the Internet proxy server that is used with Web synchronization when connecting to the Web server.</summary>
+      <returns>The name of the server.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode">
+      <summary>Gets or sets the HTTP authentication method that is used when connecting to the Web server during Web synchronization.</summary>
+      <returns>The HTTP authentication method used.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetTimeout">
+      <summary>Gets or sets the HTTP time-out when connecting to the Web server. </summary>
+      <returns>The HTTP time-out.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetUrl">
+      <summary>Gets or sets the URL of the Web service that is configured for Web synchronization.</summary>
+      <returns>A <see cref="T:System.String" /> value that is a valid URL.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.LastUpdatedTime">
+      <summary>Gets the timestamp of the last time that replication agent synchronized the subscription.</summary>
+      <returns>A <see cref="T:System.String" /> value that represents a date and time.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.LoginTimeout">
+      <summary>Gets or sets the maximum number of seconds to wait for connections to be established.</summary>
+      <returns>A <see cref="T:System.Int32" /> value that represents a maximum time, in seconds.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.MetadataRetentionCleanup">
+      <summary>Get or sets whether to clean up metadata.</summary>
+      <returns>True if to clean up metadata; otherwise, false.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Output">
+      <summary>Gets or sets the agent output file.</summary>
+      <returns>A <see cref="T:System.String" /> value that is the name and full path of the output file.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.OutputMessageFile">
+      <summary>Gets or sets the input message file.</summary>
+      <returns>The input message file.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.OutputVerboseLevel">
+      <summary>Gets or sets the level of detail of information that is written to the agent output file.</summary>
+      <returns>A <see cref="T:System.Int32" /> value that can be one of the following values.ValueDescription0Only error messages are logged.1All progress report messages are logged.2All progress report messages and error messages are logged.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ProfileName">
+      <summary>Gets or sets the name of the profile that is used by the agent.</summary>
+      <returns>A <see cref="T:System.String" /> value that is the name of the profile.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Publication">
+      <summary>Gets or sets the name of the publication.</summary>
+      <returns>the name of the publication.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Publisher">
+      <summary>Gets or sets the name of the instance of Microsoft SQL Server that is the Publisher for the subscription.</summary>
+      <returns>The publisher.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherAddress">
+      <summary>Gets or sets the network address that is used to connect to the Publisher when the <see cref="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherNetwork" /> property is specified.</summary>
+      <returns>A <see cref="T:System.String" /> value that represents the address of the Publisher.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherChanges">
+      <summary>Gets the total number of Publisher changes that were applied at the Subscriber during the last synchronization.</summary>
+      <returns>The total number of Publisher changes.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherConflicts">
+      <summary>Gets the total number of conflicts that occurred at the Publisher during the last synchronization.</summary>
+      <returns>the total number of conflicts occurred.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherDatabase">
+      <summary>Gets or sets the name of the publication database.</summary>
+      <returns>The name of the publication database.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherEncryptedPassword">
+      <summary>Gets or sets the publisher encrypted password.</summary>
+      <returns>The publisher encrypted password.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherFailoverPartner">
+      <summary>Gets or sets the failover partner instance of SQL Server that is participating in a database mirroring session with the publication database. </summary>
+      <returns>The failover partner instance of SQL Server.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin">
+      <summary>Gets or sets the login name that is used when connecting to the Publisher by using SQL Server Authentication.</summary>
+      <returns>A <see cref="T:System.String" /> value that is the login name.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherNetwork">
+      <summary>Gets or sets the client Net-Library that is used when connecting to the Publisher.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Replication.NetworkType" /> value that indicates the Net-Library to use.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword">
+      <summary>Sets the password that is used when connecting to the Publisher by using SQL Server Authentication.</summary>
+      <returns>The password used.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode">
+      <summary>Gets or sets the security mode that is used when connecting to the Publisher.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Replication.SecurityMode" /> value that represents the security mode.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.QueryTimeout">
+      <summary>Gets or sets the number of seconds that are allowed for internal queries to finish.</summary>
+      <returns>A <see cref="T:System.Int32" /> value that represents the number of seconds.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SecureDistributorEncryptedPassword">
+      <summary>Gets or sets the secure distributor encrypted password.</summary>
+      <returns>The secure distributor encrypted password.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SecurePublisherEncryptedPassword">
+      <summary>Gets or sets the secure publisher encrypted password.</summary>
+      <returns>The secure publisher encrypted password.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SecureSubscriberEncryptedPassword">
+      <summary>Gets or sets the secure subscriber encrypted password.</summary>
+      <returns>The secure subscriber encrypted password.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Subscriber">
+      <summary>Gets or sets the name of the instance of Microsoft SQL Server that is the Subscriber. </summary>
+      <returns>The subscriber.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberChanges">
+      <summary>Gets the total number of Subscriber changes that were applied at the Publisher during the last synchronization.</summary>
+      <returns>The total number of Subscriber changes that were applied at the Publisher during the last synchronization.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberConflicts">
+      <summary>Gets the total number of conflicts that occurred at the Publisher during the last synchronization.</summary>
+      <returns>The total number of conflicts that occurred.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberDatabase">
+      <summary>Gets or sets the name of the subscription database.</summary>
+      <returns>The name of the subscription database.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberDatabasePath">
+      <summary>Gets or sets the subscriber database path.</summary>
+      <returns>The subscriber database path.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberDataSourceType">
+      <summary>Gets or sets the type of data source that is used as the Subscriber.</summary>
+      <returns>The type of data source that is used as the Subscriber.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberEncryptedPassword">
+      <summary>Gets or sets the subscriber encrypted password.</summary>
+      <returns>The subscriber encrypted password.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberLogin">
+      <summary>Gets or sets the login name used that is when connecting to the Subscriber by using SQL Server Authentication.</summary>
+      <returns>A <see cref="T:System.String" /> value that is the login name.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberPassword">
+      <summary>Sets the password that is used when connecting to the Subscriber by using SQL Server Authentication.</summary>
+      <returns>The password that is used when connecting to the Subscriber.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberSecurityMode">
+      <summary>Gets or sets the security mode used when connecting to the Subscriber.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Replication.SecurityMode" /> value that represents the security mode.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType">
+      <summary>Gets or sets whether the subscription is a push or pull subscription.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Replication.SubscriptionOption" /> value that indicates the subscription type.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SyncToAlternate">
+      <summary>Gets or sets whether the synchronization is to an alternate synchronization partner.</summary>
+      <returns>True if the synchronization is to an alternate synchronization partner; otherwise, false.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.UploadGenerationsPerBatch">
+      <summary>Gets or sets the number of generations to be processed in a single batch while uploading changes from the Subscriber to the Publisher. A generation is defined as a logical group of changes per article.</summary>
+      <returns>The number of generations per batch.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.UseInteractiveResolver">
+      <summary>Gets or sets whether the interactive resolver is used during reconciliation.</summary>
+      <returns>True if the interactive resolver is used during reconciliation; otherwise, false.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.UseWebSynchronization">
+      <summary>Gets or sets whether Web synchronization is used. </summary>
+      <returns>True if Web synchronization is used; otherwise, false.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Validate">
+      <summary>Gets or sets whether data validation is performed on the Subscriber data at the end of the synchronization.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Replication.ValidateType" /> value that indicates the type of validation that will be performed.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.WorkingDirectory">
+      <summary>Gets or sets the working directory from which snapshot files are accessed when FTP is used.</summary>
+      <returns>The working directory from which snapshot files are accessed.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.NativeSqlConnectionException.ErrorSource">
+      <summary>The source of the error.</summary>
+      <returns>A <see cref="T:System.String" /> value.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.NativeSqlConnectionException.SqlState">
+      <summary>Indicates the Microsoft SQL Server SQL state for the error.</summary>
+      <returns>A five-character <see cref="T:System.String" /> value that follows the ANSI SQL standard and indicates the error code</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ReplicationAgentContainerException.ExceptionCollection">
+      <summary>Gets the collection of exception objects returned by the replication agent.</summary>
+      <returns>An <see cref="T:System.Collections.ArrayList" /> of exception objects.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ReplicationAgentContainerException.FlatExceptionCollection">
+      <summary>Gets the collection of exception objects accessed using the <see cref="T:System.Collections.IEnumerable" /> interface.</summary>
+      <returns>An <see cref="T:System.Collections.IEnumerable" /> interface used to access the collection.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ReplicationAgentException.MessageCode">
+      <summary>Gets the error code of the underlying error.</summary>
+      <returns>An <see cref="T:System.Int32" /> value.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.StatusEventArgs.Message">
+      <summary>The status message returned by the replication agent.</summary>
+      <returns>A <see cref="T:System.String" /> value that contains the status message.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.StatusEventArgs.MessageStatus">
+      <summary>The current operational status of the replication agent.</summary>
+      <returns>A <see cref="T:Microsoft.SqlServer.Replication.MessageStatus" /> value that indicates the current operational status of the replication agent.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.StatusEventArgs.PercentCompleted">
+      <summary>The estimated amount of the overall synchronization that has completed.</summary>
+      <returns>A <see cref="T:System.Byte" /> value that indicates estimated amount of the overall synchronization that has completed from 0 (starting) to 100 (complete).</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.AltSnapshotFolder">
+      <summary>Gets or sets the alternate snapshot folder for the subscription.</summary>
+      <returns>The alternate snapshot folder.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.ComErrorCollection">
+      <summary>Gets a collection of errors that are generated by the replication agent.</summary>
+      <returns>An <see cref="T:System.Collections.IEnumerable" /> collection of errors generated by a replication agent.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor">
+      <summary>Gets or sets the name of the instance of Microsoft SQL Server that is acting as the distributor for the subscription.</summary>
+      <returns>The name of the distributor.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorAddress">
+      <summary>Gets or sets the network address that is used to connect to the distributor when the <see cref="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorNetwork" /> property is specified.</summary>
+      <returns>The distributor address.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorEncryptedPassword">
+      <summary>Gets or sets the encrypted password that is used when connecting to the distributor by using SQL Server Authentication.</summary>
+      <returns>The encrypted password used.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin">
+      <summary>Gets or sets the login name that is used when connecting to the distributor by using SQL Server Authentication.</summary>
+      <returns>The login name.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorNetwork">
+      <summary>Gets or sets the client Net-Library that is used when connecting to the distributor.</summary>
+      <returns>The Net-Library to use.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword">
+      <summary>Gets or sets the password that is used when connecting to the Distributor by using SQL Server Authentication.</summary>
+      <returns>The password used.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode">
+      <summary>Gets or sets the security mode that is used when connecting to the distributor.</summary>
+      <returns>The security mode.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DtsPackageFileName">
+      <summary>Gets or sets the name and path of a Microsoft SQL Server 2000 Data Transformation Services (DTS) package that is used to transform command rowsets before they are applied to a Subscriber.</summary>
+      <returns>The name and path of a Microsoft SQL Server 2000 Data Transformation Services (DTS) package.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DtsPackagePassword">
+      <summary>Gets or sets the owner password that used to access the Microsoft SQL Server 2000 Data Transformation Services (DTS) package specified by the <see cref="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DtsPackageFileName" /> property.</summary>
+      <returns>The owner password that used to access the Microsoft SQL Server 2000 Data Transformation Services (DTS) package.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.FileTransferType">
+      <summary>Gets or sets how the initial snapshot files are transferred to the Subscriber.</summary>
+      <returns>The option for obtaining snapshot file.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.HostName">
+      <summary>Gets or sets the host name used.</summary>
+      <returns>The host name.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.LastUpdatedTime">
+      <summary>Gets the timestamp of the last time that replication agent synchronized the subscription.</summary>
+      <returns>The timestamp of the last time that replication agent synchronized the subscription.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.LoginTimeout">
+      <summary>Gets or sets the maximum number of seconds to wait for connections to be established.</summary>
+      <returns>The maximum number of seconds to wait for connections to be established.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.MaxDeliveredTransactions">
+      <summary>Gets or sets the maximum number of transactions that are applied to the Subscriber during a single agent execution.</summary>
+      <returns>The maximum number of transactions.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Output">
+      <summary>Gets or sets the file name and path of the agent output file.</summary>
+      <returns>The file name and path of the agent output file.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.OutputVerboseLevel">
+      <summary>Gets or sets the amount of information that is logged by the Distribution Agent in the agent output file.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that can be one of the following values.ValueDescription0 Only error messages are printed.1All the progress report messages are printed.2 (default)All error messages and progress report messages are printed. This is useful for debugging.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.ProfileName">
+      <summary>Gets or sets the name of the profile that is used by the agent.</summary>
+      <returns>The name of the profile.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Publication">
+      <summary>Gets or sets the name of the publication.</summary>
+      <returns>The name of the publication.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Publisher">
+      <summary>Gets or sets the name of the instance of Microsoft SQL Server that is the Publisher for the subscription.</summary>
+      <returns>The name of the instance of Microsoft SQL Server.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.PublisherDatabase">
+      <summary>Gets or sets the name of the publication database.</summary>
+      <returns>The name of the publication database.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.QueryTimeout">
+      <summary>Gets or sets the number of seconds that are allowed for internal queries to complete.</summary>
+      <returns>The number of seconds that are allowed for internal queries to complete.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.SecureDistributorEncryptedPassword">
+      <summary>Gets or sets the secure encrypted password for the distributor.</summary>
+      <returns>The secure encrypted password for the distributor.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.SecureSubscriberEncryptedPassword">
+      <summary>Gets or sets the secure encrypted password for the subscriber.</summary>
+      <returns>The secure encrypted password for the subscriber.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.SkipErrors">
+      <summary>Gets or sets a colon-separated list of the error numbers that are to be skipped by this agent.</summary>
+      <returns>A list of colon-separated Microsoft SQL Server error numbers.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Subscriber">
+      <summary>Gets or sets the name of the instance of Microsoft SQL Server that is the subscriber.</summary>
+      <returns>The name of the instance of Microsoft SQL Server.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.SubscriberDatabase">
+      <summary>Gets or sets the name of the subscription database.</summary>
+      <returns>The name of the subscription database.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.SubscriberDatabasePath">
+      <summary>Get or sets the database path for the subscriber.</summary>
+      <returns>The database path for the subscriber.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.SubscriberDataSourceType">
+      <summary>Gets or sets the type of data source that is used as the subscriber.</summary>
+      <returns>The type of data source that is used as the subscriber.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.SubscriberEncryptedPassword">
+      <summary>Gets or sets the encrypted password for the subscriber.</summary>
+      <returns>The encrypted password for the subscriber.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.SubscriberLogin">
+      <summary>Gets or sets the login name that is used when connecting to the subscriber by using SQL Server Authentication.</summary>
+      <returns>The login name.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.SubscriberPassword">
+      <summary>Gets or sets the password that is used when connecting to the subscriber by using SQL Server Authentication.</summary>
+      <returns>The subscriber password.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.SubscriberSecurityMode">
+      <summary>Gets or sets the security mode that is used when connecting to the publisher.</summary>
+      <returns>The security mode.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.SubscriptionType">
+      <summary>Gets or sets whether the subscription is a push or pull subscription.</summary>
+      <returns>The subscription type.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.UndeliveredCommands">
+      <summary>Gets the number of undelivered commands.</summary>
+      <returns>The number of undelivered commands.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.UndeliveredTransactions">
+      <summary>Gets the number of undelivered transactions.</summary>
+      <returns>The number of undelivered transactions.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.UseInProcLoader">
+      <summary>Gets or sets a value that indicates whether to use the BULK INSERT command when applying snapshot files at the subscriber.</summary>
+      <returns>true to use the BULK INSERT command when applying snapshot files at the Subscriber; otherwise, false.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.WorkingDirectory">
+      <summary>Gets or sets the working directory from which snapshot files are accessed when File Transfer Protocol (FTP) is used.</summary>
+      <returns>The working directory.</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.AbortPolicy">
+      <summary>Enumerates the options for how running replication agent threads are terminated when an unanticipated shutdown occurs.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.AbortPolicy.Synchronous">
+      <summary>Agent threads are only terminated at well-defined locations after a shutdown is in progress, such as before or after query execution and message logging.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.AbortPolicy.Asynchronous">
+      <summary>The agent thread initiating the shutdown may actively abort other running agent threads.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.AlternateSynchronizationPartner">
+      <summary>Represents an alternate Publisher to which a subscription can be synchronized if the primary Publisher is not available.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.ComErrorException">
+      <summary>The exception that is thrown when a general error is raised by a replication agent. </summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.ComErrorRecord">
+      <summary>Represents information for an error generated by a replication agent.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.ConnectionFailureException">
+      <summary>The exception that is thrown when a database connection fails when a replication agent is running. </summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.DataSourceType">
+      <summary>Enumerates the data sources supported as replication Subscribers.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DataSourceType.SqlServer">
+      <summary>Microsoft SQL Server Subscriber</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DataSourceType.OdbcDsn">
+      <summary>ODBC data source Subscriber</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DataSourceType.Jet4Database">
+      <summary>Microsoft Jet 4.0 (Access) database Subscriber</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DataSourceType.OleDBDataSource">
+      <summary>OLE DB data source Subscriber</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DataSourceType.Exchange">
+      <summary>Microsoft Exchange Subscriber </summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DataSourceType.Oracle">
+      <summary>Oracle database Subscriber</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DataSourceType.DB2Universal">
+      <summary>DB2 Universal database Subscriber</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DataSourceType.SqlServerCE">
+      <summary>Microsoft SQL Server Compact Subscriber</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DataSourceType.XmlDataSource">
+      <summary>XML data source Subscriber</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.DeadlockPriority">
+      <summary>Enumerates the priorities used to resolve deadlocks that occur during snapshot generation.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.MinusTen">
+      <summary>See the Remarks section.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.MinusNine">
+      <summary>See the Remarks section.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.MinusEight">
+      <summary>See the Remarks section.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.MinusSeven">
+      <summary>See the Remarks section.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.MinusSix">
+      <summary>See the Remarks section.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.MinusFive">
+      <summary>See the Remarks section.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.MinusFour">
+      <summary>See the Remarks section.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.MinusThree">
+      <summary>See the Remarks section.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.MinusTwo">
+      <summary>See the Remarks section.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.MinusOne">
+      <summary>See the Remarks section.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.Zero">
+      <summary>See the Remarks section.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.One">
+      <summary>See the Remarks section.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.Two">
+      <summary>See the Remarks section.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.Three">
+      <summary>See the Remarks section.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.Four">
+      <summary>See the Remarks section.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.Five">
+      <summary>See the Remarks section.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.Six">
+      <summary>See the Remarks section.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.Seven">
+      <summary>See the Remarks section.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.Eight">
+      <summary>See the Remarks section.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.Nine">
+      <summary>See the Remarks section.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.Ten">
+      <summary>See the Remarks section.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.Low">
+      <summary>Specifies that the current session will be the deadlock victim if it is involved in a deadlock and other sessions involved in the deadlock chain have deadlock priority set to either NORMAL or HIGH or to an integer value greater than -5.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.Normal">
+      <summary>Specifies that the current session will be the deadlock victim if other sessions involved in the deadlock chain have deadlock priority set to HIGH or to an integer value greater than 0, but will not be the deadlock victim if the other sessions have deadlock priority set to LOW or to an integer value less than 0. </summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.High">
+      <summary>Specifies that the current session will be the deadlock victim if other sessions involved in the deadlock chain have deadlock priority set to an integer value greater than 5, or is eligible to be the deadlock victim if another session has also set deadlock priority to HIGH or to an integer value equal to 5. </summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.FciException">
+      <summary>The exception that is thrown when an error occurs in the File Compression Interface (FCI).</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.FileTransferOption">
+      <summary>Enumerates the options for obtaining snapshot files.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.FileTransferOption.Unc">
+      <summary>Snapshot files are accessed from a Universal Naming Convention (UNC) network share.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.FileTransferOption.Ftp">
+      <summary>Snapshot files are downloaded using FTP.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.MergeExchangeType">
+      <summary>Enumerates options for how the Merge Agent synchronizes data. </summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MergeExchangeType.None">
+      <summary>No exchange type is specified.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MergeExchangeType.Upload">
+      <summary>Only Subscriber changes are uploaded.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MergeExchangeType.Download">
+      <summary>Only Publisher changes are downloaded.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MergeExchangeType.Bidirectional">
+      <summary>Changes are downloaded from the Publisher and uploaded from the Subscriber (the default).</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.MergeSynchronizationAgent">
+      <summary>Provides the functionality of the Replication Merge Agent. </summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.MessageStatus">
+      <summary>Enumerates replication agent status codes. </summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MessageStatus.None">
+      <summary>No status.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MessageStatus.Start">
+      <summary>Agent is starting.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MessageStatus.Succeed">
+      <summary>Agent operation completed successfully.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MessageStatus.InProgress">
+      <summary>Agent operation in progress.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MessageStatus.Idle">
+      <summary>Agent is running and waiting for changes.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MessageStatus.Retry">
+      <summary>Agent operation failed and is being retried.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MessageStatus.Fail">
+      <summary>Agent operation failed.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MessageStatus.ValidationFail">
+      <summary>Agent ran data validation, and validation failed.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MessageStatus.ValidationPass">
+      <summary>Agent ran data validation, and validation completed successfully.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MessageStatus.RequestShutdownOnValidationFail">
+      <summary>Agent ran data validation, and validation failed. Agent will shut down.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MessageStatus.Abort">
+      <summary>Agent operation was aborted.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.NativeSqlConnectionException">
+      <summary>The exception that is thrown when an error is raised by an ODBC driver or an OLEDB provider during bulk copy operations. </summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.NetworkType">
+      <summary>Enumerates the supported Net-Libraries used by a replication agent when connecting to a replication server.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.NetworkType.DefaultNetwork">
+      <summary>Current configured client Net-Library (default).</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.NetworkType.TcpIPSockets">
+      <summary>TCP/IP Sockets Net-Library. </summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.NetworkType.Multiprotocol">
+      <summary />
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.OciException">
+      <summary>The exception that is thrown when an error is raised by the Oracle Call Interface (OCI).</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.OSException">
+      <summary>The exception that is thrown when an error is raised by the operating system during a File Compression Interface (FCI) operation. </summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.ParameterValueOutOfRangeException">
+      <summary>The exception that is thrown if a value passed to a parameter is out of range for the data type of the parameter.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.PasswordWriteOnlyException">
+      <summary>The exception that is thrown when a replication agent password property is accessed.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.ReplicationAgentContainerException">
+      <summary>The exception that is thrown when one or more errors are generated by a managed code-based replication agent.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.ReplicationAgentContainerWithWatsonException">
+      <summary>Represents the exception that is thrown when one or more errors are generated by a managed code-based replication agent using Watson.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.ReplicationAgentException">
+      <summary>The base exception class for exceptions generated during replication agent execution.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.ReplicationType">
+      <summary>Enumerates the type of publication for which a snapshot is generated. </summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.ReplicationType.None">
+      <summary>Publication type not specified.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.ReplicationType.Transactional">
+      <summary>Transactional publication.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.ReplicationType.Snapshot">
+      <summary>Snapshot publication.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.ReplicationType.Merge">
+      <summary>Merge publication.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.SecurityMode">
+      <summary>Enumerates the type of authentication to use when a replication agent connects to a server in a replication topology.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.SecurityMode.Standard">
+      <summary>SQL Server Authentication or HTTP Basic Authentication when used with a Secure Sockets Layer (SSL) connection to the Web synchronization Web server.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.SecurityMode.Integrated">
+      <summary>Windows Authentication</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.StatusEventArgs">
+      <summary>Represents status information returned by a replication agent when the <see cref="E:Microsoft.SqlServer.Replication.AgentCore.Status" /> event occurs.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.SubscriptionOption">
+      <summary>Enumerates the type of subscription.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.SubscriptionOption.Push">
+      <summary>Push subscription.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.SubscriptionOption.Pull">
+      <summary>Pull subscription.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.SubscriptionOption.Anonymous">
+      <summary>Anonymous subscription. Anonymous subscriptions are required if you want to create a subscription without registering the subscription at the Publisher. This is necessary for cases in which you cannot establish a SQL Server connection to the Publisher during subscription configuration.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.TransSynchronizationAgent">
+      <summary>Provides the functionality of the Replication Distribution Agent.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.ValidateType">
+      <summary>Enumerates the types of validation that are performed during synchronization.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.ValidateType.NoValidation">
+      <summary>Do not validate the Subscriber data (default).</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.ValidateType.RowCountOnly">
+      <summary>Full row count validation of the Subscriber data.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.ValidateType.RowCountAndChecksum">
+      <summary>Full row count and checksum validation of the Subscriber data.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.ValidateType.FastRowCountOnly">
+      <summary>Perform only a fast row count validation of the Subscriber data.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.ValidateType.FastRowCountAndChecksum">
+      <summary>Fast row count and checksum validation of the Subscriber data.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.ValidateType.RowCountAndBinaryChecksum">
+      <summary>Full row count and binary checksum validation of the Subscriber data. </summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.ValidateType.FastRowCountAndBinaryChecksum">
+      <summary>Fast row count and binary checksum validation of the Subscriber data. </summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.SqlDumper.DumpClient">
+      <summary>Represents a dump client.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.SqlDumper.Dumper">
+      <summary>Represents a dumper.</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.SqlDumper.DumperFlags">
+      <summary>This enumeration has a <see cref="T:System.FlagsAttribute" /> attribute that allows a bitwise combination of its member values.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.Default">
+      <summary>The Default attribute.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.NoMiniDump">
+      <summary>The NoMiniDump attribute.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.ReferencedMemory">
+      <summary>The ReferencedMemory attribute.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.AllMemory">
+      <summary>The AllMemory attribute.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.AllThreads">
+      <summary>The AllThreads attribute.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.MatchFilename">
+      <summary>The MatchFilename attribute.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.Verbose">
+      <summary>The Verbose attribute.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.WaitAtExit">
+      <summary>The WaitAtExit attribute.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.SendToWatson">
+      <summary>The SendToWatson attribute.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.UseDefault">
+      <summary>The UseDefault attribute.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.MaximumDump">
+      <summary>The MaximumDump attribute.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.DoubleDump">
+      <summary>The DoubleDump attribute.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.ForceWatson">
+      <summary>The ForceWatson attribute.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.Filtered">
+      <summary />
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.CriticalClr">
+      <summary />
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.NoRegistry">
+      <summary />
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.LocalOnly">
+      <summary />
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.DeleteFiles">
+      <summary />
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.ShowUI">
+      <summary />
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.ForceUserThread">
+      <summary />
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.MatchSignatureTime">
+      <summary />
+    </member>
+    <member name="T:Microsoft.SqlServer.SqlDumper.MiniDumpFlags">
+      <summary>Specifies an enumeration of mini dump flags.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.Normal">
+      <summary>The Normal dump flag.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.DataSegs">
+      <summary>The DataSegs dump flag.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.FullMemory">
+      <summary>The FullMemory dump flag.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.HandleData">
+      <summary>The HandleData dump flag.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.FilterMemory">
+      <summary>The FilterMemory dump flag.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.ScanMemory">
+      <summary>The ScanMemory dump flag.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.UnloadedModules">
+      <summary>The UnloadedModules dump flag.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.IndirectlyReferencedMemory">
+      <summary>The IndirectlyReferencedMemory dump flag.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.FilterModulePaths">
+      <summary>The FilterModulePaths dump flag.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.ProcessThreadData">
+      <summary>The ProcessThreadData dump flag.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.PrivateReadWriteMemory">
+      <summary>The PrivateReadWriteMemory dump flag.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.outOptionalData">
+      <summary>The outOptionalData dump flag.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.FullMemoryInfo">
+      <summary>The FullMemoryInfo dump flag.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.ThreadInfo">
+      <summary>The ThreadInfo dump flag.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.CodeSegs">
+      <summary>The CodeSegs dump flag.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.WithoutManagedState">
+      <summary>The WithoutManagedState dump flag.</summary>
+    </member>
+  </members>
+</doc>

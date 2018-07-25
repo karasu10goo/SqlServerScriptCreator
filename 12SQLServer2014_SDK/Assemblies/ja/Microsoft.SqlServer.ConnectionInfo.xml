@@ -1,0 +1,1524 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.SqlServer.ConnectionInfo</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.SqlServer.Management.Common.AutoDisconnectMode">
+      <summary>SQL Server のインスタンスへの接続に使用する自動切断オプションを指定するための値を格納します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.AutoDisconnectMode.DisconnectIfPooled">
+      <summary>接続がプールされると、SQL Server のインスタンスへの接続が切断されます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.AutoDisconnectMode.NoAutoDisconnect">
+      <summary>接続は自動的に切断されません。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.CapturedSql">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.CapturedSql" /> クラスは、参照された接続を経由して SQL Server のインスタンスに送信される Transact-SQL コマンドを表します。ただし、SQL Server のインスタンス上ですぐ実行されずに、バッファーにリダイレクトされます。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.CapturedSql.Add(System.String)">
+      <summary>バッファーにキャプチャされた Transact-SQL コマンドに、Transact-SQL ステートメントを追加します。</summary>
+      <param name="sqlStatement">Transact-SQL ステートメントを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.CapturedSql.Clear">
+      <summary>キャプチャされた Transact-SQL コマンドを含むバッファーを消去します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.CapturedSql.Text">
+      <summary>バッファーにキャプチャされた Transact-SQL コマンドを取得します。</summary>
+      <returns>キャプチャされた Transact-SQL コマンドを含む <see cref="T:System.Collections.Specialized.StringCollection" /> システム オブジェクトの値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.ChangePasswordFailureException">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ChangePasswordFailureException" /> クラスは、SQL Server 認証を使用して SQL Server のインスタンスに接続するためのログイン パスワードを変更しようとして、変更に失敗した場合に発生する例外です。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ChangePasswordFailureException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ChangePasswordFailureException" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ChangePasswordFailureException.#ctor(System.String)">
+      <summary>指定されたメッセージ テキストを持つ <see cref="T:Microsoft.SqlServer.Management.Common.ChangePasswordFailureException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ChangePasswordFailureException.#ctor(System.String,System.Exception)">
+      <summary>指定されたメッセージ テキストと内部例外を持つ <see cref="T:Microsoft.SqlServer.Management.Common.ChangePasswordFailureException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="innerException">内部例外を含む <see cref="T:System.Exception" /> オブジェクトです。1 つの例外が原因で別の例外が発生する状況で使用されます。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.ConnectionCannotBeChangedException">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ConnectionCannotBeChangedException" /> クラスは、Microsoft SQL Server のインスタンスへの接続を変更しようとして失敗した場合に発生する例外です。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ConnectionCannotBeChangedException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ConnectionCannotBeChangedException" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ConnectionCannotBeChangedException.#ctor(System.String)">
+      <summary>指定されたメッセージ テキストを使用して、<see cref="T:Microsoft.SqlServer.Management.Common.ConnectionCannotBeChangedException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ConnectionCannotBeChangedException.#ctor(System.String,System.Exception)">
+      <summary>指定されたメッセージ テキストと内部例外を使用して、<see cref="T:Microsoft.SqlServer.Management.Common.ConnectionCannotBeChangedException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="innerException">内部例外を含む <see cref="T:System.Exception" /> オブジェクトです。1 つの例外が原因で別の例外が発生する状況で使用されます。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.ConnectionException">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ConnectionException" /> クラスは、SQL Server のインスタンスへの接続でエラーが起きたときに発生する例外です。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ConnectionException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ConnectionException" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ConnectionException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>指定されたシリアル化情報とストリーム コンテキストを使用して、<see cref="T:Microsoft.SqlServer.Management.Common.ConnectionException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="info">例外のシリアル化情報を示す <see cref="T:System.Runtime.Serialization.SerializationInfo" /> システム オブジェクトです。</param>
+      <param name="context">例外のストリーム コンテキストを示す <see cref="T:System.Runtime.Serialization.StreamingContext" /> システム オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ConnectionException.#ctor(System.String)">
+      <summary>指定されたメッセージ テキストを使用して、<see cref="T:Microsoft.SqlServer.Management.Common.ConnectionException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ConnectionException.#ctor(System.String,System.Exception)">
+      <summary>指定されたメッセージ テキストと内部例外を使用して、<see cref="T:Microsoft.SqlServer.Management.Common.ConnectionException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="innerException">内部例外を含む <see cref="T:System.Exception" /> オブジェクトです。1 つの例外が原因で別の例外が発生する状況で使用されます。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.ConnectionFailureException">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ConnectionFailureException" /> クラスは、SQL Server のインスタンスとの接続を確立しようとして失敗した場合に発生する例外です。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ConnectionFailureException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ConnectionFailureException" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ConnectionFailureException.#ctor(System.String)">
+      <summary>指定されたメッセージ テキストを使用して、<see cref="T:Microsoft.SqlServer.Management.Common.ConnectionFailureException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ConnectionFailureException.#ctor(System.String,System.Exception)">
+      <summary>指定されたメッセージ テキストと内部例外を使用して、<see cref="T:Microsoft.SqlServer.Management.Common.ConnectionFailureException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="innerException">内部例外を含む <see cref="T:System.Exception" /> オブジェクトです。1 つの例外が原因で別の例外が発生する状況で使用されます。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.ConnectionInfoBase">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ConnectionInfoBase" /> オブジェクトは、<see cref="T:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase" /> クラスの作成に使用される基本クラスであり、SQL Server のインスタンスに接続するために使用する情報を表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ConnectionInfoBase.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ConnectionInfoBase" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ConnectionInfoBase.#ctor(Microsoft.SqlServer.Management.Common.ConnectionInfoBase)">
+      <summary>指定したオブジェクトに基づいて <see cref="T:Microsoft.SqlServer.Management.Common.ConnectionInfoBase" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="conn">新しいオブジェクトの基になる接続情報を示す <see cref="T:Microsoft.SqlServer.Management.Common.ConnectionInfoBase" /> オブジェクト値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ConnectionInfoBase.#ctor(Microsoft.SqlServer.Management.Common.ConnectionType)">
+      <summary>指定された接続の種類を使用して、<see cref="T:Microsoft.SqlServer.Management.Common.ConnectionInfoBase" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="serverType">接続の種類を示す <see cref="T:Microsoft.AnalysisServices.ConnectionType" /> オブジェクト値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ConnectionInfoBase.ConnectionParmsChanged">
+      <summary>派生クラスでオーバーライドすることによって、接続パラメーターが変更されたときのカスタム アクションを指定できます。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionInfoBase.ServerCaseSensitivity">
+      <summary>接続で、サーバーが大文字と小文字を区別するかどうかを示す情報を取得または設定します。</summary>
+      <returns>接続で、サーバーが大文字と小文字を区別するかどうかを示す <see cref="T:Microsoft.SqlServer.Management.Common.ServerCaseSensitivity" /> システム オブジェクト値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionInfoBase.ServerType">
+      <summary>サーバー接続の種類を取得または設定します。</summary>
+      <returns>接続の種類を示す <see cref="T:Microsoft.AnalysisServices.ConnectionType" /> システム オブジェクト値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionInfoBase.ServerVersion">
+      <summary>SQL Server のインスタンスに関するバージョン情報を取得または設定します。</summary>
+      <returns>SQL Server のインスタンスに関するバージョン情報を示す <see cref="T:Microsoft.SqlServer.Management.Common.ServerVersion" /> システム オブジェクト値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ConnectionInfoBase.ToString">
+      <summary>文字列値としてオブジェクトを返します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ConnectionInfoBase" /> オブジェクトを示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.ConnectionManager">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ConnectionManager" /> クラスは、SQL Server のインスタンスへの接続を管理します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionManager.AutoDisconnectMode">
+      <summary>SQL Server のインスタンスへの参照された接続の自動切断モードを取得または設定します。</summary>
+      <returns>参照された接続の自動切断モードを示す <see cref="T:Microsoft.SqlServer.Management.Common.AutoDisconnectMode" /> オブジェクト値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionManager.CapturedSql">
+      <summary>キャプチャ モードで接続が実行されているときにキャプチャされた Transact-SQL ステートメントを取得します。</summary>
+      <returns>キャプチャされた Transact-SQL ステートメントを格納する <see cref="T:Microsoft.SqlServer.Management.Common.CapturedSql" /> オブジェクト値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ConnectionManager.CheckServerVersion(Microsoft.SqlServer.Management.Common.ServerVersion)">
+      <summary>接続先の SQL Server インスタンスのバージョンを確認します。</summary>
+      <param name="version">接続先サーバーのバージョンを示す <see cref="T:Microsoft.SqlServer.Management.Common.ServerVersion" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect">
+      <summary>SQL Server のインスタンスに接続します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionManager.DatabaseEngineType">
+      <summary>データベース エンジンの種類を取得します。</summary>
+      <returns> SQL Server のスタンドアロンのインスタンスまたは SQL Azure データベース。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect">
+      <summary>SQL Server のインスタンスとの接続を切断します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ConnectionManager.ExecuteTSql(Microsoft.SqlServer.Management.Common.ConnectionManager.ExecuteTSqlAction,System.Object,System.Data.DataSet,System.Boolean)">
+      <summary>Transact-SQL コマンドを実行します。</summary>
+      <returns>Transact-SQL コマンドの結果を含む <see cref="T:System.Object" />。</returns>
+      <param name="action">
+        <see cref="T:Microsoft.SqlServer.Management.Common.ConnectionManager.ExecuteTSqlAction" /> オブジェクトです。</param>
+      <param name="execObject">実行可能ファイル <see cref="T:System.Object" />。</param>
+      <param name="fillDataSet">
+        <see cref="T:System.Data.DataSet" /> オブジェクトです。</param>
+      <param name="catchException">例外を受け取るかどうかを指定するブール値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ConnectionManager.ForceDisconnected">
+      <summary>SQL Server のインスタンスから強制的に切断します。</summary>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Common.ConnectionManager.InfoMessage">
+      <summary>SQL Server のインスタンスが情報メッセージを生成したときに発生するイベントです。 </summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionManager.InUse">
+      <summary>接続が使用中であるかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得または設定します。</summary>
+      <returns>接続が使用中であるかどうかを示す <see cref="T:System.Boolean" /> オブジェクト値です。True の場合、接続は使用中です。False (既定値) の場合、接続は使用されていません。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionManager.IsForceDisconnected">
+      <summary>接続が強制的に切断されたかどうかを示す <see cref="T:System.Boolean" /> 値を取得します。</summary>
+      <returns>接続が強制的に切断されたかどうかを示す <see cref="T:System.Boolean" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionManager.IsOpen">
+      <summary>現在、接続が開いているかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得します。</summary>
+      <returns>接続が開いているかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、接続は開いています。False (既定値) の場合、接続は開かれていません。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionManager.LockTimeout">
+      <summary>現在のトランザクションがロックされているとき、接続がタイムアウトするまでの時間を秒単位で取得または設定します。</summary>
+      <returns>現在のトランザクションがロックされているとき、接続がタイムアウトするまでの時間を秒単位で示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Common.ConnectionManager.RemoteLoginFailed">
+      <summary>このイベントは、リモート ログインが SQL Server のインスタンスへの接続に失敗すると発生します。</summary>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Common.ConnectionManager.ServerMessage">
+      <summary>SQL Server が現在の接続に関する警告または情報メッセージを返した場合に発生するイベントです。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionManager.ServerVersion">
+      <summary>接続している SQL Server インスタンスのバージョンを取得します。</summary>
+      <returns>接続している SQL Server インスタンスのバージョンを示す <see cref="T:Microsoft.SqlServer.Management.Common.ServerVersion" /> オブジェクト値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionManager.SqlConnectionObject">
+      <summary>接続オブジェクトを取得します。</summary>
+      <returns>接続を示す <see cref="T:System.Data.SqlClient.SqlConnection" /> オブジェクト値です。</returns>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Common.ConnectionManager.StateChange">
+      <summary>SQL Server のインスタンスが状態を変更すると発生するイベントです。 </summary>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Common.ConnectionManager.StatementExecuted">
+      <summary>SQL Server のインスタンスが現在の接続でステートメントを実行したときに発生するイベントです。 </summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.ConnectionManager.ExecuteTSqlAction">
+      <summary>Transact-SQL アクションを実行します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ConnectionManager.ExecuteTSqlAction.ExecuteNonQuery">
+      <summary>非クエリ コマンドを実行します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ConnectionManager.ExecuteTSqlAction.ExecuteReader">
+      <summary>リーダー コマンドを実行します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ConnectionManager.ExecuteTSqlAction.ExecuteScalar">
+      <summary>スカラー コマンドを実行します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ConnectionManager.ExecuteTSqlAction.FillDataSet">
+      <summary>データ セット コマンドを入力します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ConnectionManager.ExecuteTSqlAction.Unknown">
+      <summary>コマンド タイプが不明です。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.ConnectionSettings">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ConnectionSettings" /> クラスは、サーバー (SQL Server など) のインスタンスへの接続で使用する設定を表します。<see cref="T:Microsoft.SqlServer.Management.Common.ServerConnection" /> クラスは <see cref="T:Microsoft.SqlServer.Management.Common.ConnectionSettings" /> クラスを継承します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.ApplicationName">
+      <summary>サーバーとの接続を確立したアプリケーションの名前を取得または設定します。</summary>
+      <returns>アプリケーションの名前を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.ConnectAsUser">
+      <summary>接続が権限の借用を使用して確立されるかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得または設定します。</summary>
+      <returns>接続が権限の借用を使用して確立されるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、接続は権限の借用を使用して確立されます。False (既定値) の場合、接続は、<see cref="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.Login" /> プロパティと <see cref="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.Password" /> プロパティで指定された資格情報を使用して確立されます。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.ConnectAsUserName">
+      <summary>権限の借用を使用して接続する場合のユーザーの名前を取得または設定します。</summary>
+      <returns>ユーザーの権限借用を使用して接続を確立する場合に使用するユーザー名を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.ConnectAsUserPassword">
+      <summary>権限の借用を使用して接続する場合のユーザーのパスワードを取得または設定します。</summary>
+      <returns>ユーザーの権限借用を使用して接続する場合に使用するユーザー パスワードを示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.ConnectionString">
+      <summary>指定されたデータ ソースに接続するための接続文字列を取得または設定します。</summary>
+      <returns>接続を確立するために使用する接続文字列を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.ConnectTimeout">
+      <summary>接続タイムアウト時間 (秒数) を取得または設定します。</summary>
+      <returns>接続タイムアウト時間 (秒数) を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.DatabaseName">
+      <summary>接続に必要なデータベースを取得または設定します。</summary>
+      <returns>接続に必要なデータベースの名前を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.EncryptConnection">
+      <summary>接続が暗号化されるかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得または設定します。</summary>
+      <returns>接続が暗号化されるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、接続は暗号化されます。False (既定値) の場合、接続は暗号化されません。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.Login">
+      <summary>サーバーのインスタンスとの接続を確立するために必要なログオンを取得または設定します。</summary>
+      <returns>サーバーのインスタンスとの接続を確立するために必要なログオンを示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.LoginSecure">
+      <summary>サーバーへの接続時に Windows 認証を使用するか、SQL Server 認証を使用するかを示す <see cref="T:System.Boolean" /> プロパティを取得または設定します。</summary>
+      <returns>サーバーへの接続が Windows 認証または SQL Server 認証のどちらを使用して確立されるかを示す <see cref="T:System.Boolean" /> 値です。True (既定値) の場合、Windows 認証を使用してサーバーとの接続が確立されます。False の場合、SQL Server 認証を使用してサーバーとの接続が確立されます。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.MaxPoolSize">
+      <summary>サーバーとの接続を確立する際に、指定した接続の接続プールに格納できる最大接続数を取得または設定します。</summary>
+      <returns>接続プール内の最大接続数を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.MinPoolSize">
+      <summary>サーバーとの接続を確立する際に、指定した接続の接続プールに格納できる最小接続数を取得または設定します。</summary>
+      <returns>接続プール内の最小接続数を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.MultipleActiveResultSets">
+      <summary>複数のアクティブな結果セットが許可されるかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得または設定します。</summary>
+      <returns>複数のアクティブな結果セットが許可されるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、複数のアクティブな結果セットが許可されます。False (既定値) の場合、複数のアクティブな結果セットは許可されません。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.NetworkProtocol">
+      <summary>サーバーへの接続を確立するためのネットワーク プロトコルを取得または設定します。</summary>
+      <returns>サーバーへの接続を確立するために使用されるネットワーク プロトコルを示す <see cref="T:Microsoft.SqlServer.Management.Common.NetworkProtocol" /> オブジェクト値です。</returns>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ConnectionSettings.NoConnectionTimeout">
+      <summary>接続がタイムアウトするまでの秒数を示す <see cref="T:System.Int32" /> 値を取得または設定します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.NonPooledConnection">
+      <summary>接続をプールできるかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得または設定します。</summary>
+      <returns>接続をプールできるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、接続をプールして接続プールに追加することはできません。False (既定値) の場合、接続をプールして接続プールに追加することができます。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.PacketSize">
+      <summary>クライアントとサーバーの間で、ネットワークを経由して送信されたデータのパケット (バイト数) を取得または設定します。</summary>
+      <returns>ネットワーク パケット サイズ (バイト数) を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.Password">
+      <summary>SQL Server 認証を使用してサーバーへ接続するためのログオン パスワードを取得または設定します。</summary>
+      <returns>SQL Server 認証の使用時に必要なパスワードを示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.PooledConnectionLifetime">
+      <summary>プールされた接続の有効期間を取得または設定します。</summary>
+      <returns>プールされた接続の有効期間 (秒数) を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.ResetConnectionString">
+      <summary>接続文字列のノードが変更されたかどうかを示す <see cref="T:System.Boolean" /> 値を取得または設定します。</summary>
+      <returns>接続文字列のノードが変更されたかどうかを示す <see cref="T:System.Boolean" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.SecureConnectionString">
+      <summary>暗号化された接続文字列を取得または設定します。</summary>
+      <returns>暗号化された接続文字列を示す <see cref="T:System.Security.SecureString" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.SecurePassword">
+      <summary>SQL Server 認証を使用してサーバーへ接続する場合に、ログオンで使用するセキュリティで保護されたパスワードを取得または設定します。</summary>
+      <returns>SQL Server 認証の使用時に必要なセキュリティで保護されたパスワードを示す <see cref="T:System.Security.SecureString" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.ServerInstance">
+      <summary>サーバーの名前を取得または設定します。</summary>
+      <returns>サーバーの名前を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ConnectionSettings.ThrowIfPropertyNotSet(System.String,System.String)">
+      <summary>指定された接続プロパティが NULL または空の場合に例外をスローします。</summary>
+      <returns>文字列が NULL または空の場合、このメソッドは <see cref="T:Microsoft.SqlServer.Management.Common.PropertyNotSetException" /> をスローします。それ以外の場合は、<paramref name="str" /> パラメーターの値を返します。</returns>
+      <param name="propertyName">"Login" など、接続プロパティの名前を示す文字列です。</param>
+      <param name="str">プロパティ値を含む <see cref="T:System.String" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ConnectionSettings.ThrowIfPropertyNotSet(System.String,System.String,System.Boolean)">
+      <summary>指定された接続プロパティが NULL または空の場合に例外をスローします。</summary>
+      <returns>このプロパティが設定されていない場合、このメソッドは <see cref="T:Microsoft.SqlServer.Management.Common.PropertyNotSetException" /> をスローします。それ以外の場合は、<paramref name="str" /> パラメーターの値を返します。</returns>
+      <param name="propertyName">"Login" など、接続プロパティの名前を示す文字列です。</param>
+      <param name="str">プロパティ値を含む <see cref="T:System.String" /> オブジェクトです。</param>
+      <param name="checkEmpty">プロパティ値が NULL 値または空の文字列かどうかをチェックする場合は true、NULL 値かどうかだけをチェックする場合は false です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ConnectionSettings.ToString">
+      <summary>参照されたオブジェクトの名前を文字列として返します。</summary>
+      <returns>参照されたオブジェクトの名前を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ConnectionSettings.WorkstationId">
+      <summary>ワークステーションを一意に識別する ID 値を取得または設定します。</summary>
+      <returns>ワークステーションを一意に識別する ID 値を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.ConnectionType">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ConnectionType" /> 列挙には、接続を確立するサーバーの種類を指定するための値が格納されます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ConnectionType.AzureStorage">
+      <summary>SQL Azure サービスです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ConnectionType.IntegrationServer">
+      <summary>Integration Services サービスです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ConnectionType.Olap">
+      <summary>Analysis Services オンライン分析処理 (OLAP) サーバーです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ConnectionType.ReportServer">
+      <summary>Reporting Services サーバーです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ConnectionType.Sql">
+      <summary>SQL Server のインスタンスです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ConnectionType.SqlCE">
+      <summary>SQL Server CE のインスタンスです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ConnectionType.SqlConnection">
+      <summary>SQL Server のインスタンスです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ConnectionType.WmiManagementScope">
+      <summary>WMI 名前空間です。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.DatabaseEngineType">
+      <summary>SQL Server のスタンドアロン インスタンスまたは Windows Azure SQL データベース のデータベース エンジンの種類。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.DatabaseEngineType.Matrix">
+      <summary>サーバーには、マトリック構成があります。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.DatabaseEngineType.SqlAzureDatabase">
+      <summary>Windows Azure SQL データベース.</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.DatabaseEngineType.Standalone">
+      <summary>SQL Server のスタンドアロン データベース エンジン。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.DatabaseEngineType.Unknown">
+      <summary>不明なデータベース エンジンの種類。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.DataTransferEventArgs">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferEventArgs" /> クラスは、データ転送イベントの発生時に使用される引数を表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.DataTransferEventArgs.#ctor(Microsoft.SqlServer.Management.Common.DataTransferEventType,System.String)">
+      <summary>指定されたメッセージを使用して、指定されたイベントに対応する <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferEventArgs" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="eventType">
+        <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferEventArgs" /> オブジェクトに関連付けられたイベントの種類を指定する <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferEventType" /> オブジェクトです。</param>
+      <param name="message">
+        <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferEventType" /> オブジェクトに関連付けられたメッセージ テキストを示す文字列値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.DataTransferEventArgs.DataTransferEventType">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferEventArgs" /> オブジェクトに関連付けられたデータ転送イベントの種類を取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferEventArgs" /> オブジェクトに関連付けられたデータ転送イベントの種類を示す <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferEventType" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.DataTransferEventArgs.Message">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferEventType" /> オブジェクトに関連付けられたメッセージ テキストを取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferEventType" /> オブジェクトに関連付けられたメッセージ テキストを示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.DataTransferEventHandler">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferEventHandler" /> クラスは、データ転送のプロセスによって発生するイベントを処理するメソッドを表します。</summary>
+      <param name="sender">イベントを発生させたオブジェクトを示す <see cref="T:System.Object" /> システム オブジェクト値です。</param>
+      <param name="e">イベント ハンドラーに渡された引数を示す <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferEventArgs" /> オブジェクト値です。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.DataTransferEventType">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferEventType" /> 列挙は、データ転送イベントの種類を指定するために使用する値を格納します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.DataTransferEventType.Information">
+      <summary>情報イベントです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.DataTransferEventType.Progress">
+      <summary>進行状況イベントです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.DataTransferEventType.Warning">
+      <summary>警告イベントです。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.DataTransferProgressEventArgs">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferProgressEventArgs" /> クラスは、データ転送進行状況イベントの発生時に使用される引数を表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.DataTransferProgressEventArgs.#ctor(Microsoft.SqlServer.Management.Common.DataTransferProgressEventType,System.String,System.Int64,System.Exception)">
+      <summary>指定された転送 ID、進行状況カウント、および関連付けられた例外を使用して、指定されたイベントの <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferProgressEventArgs" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="eventType">
+        <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferProgressEventArgs" /> オブジェクトに関連付けられたイベントの種類を指定する <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferProgressEventType" /> オブジェクトです。</param>
+      <param name="transferId">
+        <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferProgressEventType" /> オブジェクトに関連付けられた転送 ID 値を示す <see cref="T:System.String" /> 値です。</param>
+      <param name="progressCount">転送の進行状況を転送済み項目数で指定する <see cref="T:System.Int64" /> 値です。</param>
+      <param name="ex">
+        <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferProgressEventArgs" /> に関連付けられた例外を示す <see cref="T:System.Exception" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.DataTransferProgressEventArgs.DataTransferProgressEventType">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferProgressEventArgs" /> オブジェクトに関連付けられたデータ転送進行状況イベントの種類を取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferProgressEventArgs" /> オブジェクトに関連付けられたデータ転送進行状況イベントの種類を示す <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferProgressEventType" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.DataTransferProgressEventArgs.Exception">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferProgressEventType" /> オブジェクトに関連付けられた例外を取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferProgressEventType" /> オブジェクトに関連付けられた例外を示す Exception オブジェクト値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.DataTransferProgressEventArgs.ProgressCount">
+      <summary>現在の転送済み項目数を取得します。</summary>
+      <returns>現在の転送済み項目数を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.DataTransferProgressEventArgs.TransferId">
+      <summary>データ転送進行状況イベントを一意に識別する ID 値を取得します。</summary>
+      <returns>データ転送進行状況イベントを一意に識別する ID 値を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.DataTransferProgressEventHandler">
+      <summary>データ転送進行状況レポートのプロセスによって発生したイベントを処理するメソッドを表します。</summary>
+      <returns>
+        <see cref="T:System.Boolean" /> です。</returns>
+      <param name="sender">イベントを発生させた <see cref="T:System.Object" /> オブジェクトです。</param>
+      <param name="e">イベント ハンドラーに渡される引数を示す <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferProgressEventArgs" /> 値です。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.DataTransferProgressEventType">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.DataTransferProgressEventType" /> 列挙は、データ転送進行状況イベントの種類を指定するために使用する値を格納します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.DataTransferProgressEventType.AllowedToFailPrologueSql">
+      <summary>Transact-SQL のプロローグ コマンドの失敗が許可されると発生するイベントです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.DataTransferProgressEventType.CancelQuery">
+      <summary>Transact-SQL クエリが取り消されると発生するイベントです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.DataTransferProgressEventType.CommitTransaction">
+      <summary>トランザクションがコミットされると発生するイベントです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.DataTransferProgressEventType.Error">
+      <summary>エラーの発生時に発生するイベントです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.DataTransferProgressEventType.ExecuteCompensatingSql">
+      <summary>Transact-SQL の補正コマンドが実行されると発生するイベントです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.DataTransferProgressEventType.ExecuteEpilogueSql">
+      <summary>Transact-SQL のエピローグ コマンドが実行されると発生するイベントです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.DataTransferProgressEventType.ExecuteNonTransactableSql">
+      <summary>Transact-SQL のトランザクション不可能なコマンドが実行されると発生するイベントです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.DataTransferProgressEventType.ExecutePrologueSql">
+      <summary>Transact-SQL のプロローグ コマンドが実行されると発生するイベントです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.DataTransferProgressEventType.ExecutingDataFlow">
+      <summary>データ フローを実行すると発生するイベントです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.DataTransferProgressEventType.GenerateDataFlow">
+      <summary>データ フローを生成すると発生するイベントです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.DataTransferProgressEventType.RollbackTransaction">
+      <summary>トランザクションがロールバックされると発生するイベントです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.DataTransferProgressEventType.StartTransaction">
+      <summary>トランザクションの開始時に発生するイベントです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.DataTransferProgressEventType.TransferringRows">
+      <summary>行の転送時に発生するイベントです。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.DeferredUseMode">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.DeferredUseMode" /> 列挙には、遅延使用時にサーバー接続の Transact-SQL ステートメントの処理方法を指定する値が含まれます。 </summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.DeferredUseMode.CollapseRedundant">
+      <summary>余分なステートメントを折りたたみます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.DeferredUseMode.MergeSql">
+      <summary>Transact-SQL ステートメントを結合します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.DeferredUseMode.None">
+      <summary>ステートメントは通常どおり処理されます。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.DisconnectedConnectionException">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.DisconnectedConnectionException" /> クラスは、接続が終了するときに発生する例外です。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.DisconnectedConnectionException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.DisconnectedConnectionException" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.DisconnectedConnectionException.#ctor(System.String)">
+      <summary>指定されたメッセージ テキストを使用して、<see cref="T:Microsoft.SqlServer.Management.Common.DisconnectedConnectionException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.DisconnectedConnectionException.#ctor(System.String,System.Exception)">
+      <summary>指定したメッセージ テキストと内部例外オブジェクトを使用して、<see cref="T:Microsoft.SqlServer.Management.Common.DisconnectedConnectionException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="innerException">内部例外を含む <see cref="T:System.Exception" /> オブジェクトです。1 つの例外が原因で別の例外が発生する状況で使用されます。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.ExecutionFailureException">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ExecutionFailureException" /> クラスは、サーバーへの接続で実行エラーが発生した場合に生成される例外です。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ExecutionFailureException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ExecutionFailureException" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ExecutionFailureException.#ctor(System.String)">
+      <summary>指定されたメッセージ テキストを使用して、<see cref="T:Microsoft.SqlServer.Management.Common.ExecutionFailureException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ExecutionFailureException.#ctor(System.String,System.Exception)">
+      <summary>指定されたメッセージ テキストと内部例外を使用して、<see cref="T:Microsoft.SqlServer.Management.Common.ExecutionFailureException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="innerException">内部例外を含む <see cref="T:System.Exception" /> オブジェクトです。1 つの例外が原因で別の例外が発生する状況で使用されます。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.ExecutionTypes">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ExecutionTypes" /> 列挙体には、SQL Server インスタンスへの接続を使用してサーバーに送信される Transact-SQL コマンドの実行オプションを指定するための値が格納されます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ExecutionTypes.ContinueOnError">
+      <summary>エラーが発生しても、実行を続行します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ExecutionTypes.Default">
+      <summary>既定の実行パスです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ExecutionTypes.NoCommands">
+      <summary>実行可能コマンドはありません。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ExecutionTypes.NoExec">
+      <summary>何も実行されません。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ExecutionTypes.ParseOnly">
+      <summary>実行可能コマンドのみを解析します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ExecutionTypes.QuotedIdentifierOn">
+      <summary>コマンドを区切るために識別子が使用されます。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.FixedServerRoles">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.FixedServerRoles" /> 列挙は、ログオンに割り当てることのできる固定サーバー ロールを指定するために使用する値を格納します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.FixedServerRoles.BulkAdmin">
+      <summary>一括操作を管理します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.FixedServerRoles.DBCreator">
+      <summary>データベースを作成できます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.FixedServerRoles.DiskAdmin">
+      <summary>リソースを変更できます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.FixedServerRoles.None">
+      <summary>サーバー ロールがありません。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.FixedServerRoles.ProcessAdmin">
+      <summary>接続を変更できます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.FixedServerRoles.SecurityAdmin">
+      <summary>ログオンを変更できます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.FixedServerRoles.ServerAdmin">
+      <summary>Microsoft SQL Server の設定変更、SQL Server サービスのシャットダウン、エンドポイントの作成と変更、SQL Server 状態の変更、およびリソースの変更が可能です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.FixedServerRoles.SetupAdmin">
+      <summary>リンク サーバーを変更できます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.FixedServerRoles.SysAdmin">
+      <summary>Microsoft SQL Server のインスタンスを全面的に制御できます。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.IAlterable">
+      <summary>SQL Server インスタンスへの接続で、オブジェクトを変更するためのメソッドを定義します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.IAlterable.Alter">
+      <summary>Microsoft SQL Server のインスタンス上でのプロパティに対する変更をすべて更新します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.ICreatable">
+      <summary>参照された接続でオブジェクトを作成するためのメソッドを定義します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ICreatable.Create">
+      <summary>参照された SMO オブジェクトによる定義に基づいて、サーバー上にオブジェクトを作成します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.IDataTransferProvider">
+      <summary>参照された接続でデータを転送するためのメソッドおよびイベントを定義します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.IDataTransferProvider.Configure(Microsoft.SqlServer.Management.Common.ITransferMetadataProvider)">
+      <summary>データ転送プロセスで使用するデータ転送インターフェイスを構成します。</summary>
+      <param name="metadataProvider">データ転送プロセスに必要なメタデータを示す <see cref="T:Microsoft.SqlServer.Management.Common.ITransferMetadataProvider" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.IDataTransferProvider.ExecuteTransfer">
+      <summary>転送プロセスを実行します。</summary>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Common.IDataTransferProvider.TransferEvent">
+      <summary>転送プロセスが発生すると生成されるイベントを表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.IDroppable">
+      <summary>参照された接続でオブジェクトを削除するためのメソッドを定義します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.IDroppable.Drop">
+      <summary>参照されたオブジェクトを削除します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.IMarkForDrop">
+      <summary>削除するオブジェクトをマークするメソッドを定義します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.IMarkForDrop.MarkForDrop(System.Boolean)">
+      <summary>Alter メソッドによって親オブジェクトが次に変更されたとき、削除する参照先オブジェクトをマークします。</summary>
+      <param name="dropOnAlter">親オブジェクトが Alter メソッドで変更された際にオブジェクトを削除するかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、Alter メソッドが親オブジェクトに対して実行されると、オブジェクトが削除されます。False の場合、オブジェクトは直ちに削除されます。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.InvalidArgumentException">
+      <summary>サーバーへの参照された接続で、有効でないパラメーターがメソッドに渡された場合に発生する例外です。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.InvalidArgumentException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.InvalidArgumentException" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.InvalidArgumentException.#ctor(System.String)">
+      <summary>指定されたメッセージ テキストを使用して、<see cref="T:Microsoft.SqlServer.Management.Common.InvalidArgumentException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.InvalidArgumentException.#ctor(System.String,System.Exception)">
+      <summary>指定されたメッセージ テキストと内部例外を使用して、<see cref="T:Microsoft.SqlServer.Management.Common.InvalidArgumentException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="innerException">内部例外を含む <see cref="T:System.Exception" /> オブジェクトです。1 つの例外が原因で別の例外が発生する状況で使用されます。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.InvalidPropertyValueException">
+      <summary>SQL サーバーへの接続で、プロパティに設定された値が有効でない場合に発生する例外です。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.InvalidPropertyValueException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.InvalidPropertyValueException" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.InvalidPropertyValueException.#ctor(System.String)">
+      <summary>指定されたメッセージ テキストを使用して、<see cref="T:Microsoft.SqlServer.Management.Common.InvalidPropertyValueException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.InvalidPropertyValueException.#ctor(System.String,System.Exception)">
+      <summary>指定されたメッセージ テキストと内部例外を使用して、<see cref="T:Microsoft.SqlServer.Management.Common.InvalidPropertyValueException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="innerException">内部例外を含む <see cref="T:System.Exception" /> オブジェクトです。1 つの例外が原因で別の例外が発生する状況で使用されます。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.IRefreshable">
+      <summary>参照された接続でサーバーから読み取ってオブジェクトを更新するためのメソッドを定義します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.IRefreshable.Refresh">
+      <summary>オブジェクトのプロパティをサーバーから読み取って更新します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.IRenamable">
+      <summary>参照された接続で Rename メソッドを定義します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.IRenamable.Rename(System.String)">
+      <summary>参照されたオブジェクトの名前を変更します。</summary>
+      <param name="newname">オブジェクトの新しい名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.IRestrictedAccess">
+      <summary>参照された接続について、サーバーへのシングル ユーザー アクセスを実装するインターフェイスを表します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.IRestrictedAccess.SingleConnection">
+      <summary>サーバーへのアクセスをシングル ユーザーに制限するかどうかを示す <see cref="T:System.Boolean" /> プロパティを取得します。値の設定も可能です。</summary>
+      <returns>サーバーへのアクセスをシングル ユーザーに制限するかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、サーバーへのアクセスはシングル ユーザーに制限されます。False (既定値) の場合、サーバーへのアクセスは制限されず、複数のユーザーが接続できます。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.ISfcConnection">
+      <summary>サーバー接続のための上位のプロパティおよびメソッドを定義します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ISfcConnection.Connect">
+      <summary>対象のサーバーに接続します。</summary>
+      <returns>接続に成功した場合は True、それ以外の場合は false です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ISfcConnection.Copy">
+      <summary>接続オブジェクトをコピーします。</summary>
+      <returns>コピー操作が成功した場合は True、それ以外の場合は false です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ISfcConnection.Disconnect">
+      <summary>サーバーとの接続を解除します。</summary>
+      <returns>接続に成功した場合は True、それ以外の場合は false です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ISfcConnection.ForceDisconnected">
+      <summary>SQL Server のインスタンスから強制的に切断します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ISfcConnection.IsForceDisconnected">
+      <summary>接続が強制的に切断されたかどうかを示す <see cref="T:System.Boolean" /> 値を取得します。</summary>
+      <returns>接続が強制的に切断されたかどうかを示す <see cref="T:System.Boolean" /> の値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ISfcConnection.IsOpen">
+      <summary>接続が開いているかどうかを示す値を取得します。</summary>
+      <returns>接続が開いている場合は True、それ以外の場合は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ISfcConnection.ServerInstance">
+      <summary>接続先のサーバー名を取得または設定します。</summary>
+      <returns>サーバーの名前を表す文字列です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ISfcConnection.ServerVersion">
+      <summary>接続先サーバーの SQL Server バージョンを取得します。</summary>
+      <returns>接続先サーバーの SQL Server バージョンを示す <see cref="T:System.Version" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ISfcConnection.ToEnumeratorObject">
+      <summary>列挙の指定オブジェクトを示します。このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。   </summary>
+      <returns>列挙の <see cref="T:System.Object" /> です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.ITransferMetadataProvider">
+      <summary>参照された接続でメタデータを転送するために必要なメソッドを定義します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ITransferMetadataProvider.GetOptions">
+      <summary>内部使用のみです。呼び出し元から呼び出されると、System.NotSupportedException をスローします。</summary>
+      <returns>メタデータ転送プロセスのオプションを格納する <see cref="T:System.Collections.SortedList" /> システム オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ITransferMetadataProvider.SaveMetadata">
+      <summary>内部使用のみです。呼び出し元から呼び出されると、System.NotSupportedException をスローします。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.NetworkProtocol">
+      <summary>接続を確立するネットワーク上で使用されるネットワーク プロトコルを指定するための値を格納します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.NetworkProtocol.AppleTalk">
+      <summary>AppleTalk ネットワーク プロトコルです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.NetworkProtocol.BanyanVines">
+      <summary>Banyan Vines ネットワーク プロトコルです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.NetworkProtocol.Multiprotocol">
+      <summary>Multiprotocol ネットワーク プロトコルです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.NetworkProtocol.NamedPipes">
+      <summary>名前付きパイプ ネットワーク プロトコルです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.NetworkProtocol.NotSpecified">
+      <summary>ネットワーク プロトコルは指定されていません。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.NetworkProtocol.NWLinkIpxSpx">
+      <summary>NWLink IPX/SPX ネットワーク プロトコルです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.NetworkProtocol.SharedMemory">
+      <summary>共有メモリです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.NetworkProtocol.TcpIp">
+      <summary>TCP/IP ネットワーク プロトコルです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.NetworkProtocol.Via">
+      <summary>VIA ネットワーク プロトコルです。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.NotInTransactionException">
+      <summary>SQL サーバーへの接続で、トランザクション中にエラーが発生した場合に生成される例外です。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.NotInTransactionException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.NotInTransactionException" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.NotInTransactionException.#ctor(System.String)">
+      <summary>指定されたメッセージ テキストを使用して、<see cref="T:Microsoft.SqlServer.Management.Common.NotInTransactionException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.NotInTransactionException.#ctor(System.String,System.Exception)">
+      <summary>指定されたメッセージ テキストと内部例外を使用して、<see cref="T:Microsoft.SqlServer.Management.Common.NotInTransactionException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="innerException">内部例外を含む <see cref="T:System.Exception" /> オブジェクトです。1 つの例外が原因で別の例外が発生する状況で使用されます。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.OlapConnectionInfo">
+      <summary>このクラスは、SMO インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.OlapConnectionInfo.#ctor">
+      <summary>このコンストラクターは、SMO インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.OlapConnectionInfo.#ctor(Microsoft.SqlServer.Management.Common.OlapConnectionInfo)">
+      <summary>このコンストラクターは、SMO インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。</summary>
+      <param name="conn">
+        <see cref="T:Microsoft.SqlServer.Management.Common.OlapConnectionInfo" /> オブジェクトです。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.OlapConnectionInfo.ApplicationName">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。。アプリケーション名を示す <see cref="T:System.String" /> 値を取得または設定します。</summary>
+      <returns>アプリケーション名を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.OlapConnectionInfo.ConnectionString">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。。データベース エンジンの接続文字列を示す <see cref="T:System.String" /> 値を取得します。</summary>
+      <returns>接続文字列を表す文字列です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.OlapConnectionInfo.Copy">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。。現在の接続オブジェクトに基づく新しい <see cref="T:Microsoft.SqlServer.Management.Common.OlapConnectionInfo" /> オブジェクトを作成します。</summary>
+      <returns>現在の接続オブジェクトに基づく新しい <see cref="T:Microsoft.SqlServer.Management.Common.OlapConnectionInfo" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.OlapConnectionInfo.CreateConnectionObject">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。。SQL Server データベース エンジンのインスタンスへの接続に使用する IDbConnection オブジェクトを作成します。</summary>
+      <returns>SQL Server データベース エンジンのインスタンスへの接続に使用する IDbConnection オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.OlapConnectionInfo.EncryptConnection">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。。データベース エンジンの接続を暗号化するかどうかを示す <see cref="T:System.Boolean" /> 値を取得または設定します。</summary>
+      <returns>データベース エンジンの接続を暗号化するかどうかを示す <see cref="T:System.Boolean" /> 値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.PropertyNotAvailableException">
+      <summary>サーバーへの接続で、利用できないプロパティが要求された場合に発生する例外です。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.PropertyNotAvailableException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.PropertyNotAvailableException" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.PropertyNotAvailableException.#ctor(System.String)">
+      <summary>指定されたメッセージ テキストを使用して、<see cref="T:Microsoft.SqlServer.Management.Common.PropertyNotAvailableException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.PropertyNotAvailableException.#ctor(System.String,System.Exception)">
+      <summary>指定されたメッセージ テキストと内部例外を使用して、<see cref="T:Microsoft.SqlServer.Management.Common.PropertyNotAvailableException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="innerException">内部例外を含む <see cref="T:System.Exception" /> オブジェクトです。1 つの例外が原因で別の例外が発生する状況で使用されます。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.PropertyNotSetException">
+      <summary>サーバーへの接続で設定されていないプロパティをプロセスが要求した場合に発生する例外です。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.PropertyNotSetException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.PropertyNotSetException" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.PropertyNotSetException.#ctor(System.String)">
+      <summary>指定されたメッセージ テキストを使用して、<see cref="T:Microsoft.SqlServer.Management.Common.PropertyNotSetException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.PropertyNotSetException.#ctor(System.String,System.Exception)">
+      <summary>指定されたメッセージ テキストと内部例外を使用して、<see cref="T:Microsoft.SqlServer.Management.Common.PropertyNotSetException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="innerException">内部例外を含む <see cref="T:System.Exception" /> オブジェクトです。1 つの例外が原因で別の例外が発生する状況で使用されます。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.QueryParameterizationMode">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.QueryParameterizationMode" /> 列挙には、パラメーターを使用したクエリがサーバー接続によってどのように処理されるかを指定するための値が格納されます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.QueryParameterizationMode.ForcedParameterization">
+      <summary>パラメーター化が強制されます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.QueryParameterizationMode.None">
+      <summary>パラメーター化は適用されません。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.QueryParameterizationMode.ParameterizeLiterals">
+      <summary>パラメーター化は、リテラル値でサポートされます。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.ServerCaseSensitivity">
+      <summary>サーバーでテキストの大文字と小文字を区別するかどうかを指定するための値を格納します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ServerCaseSensitivity.CaseInsensitive">
+      <summary>大文字と小文字が区別されません。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ServerCaseSensitivity.CaseSensitive">
+      <summary>大文字と小文字が区別されます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ServerCaseSensitivity.Unknown">
+      <summary>サーバーで大文字と小文字が区別されるかどうかは不明です。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.ServerComparer">
+      <summary>比較演算子クラスを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerComparer.#ctor(Microsoft.SqlServer.Management.Common.ServerConnection)">
+      <summary>指定された接続で、既定のデータベースからの情報を使用して、<see cref="T:Microsoft.SqlServer.Management.Common.ServerComparer" /> クラスのインスタンスを初期化します。</summary>
+      <param name="conn">データベース エンジンのインスタンスを示す <see cref="T:Microsoft.SqlServer.Management.Common.ServerConnection" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerComparer.#ctor(Microsoft.SqlServer.Management.Common.ServerConnection,System.String)">
+      <summary>指定された接続で、指定されたデータベースからの情報を使用して、<see cref="T:Microsoft.SqlServer.Management.Common.ServerComparer" /> クラスのインスタンスを初期化します。</summary>
+      <param name="conn">データベース エンジンのインスタンスを示す <see cref="T:Microsoft.SqlServer.Management.Common.ServerConnection" /> オブジェクトです。</param>
+      <param name="databaseName">データベースの名前を指定する <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerComparer.System#Collections#Generic#IComparer{T}#Compare(System.String,System.String)">
+      <summary>指定された 2 つのオブジェクトを比較します。</summary>
+      <returns>
+        <see cref="T:System.Int32" /> 値です。</returns>
+      <param name="x">
+        <see cref="T:System.String" /> 値です。</param>
+      <param name="y">
+        <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.ServerConnection">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ServerConnection" /> オブジェクトは、サーバーへの接続を表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ServerConnection" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.#ctor(Microsoft.SqlServer.Management.Common.SqlConnectionInfo)">
+      <summary>指定された接続情報を使用して、<see cref="T:Microsoft.SqlServer.Management.Common.ServerConnection" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="sci">接続の確立に必要な接続情報を示す <see cref="T:Microsoft.SqlServer.Management.Common.SqlConnectionInfo" /> オブジェクト値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.#ctor(System.Data.SqlClient.SqlConnection)">
+      <summary>指定された接続パラメーターを使用して、<see cref="T:Microsoft.SqlServer.Management.Common.ServerConnection" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="sqlConnection">参照された接続に関連付けられた接続パラメーターを示す <see cref="T:System.Data.SqlClient.SqlConnection" /> システム オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.#ctor(System.String)">
+      <summary>指定されたサーバー インスタンスを使用して、<see cref="T:Microsoft.SqlServer.Management.Common.ServerConnection" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="serverInstance">接続を確立するサーバーのインスタンスの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.#ctor(System.String,System.String,System.Security.SecureString)">
+      <summary>指定されたサーバー インスタンスおよびログオン資格情報を使用して、<see cref="T:Microsoft.SqlServer.Management.Common.ServerConnection" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="serverInstance">接続を確立するサーバーのインスタンスの名前を示す <see cref="T:System.String" /> 値です。</param>
+      <param name="userName">参照された接続を確立するために使用するログオン アカウントを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="password">ログオン アカウントで使用するパスワードを示す <see cref="T:System.Security.SecureString" /> の値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.#ctor(System.String,System.String,System.String)">
+      <summary>指定されたサーバー インスタンスおよびログオン資格情報を使用して、<see cref="T:Microsoft.SqlServer.Management.Common.ServerConnection" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="serverInstance">接続を確立するサーバーのインスタンスの名前を示す <see cref="T:System.String" /> 値です。</param>
+      <param name="userName">参照された接続を確立するために使用するログオン アカウントを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="password">ログオン アカウントで使用するパスワードを示す <see cref="T:System.String" /> の値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ServerConnection.BatchSeparator">
+      <summary>参照された接続でバッチを区切るために使用する文字列値を取得または設定します。</summary>
+      <returns>参照された接続のバッチ区切り記号を示す <see cref="T:System.String" /> 値です。既定値は GO です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.BeginTransaction">
+      <summary>参照された接続でトランザクションを開始します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.Cancel">
+      <summary>接続を取り消します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.ChangePassword(System.Security.SecureString)">
+      <summary>標準認証で使用するログイン パスワードを変更します。</summary>
+      <param name="newPassword">新しいパスワードを示す <see cref="T:System.Security.SecureString" /> の値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.ChangePassword(System.String)">
+      <summary>標準認証で使用するログオン パスワードを変更します。</summary>
+      <param name="newPassword">新しいパスワードを示す <see cref="T:System.String" /> の値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.CommitTransaction">
+      <summary>参照された接続で現在のトランザクションをコミットします。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ServerConnection.ConnectionType">
+      <summary>サーバーで使用する接続の種類を取得します。</summary>
+      <returns>使用する接続の種類です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.Copy">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ServerConnection" /> オブジェクトのコピーが返されます。</summary>
+      <returns>参照先 <see cref="T:Microsoft.SqlServer.Management.Common.ServerConnection" /> オブジェクトのコピーである <see cref="T:Microsoft.SqlServer.Management.Common.ServerConnection" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.ExecuteNonQuery(System.Collections.Specialized.StringCollection)">
+      <summary>結果セットを返さないステートメントのバッチを実行します。</summary>
+      <returns>
+        <paramref name="sqlCommands" /> パラメーターとして使用される <see cref="T:System.Collections.Specialized.StringCollection" /> オブジェクトの各要素の影響を受ける行の合計数を示す <see cref="T:System.Int32" /> 配列の値です。戻り値は、UPDATE ステートメント、INSERT ステートメント、および DELETE ステートメントに対応する Transact-SQL コマンドの影響を受ける行の合計数を示します。他のすべての種類のステートメントでは、戻り値は -1 です。</returns>
+      <param name="sqlCommands">実行する Transact-SQL ステートメントのバッチを示す <see cref="T:System.Collections.Specialized.StringCollection" /> システム オブジェクト値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.ExecuteNonQuery(System.Collections.Specialized.StringCollection,Microsoft.SqlServer.Management.Common.ExecutionTypes)">
+      <summary>指定された実行オプションで、結果セットを返さないステートメントのバッチを実行します。</summary>
+      <returns>
+        <paramref name="sqlCommands" /> パラメーターとして使用される <see cref="T:System.Collections.Specialized.StringCollection" /> オブジェクトの各要素の影響を受ける行の合計数を示す <see cref="T:System.Int32" /> 配列の値です。戻り値は、UPDATE ステートメント、INSERT ステートメント、および DELETE ステートメントに対応する Transact-SQL コマンドの影響を受ける行の合計数を示します。他のすべての種類のステートメントでは、戻り値は -1 です。</returns>
+      <param name="sqlCommands">実行する Transact-SQL ステートメントのバッチを示す <see cref="T:System.Collections.Specialized.StringCollection" /> システム オブジェクト値です。</param>
+      <param name="executionType">Transact-SQL ステートメントの実行オプションを示す <see cref="T:Microsoft.SqlServer.Management.Common.ExecutionTypes" /> オブジェクト値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.ExecuteNonQuery(System.String)">
+      <summary>結果セットを返さないステートメントを実行します。</summary>
+      <returns>UPDATE ステートメント、INSERT ステートメント、および DELETE ステートメントに対応する Transact-SQL コマンドの影響を受ける行の合計数を示す <see cref="T:System.Int32" /> 値です。他のすべての種類のステートメントでは、戻り値は -1 です。</returns>
+      <param name="sqlCommand">実行する Transact-SQL コマンドを指定する <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.ExecuteNonQuery(System.String,Microsoft.SqlServer.Management.Common.ExecutionTypes)">
+      <summary>指定された実行オプションで、結果セットを返さないステートメントを実行します。</summary>
+      <returns>UPDATE ステートメント、INSERT ステートメント、および DELETE ステートメントに対応する Transact-SQL コマンドの影響を受ける行の合計数を示す <see cref="T:System.Int32" /> 値です。他のすべての種類のステートメントでは、戻り値は -1 です。</returns>
+      <param name="sqlCommand">実行する Transact-SQL コマンドを指定する <see cref="T:System.String" /> 値です。</param>
+      <param name="executionType">Transact-SQL ステートメントの実行オプションを示す <see cref="T:Microsoft.SqlServer.Management.Common.ExecutionTypes" /> オブジェクト値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.ExecuteReader(System.String)">
+      <summary>1 つ以上の結果セットを返す Transact-SQL ステートメントを実行します。</summary>
+      <returns>1 つ以上の結果セットを格納する <see cref="T:System.Data.SqlClient.SqlDataReader" /> オブジェクト値です。</returns>
+      <param name="sqlCommand">実行する Transact-SQL コマンドを指定する <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.ExecuteReader(System.String,System.Data.SqlClient.SqlCommand@)">
+      <summary>1 つ以上の結果セットを格納した <see cref="T:System.Data.SqlClient.SqlDataReader" /> オブジェクト値を使用してリーダーを実行します。</summary>
+      <returns>1 つ以上の結果セットを格納する <see cref="T:System.Data.SqlClient.SqlDataReader" /> オブジェクト値です。</returns>
+      <param name="sqlCommand">実行する Transact-SQL コマンドを指定する <see cref="T:System.String" /> 値です。</param>
+      <param name="command">SqlDataReader パイプを取り消して実行時間の長いコマンドを終了するために使用できる、<see cref="T:System.Data.SqlCommand" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.ExecuteScalar(System.Collections.Specialized.StringCollection)">
+      <summary>Transact-SQL ステートメントのバッチを実行し、オブジェクトの値として先頭行の最初の列を返します。</summary>
+      <returns>各結果セットの先頭行の最初の列を示すオブジェクト配列値です。</returns>
+      <param name="sqlCommands">実行する Transact-SQL ステートメントのバッチを示す <see cref="T:System.Collections.Specialized.StringCollection" /> システム オブジェクト値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.ExecuteScalar(System.String)">
+      <summary>Transact-SQL ステートメントを実行し、オブジェクトの値として先頭行の最初の列を返します。</summary>
+      <returns>結果セットの先頭行の最初の列を示す <see cref="T:System.Object" /> システム オブジェクト値です。</returns>
+      <param name="sqlCommand">実行する Transact-SQL コマンドを指定する <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.ExecuteWithResults(System.Collections.Specialized.StringCollection)">
+      <summary>複数の結果セットを返す Transact-SQL ステートメントのバッチを実行します。</summary>
+      <returns>複数の結果セットを格納する <see cref="T:System.Data.DataSet" /> システム オブジェクト配列値です。</returns>
+      <param name="sqlCommands">実行する Transact-SQL ステートメントのバッチを示す <see cref="T:System.Collections.Specialized.StringCollection" /> システム オブジェクト値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.ExecuteWithResults(System.String)">
+      <summary>結果セットを返す Transact-SQL ステートメントを実行します。</summary>
+      <returns>結果セットを格納する <see cref="T:System.Data.DataSet" /> システム オブジェクト値です。</returns>
+      <param name="sqlCommand">実行する Transact-SQL コマンドを指定する <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ServerConnection.FixedServerRoles">
+      <summary>参照された接続に関連付けられた固定サーバー ロールを取得します。</summary>
+      <returns>参照された接続に関連付けられた固定サーバー ロールを示す <see cref="T:Microsoft.SqlServer.Management.Common.FixedServerRoles" /> オブジェクト値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.IsInFixedServerRole(Microsoft.SqlServer.Management.Common.FixedServerRoles)">
+      <summary>参照された接続に関連付けられたログオンが、指定された固定サーバー ロールのメンバーであるかどうかをテストします。</summary>
+      <returns>ログオンが、指定された固定サーバー ロールのメンバーであるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、ログオンは指定された固定サーバー ロールのメンバーです。False の場合、ログオンは指定された固定サーバー ロールのメンバーではありません。</returns>
+      <param name="fixedServerRole">ログオンと比較する固定サーバー ロールを示す <see cref="P:Microsoft.SqlServer.Management.Common.FixedServerRoles" /> オブジェクト値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.Microsoft#SqlServer#Management#Common#ISfcConnection#Connect">
+      <summary>SFC 接続を使用して接続するサーバーを示す値を返します。</summary>
+      <returns>接続が実行中の場合は true、実行中でない場合は false です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.Microsoft#SqlServer#Management#Common#ISfcConnection#Copy">
+      <summary>SFC 接続を使用してサーバー接続をコピーします。</summary>
+      <returns>この接続のコピーを表す <see cref="T:Microsoft.SqlServer.Management.Common.ISfcConnection" /> です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.Microsoft#SqlServer#Management#Common#ISfcConnection#Disconnect">
+      <summary>接続を切断します。</summary>
+      <returns>接続が切断されている場合は true、切断されていない場合は false になる <see cref="T:System.Boolean" /> です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ServerConnection.Microsoft#SqlServer#Management#Common#ISfcConnection#ServerVersion">
+      <summary>サーバーのバージョンを取得します。</summary>
+      <returns>サーバーの <see cref="T:System.Version" /> です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.Microsoft#SqlServer#Management#Common#ISfcConnection#ToEnumeratorObject">
+      <summary>サーバー接続の列挙子オブジェクトを表示します。</summary>
+      <returns>指定された列挙子オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.NormalizeQuery(System.String)">
+      <summary>クエリ テキストを表す文字列入力を使用します。</summary>
+      <returns>クエリ テキストを表す <see cref="T:System.String" /> 値です。</returns>
+      <param name="QueryText">クエリの名前。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.NormalizeQuery(System.String,System.Boolean)">
+      <summary>サーバー接続を制御するクエリを正規化します。</summary>
+      <returns>サーバー接続を制御するクエリです。</returns>
+      <param name="QueryText">クエリの名前。</param>
+      <param name="QuotedIdentifiers">引用符で囲まれた識別子の場合は true、それ以外の場合は false です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ServerConnection.ParameterizationMode">
+      <summary>サーバー接続のパラメーター化モードを取得または設定します。</summary>
+      <returns>サーバー接続のパラメーター化モードです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ServerConnection.ProcessID">
+      <summary>サーバーへの参照された接続に関連付けられたプロセスを一意に識別する ID 値を取得します。</summary>
+      <returns>サーバーへの参照された接続に関連付けられたプロセスを一意に識別する ID 値を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerConnection.RollBackTransaction">
+      <summary>現在のトランザクションをロールバックします。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes">
+      <summary>サーバーへの参照された接続に関連付けられた実行モードを取得または設定します。</summary>
+      <returns>参照された接続に関連付けられた実行モードを示す <see cref="T:Microsoft.SqlServer.Management.Common.SqlExecutionModes" /> オブジェクト値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ServerConnection.StatementTimeout">
+      <summary>ステートメントの実行がタイムアウト エラーで失敗するまでの秒数を取得または設定します。</summary>
+      <returns>ステートメントの実行がタイムアウト エラーで失敗するまでの秒数を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ServerConnection.TransactionDepth">
+      <summary>参照された接続の現在のトランザクションの深さを取得します。</summary>
+      <returns>参照された接続の現在のトランザクションの深さを示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ServerConnection.TrueLogin">
+      <summary>参照された接続で使用する現在のログオン レコード名を取得します。</summary>
+      <returns>参照された接続で使用する現在のログオン レコード名を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ServerConnection.TrueName">
+      <summary>サーバーの名前を取得します。</summary>
+      <returns>サーバー名を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ServerConnection.UseMode">
+      <summary>指定されたモードを使用してサーバー接続を取得または設定します。</summary>
+      <returns>指定された接続モードです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ServerConnection.UserProfile">
+      <summary>参照された接続に関連付けられたユーザー プロファイルを取得します。</summary>
+      <returns>参照された接続に関連付けられたユーザー プロファイルを示す <see cref="T:Microsoft.SqlServer.Management.Common.ServerUserProfiles" /> オブジェクト値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.ServerMessageEventArgs">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ServerMessageEventArgs" /> クラスは、サーバー メッセージ イベントの発生時に使用される引数を表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerMessageEventArgs.#ctor(System.Data.SqlClient.SqlError)">
+      <summary>指定されたエラーを使用して、指定されたイベントに対応する <see cref="T:Microsoft.SqlServer.Management.Common.ServerMessageEventArgs" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="sqlError">サーバー メッセージ イベントに関連付けられたエラーを示す <see cref="T:System.Data.SqlClient.SqlError" /> システム オブジェクト値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ServerMessageEventArgs.Error">
+      <summary>サーバー メッセージ イベントに関連付けられたエラーを取得します。</summary>
+      <returns>サーバー メッセージ イベントに関連付けられたエラーを示す <see cref="T:System.Data.SqlClient.SqlError" /> システム オブジェクト値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerMessageEventArgs.ToString">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ServerMessageEventArgs" /> オブジェクトを表す <see cref="T:System.String" /> を返します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ServerMessageEventArgs" /> オブジェクトを表す <see cref="T:System.String" /> です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.ServerMessageEventHandler">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ServerMessageEventHandler" /> クラスは、サーバー メッセージによって発生するイベントを処理するメソッドを表します。</summary>
+      <param name="sender">イベントを発生させたオブジェクトを示す <see cref="T:System.Object" /> システム オブジェクト値です。</param>
+      <param name="e">イベント ハンドラーに渡される引数を示す <see cref="T:Microsoft.SqlServer.Management.Common.ServerMessageEventArgs" /> 値です。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.ServerType">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ServerType" /> 列挙体には、さまざまな種類の SQL Server サービスを示す値が含まれます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ServerType.AnalysisServices">
+      <summary>
+            Analysis Services
+          </summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ServerType.DatabaseEngine">
+      <summary>
+            SQL Server データベース エンジン
+          </summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ServerType.IntegrationServices">
+      <summary>
+            Integration Services
+          </summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ServerType.ReportingServices">
+      <summary>
+            Reporting Services
+          </summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ServerType.SqlServerCompactEdition">
+      <summary>SQL Server Compact Edition</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ServerType.SqlServerEverywhere">
+      <summary>SQL Server Compact Edition</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.ServerUserProfiles">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ServerUserProfiles" /> 列挙は、サーバー上のユーザー プロファイルを指定するために使用する値を格納します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ServerUserProfiles.All">
+      <summary>すべての種類のプロファイルです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ServerUserProfiles.CreateDatabase">
+      <summary>データベース作成プロファイルを作成します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ServerUserProfiles.CreateXP">
+      <summary>拡張ストアド プロシージャ作成プロファイルを作成します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ServerUserProfiles.None">
+      <summary>プロファイルは作成されません。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.ServerUserProfiles.SALogin">
+      <summary>システム管理者ログイン プロファイルです。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.ServerVersion">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ServerVersion" /> クラスは、サーバーのバージョン情報を表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerVersion.#ctor(System.Int32,System.Int32)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ServerVersion" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="major">サーバーのバージョン番号のメジャー部分を示す <see cref="T:System.Int32" /> 値です。</param>
+      <param name="minor">サーバーのバージョン番号のマイナー部分を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerVersion.#ctor(System.Int32,System.Int32,System.Int32)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ServerVersion" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="major">サーバーのバージョン番号のメジャー部分を示す <see cref="T:System.Int32" /> 値です。</param>
+      <param name="minor">サーバーのバージョン番号のマイナー部分を示す <see cref="T:System.Int32" /> 値です。</param>
+      <param name="buildNumber">サーバーのバージョン番号のビルド番号部分を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ServerVersion.BuildNumber">
+      <summary>サーバーのバージョン情報のビルド番号部分を取得します。</summary>
+      <returns>サーバーのバージョン情報のビルド番号部分を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ServerVersion.Major">
+      <summary>サーバーのバージョン情報のビルド番号部分を取得します。</summary>
+      <returns>サーバーのバージョン情報のビルド番号部分を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.ServerVersion.Minor">
+      <summary>サーバーのバージョン情報のビルド番号部分を取得します。</summary>
+      <returns>サーバーのバージョン情報のビルド番号部分を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerVersion.op_Explicit(Microsoft.SqlServer.Management.Common.ServerVersion)~System.Version">
+      <summary>サーバーのバージョンを表すシステム バージョン オブジェクトを作成します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ServerVersion" /> を表す <see cref="T:System.Version" /> です。</returns>
+      <param name="serverVersion">
+        <see cref="T:System.Version" /> の作成に使用される <see cref="T:Microsoft.SqlServer.Management.Common.ServerVersion" /></param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.ServerVersion.ToString">
+      <summary>オブジェクトを文字列の形式で返します。</summary>
+      <returns>オブジェクトを文字列の形式で示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.SqlConnectionInfo">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.SqlConnectionInfo" /> オブジェクトは、SQL Server のインスタンスへの接続を確立するのに必要な情報を表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.SqlConnectionInfo.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.SqlConnectionInfo" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.SqlConnectionInfo.#ctor(Microsoft.SqlServer.Management.Common.ServerConnection,Microsoft.SqlServer.Management.Common.ConnectionType)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.SqlConnectionInfo" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="serverConnection">新しい <see cref="T:Microsoft.SqlServer.Management.Common.SqlConnectionInfo" /> オブジェクトの基になる既存の接続を示す <see cref="T:Microsoft.SqlServer.Management.Common.ServerConnection" /> オブジェクト値です。</param>
+      <param name="connectionType">接続の種類を示す <see cref="T:Microsoft.SqlServer.Management.Common.ConnectionType" /> オブジェクト値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.SqlConnectionInfo.#ctor(Microsoft.SqlServer.Management.Common.SqlConnectionInfo)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.SqlConnectionInfo" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="conn">新しい <see cref="T:Microsoft.SqlServer.Management.Common.SqlConnectionInfo" /> オブジェクトの基になるオブジェクトを示す <see cref="T:Microsoft.SqlServer.Management.Common.SqlConnectionInfo" /> オブジェクト値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.SqlConnectionInfo.#ctor(System.String)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.SqlConnectionInfo" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="serverName">SQL Server のインスタンスを示す <see cref="T:System.String" /> オブジェクト値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.SqlConnectionInfo.#ctor(System.String,System.String,System.String)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.SqlConnectionInfo" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="serverName">SQL Server のインスタンスを示す <see cref="T:System.String" /> オブジェクト値です。</param>
+      <param name="userName">SQL Server のインスタンスに接続しているユーザーを示す <see cref="T:System.String" /> オブジェクト値です。</param>
+      <param name="password">SQL Server のインスタンスに接続する際にユーザーが指定するパスワードを示す <see cref="T:System.String" /> オブジェクト値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlConnectionInfo.AdditionalParameters">
+      <summary>接続のための追加のパラメーターを取得または設定します。</summary>
+      <returns>接続のための追加のパラメーターを表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlConnectionInfo.ApplicationName">
+      <summary>SQL Server のインスタンスに接続しているアプリケーションの名前を取得または設定します。</summary>
+      <returns>アプリケーションの名前を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlConnectionInfo.ConnectionProtocol">
+      <summary>SQL Server のインスタンスへの接続で使用するネットワーク プロトコルを取得または設定します。</summary>
+      <returns>接続で使用するネットワーク プロトコルを示す <see cref="T:Microsoft.SqlServer.Management.Common.NetworkProtocol" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlConnectionInfo.ConnectionString">
+      <summary>SQL Server のインスタンスとの接続を確立するときに使用する接続文字列を取得します。</summary>
+      <returns>SQL Server のインスタンスへの接続を確立するために使用する接続文字列を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.SqlConnectionInfo.Copy">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.SqlConnectionInfo" /> オブジェクトのコピーを返します。</summary>
+      <returns>参照された元の <see cref="T:Microsoft.SqlServer.Management.Common.SqlConnectionInfo" /> オブジェクトのコピーを示す <see cref="T:Microsoft.SqlServer.Management.Common.SqlConnectionInfo" /> オブジェクト値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.SqlConnectionInfo.CreateConnectionObject">
+      <summary>システム接続オブジェクトを作成します。</summary>
+      <returns>接続オブジェクトを示す <see cref="T:System.Data.IDbConnection" /> システム オブジェクト値です。</returns>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.SqlConnectionInfo.DefaultNetworkProtocol">
+      <summary>接続の既定のネットワーク プロトコルを示す <see cref="T:Microsoft.SqlServer.Management.Common.NetworkProtocol" /> オブジェクトです。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlConnectionInfo.EncryptConnection">
+      <summary>接続情報を暗号化するかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得または設定します。</summary>
+      <returns>接続情報を暗号化するかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、接続情報は暗号化されます。False (既定値) の場合、接続情報は暗号化されません。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlConnectionInfo.MaxPoolSize">
+      <summary>スレッド プールで接続が許容する実行スレッドの最大数を取得または設定します。</summary>
+      <returns>スレッド プールで接続が許容するスレッドの最大数を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlConnectionInfo.MinPoolSize">
+      <summary>スレッド プールで接続が許容する実行スレッドの最小数を取得または設定します。</summary>
+      <returns>スレッド プールで接続が許容するスレッドの最小数を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlConnectionInfo.PacketSize">
+      <summary>データの送受信のための接続で使用されるネットワーク パケット サイズをバイト単位で取得または設定します。</summary>
+      <returns>接続で使用されるネットワーク パケット サイズをバイト単位で示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlConnectionInfo.PoolConnectionLifeTime">
+      <summary>プール接続期間を秒単位で取得または設定します。</summary>
+      <returns>プール接続期間を秒単位で示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlConnectionInfo.Pooled">
+      <summary>接続をプールするかどうかを示す <see cref="T:System.Data.SqlTypes.SqlBoolean" /> プロパティ値を取得または設定します。</summary>
+      <returns>接続をプールするかどうかを示す <see cref="T:System.Data.SqlTypes.SqlBoolean" /> 値です。True の場合、接続はプールされます。False (既定値) の場合、接続はプールされません。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.SqlConnectionInfo.ToString">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.SqlConnectionInfo" /> オブジェクトを文字列の形式で返します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Common.SqlConnectionInfo" /> オブジェクトを示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlConnectionInfo.WorkstationId">
+      <summary>クライアント ワークステーションを一意に識別する値を取得または設定します。</summary>
+      <returns>クライアント ワークステーションを一意に識別する値を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.SqlExecutionModes">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.SqlExecutionModes" /> 列挙は、サーバーへの参照された接続に送信されたコマンドが即時に実行されるか、またはバッファーに保存されるかを示す値を格納します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.SqlExecutionModes.CaptureSql">
+      <summary>サーバーへの参照された接続に送信される Transact-SQL ステートメントは、バッファーに保存されます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.SqlExecutionModes.ExecuteAndCaptureSql">
+      <summary>サーバーへの参照された接続に送信される Transact-SQL ステートメントは、バッファーに保存されると共に、サーバーに転送されて即時に実行されます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.SqlExecutionModes.ExecuteSql">
+      <summary>サーバーへの参照された接続に送信される Transact-SQL ステートメントは、サーバーに転送されて即時に実行されます。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase" /> クラスは、SQL Server のインスタンスに接続するために使用する情報を表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.#ctor(Microsoft.SqlServer.Management.Common.ConnectionType)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="serverType">接続の種類を示す <see cref="T:Microsoft.SqlServer.Management.Common.ConnectionType" /> オブジェクト値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.#ctor(Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="conn">新しいオブジェクトの基になる <see cref="T:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase" /> オブジェクト値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.#ctor(System.String,Microsoft.SqlServer.Management.Common.ConnectionType)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="serverName">SQL Server のインスタンスを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="serverType">接続の種類を示す <see cref="T:Microsoft.SqlServer.Management.Common.ConnectionType" /> オブジェクト値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.#ctor(System.String,System.String,System.String,Microsoft.SqlServer.Management.Common.ConnectionType)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="serverName">SQL Server のインスタンスを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="userName">ユーザー名を示す <see cref="T:System.String" /> 値です。</param>
+      <param name="password">パスワードを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="serverType">接続の種類を示す <see cref="T:Microsoft.SqlServer.Management.Common.ConnectionType" /> オブジェクト値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.ConnectionParmsChanged">
+      <summary>接続パラメーターを変更します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.ConnectionString">
+      <summary>接続文字列を取得します。</summary>
+      <returns>接続文字列を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.ConnectionStringInternal">
+      <summary>内部接続文字列を取得または設定します。</summary>
+      <returns>内部接続文字列を示す <see cref="T:System.Text.StringBuilder" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.ConnectionTimeout">
+      <summary>接続がタイムアウトするまでの秒数を取得または設定します。</summary>
+      <returns>接続タイムアウト期間を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.ConnectionTimeoutInternal">
+      <summary>内部接続タイムアウト期間の秒数を取得または設定します。</summary>
+      <returns>内部接続タイムアウト期間を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.CreateConnectionObject">
+      <summary>接続オブジェクトを作成し、<see cref="T:System.Data.IDbConnection" /> オブジェクト値を返します。</summary>
+      <returns>接続オブジェクトを示す <see cref="T:System.Data.IDbConnection" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.DatabaseName">
+      <summary>接続を確立するデータベースを取得または設定します。</summary>
+      <returns>接続を確立するデータベースを示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.DatabaseNameInternal">
+      <summary>内部データベース名を取得または設定します。</summary>
+      <returns>内部データベース名を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.DefaultConnTimeout">
+      <summary>既定の接続タイムアウト期間の秒数を示す <see cref="T:System.Int32" /> です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.DefaultQueryTimeout">
+      <summary>既定のクエリ タイムアウト期間の秒数を示す <see cref="T:System.Int32" /> です。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.IntegratedSecurityInternal">
+      <summary>接続が統合セキュリティをサポートするかどうかを示す Boolean プロパティ値を取得または設定します。</summary>
+      <returns>接続が統合セキュリティをサポートするかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、接続は統合セキュリティをサポートします。False (既定値) の場合、接続は統合セキュリティをサポートしません。</returns>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.NoTimeOut">
+      <summary>タイムアウトがないことを示す <see cref="T:System.Int32" /> です。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.Password">
+      <summary>接続を確立するために使用するパスワードを取得または設定します。</summary>
+      <returns>接続を確立するために使用するパスワードを示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.QueryTimeout">
+      <summary>クエリがタイムアウトするまでの秒数を取得または設定します。</summary>
+      <returns>クエリ タイムアウト期間を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.QueryTimeoutInternal">
+      <summary>内部クエリ タイムアウト期間の秒数を取得または設定します。</summary>
+      <returns>内部クエリ タイムアウト期間を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.RebuildConnectionStringInternal">
+      <summary>内部接続文字列を再構築する必要があるかどうかを示す <see cref="T:System.Boolean" /> 値を取得します。値の設定も可能です。</summary>
+      <returns>内部接続文字列を再構築する必要があるかどうかを示す <see cref="T:System.Boolean" /> です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.SecurePassword">
+      <summary>接続を確立するために使用する、セキュリティで保護されたパスワードを取得または設定します。</summary>
+      <returns>接続を確立するために使用するパスワードを示す <see cref="T:System.Security.SecureString" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.ServerName">
+      <summary>SQL Server のインスタンスの名前を取得または設定します。</summary>
+      <returns>SQL Server のインスタンスの名前を指定する <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.ServerNameInternal">
+      <summary>SQL Server のインスタンスの内部名を取得または設定します。</summary>
+      <returns>SQL Server のインスタンスの内部名を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.ToString">
+      <summary>文字列値としてオブジェクトを返します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase" /> オブジェクトを示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.UseIntegratedSecurity">
+      <summary>接続で統合セキュリティを使用するかどうかを示す Boolean プロパティ値を取得または設定します。</summary>
+      <returns>接続で統合セキュリティを使用するかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、接続で統合セキュリティを使用します。False (既定値) の場合、接続で統合セキュリティを使用しません。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlOlapConnectionInfoBase.UserName">
+      <summary>SQL Server のインスタンスに接続しようとしているユーザーを取得または設定します。</summary>
+      <returns>SQL Server のインスタンスに接続しようとしているユーザーを示す <see cref="T:System.String" /> オブジェクト値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.SqlServerManagementException">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.SqlServerManagementException" /> クラスは、サーバーへの接続で SQL Server 管理エラーが発生した場合に発生する例外です。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.SqlServerManagementException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.SqlServerManagementException" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.SqlServerManagementException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>指定したシリアル化情報とストリーム コンテキストを使用して、<see cref="T:Microsoft.SqlServer.Management.Common.SqlServerManagementException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="info">例外に関連付けられたシリアル化情報を示す <see cref="T:System.Runtime.Serialization.SerializationInfo" /> システム オブジェクト値です。</param>
+      <param name="context">例外に関連付けられたストリーム コンテキストを示す <see cref="T:System.Runtime.Serialization.StreamingContext" /> システム オブジェクト値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.SqlServerManagementException.#ctor(System.String)">
+      <summary>指定されたメッセージ テキストを使用して、<see cref="T:Microsoft.SqlServer.Management.Common.SqlServerManagementException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.SqlServerManagementException.#ctor(System.String,System.Exception)">
+      <summary>指定したメッセージ テキストと内部例外を使用して、<see cref="T:Microsoft.SqlServer.Management.Common.SqlServerManagementException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="innerException">内部例外を含む <see cref="T:System.Exception" /> オブジェクトです。1 つの例外が原因で別の例外が発生する状況で使用されます。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.SqlServerManagementException.ProductName">
+      <summary>例外の原因になった製品の名前を取得します。</summary>
+      <returns>例外の原因になった製品の名前を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.StatementEventArgs">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.StatementEventArgs" /> クラスは、ステートメント イベントの発生時に使用される引数を表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.StatementEventArgs.#ctor(System.String,System.DateTime)">
+      <summary>指定された日時に、指定された Transact-SQL ステートメントの <see cref="T:Microsoft.SqlServer.Management.Common.StatementEventArgs" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="sqlStatement">ステートメント イベントの原因になった Transact-SQL ステートメントを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="timeStamp">ステートメント イベントの日時を示す <see cref="T:System.DateTime" /> システム オブジェクト値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.StatementEventArgs.SqlStatement">
+      <summary>ステートメント イベントの原因になった Transact-SQL ステートメントを取得します。</summary>
+      <returns>ステートメント イベントの原因になった Transact-SQL ステートメントを示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Common.StatementEventArgs.TimeStamp">
+      <summary>ステートメント イベントが発生した日時を取得します。</summary>
+      <returns>ステートメント イベントが発生した日時を示す <see cref="T:System.DateTime" /> システム オブジェクト値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.StatementEventArgs.ToString">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.StatementEventArgs" /> オブジェクトを表す <see cref="T:System.String" /> 値を返します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Common.StatementEventArgs" /> オブジェクトを表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.StatementEventHandler">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.StatementEventHandler" /> クラスは、ステートメントによって発生するイベントを処理するメソッドを表します。</summary>
+      <param name="sender">イベントを発生させたオブジェクトを示す <see cref="T:System.Object" /> システム オブジェクト値です。</param>
+      <param name="e">イベント ハンドラーに渡される引数を示す <see cref="T:Microsoft.SqlServer.Management.Common.StatementEventArgs" /> 値です。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Common.TransferException">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.TransferException" /> クラスは、サーバーへの接続で SQL Server の転送エラーが発生した場合に生成される例外です。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.TransferException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.TransferException" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.TransferException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>指定したシリアル化情報とストリーム コンテキストを使用して、<see cref="T:Microsoft.SqlServer.Management.Common.TransferException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="info">例外に関連付けられたシリアル化情報を示す <see cref="T:System.Runtime.Serialization.SerializationInfo" /> システム オブジェクト値です。</param>
+      <param name="context">例外に関連付けられたストリーム コンテキストを示す <see cref="T:System.Runtime.Serialization.StreamingContext" /> システム オブジェクト値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.TransferException.#ctor(System.String)">
+      <summary>指定されたメッセージ テキストを使用して、<see cref="T:Microsoft.SqlServer.Management.Common.TransferException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Common.TransferException.#ctor(System.String,System.Exception)">
+      <summary>指定したメッセージ テキストと内部例外を使用して、<see cref="T:Microsoft.SqlServer.Management.Common.TransferException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因になったイベントを表すメッセージ テキストを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="innerException">内部例外を含む <see cref="T:System.Exception" /> オブジェクトです。1 つの例外が原因で別の例外が発生する状況で使用されます。</param>
+    </member>
+  </members>
+</doc>

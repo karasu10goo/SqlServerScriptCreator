@@ -1,0 +1,741 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.SqlServer.Management.Collector</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectionItem">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionItem" /> クラスは、コレクション アイテムのインスタンスを作成します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.#ctor(Microsoft.SqlServer.Management.Collector.CollectionSet,System.String)">
+      <summary>コレクション セット名とアイテム名を指定して、コレクション アイテムのインスタンスを作成します。</summary>
+      <param name="set">親コレクション セットを示す <see cref="T:System.Name" /> 値です。</param>
+      <param name="name">コレクション アイテムの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Alter">
+      <summary>構成ストアに変更を適用することによって、コレクション アイテムを変更します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionItem.CollectionFrequency">
+      <summary>コレクション セットが CollectionMode = "連続" で実行中の場合にこのアイテムの収集頻度を取得します。値の設定も可能です。</summary>
+      <returns>
+        <see cref="T:System.TimeSpan" /> 値を返します。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Discover(Microsoft.SqlServer.Management.Sdk.Sfc.ISfcDependencyDiscoveryObjectSink)">
+      <summary>このメソッドは、内部でのみ使用されます。</summary>
+      <param name="sink">
+        <see cref="T:IsfcDependencyDiscoveryObjectSink" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.GetObjectFactory">
+      <summary>コレクション アイテムに使用されるコンストラクターのインスタンスをインスタンス化します。</summary>
+      <returns>コレクション アイテムに使用されるコンストラクターのインスタンスです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionItem.Id">
+      <summary>コレクション アイテムの ID を取得します。</summary>
+      <returns>コレクション アイテムのローカル ID を表す <see cref="T:System.Int32" /> 値を返します。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionItem.IdentityKey">
+      <summary>コレクション アイテムの ID キーを取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionItem.Key" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.MarkForDrop(System.Boolean)">
+      <summary>このメソッドは、コレクション アイテムが変更されている場合にそのコレクション アイテムに削除対象マークを付けます。</summary>
+      <param name="dropOnAlter">コレクション アイテムが変更されたかどうかを示す <see cref="T:Boolean" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcAlterable#ScriptAlter">
+      <summary>このメソッドは、内部でのみ使用されます。</summary>
+      <returns>スクリプトを含む ISfcScript オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcRenamable#Rename(Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey)">
+      <summary>このメソッドは、内部でのみ使用されます。</summary>
+      <param name="newKey">新しい名前を保持する SfcKey オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcRenamable#ScriptRename(Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey)">
+      <summary>このメソッドは、内部でのみ使用されます。</summary>
+      <returns>スクリプトを含む ISfcScript オブジェクトです。</returns>
+      <param name="newKey">新しい名前を保持する SfcKey オブジェクトです。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionItem.Name">
+      <summary>コレクション アイテム名を取得します。値の設定も可能です。</summary>
+      <returns>コレクション アイテムの名前を含む <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionItem.Parameters">
+      <summary>コレクション アイテムのパラメーターを取得します。値の設定も可能です。</summary>
+      <returns>
+        <see cref="T:System.String" /> 値を返します。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionItem.Parent">
+      <summary>オブジェクト モデル階層内の親オブジェクトを取得します。値の設定も可能です。</summary>
+      <returns>オブジェクト モデル階層内の親を示す <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSet" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Rename(System.String)">
+      <summary>コレクション アイテムの名前を変更します。</summary>
+      <param name="newName">コレクション アイテムの新しい名前を表す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionItem.TypeName">
+      <summary>コレクション アイテムが実装するコレクター型の名前を取得します。値の設定も可能です。</summary>
+      <returns>コレクター型の名前を表す <see cref="T:System.String" /> 値を返します。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectionItem.Key">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionItem.Key" /> クラスは SfcAbstractKey から継承され、識別キーの操作に使用されます。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.#ctor(Microsoft.SqlServer.Management.Collector.CollectionItem.Key)">
+      <summary>
+        <see cref="T:" />
+        <see cref="Microsoft.SqlServer.Management.Collector.CollectionItem.Key" /> オブジェクトのインスタンスを作成します。</summary>
+      <param name="other">
+        <see cref="T:Key" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.#ctor(System.String)">
+      <summary>キー名を指定してキーのインスタンスを作成します。</summary>
+      <param name="name">キー名を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.Equals(Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey)">
+      <summary>ブール演算に使用される <see cref="T:" /><see cref="Microsoft.SqlServer.Management.Collector.CollectionItem.Key.Equals" /> クラスのインスタンスをインスタンス化します。</summary>
+      <returns>キーを示す <see cref="T:Key" /> オブジェクトです。</returns>
+      <param name="key">
+        <see cref="T:Key" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.Equals(System.Object)">
+      <summary>パラメーターとして渡されるオブジェクトがキーかどうかを確認するブール演算を実行します。</summary>
+      <returns>オブジェクトがキーの場合は TRUE を返す <see cref="T:System.Boolean" /> 値です。</returns>
+      <param name="obj">
+        <see cref="T:System.Object" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.Equals(System.Object,System.Object)">
+      <summary>パラメーターとして渡される 2 つのオブジェクトのブール値の比較を実行します。</summary>
+      <returns>両方のオブジェクトが NULL ではなく、かつ同じである場合に TRUE を返す <see cref="T:System.Boolean" /> 値です。</returns>
+      <param name="obj1">
+        <see cref="T:System.Object" /> です。</param>
+      <param name="obj2">
+        <see cref="T:System.Object" /> です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.GetHashCode">
+      <summary>キーのハッシュ コードを取得します。</summary>
+      <returns>ハッシュ コードを示す <see cref="T:System.Int" /> です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.GetUrnFragment">
+      <summary>urn フラグメントを取得します。</summary>
+      <returns>urn フラグメントを表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.name">
+      <summary>名前の変数を宣言します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.Name">
+      <summary>キー名を取得します。値の設定も可能です。</summary>
+      <returns>キー名を示す <see cref="T:System.String" /> です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.op_Equality(Microsoft.SqlServer.Management.Collector.CollectionItem.Key,Microsoft.SqlServer.Management.Collector.CollectionItem.Key)">
+      <summary>キーの左辺と右辺のブール式の等価比較を実行します。</summary>
+      <returns>次の場合に TRUE を返す <see cref="T:System.Boolean" /> 値です。どちらの辺も NULL ではなく、かつ lhs がキーであり、かつ rhs がキーであり、かつキーが等価である場合</returns>
+      <param name="lhs">キーの左辺を含む <see cref="T:Key" /> オブジェクトです。</param>
+      <param name="rhs">キーの右辺を含む <see cref="T:Key" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.op_Equality(Microsoft.SqlServer.Management.Collector.CollectionItem.Key,System.Object)">
+      <summary>パラメーターとして送信されたオブジェクトと、キーの左辺のブール式の等価比較を実行します。</summary>
+      <returns>次の場合に TRUE を返す <see cref="T:System.Boolean" /> 値です。両辺が NULL の場合どちらの辺も NULL ではなく、かつ lhs がキーであり、かつキーが等価である場合</returns>
+      <param name="lhs">キーの左辺を含む <see cref="T:Key" /> オブジェクトです。</param>
+      <param name="obj">比較対象の <see cref="T:Key" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.op_Equality(System.Object,Microsoft.SqlServer.Management.Collector.CollectionItem.Key)">
+      <summary>パラメーターとして送信されたオブジェクトと、キーの右辺のブール式の等価比較を実行します。</summary>
+      <returns>次の場合に TRUE を返す <see cref="T:System.Boolean" /> 値です。両辺が NULL の場合どちらの辺も NULL ではなく、かつ rhs がキーであり、かつキーが等価である場合</returns>
+      <param name="obj">比較対象の <see cref="T:Key" /> オブジェクトです。</param>
+      <param name="rhs">キーの右辺を含む <see cref="T:Key" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.op_Inequality(Microsoft.SqlServer.Management.Collector.CollectionItem.Key,Microsoft.SqlServer.Management.Collector.CollectionItem.Key)">
+      <summary>キーの左辺と右辺のブール式の不等価比較を実行します。</summary>
+      <returns>次の場合に TRUE を返す <see cref="T:System.Boolean" /> 値です。一方の辺が NULL である、または lhs がキーではない、または rhs がキーではない、かつキーが不等価である場合</returns>
+      <param name="lhs">キーの左辺を含む <see cref="T:Key" /> オブジェクトです。</param>
+      <param name="rhs">キーの右辺を含む <see cref="T:Key" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.op_Inequality(Microsoft.SqlServer.Management.Collector.CollectionItem.Key,System.Object)">
+      <summary>パラメーターとして送信されたオブジェクトと、キーの左辺のブール式の不等価比較を実行します。</summary>
+      <returns>次の場合に TRUE を返す <see cref="T:System.Boolean" /> 値です。どちらの辺も NULL ではない場合両辺が NULL で、かつ lhs がキーではなく、かつキーが等価ではない場合</returns>
+      <param name="lhs">キーの左辺を含む <see cref="T:Key" /> オブジェクトです。</param>
+      <param name="obj">比較対象の <see cref="T:Key" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.op_Inequality(System.Object,Microsoft.SqlServer.Management.Collector.CollectionItem.Key)">
+      <summary>パラメーターとして送信されたオブジェクトと、キーの右辺のブール式の不等価比較を実行します。</summary>
+      <returns>次の場合に TRUE を返す <see cref="T:System.Boolean" /> 値です。どちらの辺も NULL ではない場合両辺が NULL で、かつ lhs がキーではなく、かつキーが等価ではない場合</returns>
+      <param name="obj">比較対象の <see cref="T:Key" /> オブジェクトです。</param>
+      <param name="rhs">キーの右辺を含む <see cref="T:Key" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItem.Key.ToString">
+      <summary>既定の比較を目的としてキーの文字列表記を取得します。</summary>
+      <returns>キーの文字列表記を表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectionItemCollection">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionItemCollection" /> クラスは、コレクション アイテム オブジェクトのコレクション クラスです。このクラスは、SFC::SfcCollectionBase クラスから派生しています。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItemCollection.#ctor(Microsoft.SqlServer.Management.Collector.CollectionSet)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionItemCollection" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="parent">コレクション アイテムが属しているコレクション セットを識別する <see cref="T:CollectionSet" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItemCollection.AddCollectionItem(Microsoft.SqlServer.Management.Collector.CollectionItem)">
+      <summary>コレクション セットにコレクション アイテムを追加します。</summary>
+      <param name="item">
+        <see cref="T:CollectionItem" /> オブジェクトです。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionItemCollection.Item(System.String)">
+      <summary>コレクション アイテムの名前を取得します。</summary>
+      <returns>コレクション アイテムの名前を表す <see cref="T:System.Sting" /> 値です。</returns>
+      <param name="name">コレクション アイテムの名前です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionItemCollection.RemoveCollectionItem(Microsoft.SqlServer.Management.Collector.CollectionItem)">
+      <summary>コレクション セットからコレクション アイテムを削除します。</summary>
+      <param name="item">
+        <see cref="T:CollectionItem" /> オブジェクトです。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectionSet">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSet" /> クラスは SFC::SfcInstanceBase から派生し、SFC::ICreatable、SFC::IDropable、および SFC::IAlterable を実装しています。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.#ctor">
+      <summary>コレクション セットのオブジェクトをインスタンス化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.#ctor(Microsoft.SqlServer.Management.Collector.CollectorConfigStore,System.String)">
+      <summary>親となる <see cref="T:CollectorConfigStore" /> オブジェクトとコレクション セット名を指定して <see cref="T:CollectionSet" /> オブジェクトのインスタンスを初期化します。</summary>
+      <param name="store">
+        <see cref="CollectorConfigStore" /> オブジェクトです。</param>
+      <param name="name">コレクション セットの名前を表す <see cref="T:System.String" /> です。この名前は、データ コレクター ストアごとに一意です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Alter">
+      <summary>構成ストアのコレクション セット情報を変更します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Cleanup"></member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.CollectionItems">
+      <summary>コレクション セット内のコレクション アイテムを取得します。</summary>
+      <returns>コレクション アイテムを含む <see cref="CollectionItemCollection" /> オブジェクトを返します。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.CollectionMode">
+      <summary>コレクション セットのコレクション モードを取得します。値の設定も可能です。</summary>
+      <returns>
+        <see cref="T:CollectionSet.CollectionModes" /> の種類を列挙し、コレクション セットのコレクション モード設定を含むオブジェクトを返します。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Create">
+      <summary>コレクション セットを作成します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.DaysUntilExpiration">
+      <summary>収集したデータを管理データ ウェアハウスに保管しておく日数を取得します。値の設定も可能です。</summary>
+      <returns>日数を表す <see cref="T:System.Int16" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.Description">
+      <summary>コレクション セットの説明を取得します。値の設定も可能です。</summary>
+      <returns>コレクション セットの説明を表す <see cref="T:System.String" /> 値を取得します。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Drop">
+      <summary>コレクション セットを削除します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.EnumCollectionSetExecutionHistory">
+      <summary>特定のコレクション セットの履歴レコードを取得する列挙子です。</summary>
+      <returns>履歴レコードを含む <see cref="T:System.DataTable" /> です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.EnumCollectionSetExecutionHistory(System.Int64)">
+      <summary>このメソッドは、内部でのみ使用されます。</summary>
+      <returns>DataTable オブジェクトです。</returns>
+      <param name="parentLogId">親コレクション セットのログ ID を表す <see cref="T:System.Int64" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.EnumCollectionSetExecutionHistoryDetail(System.Int64)">
+      <summary>このメソッドは、内部でのみ使用されます。</summary>
+      <returns>詳細な履歴レコードを含む <see cref="T:System.DataTable" /> です。</returns>
+      <param name="logId">コレクション セットのログ ID を表す <see cref="T:System.Int64" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.GetLastUploadTime">
+      <summary>前回コレクション セットのデータがアップロードされた時刻を取得します。</summary>
+      <returns>前回コレクション セットのデータがアップロードされた時刻を示す DateTime オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.GetObjectFactory">
+      <summary>
+        <see cref="CollectorConfigStore" /> オブジェクトのオブジェクト ファクトリ コンストラクターを取得します。</summary>
+      <returns>
+        <see cref="T:CollectionSet" /> クラスのオブジェクト ファクトリを返します。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.Id">
+      <summary>コレクション セットのローカル ID を取得します。</summary>
+      <returns>ID を表す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.IdentityKey">
+      <summary>コレクション セットの ID キーを取得します。</summary>
+      <returns>コレクション セットの <see cref="T:Key" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.IsRunning">
+      <summary>コレクション セットが実行中かどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得します。</summary>
+      <returns>コレクションが実行中であるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、コレクション セットは実行中です。False の場合、コレクション セットは実行されていません。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.IsSystem">
+      <summary>コレクション セットがシステム コレクション セットかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得します。</summary>
+      <returns>コレクション セットがシステム コレクション セットであることを示す <see cref="T:System.Boolean" /> 値です。True の場合、コレクション セットはシステム コレクション セットです。False の場合、コレクション セットはシステム コレクション セットではありません。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.IsTransactionPerformance"></member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.LoggingLevel">
+      <summary>コレクション セットのログ記録レベルを取得します。値の設定も可能です。</summary>
+      <returns>コレクション セットに使用するログ記録レベルを示す <see cref="T:System.SmallInt" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcCreatable#ScriptCreate">
+      <summary>このオブジェクトを現在の状態でストレージに作成するスクリプトを生成します。このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.ISfcScript" /> が返されます。スクリプトを含む ISfcScript オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDiscoverObject#Discover(Microsoft.SqlServer.Management.Sdk.Sfc.ISfcDependencyDiscoveryObjectSink)">
+      <summary>渡されたシンクを介し、依存関係検出要求に対してリレーションシップをオブジェクトが示せるようにします。このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。</summary>
+      <param name="sink">渡されたシンク。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDroppable#ScriptDrop">
+      <summary>このオブジェクトをストレージから削除するためのスクリプトを生成します。このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.ISfcScript" /> が返されます。スクリプトを含む ISfcScript オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcRenamable#Rename(Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey)">
+      <summary>このオブジェクトの名前を指定のキーに変更し、ストレージを更新します。このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。</summary>
+      <param name="newKey">新しい名前を保持する SfcKey オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcRenamable#ScriptRename(Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey)">
+      <summary>このオブジェクトの名前を指定のキーに変更するためのスクリプトを生成します。このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.ISfcScript" /> が返されます。スクリプトを含む ISfcScript オブジェクトです。</returns>
+      <param name="newKey">新しい名前を保持する SfcKey オブジェクトです。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.Name">
+      <summary>コレクション セットの名前を取得します。値の設定も可能です。</summary>
+      <returns>コレクション セット名を表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.Parent">
+      <summary>このコレクション セットが属している親ストアを取得します。値の設定も可能です。</summary>
+      <returns>コレクション セットの親ストアを識別する <see cref="T:CollectorConfigStore" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.ProxyName">
+      <summary>コレクション セットが実行される SQL Server エージェントのプロキシ アカウントの名前を取得します。値の設定も可能です。</summary>
+      <returns>プロキシ アカウントの名前を表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Rename(System.String)">
+      <summary>コレクション セットの名前を変更します。</summary>
+      <param name="newName">コレクション セットの新しい名前を表す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.RunOnce">
+      <summary>1 回だけ実行されるコレクション セットを指定します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.ScheduleName">
+      <summary>コレクション セットに関連付けられている SQL Server エージェントのスケジュールの名前を取得します。値の設定も可能です。</summary>
+      <returns>スケジュールの名前を表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.ScriptAlter">
+      <summary>このメソッドは、内部でのみ使用されます。</summary>
+      <returns>ISfcScript オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Start">
+      <summary>コレクション セットを開始します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.State">
+      <summary>コレクション セットの状態を取得します。</summary>
+      <returns>コレクション セットの現在の状態 (実行中または停止) を返します。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Stop">
+      <summary>コレクション セットを停止します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.TargetName">
+      <summary>コレクション セットのデータの収集対象の名前を取得します。値の設定も可能です。</summary>
+      <returns>対象名を表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.UId">
+      <summary>コレクション セットのグローバルな一意の ID を取得します。値の設定も可能です。</summary>
+      <returns>コレクション セットの GUID を表す <see cref="T:System.Guid" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Upload">
+      <summary>コレクション セットをオンデマンドでアップロードします。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectionSet.CollectionModes">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSet.CollectionModes" /> クラスは、コレクション セットのコレクション モードを列挙します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Collector.CollectionSet.CollectionModes.Cached">
+      <summary>キャッシュ モードでは、データの収集とアップロードは別々のスケジュールに従います。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Collector.CollectionSet.CollectionModes.NonCached">
+      <summary>非キャッシュ モードでは、データの収集とアップロードは同じスケジュールに従います。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectionSet.ExecutionStatus">
+      <summary>コレクション セットを列挙して現在の実行ステータスを取得します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Collector.CollectionSet.ExecutionStatus.Failed">
+      <summary>コレクション セットが失敗したことを示します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Collector.CollectionSet.ExecutionStatus.Finished">
+      <summary>コレクション セットで収集とアップロードのタスクが完了したことを示します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Collector.CollectionSet.ExecutionStatus.Running">
+      <summary>コレクション セットが実行中であることを示します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Collector.CollectionSet.ExecutionStatus.Warning">
+      <summary>エラーが発生し、警告が生成されたことを示します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectionSet.Key">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSet.Key" /> クラスは SfcAbstractKey から継承され、識別キーの操作に使用されます。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.#ctor(Microsoft.SqlServer.Management.Collector.CollectionSet.Key)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSet.Key" /> オブジェクトのインスタンスを作成します。</summary>
+      <param name="other">
+        <see cref="T:Key" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.#ctor(System.String)">
+      <summary>キー名を指定してキーのインスタンスを作成します。</summary>
+      <param name="name">キー名を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.Equals(Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey)">
+      <summary>ブール演算に使用される <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.Equals" /> クラスのインスタンスをインスタンス化します。</summary>
+      <returns>キーを示す <see cref="T:Key" /> オブジェクトです。</returns>
+      <param name="key">
+        <see cref="T:Key" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.Equals(System.Object)">
+      <summary>パラメーターとして渡されるオブジェクトがキーかどうかを確認するブール演算を実行します。</summary>
+      <returns>オブジェクトがキーの場合は TRUE を返す <see cref="T:System.Boolean" /> 値です。</returns>
+      <param name="obj">
+        <see cref="T:System.Object" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.Equals(System.Object,System.Object)">
+      <summary>パラメーターとして渡される 2 つのオブジェクトのブール値の比較を実行します。</summary>
+      <returns>両方のオブジェクトが NULL ではなく、かつ同じである場合に TRUE を返す <see cref="T:System.Boolean" /> 値です。</returns>
+      <param name="obj1">
+        <see cref="T:System.Object" /> です。</param>
+      <param name="obj2">
+        <see cref="T:System.Object" /> です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.GetHashCode">
+      <summary>キーのハッシュ コードを取得します。</summary>
+      <returns>ハッシュ コードを示す <see cref="T:System.Int" /> です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.GetUrnFragment">
+      <summary>urn フラグメントを取得します。</summary>
+      <returns>urn フラグメントを表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.name">
+      <summary>キーの Name プロパティを構成します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.Name">
+      <summary>キー名を取得します。値の設定も可能です。</summary>
+      <returns>キー名を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.op_Equality(Microsoft.SqlServer.Management.Collector.CollectionSet.Key,Microsoft.SqlServer.Management.Collector.CollectionSet.Key)">
+      <summary>キーの左辺と右辺のブール式の等価比較を実行します。</summary>
+      <returns>次の場合に TRUE を返す <see cref="T:System.Boolean" /> 値です。どちらの辺も NULL ではなく、かつ lhs がキーであり、かつ rhs がキーであり、かつキーが等価である場合</returns>
+      <param name="lhs">キーの左辺を含む <see cref="T:Key" /> オブジェクトです。</param>
+      <param name="rhs">キーの右辺を含む <see cref="T:Key" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.op_Equality(Microsoft.SqlServer.Management.Collector.CollectionSet.Key,System.Object)">
+      <summary>パラメーターとして送信されたオブジェクトと、キーの左辺のブール式の等価比較を実行します。</summary>
+      <returns>次の場合に TRUE を返す <see cref="T:System.Boolean" /> 値です。両辺が NULL の場合どちらの辺も NULL ではなく、かつ lhs がキーであり、かつキーが等価である場合</returns>
+      <param name="lhs">キーの左辺を含む <see cref="T:Key" /> オブジェクトです。</param>
+      <param name="obj">比較対象の <see cref="T:Key" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.op_Equality(System.Object,Microsoft.SqlServer.Management.Collector.CollectionSet.Key)">
+      <summary>パラメーターとして送信されたオブジェクトと、キーの右辺のブール式の等価比較を実行します。</summary>
+      <returns>次の場合に TRUE を返す <see cref="T:System.Boolean" /> 値です。両辺が NULL の場合どちらの辺も NULL ではなく、かつ rhs がキーであり、かつキーが等価である場合</returns>
+      <param name="obj">比較対象の <see cref="T:Key" /> オブジェクトです。</param>
+      <param name="rhs">キーの右辺を含む <see cref="T:Key" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.op_Inequality(Microsoft.SqlServer.Management.Collector.CollectionSet.Key,Microsoft.SqlServer.Management.Collector.CollectionSet.Key)">
+      <summary>キーの左辺と右辺のブール式の不等価比較を実行します。</summary>
+      <returns>次の場合に TRUE を返す <see cref="T:System.Boolean" /> 値です。一方の辺が NULL である、または lhs がキーではない、または rhs がキーではない、かつキーが不等価である場合</returns>
+      <param name="lhs">キーの左辺を含む <see cref="T:Key" /> オブジェクトです。</param>
+      <param name="rhs">キーの右辺を含む <see cref="T:Key" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.op_Inequality(Microsoft.SqlServer.Management.Collector.CollectionSet.Key,System.Object)">
+      <summary>パラメーターとして送信されたオブジェクトと、キーの左辺のブール式の不等価比較を実行します。</summary>
+      <returns>次の場合に TRUE を返す <see cref="T:System.Boolean" /> 値です。どちらの辺も NULL ではない場合両辺が NULL で、かつ lhs がキーではなく、かつキーが等価ではない場合</returns>
+      <param name="lhs">キーの左辺を含む <see cref="T:Key" /> オブジェクトです。</param>
+      <param name="obj">比較対象の <see cref="T:Key" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.op_Inequality(System.Object,Microsoft.SqlServer.Management.Collector.CollectionSet.Key)">
+      <summary>パラメーターとして送信されたオブジェクトと、キーの右辺のブール式の不等価比較を実行します。</summary>
+      <returns>次の場合に TRUE を返す <see cref="T:System.Boolean" /> 値です。どちらの辺も NULL ではない場合両辺が NULL で、かつ lhs がキーではなく、かつキーが等価ではない場合</returns>
+      <param name="obj">比較対象の <see cref="T:Key" /> オブジェクトです。</param>
+      <param name="rhs">キーの右辺を含む <see cref="T:Key" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSet.Key.ToString">
+      <summary>既定の比較を目的としてキーの文字列表記を取得します。</summary>
+      <returns>キーの文字列表記を表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectionSet.RuntimeExecutionMode">
+      <summary>RuntimeExecutionMode 列挙には、ランタイム実行モードを指定するために使用される値が含まれます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Collector.CollectionSet.RuntimeExecutionMode.Collection">
+      <summary> ランタイム実行モードはコレクションです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Collector.CollectionSet.RuntimeExecutionMode.Upload">
+      <summary> ランタイム実行モードはアップロードです。 </summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectionSetCollection">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSetCollection" /> は、コレクション セットの SFC コレクション クラスです。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSetCollection.#ctor(Microsoft.SqlServer.Management.Collector.CollectorConfigStore)">
+      <summary>コレクション セットの親として指定されている <see cref="T:CollectorConfigStore" /> オブジェクトに基づいて新しいコレクション セットをインスタンス化します。</summary>
+      <param name="parent">コレクション セットの親オブジェクトです。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectionSetCollection.Item(System.String)">
+      <summary>指定された名前に基づいてコレクション セットを取得します。</summary>
+      <returns>コレクション セットを表す <see cref="T:CollectionSetCollection" /> オブジェクトです。</returns>
+      <param name="name">コレクション セット名を表す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectionSetExtender">
+      <summary> 新しいプロパティを <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSet" /> に追加できるようにします。また、拡張プロパティと元のプロパティの間の依存関係の確立にも役立ちます。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSetExtender.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSetExtender" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSetExtender.#ctor(Microsoft.SqlServer.Management.Collector.CollectionSet)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSetExtender" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="collectionSet"> このインスタンスが拡張する <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSet" /> です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectionSetExtender.#ctor(Microsoft.SqlServer.Management.Collector.CollectorConfigStore,System.String)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSetExtender" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="collectorConfigStore"> このインスタンスに関連付ける <see cref="T:Microsoft.SqlServer.Management.Collector.CollectorConfigStore" /> です。</param>
+      <param name="name"> このインスタンスが拡張する <see cref="T:Microsoft.SqlServer.Management.Collector.CollectionSet" /> の名前です。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectorConfigStore">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Collector.CollectorConfigStore" /> クラスは、データ コレクターの構成ストアを実装します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Collector.CollectorConfigStore" /> オブジェクトを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.#ctor(Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Collector.CollectorConfigStore" /> オブジェクトを初期化します。</summary>
+      <param name="connection">接続情報を含む <see cref="T:SqlStoreConnection" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Alter">
+      <summary>構成ストアの構成設定を変更します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.CacheDirectory">
+      <summary>キャッシュ ディレクトリのパスとフォルダー名を取得します。値の設定も可能です。</summary>
+      <returns>ディレクトリ パスとフォルダー名を含む <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.CacheWindow">
+      <summary>収集したデータのアップロード試行回数を取得します。値の設定も可能です。</summary>
+      <returns>アップロード試行回数を表す <see cref="T:System.Int" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.CollectionSets">
+      <summary>構成ストア内にあるコレクション セットを取得します。</summary>
+      <returns>コレクション セットを含む <see cref="T:CollectionSetObject" /> です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.ConfigureTransactionPerformanceCollectors(System.Data.SqlClient.SqlConnection)"></member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.DisableCollector">
+      <summary>データ コレクターを無効にします。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.EnableCollector">
+      <summary>データ コレクターを有効にします。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Enabled">
+      <summary>データ コレクターが有効かどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得します。</summary>
+      <returns>データ コレクターが有効かどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、データ コレクターは有効です。False の場合、データ コレクターは無効です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.EnumTypes">
+      <summary>構成ストアのコレクター型の名前を列挙します。</summary>
+      <returns>インストールされているコレクター型の名前を含む <see cref="T:StringCollection" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.IdentityKey">
+      <summary>構成ストアの ID キーを取得します。</summary>
+      <returns>Key オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.MDWDatabase">
+      <summary>収集したデータを保持するデータベースの名前を取得します。値の設定も可能です。</summary>
+      <returns>データベース名を表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.MDWInstance">
+      <summary>管理データ ウェアハウスが存在するインスタンスを取得します。値の設定も可能です。</summary>
+      <returns>インスタンス名を表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcAlterable#ScriptAlter">
+      <summary>このメソッドは、内部でのみ使用されます。</summary>
+      <returns>ISfcScript オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomain#GetExecutionEngine">
+      <summary>このメソッドは、内部でのみ使用されます。</summary>
+      <returns>ISfcExecutionEngine オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomain#GetKey(Microsoft.SqlServer.Management.Sdk.Sfc.IUrnFragment)">
+      <summary>このメソッドは、内部でのみ使用されます。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey" /> オブジェクトです。</returns>
+      <param name="urnFragment">
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.IUrnFragment" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomain#GetType(System.String)">
+      <summary>このメソッドは、内部でのみ使用されます。</summary>
+      <returns>コレクター型を表す <see cref="T:System.Type" /> です。</returns>
+      <param name="typeName">型の名前を表す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomain#GetTypeMetadata(System.String)">
+      <summary>このメソッドは、内部でのみ使用されます。</summary>
+      <returns>コレクター型のメタデータを指定する SfcTypeMetadata オブジェクトです。</returns>
+      <param name="typeName">コレクター型の名前を表す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomain#UseSfcStateManagement">
+      <summary>このプロパティは、内部でのみ使用されます。</summary>
+      <returns>
+        <see cref="T:System.Boolean" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomainLite#DomainInstanceName">
+      <summary>このプロパティは、内部でのみ使用されます。</summary>
+      <returns>インスタンス名を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomainLite#DomainName">
+      <summary>このプロパティは、内部でのみ使用されます。</summary>
+      <returns>ドメイン名を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomainLite#GetLogicalVersion">
+      <summary>このプロパティは、内部でのみ使用されます。</summary>
+      <returns>
+        <see cref="T:System.Int32" /> 値を返します。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcHasConnection#ConnectionContext">
+      <summary>このプロパティは、内部でのみ使用されます。</summary>
+      <returns>SfcConnectionContext オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcHasConnection#GetConnection">
+      <summary>バックアップ用ストレージへのサーバー接続を取得します。このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ISfcConnection" /> が返されます。サーバー接続を保持する ISfcConnection オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcHasConnection#GetConnection(Microsoft.SqlServer.Management.Sdk.Sfc.SfcObjectQueryMode)">
+      <summary>指定したクエリ処理モードをサポートするバックアップ用ストレージへのサーバー接続を取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ISfcConnection" /> が返されます。サーバー接続を保持する ISfcConnection オブジェクトです。</returns>
+      <param name="activeQueriesMode">クエリ処理モードを指定する SfcObjectQueryMode 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcHasConnection#SetConnection(Microsoft.SqlServer.Management.Common.ISfcConnection)">
+      <summary>ドメイン ルートのアクティブな接続を設定します。このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。</summary>
+      <param name="connection">使用する接続を表す ISfcConnection オブジェクトです。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key" /> クラスは DomainRootKey から継承され、識別キーの操作に使用されます。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key" /> クラスのインスタンスをインスタンス化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.Equals(Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey)">
+      <summary>ブール演算に使用される <see cref="T:" /><see cref="Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.Equals" /> クラスのインスタンスをインスタンス化します。</summary>
+      <returns>キーを示す <see cref="T:Key" /> オブジェクトです。</returns>
+      <param name="key">
+        <see cref="T:Key" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.Equals(System.Object)">
+      <summary>パラメーターとして渡されるオブジェクトがキーかどうかを確認するブール演算を実行します。</summary>
+      <returns>オブジェクトがキーの場合は TRUE を返す <see cref="T:System.Boolean" /> 値です。</returns>
+      <param name="obj">
+        <see cref="T:System.Object" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.Equals(System.Object,System.Object)">
+      <summary>パラメーターとして渡される 2 つのオブジェクトのブール値の比較を実行します。</summary>
+      <returns>両方のオブジェクトが NULL ではなく、かつ同じである場合に TRUE を返す <see cref="T:System.Boolean" /> 値です。</returns>
+      <param name="obj1">
+        <see cref="T:System.Object" /> です。</param>
+      <param name="obj2">
+        <see cref="T:System.Object" /> です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.GetHashCode">
+      <summary>キーのハッシュ コードを取得します。</summary>
+      <returns>ハッシュ コードを示す <see cref="T:System.Int" /> です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.GetUrnFragment">
+      <summary>urn フラグメントを取得します。</summary>
+      <returns>urn フラグメントを表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.name">
+      <summary>キーの Name プロパティを構成します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.Name">
+      <summary>キー名を取得します。値の設定も可能です。</summary>
+      <returns>キー名を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.op_Equality(Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key,Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key)">
+      <summary>キーの左辺と右辺のブール式の等価比較を実行します。</summary>
+      <returns>次の場合に TRUE を返す <see cref="T:System.Boolean" /> 値です。どちらの辺も NULL ではなく、かつ lhs がキーであり、かつ rhs がキーであり、かつキーが等価である場合</returns>
+      <param name="lhs">キーの左辺を含む <see cref="T:Key" /> オブジェクトです。</param>
+      <param name="rhs">キーの右辺を含む <see cref="T:Key" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.op_Equality(Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key,System.Object)">
+      <summary>パラメーターとして送信されたオブジェクトと、キーの左辺のブール式の等価比較を実行します。</summary>
+      <returns>次の場合に TRUE を返す <see cref="T:System.Boolean" /> 値です。両辺が NULL の場合どちらの辺も NULL ではなく、かつ lhs がキーであり、かつキーが等価である場合</returns>
+      <param name="lhs">キーの左辺を含む <see cref="T:Key" /> オブジェクトです。</param>
+      <param name="obj">比較対象の <see cref="T:Key" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.op_Equality(System.Object,Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key)">
+      <summary>パラメーターとして送信されたオブジェクトと、キーの右辺のブール式の等価比較を実行します。</summary>
+      <returns>次の場合に TRUE を返す <see cref="T:System.Boolean" /> 値です。両辺が NULL の場合どちらの辺も NULL ではなく、かつ rhs がキーであり、かつキーが等価である場合</returns>
+      <param name="obj">比較対象の <see cref="T:Key" /> オブジェクトです。</param>
+      <param name="rhs">キーの右辺を含む <see cref="T:Key" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.op_Inequality(Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key,Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key)">
+      <summary>キーの左辺と右辺のブール式の不等価比較を実行します。</summary>
+      <returns>次の場合に TRUE を返す <see cref="T:System.Boolean" /> 値です。一方の辺が NULL である、または lhs がキーではない、または rhs がキーではない、かつキーが不等価である場合</returns>
+      <param name="lhs">キーの左辺を含む <see cref="T:Key" /> オブジェクトです。</param>
+      <param name="rhs">キーの右辺を含む <see cref="T:Key" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.op_Inequality(Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key,System.Object)">
+      <summary>パラメーターとして送信されたオブジェクトと、キーの左辺のブール式の不等価比較を実行します。</summary>
+      <returns>次の場合に TRUE を返す <see cref="T:System.Boolean" /> 値です。どちらの辺も NULL ではない場合両辺が NULL で、かつ lhs がキーではなく、かつキーが等価ではない場合</returns>
+      <param name="lhs">キーの左辺を含む <see cref="T:Key" /> オブジェクトです。</param>
+      <param name="obj">比較対象の <see cref="T:Key" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key.op_Inequality(System.Object,Microsoft.SqlServer.Management.Collector.CollectorConfigStore.Key)">
+      <summary>パラメーターとして送信されたオブジェクトと、キーの右辺のブール式の不等価比較を実行します。</summary>
+      <returns>次の場合に TRUE を返す <see cref="T:System.Boolean" /> 値です。どちらの辺も NULL ではない場合両辺が NULL で、かつ lhs がキーではなく、かつキーが等価ではない場合</returns>
+      <param name="obj">比較対象の <see cref="T:Key" /> オブジェクトです。</param>
+      <param name="rhs">キーの右辺を含む <see cref="T:Key" /> オブジェクトです。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Collector.CollectorException">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Collector.CollectorException" /> クラスは、すべてのデータ コレクター例外の基本クラスです。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorException.#ctor">
+      <summary>例外のインスタンスを作成します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+        <paramref name="info" /> と <paramref name="context" /> をパラメーターとして渡して <see cref="T:Microsoft.SqlServer.Management.Collector.CollectorException" /> クラスのインスタンスをインスタンス化します。</summary>
+      <param name="info">
+        <see cref="T:System.Runtime.Serialization.SerializationInfo" />
+      </param>
+      <param name="context">
+        <see cref="T:System.Runtime.Serialization.StreamingContext" />
+      </param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorException.#ctor(System.String)">
+      <summary>エラー メッセージです。</summary>
+      <param name="message">エラー メッセージを表す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorException.#ctor(System.String,System.Exception)">
+      <summary>コレクション オブジェクトを作成し、エラー メッセージおよびエラーの原因となっている例外を渡します。</summary>
+      <param name="message">エラー メッセージを表す <see cref="T:System.String" /> 値です。</param>
+      <param name="innerException">スローしている例外を表す <see cref="T:System.Exception" /> です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorException.HelpLink">
+      <summary>例外に基づいて Microsoft SQL Server のヘルプの Web サイトへのリンクを取得します。</summary>
+      <returns>Microsoft SQL Server のヘルプの Web サイトの URL を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Collector.CollectorException.ProdVer">
+      <summary>製品のバージョンを取得します。</summary>
+      <returns>製品のバージョン情報を含む <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Collector.CollectorException.SetHelpContext(System.String)">
+      <summary>渡されたリソース文字列に基づいてヘルプ コンテキストを設定します。</summary>
+      <returns>データ コレクター例外を含んでいる <see cref="T:Microsoft.SqlServer.Management.Collector.CollectorException" /> 型のオブジェクトです。</returns>
+      <param name="resource">例外をスローしたリソースの名前を表す <see cref="T:System:String" /> 値です。</param>
+    </member>
+  </members>
+</doc>

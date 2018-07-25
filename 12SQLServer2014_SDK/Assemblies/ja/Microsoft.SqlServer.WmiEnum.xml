@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+	<assembly>
+		<name>Microsoft.SqlServer.WmiEnum</name>
+	</assembly>
+	<members>
+		<member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedServiceType">
+			<summary><see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedServiceType"></see> 列挙には、Windows Management Instrumentation (WMI) で管理できるサービスの種類を指定するために使用される値が含まれます。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ManagedServiceType.AnalysisServer">
+			<summary>Analysis Services。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ManagedServiceType.NotificationServer">
+			<summary>SQL Server 通知サーバー。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ManagedServiceType.ReportServer">
+			<summary>レポート サーバー Windows サービス。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ManagedServiceType.Search">
+			<summary>Microsoft Search サービス。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ManagedServiceType.SqlAgent">
+			<summary>SQL Server エージェント サービス。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ManagedServiceType.SqlBrowser">
+			<summary>SQL Server Browser サービス。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ManagedServiceType.SqlServer">
+			<summary>SQL Server サービス。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ManagedServiceType.SqlServerIntegrationService">
+			<summary>SQL Server Integration Services。</summary>
+		</member>
+		<member name="T:Microsoft.SqlServer.Management.Smo.Wmi.PropertyType">
+			<summary><see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.PropertyType"></see> 列挙には、Windows Management Instrumentation (WMI) プロパティ オブジェクトのプロパティのデータ型を指定するために使用される値が含まれます。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.PropertyType.FlagValue">
+			<summary>プロパティはフラグ値です。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.PropertyType.NumericValue">
+			<summary>プロパティは数値です。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.PropertyType.StringValue">
+			<summary>プロパティは文字列値です。</summary>
+		</member>
+		<member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceErrorControl">
+			<summary><see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceErrorControl"></see> 列挙には、SQL Server サービスがスタートアップ時に開始できなかった場合のエラーの重大度を指定するために使用される値が含まれます。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceErrorControl.Critical">
+			<summary>エラーは重大です。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceErrorControl.Ignore">
+			<summary>エラーは無視されます。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceErrorControl.Normal">
+			<summary>エラーの重大度は標準です。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceErrorControl.Severe">
+			<summary>エラーは深刻です。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceErrorControl.Unknown">
+			<summary>エラーの状態は不明です。</summary>
+		</member>
+		<member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceStartMode">
+			<summary><see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceStartMode"></see> 列挙には、SQL Server サービスの開始に使用するメソッドを指定するために使用される値が含まれます。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceStartMode.Auto">
+			<summary>SQL Server サービスは自動的に開始されます。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceStartMode.Boot">
+			<summary>SQL Server サービスは、オペレーティング システムの起動時に開始されます。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceStartMode.Disabled">
+			<summary>SQL Server サービスは無効のため、開始できません。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceStartMode.Manual">
+			<summary>SQL Server サービスは手動で開始されます。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceStartMode.System">
+			<summary>SQL Server サービスはシステムによって開始されます。</summary>
+		</member>
+		<member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceState">
+			<summary><see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceState"></see> 列挙には、SQL Server サービスの状態を指定するために使用される値が含まれます。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceState.ContinuePending">
+			<summary>SQL Server サービスは継続を待機しています。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceState.Paused">
+			<summary>SQL Server サービスは一時停止しています。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceState.PausePending">
+			<summary>SQL Server サービスは一時停止を待機しています。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceState.Running">
+			<summary>SQL Server サービスは実行されています。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceState.StartPending">
+			<summary>SQL Server サービスは開始を待機しています。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceState.Stopped">
+			<summary>SQL Server サービスは停止しています。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceState.StopPending">
+			<summary>SQL Server サービスは停止を待機しています。</summary>
+		</member>
+		<member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ServiceState.Unknown">
+			<summary>SQL Server サービスの状態は不明です。</summary>
+		</member>
+	</members>
+</doc>

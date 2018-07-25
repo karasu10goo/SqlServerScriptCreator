@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.ExceptionMessageBox</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.SqlServer.MessageBox.CopyToClipboardEventArgs">
+      <summary>
+        <see cref="E:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.OnCopyToClipboard" /> イベントが発生した場合に情報を返します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.MessageBox.CopyToClipboardEventArgs.#ctor">
+      <summary>既定のプロパティで <see cref="T:Microsoft.SqlServer.MessageBox.CopyToClipboardEventArgs" /> の新しいインスタンスを作成します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.MessageBox.CopyToClipboardEventArgs.#ctor(System.String)">
+      <summary>指定したコピー済みテキストを使用して <see cref="T:Microsoft.SqlServer.MessageBox.CopyToClipboardEventArgs" /> の新しいインスタンスを作成します。</summary>
+      <param name="clipboardText">コピーされるエラー メッセージ情報です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.CopyToClipboardEventArgs.ClipboardText">
+      <summary>コピーされるエラー メッセージ情報を取得します。</summary>
+      <returns>
+        <see cref="T:System.String" /> の値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.CopyToClipboardEventArgs.EventHandled">
+      <summary>
+        <see cref="E:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.OnCopyToClipboard" /> イベントが処理されるかどうかを取得します。値の設定も可能です。</summary>
+      <returns>
+        <see cref="T:System.Boolean" /> 値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.MessageBox.CopyToClipboardEventHandler">
+      <summary>エラー情報がクリップボードにコピーされる際に発生する <see cref="E:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.OnCopyToClipboard" /> イベントを処理するデリゲートです。</summary>
+      <param name="sender">状態イベントのソースです。</param>
+      <param name="e">イベント データを含む <see cref="T:Microsoft.SqlServer.MessageBox.CopyToClipboardEventArgs" /> オブジェクトです。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBox">
+      <summary>テキスト、ボタン、および記号によってカスタマイズ可能なメッセージ ボックスを表示し、Microsoft Windows .NET Framework ベース アプリケーションでの顧客の作業能力を向上させます。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.#ctor">
+      <summary>既定のプロパティで <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBox" /> のインスタンスを作成します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.#ctor(System.Exception)">
+      <summary>指定した <see cref="T:System.Exception" /> の情報を使用して、<see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBox" /> のインスタンスを作成します。</summary>
+      <param name="exception">例外メッセージ ボックスに表示される最上位レベル テキスト、内部例外テキスト、キャプション、データ、ヘルプ リンク、およびオプションの追加情報が含まれる <see cref="T:System.Exception" /> です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.#ctor(System.Exception,Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons)">
+      <summary>指定した <see cref="T:System.Exception" /> の情報を使用し、メッセージ ボックスに表示するボタンを指定して、<see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBox" /> のインスタンスを作成します。</summary>
+      <param name="exception">例外メッセージ ボックスに表示される最上位レベル テキスト、内部例外テキスト、キャプション、データ、ヘルプ リンク、およびオプションの追加情報が含まれる <see cref="T:System.Exception" /> です。</param>
+      <param name="buttons">メッセージ ボックスに表示するボタンを指定する <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons" /> 列挙です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.#ctor(System.Exception,Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons,Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol)">
+      <summary>指定した <see cref="T:System.Exception" /> の情報を使用し、メッセージ ボックスに表示するボタンと記号を指定して、<see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBox" /> のインスタンスを作成します。</summary>
+      <param name="exception">例外メッセージ ボックスに表示される最上位レベル テキスト、内部例外テキスト、キャプション、データ、ヘルプ リンク、およびオプションの追加情報が含まれる <see cref="T:System.Exception" /> です。</param>
+      <param name="buttons">例外メッセージ ボックスに表示するボタンを指定する <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons" /> 列挙です。</param>
+      <param name="symbol">例外メッセージ ボックスに表示する記号を指定する <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol" /> 列挙です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.#ctor(System.Exception,Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons,Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol,Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton)">
+      <summary>指定した <see cref="T:System.Exception" /> の情報を使用し、例外メッセージ ボックスに表示するボタン、記号、および既定のボタンを指定して、<see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBox" /> のインスタンスを作成します。.</summary>
+      <param name="exception">例外メッセージ ボックスに表示される最上位レベル テキスト、内部例外テキスト、キャプション、データ、ヘルプ リンク、およびオプションの追加情報が含まれる <see cref="T:System.Exception" /> です。</param>
+      <param name="buttons">例外メッセージ ボックスに表示するボタンを指定する <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons" /> 列挙です。</param>
+      <param name="symbol">例外メッセージ ボックスに表示する記号を指定する <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol" /> 列挙です。</param>
+      <param name="defaultButton">例外メッセージ ボックスの既定のボタンを指定する <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton" /> 列挙です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.#ctor(System.Exception,Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons,Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol,Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton,Microsoft.SqlServer.MessageBox.ExceptionMessageBoxOptions)">
+      <summary>指定した <see cref="T:System.Exception" /> の情報を使用し、例外メッセージ ボックスに表示するボタン、記号、既定のボタン、および他のプロパティを指定して、<see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBox" /> のインスタンスを作成します。</summary>
+      <param name="exception">例外メッセージ ボックスに表示される最上位レベル テキスト、内部例外テキスト、キャプション、データ、ヘルプ リンク、およびオプションの追加情報が含まれる <see cref="T:System.Exception" /> です。</param>
+      <param name="buttons">例外メッセージ ボックスに表示するボタンを指定する <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons" /> 列挙です。</param>
+      <param name="symbol">例外メッセージ ボックスに表示する記号を指定する <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol" /> 列挙です。</param>
+      <param name="defaultButton">例外メッセージ ボックスの既定のボタンを指定する <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton" /> 列挙です。</param>
+      <param name="options">例外メッセージ ボックスの他の動作を制御する <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxOptions" /> 列挙です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.#ctor(System.String)">
+      <summary>指定した最上位レベルのエラー メッセージ テキストを使用して、<see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBox" /> のインスタンスを作成します。</summary>
+      <param name="text">最上位レベル メッセージのエラー テキストです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.#ctor(System.String,System.String)">
+      <summary>例外メッセージ ボックスに表示する最上位レベルのエラー メッセージ テキストとダイアログ ボックス キャプションを指定して、<see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBox" /> のインスタンスを作成します。</summary>
+      <param name="text">最上位レベル メッセージのエラー テキストです。</param>
+      <param name="caption">例外メッセージ ボックスのキャプションです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.#ctor(System.String,System.String,Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons)">
+      <summary>例外メッセージ ボックスに表示する最上位レベルのエラー メッセージ テキストとダイアログ ボックス キャプションを指定して、<see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBox" /> のインスタンスを作成します。このメソッドは、例外メッセージ ボックスに表示するボタンも指定します。</summary>
+      <param name="text">最上位レベル メッセージのエラー テキストです。</param>
+      <param name="caption">例外メッセージ ボックスのキャプションです。</param>
+      <param name="buttons">例外メッセージ ボックスに表示するボタンを指定する <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons" /> 列挙です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.#ctor(System.String,System.String,Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons,Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol)">
+      <summary>例外メッセージ ボックスに表示する最上位レベルのエラー メッセージ テキストとダイアログ ボックス キャプションを指定して、<see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBox" /> のインスタンスを作成します。このメソッドは、例外メッセージ ボックスに表示するボタンおよび記号も指定します。</summary>
+      <param name="text">最上位レベル メッセージのエラー テキストです。</param>
+      <param name="caption">例外メッセージ ボックスのダイアログ ボックス キャプションです。</param>
+      <param name="buttons">例外メッセージ ボックスに表示するボタンを指定する <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons" /> 列挙です。</param>
+      <param name="symbol">例外メッセージ ボックスに表示する記号を指定する <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol" /> 列挙です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.#ctor(System.String,System.String,Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons,Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol,Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton)">
+      <summary>メッセージ ボックスに表示する最上位レベルのエラー メッセージ テキストとダイアログ ボックス キャプションを指定して、<see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBox" /> のインスタンスを作成します。このメソッドは、例外メッセージ ボックスに表示するボタン、記号、および既定のボタンも指定します。</summary>
+      <param name="text">最上位レベル メッセージのエラー テキストです。</param>
+      <param name="caption">例外メッセージ ボックスのダイアログ ボックス キャプションです。</param>
+      <param name="buttons">例外メッセージ ボックスに表示するボタンを指定する <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons" /> 列挙です。</param>
+      <param name="symbol">例外メッセージ ボックスに表示する記号を指定する <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol" /> 列挙です。</param>
+      <param name="defaultButton">例外メッセージ ボックスの既定のボタンを指定する <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton" /> 列挙です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.#ctor(System.String,System.String,Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons,Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol,Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton,Microsoft.SqlServer.MessageBox.ExceptionMessageBoxOptions)">
+      <summary>メッセージ ボックスに表示する最上位レベルのエラー メッセージ テキストとダイアログ ボックス キャプションを指定して、<see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBox" /> のインスタンスを作成します。このメソッドは、例外メッセージ ボックスに表示するボタン、記号、既定のボタン、およびダイアログ オプションも指定します。</summary>
+      <param name="text">最上位レベル メッセージのエラー テキストです。</param>
+      <param name="caption">例外メッセージ ボックスのダイアログ ボックス キャプションです。</param>
+      <param name="buttons">例外メッセージ ボックスに表示する記号を指定する <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol" /> 列挙です。</param>
+      <param name="symbol">例外メッセージ ボックスに表示する記号を指定する <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol" /> 列挙です。</param>
+      <param name="defaultButton">例外メッセージ ボックスの既定のボタンを指定する <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton" /> 列挙です。</param>
+      <param name="options">例外メッセージ ボックスの他の動作を制御する <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxOptions" /> 列挙です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.AbortButtonText">
+      <summary>[中止] ボタンの既定のテキストを取得します。</summary>
+      <returns>
+        <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Beep">
+      <summary>メッセージが表示されるときに、サウンドを再生するかどうかを指定します。</summary>
+      <returns>
+        <see cref="T:System.Boolean" /> の値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons">
+      <summary>メッセージ ボックスに表示するボタンを取得します。値の設定も可能です。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CancelButtonText">
+      <summary>[キャンセル] ボタンの既定のテキストを取得します。</summary>
+      <returns>
+        <see cref="T:System.String" /> の値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Caption">
+      <summary>例外メッセージ ボックスのダイアログ ボックス キャプションを取得します。値の設定も可能です。</summary>
+      <returns>
+        <see cref="T:System.String" /> の値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckBoxRegistryKey">
+      <summary>開いている <see cref="T:Microsoft.Win32.RegistryKey" /> を設定して、<see cref="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckbox" /> が true の場合に例外メッセージ ボックスに表示されるチェック ボックスを制御します。</summary>
+      <returns>
+        <see cref="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckbox" /> が true の場合に例外メッセージ ボックスに表示されるチェック ボックスを制御する <see cref="T:Microsoft.Win32.RegistryKey" /> です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckBoxRegistryMeansDoNotShowDialog">
+      <summary>
+        <see cref="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckBoxRegistryKey" /> および <see cref="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckBoxRegistryValue" /> により指定されたレジストリ値の内容が、このメッセージを表示しないというユーザーの以前の決定を示しているかどうかを判別します。</summary>
+      <returns>
+        <see cref="T:System.Boolean" /> の値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckBoxRegistryValue">
+      <summary>
+        <see cref="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckbox" /> が true の場合に例外メッセージ ボックスのチェック ボックスを制御するレジストリ値名を取得します。値の設定も可能です。</summary>
+      <returns>
+        <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckBoxText">
+      <summary>
+        <see cref="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckbox" /> が true の場合に例外メッセージ ボックスのチェック ボックスに表示するテキストを取得します。値の設定も可能です。</summary>
+      <returns>
+        <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CustomDialogResult">
+      <summary>クリックしたカスタム テキスト ダイアログ ボタンを取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult" /> の値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CustomSymbol">
+      <summary>例外メッセージ ボックスで記号として使用するカスタム ビットマップを取得します。値の設定も可能です。</summary>
+      <returns>
+        <see cref="T:System.Drawing.Bitmap" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Data">
+      <summary>最上位レベル メッセージに関連付けられたヘルプ リンクおよび詳細情報を格納する <see cref="T:System.Collections.IDictionary" /> インターフェイスを取得します。</summary>
+      <returns>
+        <see cref="T:System.Collections.IDictionary" /> インターフェイスです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.DefaultButton">
+      <summary>メッセージ ボックスの既定のボタンを取得します。値の設定も可能です。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.DefaultDialogResult">
+      <summary>特定のメッセージを再度表示しないようにユーザーに前回指示が行われた際に、<see cref="M:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show(System.Windows.Forms.IWin32Window)" /> メソッドによって返された値を取得します。値の設定も可能です。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.FailButtonText">
+      <summary>[失敗] ボタンの既定のテキストを取得します。</summary>
+      <returns>
+        <see cref="T:System.String" /> の値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Font">
+      <summary>メッセージ ボックスで使用するフォントを取得します。値の設定も可能です。</summary>
+      <returns>
+        <see cref="T:System.Drawing.Font" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.GetMessageText(System.Exception)">
+      <summary>例外メッセージ ボックスに例外が表示されたときにユーザーがクリップボードにコピー可能な文字列を返します。</summary>
+      <returns>メッセージの完全な内容が含まれる <see cref="T:System.String" /> です。</returns>
+      <param name="exception">
+        <see cref="T:System.Exception" /> オブジェクトです。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.HelpLink">
+      <summary>最上位レベル メッセージに関連付けられるヘルプ ファイルまたはヘルプ Web ページへのリンクを取得します。値の設定も可能です。</summary>
+      <returns>
+        <see cref="T:System.String" /> URL 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.IgnoreButtonText">
+      <summary>[無視] ボタンの既定のテキストを取得します。</summary>
+      <returns>
+        <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.InnerException">
+      <summary>下位レベル メッセージに関連付けられた <see cref="T:System.Exception" /> インスタンスを取得します。値の設定も可能です。</summary>
+      <returns>
+        <see cref="T:System.Exception" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.IsCheckBoxChecked">
+      <summary>
+        <see cref="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckbox" /> が true の場合にチェック ボックスをオンにするかどうかを指定します。</summary>
+      <returns>
+        <see cref="T:System.Boolean" /> の値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Message">
+      <summary>表示するメッセージが含まれる <see cref="T:System.Exception" /> を取得します。値の設定も可能です。</summary>
+      <returns>
+        <see cref="T:System.Exception" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.MessageLevelDefault">
+      <summary>メッセージ ボックスに表示するメッセージ レベルの数を取得します。値の設定も可能です。</summary>
+      <returns>
+        <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.NoButtonText">
+      <summary>[いいえ] ボタンの既定のテキストを取得します。</summary>
+      <returns>
+        <see cref="T:System.String" /> の値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.OKButtonText">
+      <summary>[OK] ボタンの既定のテキストを取得します。</summary>
+      <returns>
+        <see cref="T:System.String" /> の値です。</returns>
+    </member>
+    <member name="E:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.OnCopyToClipboard">
+      <summary>例外メッセージ テキストがメッセージ ボックスからクリップボードにコピーされた場合に発生します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Options">
+      <summary>メッセージ ボックスのその他の表示オプションを取得します。値の設定も可能です。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxOptions" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.RetryButtonText">
+      <summary>[再試行] ボタンの既定のテキストを取得します。</summary>
+      <returns>
+        <see cref="T:System.String" /> の値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.SetButtonText(System.String)">
+      <summary>例外メッセージ ボックスにボタンが 1 つだけ表示される場合の、カスタム テキスト ボタンのテキストを設定します。</summary>
+      <param name="button1Text">最初のカスタム ボタンのテキストです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.SetButtonText(System.String,System.String)">
+      <summary>例外メッセージ ボックスにボタンが 2 つだけ表示される場合の、カスタム テキスト ボタンのテキストを設定します。</summary>
+      <param name="button1Text">最初のカスタム ボタンのテキストです。</param>
+      <param name="button2Text">2 番目のカスタム ボタンのテキストです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.SetButtonText(System.String,System.String,System.String)">
+      <summary>例外メッセージ ボックスにボタンが 3 つだけ表示される場合の、カスタム テキスト ボタンのテキストを設定します。</summary>
+      <param name="button1Text">最初のカスタム ボタンのテキストです。</param>
+      <param name="button2Text">2 番目のカスタム ボタンのテキストです。</param>
+      <param name="button3Text">3 番目のカスタム ボタンのテキストです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.SetButtonText(System.String,System.String,System.String,System.String)">
+      <summary>例外メッセージ ボックスにボタンが 4 つだけ表示される場合の、カスタム テキスト ボタンのテキストを設定します。</summary>
+      <param name="button1Text">最初のカスタム ボタンのテキストです。</param>
+      <param name="button2Text">2 番目のカスタム ボタンのテキストです。</param>
+      <param name="button3Text">3 番目のカスタム ボタンのテキストです。</param>
+      <param name="button4Text">4 番目のカスタム ボタンのテキストです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.SetButtonText(System.String,System.String,System.String,System.String,System.String)">
+      <summary>例外メッセージ ボックスにボタンが 5 つだけ表示される場合の、カスタム テキスト ボタンのテキストを設定します。</summary>
+      <param name="button1Text">最初のカスタム ボタンのテキストです。</param>
+      <param name="button2Text">2 番目のカスタム ボタンのテキストです。</param>
+      <param name="button3Text">3 番目のカスタム ボタンのテキストです。</param>
+      <param name="button4Text">4 番目のカスタム ボタンのテキストです。</param>
+      <param name="button5Text">5 番目のカスタム ボタンのテキストです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show(System.IntPtr,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+      <summary>例外メッセージ ボックスを表示します。単に情報を示すためだけに特定されます。サポートされていません。将来の互換性は保証されません。</summary>
+      <returns>ユーザーによってクリックされたボタンの <see cref="T:System.Windows.Forms.DialogResult" /> です。</returns>
+      <param name="hwnd">親ウィンドウへのハンドルである <see cref="T:System.IntPtr" /> です。</param>
+      <param name="message">このインスタンスに関連付けられた例外のメッセージを含む文字列です。</param>
+      <param name="source">このインスタンスに関連付けられた例外のソースを含む文字列です。</param>
+      <param name="sourceAppName">ソース アプリケーションの名前を含む文字列です。</param>
+      <param name="sourceAppVersion">ソース アプリケーションのバージョンを含む文字列です。</param>
+      <param name="sourceModule">ソース モジュールの名前を含む文字列です。</param>
+      <param name="sourceMessageId">ソース メッセージの ID を含む文字列です。</param>
+      <param name="sourceLanguage">ソース言語を含む文字列です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show(System.Windows.Forms.IWin32Window)">
+      <summary>例外メッセージ ボックスを、親ウィンドウの中央にモーダル ダイアログ ボックスとして表示します。</summary>
+      <returns>ユーザーによってクリックされたボタンの <see cref="T:System.Windows.Forms.DialogResult" /> です。</returns>
+      <param name="owner">例外メッセージ ボックスの親ウィンドウです。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckBox">
+      <summary>例外メッセージ ボックスにチェック ボックスを表示するかどうかを指定します。</summary>
+      <returns>
+        <see cref="T:System.Boolean" /> の値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowToolBar">
+      <summary>例外メッセージ ボックスにコマンド ボタン ツール バーを表示するかどうかを指定します。</summary>
+      <returns>
+        <see cref="T:System.Boolean" /> の値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Symbol">
+      <summary>例外メッセージ ボックスに表示される記号を取得します。値の設定も可能です。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Text">
+      <summary>例外メッセージ ボックスに表示される最上位レベル メッセージのテキストを取得します。値の設定も可能です。</summary>
+      <returns>
+        <see cref="T:System.String" /> の値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.UseOwnerFont">
+      <summary>オーナー ウィンドウのフォントを取得して、それを例外メッセージ ボックスのフォントとして使用するかどうかを指定します。</summary>
+      <returns>
+        <see cref="T:System.Boolean" /> の値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.YesButtonText">
+      <summary>[はい] ボタンの既定のテキストを取得します。</summary>
+      <returns>
+        <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons">
+      <summary>例外メッセージ ボックスに表示するボタンを指定します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.AbortRetryIgnore">
+      <summary>[中止]、[再試行]、および [無視] ボタンを表示します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.Custom">
+      <summary>カスタム ボタン テキストのボタンを表示します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.OK">
+      <summary>[OK] ボタンを表示します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.OKCancel">
+      <summary>[OK] および [キャンセル] ボタンを表示します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.RetryCancel">
+      <summary>[再試行] および [キャンセル] ボタンを表示します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.YesNo">
+      <summary>[はい] および [いいえ] ボタンを表示します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.YesNoCancel">
+      <summary>[はい]、[いいえ]、および [キャンセル] ボタンを表示します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton">
+      <summary>例外メッセージ ボックスの既定のボタンを設定します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton.Button1">
+      <summary>最初のボタンは既定のボタンです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton.Button2">
+      <summary>2 番目のボタンは既定のボタンです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton.Button3">
+      <summary>3 番目のボタンは既定のボタンです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton.Button4">
+      <summary>4 番目のボタンは既定のボタンです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton.Button5">
+      <summary>5 番目のボタンは既定のボタンです。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult">
+      <summary>カスタム テキスト ボタンが使用されている場合に、例外メッセージ ボックスを閉じるためにユーザーがクリックしたボタンを識別します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult.Button1">
+      <summary>最初のカスタム テキスト ボタンです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult.Button2">
+      <summary>2 番目のカスタム テキスト ボタンです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult.Button3">
+      <summary>3 番目のカスタム テキスト ボタンです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult.Button4">
+      <summary>4 番目のカスタム テキスト ボタンです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult.Button5">
+      <summary>5 番目のカスタム テキスト ボタンです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult.None">
+      <summary>カスタム テキスト ボタンは使用されていません。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxOptions">
+      <summary>例外メッセージ ボックスのその他の表示オプションを指定します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxOptions.None">
+      <summary>他の動作は必要ありません。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxOptions.RightAlign">
+      <summary>テキストを右揃えで表示します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxOptions.RtlReading">
+      <summary>テキストを右から左へ記述して表示します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol">
+      <summary>例外メッセージ ボックスに表示する記号を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol.Asterisk">
+      <summary>システムのアスタリスク記号です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol.Error">
+      <summary>システムのエラー記号です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol.Exclamation">
+      <summary>システムの感嘆符記号です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol.Hand">
+      <summary>システムの手の記号です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol.Information">
+      <summary>システムの情報記号です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol.None">
+      <summary>記号はありません。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol.Question">
+      <summary>システムの疑問符記号です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol.Stop">
+      <summary>システムの一時停止標識記号です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol.Warning">
+      <summary>システムの警告記号です。</summary>
+    </member>
+  </members>
+</doc>

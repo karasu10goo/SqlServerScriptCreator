@@ -1,0 +1,1541 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.ReportingServices.Interfaces</name>
+  </assembly>
+  <members>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AceStruct.CatalogOperations">
+      <summary>カタログ アイテムの種類に対してユーザーが実行可能な操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AceStruct.DatasourceOperations">
+      <summary>データ ソース アイテムの種類に対してユーザーが実行可能な操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AceStruct.FolderOperations">
+      <summary>フォルダー アイテムの種類に対してユーザーが実行可能な操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AceStruct.ModelItemOperations">
+      <summary>モデル アイテム操作の種類に対してユーザーが実行可能な操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AceStruct.ModelOperations">
+      <summary>モデル操作の種類に対してユーザーが実行可能な操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AceStruct.PrincipalName">
+      <summary>ユーザー、グループ、またはコンピューターの名前を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AceStruct.ReportOperations">
+      <summary>レポート アイテムの種類に対してユーザーが実行可能な操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AceStruct.ResourceOperations">
+      <summary>リソース アイテムの種類に対してユーザーが実行可能な操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.ExecuteReportDefinition">
+      <summary>"レポート定義の実行" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperCancelJobs">
+      <summary>"ジョブのキャンセル" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperCreateAnySubscription">
+      <summary>"任意のサブスクリプションの作成" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperCreateDatasource">
+      <summary>"データ ソースの作成" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperCreateFolder">
+      <summary>"フォルダーの作成" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperCreateLink">
+      <summary>"リンクの作成" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperCreateModel">
+      <summary>"モデルの作成" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperCreateReport">
+      <summary>"レポートの作成" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperCreateResource">
+      <summary>"リソースの作成" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperCreateRoles">
+      <summary>"ロールの作成" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperCreateSchedules">
+      <summary>"スケジュールの作成" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperCreateSnapshot">
+      <summary>"レポート履歴の作成" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperCreateSubscription">
+      <summary>"サブスクリプションの作成" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperDelete">
+      <summary>"削除" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperDeleteAnySubscription">
+      <summary>"任意のサブスクリプションの削除" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperDeleteHistory">
+      <summary>"レポート履歴の削除" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperDeleteRoles">
+      <summary>"ロールの削除" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperDeleteSchedules">
+      <summary>"スケジュールの削除" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperDeleteSubscription">
+      <summary>"サブスクリプションの削除" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperExecute">
+      <summary>"実行" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperExecuteAndView">
+      <summary>"実行と表示" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperGenerateEvents">
+      <summary>"イベントの生成" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperListHistory">
+      <summary>"レポート履歴の一覧表示" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperListJobs">
+      <summary>"ジョブの一覧表示" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperManageSharedSchedules">
+      <summary>"共有スケジュールの管理" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadAnySubscription">
+      <summary>"任意のサブスクリプションの読み取り" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadAuthorizationPolicy">
+      <summary>"セキュリティ ポリシーの読み取り" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadContent">
+      <summary>"コンテンツの読み取り" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadDatasources">
+      <summary>"データ ソースの読み取り" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadModelItemSecurityPolicies">
+      <summary>"モデル アイテム セキュリティ ポリシーの読み取り" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadParameters">
+      <summary>"パラメーターの読み取り" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadPolicy">
+      <summary>"ポリシーの読み取り" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadProperties">
+      <summary>"プロパティの読み取り" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadReportDefinition">
+      <summary>"レポート定義の読み取り" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadRoleProperties">
+      <summary>"ロールのプロパティの読み取り" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadSchedules">
+      <summary>"スケジュールの読み取り" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadSubscription">
+      <summary>"サブスクリプションの読み取り" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadSystemProperties">
+      <summary>"システムのプロパティの読み取り" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadSystemSecurityPolicy">
+      <summary>"システム セキュリティ ポリシーの読み取り" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateAnySubscription">
+      <summary>"任意のサブスクリプションの更新" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateContent">
+      <summary>"コンテンツの更新" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateDatasources">
+      <summary>"データ ソースの更新" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateDeleteAuthorizationPolicy">
+      <summary>"セキュリティ ポリシーの更新" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateModelItemSecurityPolicies">
+      <summary>"モデル アイテム セキュリティ ポリシーの更新" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateParameters">
+      <summary>"パラメーターの更新" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdatePolicy">
+      <summary>"ポリシーの更新" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateProperties">
+      <summary>"プロパティの更新" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateReportDefinition">
+      <summary>"レポート定義の更新" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateRoleProperties">
+      <summary>"ロールのプロパティの更新" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateSchedules">
+      <summary>"スケジュールの更新" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateSubscription">
+      <summary>"サブスクリプションの更新" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateSystemProperties">
+      <summary>"システムのプロパティの更新" 操作を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateSystemSecurityPolicy">
+      <summary>"システム セキュリティ ポリシーの更新" 操作を指定します。</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDataParameterCollection.Add(Microsoft.ReportingServices.DataProcessing.IDataParameter)">
+      <summary>オブジェクトをパラメーター コレクションの末尾に追加します。</summary>
+      <param name="parameter">コレクションに追加する <see cref="T:Microsoft.ReportingServices.DataProcessing.IDataParameter" /> です。</param>
+      <returns>新しい要素が挿入された位置です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDataReader.GetFieldType(System.Int32)">
+      <summary>
+        <see cref="M:Microsoft.ReportingServices.DataProcessing.IDataReader.GetValue(System.Int32)" /> から返されるオブジェクトの種類に対応する Type 情報を取得します。</summary>
+      <param name="fieldIndex">検索するフィールドのインデックスです。</param>
+      <returns>
+        <see cref="M:Microsoft.ReportingServices.DataProcessing.IDataReader.GetValue(System.Int32)" /> から返される Object の種類に対応する Type 情報です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDataReader.GetName(System.Int32)">
+      <summary>検索するフィールドの名前を取得します。</summary>
+      <param name="fieldIndex">検索するフィールドのインデックスです。</param>
+      <returns>返す値がない場合、フィールドの名前になるか、空の文字列 ("") になります。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDataReader.GetOrdinal(System.String)">
+      <summary>名前付きフィールドのインデックスを返します。</summary>
+      <param name="fieldName">検索するフィールドの名前です。</param>
+      <returns>名前付きフィールドのインデックスです。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDataReader.GetValue(System.Int32)">
+      <summary>指定したフィールドの値を返します。</summary>
+      <param name="fieldIndex">検索するフィールドのインデックスです。</param>
+      <returns>指定したインデックスのフィールドの値です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDataReader.Read">
+      <summary>次のレコードに <see cref="T:Microsoft.ReportingServices.DataProcessing.IDataReader" /> を進めます。</summary>
+      <returns>列挙子が正常に次のレコードに進んだ場合は true、列挙子が結果セットの末尾に達した場合は false です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension.IsAggregationField(System.Int32)">
+      <summary>インデックスが付けられたフィールドによってデータが集計されるかどうかを示します。</summary>
+      <param name="index">レコード内のフィールドのインデックスです。</param>
+      <returns>現在の行が集計フィールドである場合、値は true となり、それ以外の場合は false となります。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDataReaderFieldProperties.GetPropertyCount(System.Int32)">
+      <summary>指定したフィールドのプロパティの数を返します。</summary>
+      <param name="fieldIndex">フィールドのインデックスです。</param>
+      <returns>指定したフィールドのプロパティ カウントです。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDataReaderFieldProperties.GetPropertyName(System.Int32,System.Int32)">
+      <summary>指定したフィールドの指定したプロパティの名前を返します。</summary>
+      <param name="fieldIndex">フィールドのインデックスです。</param>
+      <param name="propertyIndex">プロパティのインデックスです。</param>
+      <returns>指定したプロパティの名前を表す string です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDataReaderFieldProperties.GetPropertyValue(System.Int32,System.Int32)">
+      <summary>指定したフィールドの指定したプロパティの名前を返します。</summary>
+      <param name="fieldIndex">フィールドのインデックスです。</param>
+      <param name="propertyIndex">プロパティのインデックスです。</param>
+      <returns>指定したプロパティの値を表す object です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDbCollationProperties.GetCollationProperties(System.String@,System.Boolean@,System.Boolean@,System.Boolean@,System.Boolean@)">
+      <summary>接続に使用する照合順序プロパティを返します。</summary>
+      <param name="cultureName">照合順序に使用するカルチャ名です。</param>
+      <param name="caseSensitive">照合順序では大文字と小文字を区別する必要があることを示します。</param>
+      <param name="accentSensitive">照合順序ではアクセントを区別する必要があることを示します。</param>
+      <param name="kanatypeSensitive">照合順序ではかなを区別する必要があることを示します。</param>
+      <param name="widthSensitive">照合順序では文字幅を区別する必要があることを示します。</param>
+      <returns>現在の接続に対して照合順序プロパティを検出できた場合、true を返します。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDbCommand.Cancel">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.DataProcessing.IDbCommand" /> の実行の取り消しを試行します。</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDbCommand.CreateParameter">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.DataProcessing.IDataParameter" /> オブジェクトの新しいインスタンスを作成します。</summary>
+      <returns>
+        <see cref="T:Microsoft.ReportingServices.DataProcessing.IDataParameter" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDbCommand.ExecuteReader(Microsoft.ReportingServices.DataProcessing.CommandBehavior)">
+      <summary>Connection に対して <see cref="P:Microsoft.ReportingServices.DataProcessing.IDbCommand.CommandText" /> を実行し、<see cref="T:Microsoft.ReportingServices.DataProcessing.IDataReader" /> を構築します。</summary>
+      <param name="behavior">プロパティを取得するフィールドのインデックスです。</param>
+      <returns>
+        <see cref="T:Microsoft.ReportingServices.DataProcessing.IDataReader" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDbCommandAnalysis.GetParameters">
+      <summary>クエリで使用されるパラメーターの一覧を表す <see cref="T:Microsoft.ReportingServices.DataProcessing.IDataParameterCollection" /> オブジェクトを返します。</summary>
+      <returns>クエリで使用されるパラメーターの一覧を表す <see cref="T:Microsoft.ReportingServices.DataProcessing.IDataParameterCollection" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDbConnection.BeginTransaction">
+      <summary>データベース トランザクションを開始します。</summary>
+      <returns>新しいトランザクションを表すオブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDbConnection.Close">
+      <summary>データベースへの接続を閉じます。</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDbConnection.CreateCommand">
+      <summary>接続に関連付けられた Command オブジェクトを作成して返します。</summary>
+      <returns>接続に関連付けられた Command オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDbConnection.Open">
+      <summary>プロバイダー固有の Connection オブジェクトの <see cref="P:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString" /> プロパティで指定した設定を使用して、データベース接続を初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDbTransaction.Commit">
+      <summary>データベース トランザクションをコミットします。</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDbTransaction.Rollback">
+      <summary>トランザクションを保留状態からロールバックします。</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.ITokenDataExtension.SetUserToken(System.Byte[])">
+      <summary>SharePoint ユーザー トークンを設定します。 このメソッドはレポート サーバーで使用され、SharePoint ユーザー トークンをデータ処理拡張機能に送信します。</summary>
+      <param name="UserToken">トークン データを表すbyte配列。</param>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.AceCollection.#ctor">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.AceCollection" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.AceCollection.Add(Microsoft.ReportingServices.Interfaces.AceStruct)">
+      <summary>オブジェクトを <see cref="T:Microsoft.ReportingServices.Interfaces.AceCollection" /> の末尾に追加します。</summary>
+      <param name="ace">コレクションに追加するアクセス制御エントリを表す <see cref="T:Microsoft.ReportingServices.Interfaces.AceStruct" /> オブジェクトです。</param>
+      <returns>新しいアクセス制御エントリが挿入された位置です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.AceStruct.#ctor(Microsoft.ReportingServices.Interfaces.AceStruct)">
+      <summary>既存の <see cref="T:Microsoft.ReportingServices.Interfaces.AceStruct" /> オブジェクトに基づく <see cref="T:Microsoft.ReportingServices.Interfaces.AceStruct" /> クラスの新しいインスタンスを作成します。</summary>
+      <param name="other">既存の <see cref="T:Microsoft.ReportingServices.Interfaces.AceStruct" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.AceStruct.#ctor(System.String)">
+      <summary>指定したプリンシパル名を使用して、<see cref="T:Microsoft.ReportingServices.Interfaces.AceStruct" /> クラスの新しいインスタンスを作成します。</summary>
+      <param name="name">ユーザー、グループ、またはコンピューター名です。</param>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.CatalogOperationsCollection.#ctor">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.CatalogOperationsCollection" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.CatalogOperationsCollection.Add(Microsoft.ReportingServices.Interfaces.CatalogOperation)">
+      <summary>オブジェクトを <see cref="T:Microsoft.ReportingServices.Interfaces.CatalogOperationsCollection" /> の末尾に追加します。</summary>
+      <param name="operation">コレクションに追加するカタログ操作です。</param>
+      <returns>新しいカタログ操作が挿入された位置です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.DatasourceOperationsCollection.#ctor">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.DatasourceOperationsCollection" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.DatasourceOperationsCollection.Add(Microsoft.ReportingServices.Interfaces.DatasourceOperation)">
+      <summary>オブジェクトを <see cref="T:Microsoft.ReportingServices.Interfaces.DatasourceOperationsCollection" /> の末尾に追加します。</summary>
+      <param name="operation">コレクションに追加するデータ ソース操作です。</param>
+      <returns>新しいデータ ソース操作が挿入された位置です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.Extension.#ctor(System.String,System.String,System.Boolean)">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.Extension" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="name">構成ファイルで定義された拡張機能の名前です。</param>
+      <param name="localizedName">ユーザー インターフェイスで表示目的に使用される拡張機能のローカライズされた名前です。</param>
+      <param name="visible">拡張機能がユーザー インターフェイスに表示されるかどうかを示します。</param>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.FolderOperationsCollection.#ctor">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.FolderOperationsCollection" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.FolderOperationsCollection.Add(Microsoft.ReportingServices.Interfaces.FolderOperation)">
+      <summary>オブジェクトを <see cref="T:Microsoft.ReportingServices.Interfaces.FolderOperationsCollection" /> の末尾に追加します。</summary>
+      <param name="operation">コレクションに追加するフォルダー操作です。</param>
+      <returns>新しいフォルダー操作が挿入された位置です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension.GetUserInfo(System.Security.Principal.IIdentity@,System.IntPtr@)">
+      <summary>現在のユーザー ID を返します。</summary>
+      <param name="userIdentity">[out] 現在のユーザーの ID です。 IIdentity の値はユーザー インターフェイスに表示することができ、その場合は解読可能である必要があります。</param>
+      <param name="userId">[out] ユーザー アカウント トークンです。 このトークンは、Windows 認証の資格情報管理をサポートする Windows アカウントのハンドルとして、主にレポート サーバーによって使用されます。</param>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension.IsValidPrincipalName(System.String)">
+      <summary>指定したプリンシパル名が有効かどうかを示します。</summary>
+      <param name="principalName">ユーザー、グループ、またはコンピューター名です。</param>
+      <returns>指定されたユーザー名が有効なプリンシパル名を表している場合、true を返します。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension.LogonUser(System.String,System.String,System.String)">
+      <summary>指定された資格情報に関連付けられたユーザーのログオン セッションを作成します。</summary>
+      <param name="userName">資格情報に関連付けられている名前です。</param>
+      <param name="password">資格情報に関連付けられているパスワードです。</param>
+      <param name="authority">省略可。 ユーザー認証で使用する特定の機関 (Windows ドメインなど) です。</param>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2.GetUserInfo(Microsoft.ReportingServices.Interfaces.IRSRequestContext,System.Security.Principal.IIdentity@,System.IntPtr@)">
+      <summary />
+      <param name="requestContext" />
+      <param name="userIdentity" />
+      <param name="userId" />
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2.GetUserInfo(System.Security.Principal.IIdentity@,System.IntPtr@)">
+      <summary />
+      <param name="userIdentity" />
+      <param name="userId" />
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2.IsValidPrincipalName(System.String)">
+      <summary />
+      <param name="principalName" />
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2.LogonUser(System.String,System.String,System.String)">
+      <summary />
+      <param name="userName" />
+      <param name="password" />
+      <param name="authority" />
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess(System.String,System.IntPtr,System.Byte[],Microsoft.ReportingServices.Interfaces.CatalogOperation)">
+      <summary>特定のカタログ操作に関して、レポート サーバー データベースのアイテムへのアクセスをユーザーに承認するかどうかを示します。</summary>
+      <param name="userName">レポート サーバーへのアクセスを要求しているユーザーの名前です。</param>
+      <param name="userToken">ユーザー アカウント トークンです。 このトークンは、Windows 認証の資格情報管理をサポートする Microsoft Windows アカウントのハンドルとして、主にレポート サーバーによって使用されます。</param>
+      <param name="secDesc">アイテムのセキュリティ記述子です。</param>
+      <param name="requiredOperation">特定のユーザーに対してレポート サーバーが要求している操作です。</param>
+      <returns>現在認証されているユーザーに、指定された操作およびセキュリティ記述子に基づいてアイテムへのアクセスが許可された場合、true を返します。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess(System.String,System.IntPtr,System.Byte[],Microsoft.ReportingServices.Interfaces.CatalogOperation[])">
+      <summary>カタログ操作の特定の配列に関して、レポート サーバー データベースのアイテムへのアクセスをユーザーに承認するかどうかを示します。</summary>
+      <param name="userName">レポート サーバーへのアクセスを要求しているユーザーの名前です。</param>
+      <param name="userToken">ユーザー アカウント トークンです。 このトークンは、Windows 認証の資格情報管理をサポートする Microsoft Windows アカウントのハンドルとして、主にレポート サーバーによって使用されます。</param>
+      <param name="secDesc">アイテムのセキュリティ記述子です。</param>
+      <param name="requiredOperations">特定のユーザーに対してレポート サーバーが要求している操作です。</param>
+      <returns>現在認証されているユーザーに、指定された操作およびセキュリティ記述子に基づいてアイテムへのアクセスが許可された場合、true を返します。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess(System.String,System.IntPtr,System.Byte[],Microsoft.ReportingServices.Interfaces.DatasourceOperation)">
+      <summary>特定のデータ ソース操作に関して、レポート サーバー データベースのアイテムへのアクセスをユーザーに承認するかどうかを示します。</summary>
+      <param name="userName">レポート サーバーへのアクセスを要求しているユーザーの名前です。</param>
+      <param name="userToken">ユーザー アカウント トークンです。 このトークンは、Windows 認証の資格情報管理をサポートする Microsoft Windows アカウントのハンドルとして、主にレポート サーバーによって使用されます。</param>
+      <param name="secDesc">アイテムのセキュリティ記述子です。</param>
+      <param name="requiredOperation">特定のユーザーに対してレポート サーバーが要求している操作です。</param>
+      <returns>現在認証されているユーザーに、指定された操作およびセキュリティ記述子に基づいてアイテムへのアクセスが許可された場合、true を返します。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess(System.String,System.IntPtr,System.Byte[],Microsoft.ReportingServices.Interfaces.FolderOperation)">
+      <summary>特定のフォルダー操作に関して、レポート サーバー データベースのアイテムへのアクセスをユーザーに承認するかどうかを示します。</summary>
+      <param name="userName">レポート サーバーへのアクセスを要求しているユーザーの名前です。</param>
+      <param name="userToken">ユーザー アカウント トークンです。 このトークンは、Windows 認証の資格情報管理をサポートする Microsoft Windows アカウントのハンドルとして、主にレポート サーバーによって使用されます。</param>
+      <param name="secDesc">アイテムのセキュリティ記述子です。</param>
+      <param name="requiredOperation">特定のユーザーに対してレポート サーバーが要求している操作です。</param>
+      <returns>現在認証されているユーザーに、指定された操作およびセキュリティ記述子に基づいてアイテムへのアクセスが許可された場合、true を返します。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess(System.String,System.IntPtr,System.Byte[],Microsoft.ReportingServices.Interfaces.FolderOperation[])">
+      <summary>レポート サーバー データベースのアイテムにおける操作のセキュリティ記述子に対して、ユーザーの承認資格情報を確認します。</summary>
+      <param name="userName">レポート サーバーへのアクセスを要求しているユーザーの名前です。</param>
+      <param name="userToken">ユーザー アカウント トークンです。 このトークンは、Windows 認証の資格情報管理をサポートする Microsoft Windows アカウントのハンドルとして、主にレポート サーバーによって使用されます。</param>
+      <param name="secDesc">アイテムのセキュリティ記述子です。</param>
+      <param name="requiredOperations">特定のユーザーに対してレポート サーバーが要求している操作です。</param>
+      <returns>現在認証されているユーザーに、指定された操作およびセキュリティ記述子に基づいてアイテムへのアクセスが許可された場合、true を返します。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess(System.String,System.IntPtr,System.Byte[],Microsoft.ReportingServices.Interfaces.ModelItemOperation)">
+      <summary>特定のモデル アイテム操作に関して、レポート サーバー データベースのアイテムへのアクセスをユーザーに承認するかどうかを示します。</summary>
+      <param name="userName">レポート サーバーへのアクセスを要求しているユーザーの名前です。</param>
+      <param name="userToken">ユーザー アカウント トークンです。 このトークンは、Windows 認証の資格情報管理をサポートする Microsoft Windows アカウントのハンドルとして、主にレポート サーバーによって使用されます。</param>
+      <param name="secDesc">アイテムのセキュリティ記述子です。</param>
+      <param name="requiredOperation">特定のユーザーに対してレポート サーバーが要求している操作です。</param>
+      <returns>現在認証されているユーザーに、指定された操作およびセキュリティ記述子に基づいてアイテムへのアクセスが許可された場合、true を返します。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess(System.String,System.IntPtr,System.Byte[],Microsoft.ReportingServices.Interfaces.ModelOperation)">
+      <summary>特定のモデル操作に関して、レポート サーバー データベースのアイテムへのアクセスをユーザーに承認するかどうかを示します。</summary>
+      <param name="userName">レポート サーバーへのアクセスを要求しているユーザーの名前です。</param>
+      <param name="userToken">ユーザー アカウント トークンです。 このトークンは、Windows 認証の資格情報管理をサポートする Microsoft Windows アカウントのハンドルとして、主にレポート サーバーによって使用されます。</param>
+      <param name="secDesc">アイテムのセキュリティ記述子です。</param>
+      <param name="requiredOperation">特定のユーザーに対してレポート サーバーが要求している操作です。</param>
+      <returns>現在認証されているユーザーに、指定された操作およびセキュリティ記述子に基づいてアイテムへのアクセスが許可された場合、true を返します。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess(System.String,System.IntPtr,System.Byte[],Microsoft.ReportingServices.Interfaces.ReportOperation)">
+      <summary>特定のレポート操作に関して、レポート サーバー データベースのアイテムへのアクセスをユーザーに承認するかどうかを示します。</summary>
+      <param name="userName">レポート サーバーへのアクセスを要求しているユーザーの名前です。</param>
+      <param name="userToken">ユーザー アカウント トークンです。 このトークンは、Windows 認証の資格情報管理をサポートする Microsoft Windows アカウントのハンドルとして、主にレポート サーバーによって使用されます。</param>
+      <param name="secDesc">アイテムのセキュリティ記述子です。</param>
+      <param name="requiredOperation">特定のユーザーに対してレポート サーバーが要求している操作です。</param>
+      <returns>現在認証されているユーザーに、指定された操作およびセキュリティ記述子に基づいてアイテムへのアクセスが許可された場合、true を返します。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess(System.String,System.IntPtr,System.Byte[],Microsoft.ReportingServices.Interfaces.ResourceOperation)">
+      <summary>特定のリソース操作に関して、レポート サーバー データベースのアイテムへのアクセスをユーザーに承認するかどうかを示します。</summary>
+      <param name="userName">レポート サーバーへのアクセスを要求しているユーザーの名前です。</param>
+      <param name="userToken">ユーザー アカウント トークンです。 このトークンは、Windows 認証の資格情報管理をサポートする Microsoft Windows アカウントのハンドルとして、主にレポート サーバーによって使用されます。</param>
+      <param name="secDesc">アイテムのセキュリティ記述子です。</param>
+      <param name="requiredOperation">特定のユーザーに対してレポート サーバーが要求している操作です。</param>
+      <returns>現在認証されているユーザーに、指定された操作およびセキュリティ記述子に基づいてアイテムへのアクセスが許可された場合、true を返します。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess(System.String,System.IntPtr,System.Byte[],Microsoft.ReportingServices.Interfaces.ResourceOperation[])">
+      <summary>リソース操作の特定の配列に関して、レポート サーバー データベースのアイテムへのアクセスをユーザーに承認するかどうかを示します。</summary>
+      <param name="userName">レポート サーバーへのアクセスを要求しているユーザーの名前です。</param>
+      <param name="userToken">ユーザー アカウント トークンです。 このトークンは、Windows 認証の資格情報管理をサポートする Microsoft Windows アカウントのハンドルとして、主にレポート サーバーによって使用されます。</param>
+      <param name="secDesc">アイテムのセキュリティ記述子です。</param>
+      <param name="requiredOperations">特定のユーザーに対してレポート サーバーが要求している操作です。</param>
+      <returns>現在認証されているユーザーに、指定された操作およびセキュリティ記述子に基づいてアイテムへのアクセスが許可された場合、true を返します。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CreateSecurityDescriptor(Microsoft.ReportingServices.Interfaces.AceCollection,Microsoft.ReportingServices.Interfaces.SecurityItemType,System.String@)">
+      <summary>レポート サーバー データベースに個々のアイテムと共に格納されたセキュリティ記述子を返します。</summary>
+      <param name="acl">アイテムのレポート サーバーによって作成されたアクセス コードの一覧です。 アクセス コード エントリのコレクションが含まれます。</param>
+      <param name="itemType">セキュリティ記述子が作成されるアイテムの種類です。</param>
+      <param name="stringSecDesc">省略可。 デバッグに使用可能なセキュリティ記述子の、わかりやすい説明です。 これは、レポート サーバーで格納されません。</param>
+      <returns>シリアル化されたアクセス コードの一覧です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.GetPermissions(System.String,System.IntPtr,Microsoft.ReportingServices.Interfaces.SecurityItemType,System.Byte[])">
+      <summary>レポート サーバー データベースのアイテムに関して、特定のユーザーに付与された権限のセットを返します。</summary>
+      <param name="userName">
+        <see cref="M:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension.GetUserInfo(System.Security.Principal.IIdentity@,System.IntPtr@)" /> の <see cref="T:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension" /> メソッドによって返されるユーザーの名前です。</param>
+      <param name="userToken">
+        <see cref="M:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension.GetUserInfo(System.Security.Principal.IIdentity@,System.IntPtr@)" /> メソッドによって返される、ユーザー ID へのポインターです。</param>
+      <param name="itemType">権限が返されるレポート サーバー データベースのアイテムの種類です。</param>
+      <param name="secDesc">アイテムに関連付けられたセキュリティ記述子です。</param>
+      <returns>特定のアイテムのユーザーに関連付けられた各権限の名前を表す StringCollection です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver(Microsoft.ReportingServices.Interfaces.Notification)">
+      <summary>通知の内容に基づいて、ユーザーにレポート通知を配信します。</summary>
+      <param name="notification">配信拡張機能がレポートを配信するために必要とする情報を格納した <see cref="T:Microsoft.ReportingServices.Interfaces.Notification" /> オブジェクトです。</param>
+      <returns>配信が成功したかどうかを示す Boolean 値です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ValidateUserData(Microsoft.ReportingServices.Interfaces.Setting[])">
+      <summary>指定された一連の配信拡張機能の設定が有効かどうかを判別するために使用します。</summary>
+      <param name="settings">クライアントから提供された拡張機能の設定を格納した <see cref="T:Microsoft.ReportingServices.Interfaces.Setting" /> オブジェクトの配列です。</param>
+      <returns>配信拡張機能によって検証された拡張機能の設定を格納した <see cref="T:Microsoft.ReportingServices.Interfaces.Setting" /> オブジェクトの配列です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IExtension.SetConfiguration(System.String)">
+      <summary>拡張機能にカスタム構成データを渡すために使用されます。</summary>
+      <param name="configuration">拡張機能の構成データを含む構成ファイルからの XML 文字列です。</param>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IRenderStream.Finish">
+      <summary>表示拡張機能が、指定されたストリームに追加する追加の内容が存在しないことを、示します。</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IReportDefinitionCustomizationExtension.ProcessReportDefinition(System.Byte[],Microsoft.ReportingServices.Interfaces.IReportContext,Microsoft.ReportingServices.Interfaces.IUserContext,System.Byte[]@,System.Collections.Generic.IEnumerable{Microsoft.ReportingServices.Interfaces.RdceCustomizableElementId}@)">
+      <summary>レポート定義への変更を処理します。</summary>
+      <param name="reportDefinition">元のレポート定義です。 リンク レポートの場合、リンク先が定義されています。</param>
+      <param name="reportContext">レポートのコンテキストを示す <see cref="T:Microsoft.ReportingServices.Interfaces.IReportContext" /> オブジェクトです。</param>
+      <param name="userContext">ユーザー セッションのコンテキストを示す <see cref="T:Microsoft.ReportingServices.Interfaces.IUserContext" /> オブジェクトです。</param>
+      <param name="reportDefinitionProcessed">新しいレポート定義です。</param>
+      <param name="customizedElementIds">カスタマイズされるレポート要素のコレクションです。 Reporting Services により、これらの要素は元のレポート定義とマージされます。NULL が返される場合、新しいレポート定義は元のレポート定義とマージされません。</param>
+      <returns>レポート定義が変更されるかどうかを示す Boolean です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.ISemanticModelGenerator.Generate(System.Data.IDbConnection,System.Xml.XmlWriter)">
+      <summary>指定した接続とモデル ライターを使用してセマンティック モデルを生成します。</summary>
+      <param name="connection">データ ソースへの接続です。</param>
+      <param name="newModelWriter">モデルの新しいライターです。</param>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.ISemanticModelGenerator.ReGenerateModel(System.Data.IDbConnection,System.Xml.XmlReader,System.Xml.XmlWriter)">
+      <summary>指定した接続、モデル リーダー、モデル ライターを使用してモデルを再生成します。</summary>
+      <param name="connection">データ ソースへの接続です。</param>
+      <param name="currentModelReader">モデルの現在のリーダーです。</param>
+      <param name="newModelWriter">モデルの新しいライターです。</param>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl.Validate">
+      <summary>配信拡張機能の設定が有効かどうかを判別するために使用します。</summary>
+      <returns>
+        <see cref="P:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl.UserData" /> プロパティで指定された情報が有効かどうかを示す Boolean です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IWindowsAuthenticationExtension.PrincipalNameToSid(System.String)">
+      <summary>指定されたプリンシパル名の Windows SID を取得します。</summary>
+      <param name="name">プリンシパルの名前です。</param>
+      <returns>Windows SID を表す byte 型の配列です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IWindowsAuthenticationExtension.SidToPrincipalName(System.Byte[])">
+      <summary>指定された Windows SID のプリンシパル名を取得します。</summary>
+      <param name="sid">プリンシパルに割り当てられている Windows SID です。</param>
+      <returns>プリンシパルの名前を表す string です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IWindowsAuthenticationExtension2.PrincipalNameToSid(System.String)">
+      <summary />
+      <param name="name" />
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IWindowsAuthenticationExtension2.SidToPrincipalName(System.Byte[])">
+      <summary />
+      <param name="sid" />
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.LocalizedNameAttribute.#ctor">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.LocalizedNameAttribute" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.LocalizedNameAttribute.#ctor(System.String)">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.LocalizedNameAttribute" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="name">拡張機能の名前です。  どのローカライズを返すかを決定するキーとして使用されます。</param>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.LocalizedNameAttribute.Equals(System.Object)">
+      <summary>指定されたオブジェクトが現在のオブジェクトと同じかどうかを示します。</summary>
+      <param name="obj">比較に使用するオブジェクトです。</param>
+      <returns>オブジェクトが同じかどうかを示す Boolean 値です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.LocalizedNameAttribute.GetHashCode">
+      <summary>オブジェクトの一意のハッシュ コードを返します。</summary>
+      <returns>オブジェクトのハッシュ コードを表す integer です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.LocalizedNameAttribute.GetLocalizedString(System.String)">
+      <summary>拡張機能のローカライズされた正しい名前を返します。</summary>
+      <param name="value">拡張機能のニュートラル言語の名前です。</param>
+      <returns>拡張機能のローカライズされた名前を表す string です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.ModelItemOperationsCollection.#ctor">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.ModelItemOperationsCollection" /> オブジェクトを構築します。</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.ModelItemOperationsCollection.Add(Microsoft.ReportingServices.Interfaces.ModelItemOperation)">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.ModelItemOperation" /> を <see cref="T:Microsoft.ReportingServices.Interfaces.ModelItemOperationsCollection" /> に追加します。</summary>
+      <param name="operation">
+        <see cref="T:Microsoft.ReportingServices.Interfaces.ModelItemOperation" /> オブジェクト。</param>
+      <returns>新しい <see cref="T:Microsoft.ReportingServices.Interfaces.ModelItemOperation" /> が挿入された位置です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.ModelOperationsCollection.#ctor">
+      <summary>新しい <see cref="T:Microsoft.ReportingServices.Interfaces.ModelOperationsCollection" /> オブジェクトを構築します。</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.ModelOperationsCollection.Add(Microsoft.ReportingServices.Interfaces.ModelOperation)">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.ModelOperation" /> を <see cref="T:Microsoft.ReportingServices.Interfaces.ModelOperationsCollection" /> に追加します。</summary>
+      <param name="operation">
+        <see cref="T:Microsoft.ReportingServices.Interfaces.ModelOperation" /> オブジェクト。</param>
+      <returns>新しい <see cref="T:Microsoft.ReportingServices.Interfaces.ModelOperation" /> が挿入された位置を表す整数値です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.Notification.#ctor">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.Notification" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.Notification.Save">
+      <summary>関連付けられたサブスクリプションで <see cref="T:Microsoft.ReportingServices.Interfaces.Notification" /> オブジェクトに加えられた変更を保存します。</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.NotificationWithResult.#ctor">
+      <summary />
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.OperationNames.#ctor">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.OperationNames" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.RenderedOutputFile.#ctor">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.RenderedOutputFile" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.Report.#ctor">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.Report" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.Report.Render(System.String,System.String)">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.Report" /> オブジェクトのプロパティに格納された情報を使用して、レポートを特定の形式で表示します。</summary>
+      <param name="renderFormat">レポートの表示に使用される形式の名前です。 この形式は、レポート サーバーにインストールされた使用可能な表示拡張機能の 1 つに一致します。</param>
+      <param name="deviceInfo">表示拡張機能の拡張パラメーターのリストを定義する XML 文字列です。これらのパラメーターを使用してレポートの形式を設定することにより、配信拡張機能の要件に基づいてレポートを適切に配信できます。</param>
+      <returns>
+        <paramref name="renderFormat" /> パラメーターで選択した表示拡張機能によって生成される <see cref="T:Microsoft.ReportingServices.Interfaces.RenderedOutputFile" /> オブジェクトの配列です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.ReportOperationsCollection.#ctor">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.ReportOperationsCollection" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.ReportOperationsCollection.Add(Microsoft.ReportingServices.Interfaces.ReportOperation)">
+      <summary>オブジェクトを <see cref="T:Microsoft.ReportingServices.Interfaces.ReportOperationsCollection" /> の末尾に追加します。</summary>
+      <param name="operation">コレクションに追加するレポート操作です。</param>
+      <returns>新しいレポート操作が挿入された位置です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.ResourceOperationsCollection.#ctor">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.ResourceOperationsCollection" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.ResourceOperationsCollection.Add(Microsoft.ReportingServices.Interfaces.ResourceOperation)">
+      <summary>オブジェクトを <see cref="T:Microsoft.ReportingServices.Interfaces.ResourceOperationsCollection" /> の末尾に追加します。</summary>
+      <param name="operation">コレクションに追加するリソース操作です。</param>
+      <returns>新しいリソース操作が挿入された位置です。</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.Setting.#ctor">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.Setting" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.Setting.AddValidValue(Microsoft.ReportingServices.Interfaces.ValidValue)">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.ValidValue" /> クラスを使用して有効な値を追加します。</summary>
+      <param name="val">ラベル、および設定の値を含む <see cref="T:Microsoft.ReportingServices.Interfaces.ValidValue" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.Setting.AddValidValue(System.String,System.String)">
+      <summary>ラベルと値を使用して、設定に有効な値を追加します。</summary>
+      <param name="label">ユーザー インターフェイスに表示される設定の表示値です。</param>
+      <param name="val">配信拡張機能に渡される設定の、実際の値です。</param>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.ValidValue.#ctor">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.ValidValue" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDataMultiValueParameter.Values">
+      <summary>パラメーターの値を取得または設定します。</summary>
+      <returns>パラメーターの値を含むオブジェクトのコレクションです。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDataParameter.ParameterName">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.DataProcessing.IDataParameter" /> の名前を取得または設定します。</summary>
+      <returns>パラメーターの名前を表す文字列です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDataParameter.Value">
+      <summary>パラメーターの値を取得または設定します。</summary>
+      <returns>パラメーターの値である Object です。 既定値は Null です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDataReader.FieldCount">
+      <summary>データ リーダー内のフィールドの数を取得します。</summary>
+      <returns>有効なレコードセットに配置されない場合は 0 になり、それ以外の場合は現在のレコードの列の数になります。 既定値は -1 です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension.AggregationFieldCount">
+      <summary>データが集計されるフィールドの数を取得します。</summary>
+      <returns>有効なレコードセットに配置されない場合は 0 になり、それ以外の場合は現在のレコードの集計列の数になります。 既定値は -1 です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension.IsAggregateRow">
+      <summary>現在の行に集計データが含まれているかどうかを示します。</summary>
+      <returns>現在の行に集計データが含まれている場合、値は true となり、含まれていない場合は false となります。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbCommand.CommandText">
+      <summary>データ ソースに対して実行するテキスト コマンドを取得または設定します。</summary>
+      <returns>実行するテキスト コマンドです。 既定値は空の文字列 ("") です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbCommand.CommandTimeout">
+      <summary>コマンド実行の試行を終了してエラーを生成する前に、待機時間を取得または設定します。</summary>
+      <returns>コマンドの実行を待機する時間 (秒単位) です。 既定値は 30 秒です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbCommand.CommandType">
+      <summary>
+        <see cref="P:Microsoft.ReportingServices.DataProcessing.IDbCommand.CommandText" /> プロパティの解釈方法 (テキストまたはストアド プロシージャなどとして) を示すか、指定します。</summary>
+      <returns>
+        <see cref="P:Microsoft.ReportingServices.DataProcessing.IDbCommand.CommandType" /> 値のいずれか 1 つです。 既定値は Text です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbCommand.Parameters">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.DataProcessing.IDataParameterCollection" /> を取得します。</summary>
+      <returns>クエリまたはストアド プロシージャのパラメーターです。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbCommand.Transaction">
+      <summary>SQL Server Reporting Services データ プロバイダーの Command オブジェクトが実行されるトランザクションを取得または設定します。</summary>
+      <returns>Reporting Services データ プロバイダー実行のトランザクション オブジェクトです。 既定値は、null 参照 (Visual Basic では Nothing) です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbCommandRewriter.RewrittenCommandText">
+      <summary>書き換えられたコマンド テキストを取得します。</summary>
+      <returns>書き換えられたコマンド テキストを表す string 値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString">
+      <summary>データベースを開くために使用される文字列を取得または設定します。</summary>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionTimeout">
+      <summary>接続を確立する際、試行を終了してエラーを生成するまでに待機する時間を取得します。</summary>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.Impersonate">
+      <summary>クエリの実行中に権限を借用されるユーザーのユーザー名を設定します。 権限の借用がデータ プロバイダーでサポートされていない場合、このプロパティはレポート サーバーでは無視されます。</summary>
+      <returns>クエリの実行される間に権限を借用されるユーザーのユーザー名です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.IntegratedSecurity">
+      <summary>接続でユーザー名とパスワードを指定するのではなく、統合セキュリティを使用するかどうかを示します。</summary>
+      <returns>接続で認証に統合セキュリティを使用する必要がある場合は値が true となり、それ以外の場合は false となります。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.Password">
+      <summary>データベースに接続するときに使用するパスワードを取得または設定します。 接続文字列で指定されたパスワードよりも優先されます。</summary>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.UserName">
+      <summary>データベースに接続するときに使用するユーザー名を取得または設定します。 接続文字列で指定されたユーザー名よりも優先されます。</summary>
+      <returns>クライアントを認証するときに使用するユーザー名です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbConnectionWrapper.Connection">
+      <summary>データ ソースへの接続を取得します。</summary>
+      <returns>データ ソースへの接続を表す <see cref="T:System.Data.IDbConnection" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbTransactionExtension.AllowMultiConnection">
+      <summary>プロバイダー拡張機能により、複数の接続間で単一のトランザクションの使用を許可するかどうかを指定します。</summary>
+      <returns>プロバイダーが複数の接続間での単一のトランザクションの使用を許可する場合は値が true となり、許可しない場合は false となります。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.AceCollection.Item(System.Int32)">
+      <summary>指定されたインデックス位置にある要素を取得または設定します。 C# の場合、このプロパティは <see cref="T:Microsoft.ReportingServices.Interfaces.AceCollection" /> クラスのインデクサーとなります。</summary>
+      <param name="index">取得または設定する要素の 0 から始まるインデックスです。</param>
+      <returns>指定されたインデックス位置の要素です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.CatalogOperationsCollection.Item(System.Int32)">
+      <summary>指定されたインデックス位置にある要素を取得または設定します。 C# の場合、このプロパティは <see cref="T:Microsoft.ReportingServices.Interfaces.CatalogOperationsCollection" /> クラスのインデクサーとなります。</summary>
+      <param name="index">取得または設定する要素の 0 から始まるインデックスです。</param>
+      <returns>指定されたインデックス位置の要素です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.DatasourceOperationsCollection.Item(System.Int32)">
+      <summary>指定されたインデックス位置にある要素を取得または設定します。 C# の場合、このプロパティは <see cref="T:Microsoft.ReportingServices.Interfaces.DatasourceOperationsCollection" /> クラスのインデクサーとなります。</summary>
+      <param name="index">取得または設定する要素の 0 から始まるインデックスです。</param>
+      <returns>指定されたインデックス位置の要素です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Extension.LocalizedName">
+      <summary>ユーザー インターフェイスで表示目的に使用される拡張機能のローカライズされた名前を取得します。</summary>
+      <returns>拡張機能のローカライズされた名前です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Extension.Name">
+      <summary>構成ファイルで定義された拡張機能の名前を取得します。 たとえば、配信拡張機能はレポート サーバーの電子メールの値を返すことができます。</summary>
+      <returns>レポート サーバー構成ファイルで定義された拡張機能の名前です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Extension.Visible">
+      <summary>拡張機能がユーザー インターフェイスに表示されるかどうかを示します。</summary>
+      <returns>拡張機能が表示されるかどうかを示す Boolean 値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.FolderOperationsCollection.Item(System.Int32)">
+      <summary>指定されたインデックス位置にある要素を取得または設定します。 C# の場合、このプロパティは <see cref="T:Microsoft.ReportingServices.Interfaces.FolderOperationsCollection" /> クラスのインデクサーとなります。 JScript では、型によって定義される既定のインデックス付きプロパティを使用できますが、独自のプロパティを明示的に定義することはできません。 ただし、クラスで expando 属性を指定すると、型が Object で、インデックスの種類が String の既定のインデックス付きプロパティが自動的に提供されます。</summary>
+      <param name="index">取得または設定する要素の 0 から始まるインデックスです。</param>
+      <returns>指定されたインデックス位置の要素です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ExtensionSettings">
+      <summary>配信拡張機能が通知またはレポートを作成するために使用する設定の一覧を取得します。</summary>
+      <returns>配信拡張機能の設定です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.IsPrivilegedUser">
+      <summary>ユーザーに対して、拡張機能のすべての機能へのアクセスを許可するかどうかを示します。</summary>
+      <returns>ユーザーに対して、拡張機能のすべての機能へのアクセスを許可するかどうかを示す Boolean 値です。false に設定すると、拡張機能は、レポート サーバーによる定義に従い、ユーザーが機能にアクセスできないようにします。 既定値は false です。 サブスクリプションを作成するユーザーが、定義されたロールの一部として、「すべてのサブスクリプションを管理」権限を持っている場合、プロパティの値は true です。このプロパティは、配信拡張機能によって設定されることはありません。 レポート サーバーがこのプロパティを正しく管理できるように <see cref="P:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.IsPrivilegedUser" /> プロパティを実装する必要がありますが、このプロパティは配信拡張機能のコードで使用されることはありません。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ReportServerInformation">
+      <summary>配信拡張機能が配信を実行するために必要とする、レポート サーバーに関する情報を取得します。</summary>
+      <returns>たとえばインストールされている表示拡張機能の一覧などの、レポート サーバーに関する特定の情報を、レポート通知を配信する前に取得するために使用できる <see cref="T:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation" /> インターフェイスです。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation.RenderingExtension">
+      <summary>レポート サーバーに現在配置されている表示拡張機能を表す <see cref="P:Microsoft.ReportingServices.Interfaces.RenderedOutputFile.Extension" /> オブジェクトの配列です。</summary>
+      <returns>レポート サーバーで現在利用可能な表示拡張機能のリストです。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation.ServerSettings">
+      <summary>使用中の拡張機能の設定値を取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.Setting" /> オブジェクトの配列。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IExtension.LocalizedName">
+      <summary>ユーザー インターフェイスに表示される拡張機能のローカライズされた名前を取得します。</summary>
+      <returns>拡張機能のローカライズされた名前です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IParameter.IsMultiValue">
+      <summary>パラメーターが複数値パラメーターかどうかを示す値を取得します。</summary>
+      <returns>パラメーターが複数値パラメーターかどうかを示す値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IParameter.Name">
+      <summary>パラメーターの名前を示す値を取得します。</summary>
+      <returns>パラメーターの名前を示す値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IParameter.Values">
+      <summary>パラメーター値の配列を示す値を取得します。</summary>
+      <returns>配列を示す値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IReportContext.IsLinkedReport">
+      <summary>レポートがリンク レポートかどうかを示す値を取得します。</summary>
+      <returns>レポートがリンク レポートかどうかを示す値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IReportContext.IsSubreport">
+      <summary>レポートがサブレポートかどうかを示す値を取得します。</summary>
+      <returns>レポートがサブレポートかどうかを示す値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IReportContext.LinkedReportTargetName">
+      <summary>リンク先の名前を示す値を取得します。</summary>
+      <returns>リンク先の名前を示す値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IReportContext.LinkedReportTargetPath">
+      <summary>リンク先のパスを示す値を取得します。</summary>
+      <returns>リンク先のパスを示す値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IReportContext.ParentReportName">
+      <summary>親レポートの名前を示す値を取得します。</summary>
+      <returns>親レポートの名前を示す値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IReportContext.ParentReportPath">
+      <summary>親レポートのパスを示す値を取得します。</summary>
+      <returns>親レポートのパスを示す値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IReportContext.QueryParameters">
+      <summary>レポートのクエリ パラメーターを示す値を取得します。</summary>
+      <returns>レポートのクエリ パラメーターを示す値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IReportContext.ReportName">
+      <summary>レポートの名前を示す値を取得します。</summary>
+      <returns>レポートの名前を示す値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IReportContext.ReportPath">
+      <summary>レポートのパスを示す値を取得します。</summary>
+      <returns>レポートのパスを示す値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IRSRequestContext.Cookies">
+      <summary />
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IRSRequestContext.Headers">
+      <summary />
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IRSRequestContext.User">
+      <summary />
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl.Description">
+      <summary>レポート マネージャーに表示される配信の説明を取得します。</summary>
+      <returns>レポート マネージャーに表示される配信の説明です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl.IsPrivilegedUser">
+      <summary>ユーザーに対して、拡張機能のすべての機能へのアクセスを許可するかどうかを示します。</summary>
+      <returns>ユーザーに対して、拡張機能のすべての機能へのアクセスを許可するかどうかを示す Boolean です。false に設定すると、ユーザーは拡張機能により定義された機能にアクセスすることができなくなります。 既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl.ReportServerInformation">
+      <summary>配信拡張機能が配信を実行するために必要とする、レポート サーバーに関する情報を取得します。</summary>
+      <returns>たとえばインストールされている表示拡張機能の一覧などの、レポート サーバーに関する特定の情報を、レポート通知を配信する前に取得するために使用できる <see cref="T:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation" /> インターフェイスです。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl.UserData">
+      <summary>通知の拡張機能の設定を定義する <see cref="T:Microsoft.ReportingServices.Interfaces.Setting" /> オブジェクトの配列です。</summary>
+      <returns>サブスクリプション所有者によって設定された <see cref="T:Microsoft.ReportingServices.Interfaces.Setting" /> オブジェクトの配列です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IUserContext.AuthenticationType">
+      <summary>認証モードを示す値を取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.AuthenticationType" /> オブジェクト。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IUserContext.Token">
+      <summary>セキュリティ トークンを示す値を取得します。</summary>
+      <returns>セキュリティ トークンを示す値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IUserContext.UserName">
+      <summary>ユーザー名を示す値を取得します。</summary>
+      <returns>ユーザー名を示す値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.LocalizedNameAttribute.Name">
+      <summary>拡張機能のローカライズされた名前を取得します。</summary>
+      <returns>拡張機能のローカライズされた名前を表す string です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.ModelItemOperationsCollection.Item(System.Int32)">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.ModelItemOperation" /> の <see cref="T:Microsoft.ReportingServices.Interfaces.ModelItemOperationsCollection" /> を返します。</summary>
+      <param name="index">取得する <see cref="T:Microsoft.ReportingServices.Interfaces.ModelItemOperation" /> の 0 から始まるインデックスです。</param>
+      <returns>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.ModelItemOperation" /> オブジェクト。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.ModelOperationsCollection.Item(System.Int32)">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.ModelOperation" /> の <see cref="T:Microsoft.ReportingServices.Interfaces.ModelOperationsCollection" /> を返します。</summary>
+      <param name="index">取得する <see cref="T:Microsoft.ReportingServices.Interfaces.ModelOperation" /> の 0 から始まるインデックスです。</param>
+      <returns>コレクションからの <see cref="T:Microsoft.ReportingServices.Interfaces.ModelOperation" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Notification.Attempt">
+      <summary>レポート サーバーが通知の配信を試みた回数を示します。</summary>
+      <returns>レポート サーバーが通知の配信を試みた回数を示す Boolean 値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Notification.MaxNumberOfRetries">
+      <summary>レポート サーバーが通知の配信を試みる最大回数を示します。 この値は、配信拡張機能の構成ファイルに含まれる情報に基づいています。</summary>
+      <returns>レポート サーバーが通知の配信を試みる最大回数です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Notification.Owner">
+      <summary>通知を生成した所有者のユーザー名です。 ユーザー名は、domain\alias の形式です。</summary>
+      <returns>サブスクリプションを生成した所有者のユーザー名です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Notification.Report">
+      <summary>サブスクリプションに関連付けられたレポートに関する情報を含む <see cref="P:Microsoft.ReportingServices.Interfaces.Notification.Report" /> オブジェクトです。</summary>
+      <returns>通知に関連付けられたレポートに関する情報です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Notification.Retry">
+      <summary>レポート サーバーが通知の配信を再試行することを示します。</summary>
+      <returns>レポート サーバーが通知の配信を再試行するかどうかを示す Boolean 値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Notification.Status">
+      <summary>通知の状態です。 サブスクリプション ユーザー インターフェイスに表示されます。</summary>
+      <returns>通知の状態です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Notification.UserData">
+      <summary>通知の拡張機能の設定の値を定義する <see cref="T:Microsoft.ReportingServices.Interfaces.Setting" /> オブジェクトの配列です。</summary>
+      <returns>通知の設定値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.NotificationWithResult.SubscriptionResult">
+      <summary />
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.RenderedOutputFile.Data">
+      <summary>表示拡張機能から出力されたレポートを表すデータ ストリームです。</summary>
+      <returns>表示レポートを表すデータ ストリームです。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.RenderedOutputFile.Encoding">
+      <summary>
+        <see cref="P:Microsoft.ReportingServices.Interfaces.RenderedOutputFile.Data" /> プロパティから返されたファイル ストリームのエンコードの種類です。</summary>
+      <returns>レポート ファイル ストリームのエンコードです。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.RenderedOutputFile.Extension">
+      <summary>
+        <see cref="P:Microsoft.ReportingServices.Interfaces.RenderedOutputFile.Data" /> プロパティから返されたファイルの拡張子です。 この拡張子は、<see cref="P:Microsoft.ReportingServices.Interfaces.RenderedOutputFile.Type" /> プロパティで指定されたファイルの種類に一致します。</summary>
+      <returns>エンコードされたデータ ストリームのファイル拡張子です。 レポートの一般的なファイル拡張子は、HTM、XLS、および TIF です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.RenderedOutputFile.FileName">
+      <summary>ストリームの保存先となるレポート ファイルの名前です。</summary>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.RenderedOutputFile.Type">
+      <summary>
+        <see cref="P:Microsoft.ReportingServices.Interfaces.RenderedOutputFile.Data" /> プロパティのストリームの MIME タイプです。</summary>
+      <returns>ストリームの MIME タイプです。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Report.Date">
+      <summary>レポートが実行されたサーバー日時を取得します。</summary>
+      <returns>レポートが実行された日時です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Report.Name">
+      <summary>通知に関連付けられたレポートの名前を取得します。</summary>
+      <returns>通知に関連付けられたレポートの名前です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Report.URL">
+      <summary>レポート サーバー上にあるレポートの URL を取得します。</summary>
+      <returns>レポートの URL です。 この URL は、レポートへの完全な URL アクセス文字列です。 詳しくは、「URL アクセス (SSRS)」をご覧ください。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.ReportOperationsCollection.Item(System.Int32)">
+      <summary>指定されたインデックス位置にある要素を取得または設定します。 C# の場合、このプロパティは <see cref="T:Microsoft.ReportingServices.Interfaces.ReportOperationsCollection" /> クラスのインデクサーとなります。</summary>
+      <param name="index">取得または設定する要素の 0 から始まるインデックスです。</param>
+      <returns>指定されたインデックス位置の要素です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.ResourceOperationsCollection.Item(System.Int32)">
+      <summary>指定されたインデックス位置にある要素を取得または設定します。 C# の場合、このプロパティは <see cref="T:Microsoft.ReportingServices.Interfaces.ResourceOperationsCollection" /> クラスのインデクサーとなります。</summary>
+      <param name="index">取得または設定する要素の 0 から始まるインデックスです。</param>
+      <returns>指定されたインデックス位置の要素です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Setting.DisplayName">
+      <summary>ユーザーに表示される拡張機能の設定の、ローカライズされた名前です。</summary>
+      <returns>レポート マネージャーなど、ユーザー インターフェイスに表示される設定の名前を表す String です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Setting.Encrypted">
+      <summary>レポート サーバー データベースで拡張機能の設定値を暗号化する必要があるかどうかを示します。</summary>
+      <returns>レポート サーバー データベースで設定の値を暗号化する必要があるかどうかを示す Boolean 値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Setting.Error">
+      <summary>設定の値の問題を説明するエラーです。</summary>
+      <returns>設定の値の問題を説明するエラー メッセージです。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Setting.Field">
+      <summary>設定の値の取得に使用するフィールドの名前です。</summary>
+      <returns>設定の値の取得に使用するフィールドの名前を表す String 値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Setting.IsPassword">
+      <summary>SOAP API の呼び出しで設定値を返すかどうかを示します。</summary>
+      <returns>SOAP API の呼び出しで設定値を返すかどうかを示す Boolean 値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Setting.Name">
+      <summary>設定の名前を取得します。</summary>
+      <returns>設定の名前を表す String 値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Setting.ReadOnly">
+      <summary>設定が読み取り専用かどうかを示します。</summary>
+      <returns>設定が読み取り専用かどうかを示す Boolean 値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Setting.Required">
+      <summary>拡張機能で設定の値が必要かどうかを示します。</summary>
+      <returns>設定の値が必要かどうかを示す Boolean 値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Setting.ValidValues">
+      <summary>設定に構成可能な値のセットです。</summary>
+      <returns>設定の有効な値を含む <see cref="T:Microsoft.ReportingServices.Interfaces.ValidValue" /> オブジェクトのコレクションです。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Setting.Value">
+      <summary>設定の値を取得または設定します。</summary>
+      <returns>設定の値を含む String 値です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.ValidValue.Label">
+      <summary>設定値のラベルです。</summary>
+      <returns>レポート マネージャーなどのユーザー インターフェイスに表示される設定のラベルを表す String です。</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.ValidValue.Value">
+      <summary>設定の有効な値です。</summary>
+      <returns>配信拡張機能が通知を配信するために使用する設定の有効な値を表す String です。</returns>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.CommandBehavior">
+      <summary>クエリの結果と、それがデータベースに与える影響を記述します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.DataProcessing.CommandBehavior.SchemaOnly">
+      <summary>クエリは列情報のみを返し、データベースの状態には影響を与えません。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.DataProcessing.CommandBehavior.SingleResult">
+      <summary>クエリは、単一の結果セットを返します。 クエリの実行により、データベース状態に影響が及ぶことがあります。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.CommandType">
+      <summary>コマンド文字列の解釈方法を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.DataProcessing.CommandType.Text">
+      <summary>テキスト コマンドです。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.DataProcessing.CommandType.StoredProcedure">
+      <summary>ストアド プロシージャの名前です。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.DataProcessing.CommandType.TableDirect">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.DataProcessing.CommandType" /> プロパティが TableDirect に設定されている場合は、<see cref="P:Microsoft.ReportingServices.DataProcessing.IDbCommand.CommandText" /> プロパティをアクセス対象のテーブルの名前に設定する必要があります。 名前付きテーブルのいずれかに特殊文字が含まれている場合、状況に応じてエスケープ文字構文を使用するか、または修飾文字を含める必要があります。Execute メソッドのいずれかを呼び出すと、名前付きテーブルのすべての行と列が返されます。  複数のテーブルにアクセスするには、アクセスするテーブルの名前を含む、スペースや余白のないコンマ区切りの一覧を使用します。<see cref="P:Microsoft.ReportingServices.DataProcessing.IDbCommand.CommandText" /> プロパティが複数のテーブルに名前を付ける場合は、指定されたテーブルの結合が返されます。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDataMultiValueParameter">
+      <summary>Command オブジェクトの複数値パラメーターを表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDataParameter">
+      <summary>Command オブジェクトのパラメーターを表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDataParameterCollection">
+      <summary>Command オブジェクトに関連するすべてのパラメーターのコレクションを表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDataReader">
+      <summary>データ ソースでコマンドを実行することによって取得される結果セットの 1 つ以上の順方向専用ストリームを読み取る手段を提供します。また、リレーショナル データベースにアクセスする Reporting Services データ処理拡張機能によって実装されています。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension">
+      <summary>データ ソースでコマンドを実行することによって取得される、結果セットの 1 つ以上の順方向専用ストリームを読み取る手段を提供します。また、結果セットに関する集計固有の情報を取得するために SQL Server Reporting Services によって使用されます。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDataReaderFieldProperties">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.DataProcessing.IDataReader" /> または <see cref="T:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension" /> インターフェイスを使用して取得した結果セットからフィールド プロパティを読み取る手段を提供します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDbCollationProperties">
+      <summary>データ ソースへの接続の照合順序プロパティを表し、リレーショナル データベースにアクセスする SQL Server Reporting Services データ処理拡張機能によって実装されています。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDbCommand">
+      <summary>データ ソースへの開いている接続が存在するときに実行されるステートメントを表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDbCommandAnalysis">
+      <summary>クエリを分析し、クエリで使用されるパラメーター名の一覧を返す追加コマンド情報を表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDbCommandRewriter">
+      <summary>書き換えられたコマンド テキストを提供します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDbConnection">
+      <summary>データ ソースに対して開いている接続を表し、リレーショナル データベースにアクセスする SQL Server Reporting Services データ処理拡張機能によって実装されています。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension">
+      <summary>SQL Server Reporting Services データ処理拡張機能により実装可能な、追加の接続プロパティを表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDbConnectionWrapper">
+      <summary>
+        <see cref="T:System.Data.IDbConnection" /> オブジェクトにラッパーを提供します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDbTransaction">
+      <summary>データ ソースで実行されるトランザクションを表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDbTransactionExtension">
+      <summary>SQL Server Reporting Services データ処理拡張機能により実装可能な、追加のトランザクション プロパティを表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.ITokenDataExtension">
+      <summary>SharePoint データ ソースにアクセスする SharePoint ユーザー トークンを使用するために、データ処理拡張機能のサポートを定義します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.AceCollection">
+      <summary>1 つ以上のトラスティのアクセス権を指定するアクセス制御エントリのコレクションを表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.AceStruct">
+      <summary>トラスティがレポート サーバー データベースのアイテムで実行可能な操作を指定する、トラスティ (ユーザー、グループ、またはコンピューター) のアクセス制御エントリを表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.AuthenticationType">
+      <summary>認証モードを定義します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AuthenticationType.None">
+      <summary>認証なしを指定します  (値 = 0)</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AuthenticationType.Windows">
+      <summary>認証モードとして Windows を指定します。 このモードは、基本、NTLM、またはネゴシエートを使用している場合に適用されます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AuthenticationType.Passport">
+      <summary>認証モードとして Microsoft Passport を指定します。 この認証モードは、追加設定なしではサポートされません  (値 = 2)</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AuthenticationType.Forms">
+      <summary>認証モードとして ASP.NET フォームベースの認証を指定します  (値 = 3)</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AuthenticationType.SharePointTrustedUser">
+      <summary>認証モードとして SharePoint の信頼されたユーザーを指定します  (値 = 4)。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AuthenticationType.Federation">
+      <summary>フェデレーション認証を指定します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.CatalogOperation">
+      <summary>ユーザーがカタログに対して実行できる操作を記述します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.CreateRoles">
+      <summary>ユーザーは、ロールを作成できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.DeleteRoles">
+      <summary>ユーザーは、ロールを削除できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.ReadRoleProperties">
+      <summary>ユーザーは、ロールに関連付けられた個々のタスクを含む、ロール固有のプロパティを読み取ることができます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.UpdateRoleProperties">
+      <summary>ユーザーは、ロールに関連付けられた個々のタスクを含む、ロール固有のプロパティを変更できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.ReadSystemProperties">
+      <summary>ユーザーは、システムのプロパティを読み取ることができます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.UpdateSystemProperties">
+      <summary>ユーザーは、システム レベルのプロパティを変更できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.GenerateEvents">
+      <summary>ユーザーは、レポート サーバー内でイベントを生成できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.ReadSystemSecurityPolicy">
+      <summary>ユーザーは、システム レベルで設定されたセキュリティ ポリシーを読み取ることができます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.UpdateSystemSecurityPolicy">
+      <summary>ユーザーは、システム レベルで設定されたセキュリティ ポリシーを変更できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.CreateSchedules">
+      <summary>ユーザーは、スケジュールを作成できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.DeleteSchedules">
+      <summary>ユーザーは、スケジュールを削除できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.ReadSchedules">
+      <summary>ユーザーは、スケジュールを読み取ることができます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.UpdateSchedules">
+      <summary>ユーザーは、スケジュールを変更できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.ListJobs">
+      <summary>ユーザーは、実行中のジョブの一覧を取得できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.CancelJobs">
+      <summary>ユーザーは、実行中のジョブをキャンセルできます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.ExecuteReportDefinition">
+      <summary>ユーザーは、レポート サーバー内でレポート定義を実行できます。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.CatalogOperationsCollection">
+      <summary>カタログ操作のコレクションを表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.CreateAndRegisterStream">
+      <summary>ストリームを作成および登録し、レポートの表示先のストリームを取得するためにレポート サーバーによって呼び出されます。</summary>
+      <param name="name">ストリームの名前です。 要求される最初のストリームは、たとえば HTML 表示での HTML や、ページ単位の表示での先頭ページなどの、レポートの本文である必要があります。 名前は、レポート内で一意である必要があります。使用できる文字は、0 ～ 9、a ～ z (小文字のみ)、およびアンダースコア (_) だけです。 アンダースコアは、名前の最初の文字としては使用できません。</param>
+      <param name="extension">ストリームのファイル拡張子です。</param>
+      <param name="encoding">ストリームの文字エンコードです。 ストリームに文字が含まれない場合には、NULL を指定することができます。</param>
+      <param name="mimeType">ストリームの MIME タイプです。</param>
+      <param name="willSeek">ストリームをシーク可能にするかどうかを指定します。false を指定すると、ストリームは順方向専用となり、作成時にチャンクとしてクライアントに送信されます。true を指定すると、ストリームはディスクにスプールされ、閉じられるまで送信されません。 既定値は false です。</param>
+      <param name="operation">メソッドが実行する操作 (<see cref="T:Microsoft.ReportingServices.Interfaces.StreamOper" /> 値) を示します。</param>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.DatasourceOperation">
+      <summary>ユーザーが共有データ ソースに対して実行できる操作を記述します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.DatasourceOperation.Delete">
+      <summary>ユーザーは、共有データ ソースを削除できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.DatasourceOperation.ReadProperties">
+      <summary>ユーザーは、共有データ ソースに関連付けられたプロパティを読み取ることができます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.DatasourceOperation.UpdateProperties">
+      <summary>ユーザーは、共有データ ソースに関連付けられたプロパティを変更できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.DatasourceOperation.ReadContent">
+      <summary>ユーザーは、共有データ ソースの内容を読み取ることができます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.DatasourceOperation.UpdateContent">
+      <summary>ユーザーは、共有データ ソースの内容を変更できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.DatasourceOperation.ReadAuthorizationPolicy">
+      <summary>ユーザーは、共有データ ソースに関連付けられたセキュリティ ポリシーを読み取ることができます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.DatasourceOperation.UpdateDeleteAuthorizationPolicy">
+      <summary>ユーザーは、共有データ ソースに関連付けられたセキュリティ ポリシーを変更または削除できます。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.DatasourceOperationsCollection">
+      <summary>データ ソース操作のコレクションを表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.Extension">
+      <summary>SQL Server Reporting Services の拡張機能を表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.FolderOperation">
+      <summary>ユーザーがフォルダーに対して実行できる操作を記述します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.FolderOperation.CreateFolder">
+      <summary>ユーザーは、指定したフォルダーにサブフォルダーを追加できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.FolderOperation.Delete">
+      <summary>ユーザーは、指定したフォルダーを削除できます。 ユーザーがすべてのアイテムに対して削除権限を持っている場合は、フォルダーの内容を削除できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.FolderOperation.ReadProperties">
+      <summary>ユーザーは、拡張フォルダーのプロパティを読み取ることができます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.FolderOperation.UpdateProperties">
+      <summary>ユーザーは、拡張フォルダーのプロパティを更新または変更できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.FolderOperation.CreateReport">
+      <summary>ユーザーは、指定したフォルダーにレポートを作成できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.FolderOperation.CreateResource">
+      <summary>ユーザーは、指定したフォルダーにリソースを作成できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.FolderOperation.ReadAuthorizationPolicy">
+      <summary>ユーザーは、フォルダーに関連付けられたセキュリティ ポリシーを読み取ることができます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.FolderOperation.UpdateDeleteAuthorizationPolicy">
+      <summary>ユーザーは、フォルダーに関連付けられたセキュリティ ポリシーを更新または削除できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.FolderOperation.CreateDatasource">
+      <summary>ユーザーは、指定したフォルダーに共有データ ソースを作成できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.FolderOperation.CreateModel">
+      <summary>ユーザーは、指定したフォルダーにモデルを作成できます。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.FolderOperationsCollection">
+      <summary>フォルダー操作のコレクションを表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension">
+      <summary>SQL Server Reporting Services の認証拡張機能を表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2">
+      <summary />
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension">
+      <summary>SQL Server Reporting Services の承認機能の拡張に使用できる拡張機能を表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IDeliveryExtension">
+      <summary>SQL Server Reporting Services の配信拡張機能を表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation">
+      <summary>配信拡張機能に必要な、レポート サーバーに関する情報を含みます。 たとえば、利用可能な表示拡張機能のリストです。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IExtension">
+      <summary>SQL Server Reporting Services の拡張機能を表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IParameter">
+      <summary>パラメーターのプロパティを定義します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IRenderStream">
+      <summary>表示拡張機能からの複数のストリームの表示をサポートします。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IReportContext">
+      <summary>レポートのコンテキストのプロパティを定義します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IReportDefinitionCustomizationExtension">
+      <summary>レポート定義の処理に使用される <see cref="M:Microsoft.ReportingServices.Interfaces.IReportDefinitionCustomizationExtension.ProcessReportDefinition" /> メソッドを定義します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IRSRequestContext">
+      <summary />
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.ISemanticModelGenerator">
+      <summary>レポートのセマンティック モデルを生成するプロパティとメソッドを定義します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl">
+      <summary>ユーザーから配信拡張機能固有のサブスクリプション情報を取得する手段を表します (電子メール アドレスなど)。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IUserContext">
+      <summary>ユーザー セッションのコンテキストのプロパティを定義します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IWindowsAuthenticationExtension">
+      <summary>SQL Server Reporting Services の Windows 認証拡張機能を表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IWindowsAuthenticationExtension2">
+      <summary />
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.LocalizedNameAttribute">
+      <summary>拡張機能のローカライズされた名前を提供します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.ModelItemOperation">
+      <summary>モデル アイテムで許可された操作の種類を表します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ModelItemOperation.ReadProperties">
+      <summary>ユーザーに対して、モデル アイテムのプロパティの読み取りを許可します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.ModelItemOperationsCollection">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.ModelItemOperationsCollection" /> のコレクションを表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.ModelOperation">
+      <summary>ユーザーがモデルに対して実行できる操作を記述します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ModelOperation.Delete">
+      <summary>ユーザーはモデルを削除できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ModelOperation.ReadProperties">
+      <summary>ユーザーは、モデルに関連付けられたプロパティを読み取ることができます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ModelOperation.UpdateProperties">
+      <summary>ユーザーは、特定のモデルに関連付けられたプロパティを更新できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ModelOperation.ReadDatasource">
+      <summary>ユーザーは、モデルのデータ ソースに関連付けられたプロパティを読み取ることができます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ModelOperation.UpdateDatasource">
+      <summary>ユーザーは、特定のモデルに関連付けられたデータ ソースを更新できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ModelOperation.ReadContent">
+      <summary>ユーザーは、特定のモデルのコンテンツを読み取ることができます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ModelOperation.UpdateContent">
+      <summary>ユーザーは、特定のモデルのコンテンツを更新できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ModelOperation.ReadAuthorizationPolicy">
+      <summary>ユーザーは、モデルに関連付けられたセキュリティ ポリシーを読み取ることができます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ModelOperation.UpdateDeleteAuthorizationPolicy">
+      <summary>ユーザーは、特定のモデルに関連付けられたセキュリティ ポリシーを変更または削除できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ModelOperation.ReadModelItemAuthorizationPolicies">
+      <summary>ユーザーは、特定のモデルに関連付けられたセキュリティ ポリシーを読み取ることができます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ModelOperation.UpdateModelItemAuthorizationPolicies">
+      <summary>ユーザーは、特定のモデル アイテムに関連付けられたセキュリティ ポリシーを更新できます。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.ModelOperationsCollection">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.ModelOperation" /> オブジェクトのコレクションを表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.Notification">
+      <summary>配信拡張機能がレポートの配信に使用するサブスクリプション情報を表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.NotificationWithResult">
+      <summary />
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.OperationNames">
+      <summary>ユーザーが SQL Server Reporting Services のアイテムで実行可能な操作のフィールド名および対応する値を表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.RdceCustomizableElementId">
+      <summary>カスタマイズ可能なレポート要素を定義します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.RdceCustomizableElementId.Body">
+      <summary>レポートの本文要素を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.RdceCustomizableElementId.PageHeader">
+      <summary>レポートのページ ヘッダー要素を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.RdceCustomizableElementId.PageFooter">
+      <summary>レポートのページ フッター要素を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.RdceCustomizableElementId.Page">
+      <summary>レポートのページ要素を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.RdceCustomizableElementId.DataSets">
+      <summary>レポート定義で使用されるデータセットを指定します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.RenderedOutputFile">
+      <summary>表示拡張機能からの出力を表します。<see cref="T:Microsoft.ReportingServices.Interfaces.RenderedOutputFile" /> オブジェクトは、表示拡張機能から返されたストリームを配信拡張機能が処理するために必要な、関連付けられたファイル名と型に関する情報を格納します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.Report">
+      <summary>配信拡張機能によるユーザーへのレポート配信を可能にする、レポート固有の情報とメソッドを表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.ReportOperation">
+      <summary>ユーザーがレポートに対して実行できる操作を記述します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.Delete">
+      <summary>ユーザーは、レポートを削除できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.ExecuteAndView">
+      <summary>ユーザーは、レポートを実行および表示できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.ReadProperties">
+      <summary>ユーザーは、レポートに関連付けられたプロパティを読み取ることができます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.UpdateProperties">
+      <summary>ユーザーは、特定のレポートに関連付けられたプロパティを変更または更新できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.UpdateParameters">
+      <summary>ユーザーは、特定のレポートに関連付けられたパラメーター値を更新または変更できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.ReadDatasource">
+      <summary>ユーザーは、レポートのデータ ソースに関連付けられたプロパティを読み取ることができます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.UpdateDatasource">
+      <summary>ユーザーは、特定のレポートに関連付けられた単一のデータ ソースを更新または変更できます。 これには、共有データ ソースは含まれません。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.ReadReportDefinition">
+      <summary>ユーザーは、特定のレポートのレポート定義を読み取ることができます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.UpdateReportDefinition">
+      <summary>ユーザーは、レポートのレポート定義を変更または更新できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.CreateSubscription">
+      <summary>ユーザーは、特定のレポートに関連付けられたサブスクリプションを作成できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.DeleteSubscription">
+      <summary>ユーザーは、自身が所有者であるサブスクリプションを削除できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.ReadSubscription">
+      <summary>ユーザーは、自身が所有者であるレポート サブスクリプションに関連付けられたプロパティを読み取ることができます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.ReadAuthorizationPolicy">
+      <summary>ユーザーは、特定のレポートに関連付けられたセキュリティ ポリシーを読み取ることができます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.UpdateDeleteAuthorizationPolicy">
+      <summary>ユーザーは、特定のレポートに関連付けられたセキュリティ ポリシーを変更または削除できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.UpdateSubscription">
+      <summary>ユーザーは、自身が所有者であるレポート サブスクリプションを変更または更新できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.CreateAnySubscription">
+      <summary>ユーザーは、特定のレポートに関連付けられた任意のサブスクリプションを作成できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.DeleteAnySubscription">
+      <summary>ユーザーは、特定のレポートに関連付けられた任意のサブスクリプションを削除できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.ReadAnySubscription">
+      <summary>ユーザーは、特定のレポートに関連付けられた任意のサブスクリプションのプロパティを読み取ることができます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.UpdateAnySubscription">
+      <summary>ユーザーは、特定のレポートに関連付けられた任意のサブスクリプションを更新または変更できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.UpdatePolicy">
+      <summary>ユーザーは、特定のレポートに関連付けられたキャッシュやスナップショットのポリシーを変更または更新できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.ReadPolicy">
+      <summary>ユーザーは、特定のレポートに関連付けられたキャッシュおよびスナップショットのポリシーを読み取ることができます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.DeleteHistory">
+      <summary>ユーザーは、特定のレポートに関連付けられたレポート履歴スナップショットを削除できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.ListHistory">
+      <summary>ユーザーは、特定のレポートに関連付けられたレポート履歴を表示できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.CreateResource">
+      <summary>ユーザーは、特定のフォルダーにリソースを作成できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.CreateSnapshot">
+      <summary>ユーザーは、特定のレポートに関連付けられたレポート履歴スナップショットを作成できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.Execute">
+      <summary>ユーザーは、レポートを実行できますが、表示することはできません。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.CreateLink">
+      <summary>ユーザーは、特定のレポートにリンクできます。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.ReportOperationsCollection">
+      <summary>レポート操作のコレクションを表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.ResourceOperation">
+      <summary>ユーザーがリソースに対して実行できる操作を記述します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ResourceOperation.Delete">
+      <summary>ユーザーは、指定されたリソースを削除できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ResourceOperation.ReadProperties">
+      <summary>ユーザーは、リソースのプロパティを読み取ることができます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ResourceOperation.UpdateProperties">
+      <summary>ユーザーは、リソースのプロパティを変更または更新できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ResourceOperation.ReadContent">
+      <summary>ユーザーは、リソースの MIME コンテンツを読み取ることができます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ResourceOperation.UpdateContent">
+      <summary>ユーザーは、リソースの MIME コンテンツを更新または変更できます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ResourceOperation.ReadAuthorizationPolicy">
+      <summary>ユーザーは、リソースに関連付けられたセキュリティ ポリシーを読み取ることができます。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ResourceOperation.UpdateDeleteAuthorizationPolicy">
+      <summary>ユーザーは、リソースに関連付けられたセキュリティ ポリシーを更新または削除できます。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.ResourceOperationsCollection">
+      <summary>リソース操作のコレクションを表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.SecurityItemType">
+      <summary>特定の承認要求に関連付けられたアイテムを表します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.SecurityItemType.Unknown">
+      <summary>不明なアイテムの種類を表します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.SecurityItemType.Catalog">
+      <summary>レポート サーバー データベース全体を表します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.SecurityItemType.Folder">
+      <summary>フォルダー アイテムの種類を表します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.SecurityItemType.Report">
+      <summary>レポート アイテムの種類を表します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.SecurityItemType.Resource">
+      <summary>リソース アイテムの種類を表します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.SecurityItemType.Datasource">
+      <summary>データ ソース アイテムの種類を表します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.SecurityItemType.Model">
+      <summary>モデルの種類を表します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.SecurityItemType.ModelItem">
+      <summary>モデル アイテムの種類を表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.Setting">
+      <summary>拡張機能の設定を表します。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.StreamOper">
+      <summary>
+        <see cref="T:Microsoft.ReportingServices.Interfaces.CreateAndRegisterStream" /> メソッドによって使用される操作を定義します。 表示拡張機能は、クライアント アプリケーションが SOAP または URL アクセスを通じて利用できるストリーム、または表示処理中に使用される一時ストリームを要求する場合があります。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.StreamOper.CreateAndRegister">
+      <summary>ストリームを作成し、その名前を登録して、そのストリームが後続のクライアント要求に対して SOAP API を通じて返されるようにします。 登録される最初のストリームは、プライマリ出力ストリームです。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.StreamOper.CreateOnly">
+      <summary>ストリームの作成のみを実行します。 この機能は、表示拡張機能が大きなメモリ要求を処理するために使用できる一時ストリームを作成するために使用されます。 この一時ストリームは、後続のクライアント要求では利用できません。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.StreamOper.RegisterOnly">
+      <summary>ストリームを、表示拡張機能のセカンダリ ストリームとして登録します。 このメソッドはストリームを作成しませんが、代わりにコールバックが null を返し、名前を登録します。</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.StreamOper.CreateForPersistedStreams">
+      <summary>rs:PersistStream=true URL アクセス オプションを使用するユーザーのために 1 つの永続化ストリームを作成します。 このオプションを使用すると、セカンダリ ストリームは登録されません。 代わりに、ストリーム データがチャンク単位で転送されます。ユーザーは、rs:GetNextStream=true オプションを指定した同じ URL アクセス コマンドを使用して、永続化ストリームの次のデータ チャンクにアクセスします。 このオプションは、URL アクセスにのみ適用できます。</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.ValidValue">
+      <summary>拡張機能の設定の有効な値を表します。</summary>
+    </member>
+  </members>
+</doc>

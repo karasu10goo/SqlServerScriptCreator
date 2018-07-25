@@ -1,0 +1,1369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.SqlServer.Management.Utility</name>
+  </assembly>
+  <members>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.#ctor(Microsoft.SqlServer.Management.Utility.Utility,System.String)">
+      <summary>指定された親ユーティリティ オブジェクトと指定された名前を使用して、<see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="parent">
+        <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> オブジェクト値です。</param>
+      <param name="name">コンピューターの名前を示す <see cref="T:Server.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.GetObjectFactory">
+      <summary>新しいインスタンスを作成するために使用されるファクトリ オブジェクトを取得します。</summary>
+      <returns>新しいインスタンスを作成するために使用される <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcObjectFactory" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.#ctor">
+      <summary>指定した名前を持つ <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.#ctor(Microsoft.SqlServer.Management.Utility.Computer.Key)">
+      <summary>指定したキーに基づいて <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="other">他のキーを指定する <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.#ctor(System.String)">
+      <summary>指定した名前を持つ <see cref="T:Microsoft.SqlServer.Management.Utility. Computer.Key" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="name">キーの名前を指定する <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.Equals(Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey)">
+      <summary>指定した 2 つのオブジェクトが等しいかどうかを判定します。</summary>
+      <param name="key">一方のオブジェクトを指定する <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey" /> 値です。</param>
+      <returns>指定したキーが参照先オブジェクト キーと等しいかどうかを指定する <see cref="T:System.Boolean" /> 値です。True の場合は、キー値が等しいことを意味します。 それ以外の場合は False。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.Equals(System.Object)">
+      <summary>指定したオブジェクト キーが参照先の文字列値と等しいかどうかを確認します。</summary>
+      <param name="obj">比較するオブジェクトを指定する <see cref="T:System.Object" /> 値です。</param>
+      <returns>指定したキーが参照先オブジェクト キーと等しいかどうかを指定する <see cref="T:System.Boolean" /> 値です。True の場合は、キー値が等しいことを意味します。 それ以外の場合は False。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.Equals(System.Object,System.Object)">
+      <summary>指定した 2 つのオブジェクトが等しいかどうかを判定します。</summary>
+      <param name="obj1">一方のオブジェクトを指定する <see cref="T:System.Object" /> 値です。</param>
+      <param name="obj2">もう一方のオブジェクトを指定する <see cref="T:System.Object" /> 値です。</param>
+      <returns>指定したキーが参照先オブジェクト キーと等しいかどうかを指定する <see cref="T:System.Boolean" /> 値です。True の場合は、キー値が等しいことを意味します。 それ以外の場合は False。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.GetHashCode">
+      <summary>オブジェクトのハッシュ コードを取得します。</summary>
+      <returns>ハッシュ コードを指定する <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.GetUrnFragment">
+      <summary>コンピューターを表す URN パス文字列の一部を取得します。</summary>
+      <returns>URN フラグメントを格納する <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.op_Equality(Microsoft.SqlServer.Management.Utility.Computer.Key,Microsoft.SqlServer.Management.Utility.Computer.Key)">
+      <summary>指定したオブジェクト キーが 2 つ目のオブジェクト キーと等しいかどうかを確認します。</summary>
+      <param name="leftOperand">等しいかどうかを比較する <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> です。</param>
+      <param name="rightOperand">等しいかどうかを比較する 2 つ目の <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> です。</param>
+      <returns>2 つのオペランドが等しい場合は true、そうでない場合は false になる <see cref="T:System.Boolean" /> です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.op_Equality(Microsoft.SqlServer.Management.Utility.Computer.Key,System.Object)">
+      <summary>指定されたオブジェクト キーがオブジェクトと等しいかどうかを確認します。</summary>
+      <param name="leftOperand">等しいかどうかを比較する <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> です。</param>
+      <param name="obj">等しいかどうかを比較する <see cref="T:System.Object" /> です。</param>
+      <returns>2 つのオペランドが等しい場合は true、そうでない場合は false になる <see cref="T:System.Boolean" /> です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.op_Equality(System.Object,Microsoft.SqlServer.Management.Utility.Computer.Key)">
+      <summary>指定されたオブジェクトがオブジェクト キーと等しいかどうかを確認します。</summary>
+      <param name="obj">等しいかどうかを比較する <see cref="T:System.Object" /> です。</param>
+      <param name="rightOperand">等しいかどうかを比較する <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> です。</param>
+      <returns>2 つのオペランドが等しい場合は true、そうでない場合は false になる <see cref="T:System.Boolean" /> です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.op_Inequality(Microsoft.SqlServer.Management.Utility.Computer.Key,Microsoft.SqlServer.Management.Utility.Computer.Key)">
+      <summary>指定したオブジェクト キーが 2 つ目のオブジェクト キーと等しくないかどうかを確認します。</summary>
+      <param name="leftOperand">比較する <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> です。</param>
+      <param name="rightOperand">比較する 2 番目の <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> です。</param>
+      <returns>2 つのオペランドが等しくない場合は true、そうでない場合は false になる <see cref="T:System.Boolean" /> です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.op_Inequality(Microsoft.SqlServer.Management.Utility.Computer.Key,System.Object)">
+      <summary>指定されたオブジェクト キーがオブジェクトと等しくないかどうかを確認します。</summary>
+      <param name="leftOperand">比較する <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> です。</param>
+      <param name="obj">比較する <see cref="T:System.Object" /> です。</param>
+      <returns>2 つのオペランドが等しくない場合は true、そうでない場合は false になる <see cref="T:System.Boolean" /> です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Computer.Key.op_Inequality(System.Object,Microsoft.SqlServer.Management.Utility.Computer.Key)">
+      <summary>指定されたオブジェクトがオブジェクト キーと等しくないかどうかを確認します。</summary>
+      <param name="obj">比較する <see cref="T:System.Object" /> です。</param>
+      <param name="rightOperand">比較する <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> です。</param>
+      <returns>2 つのオペランドが等しくない場合は true、そうでない場合は false になる <see cref="T:System.Boolean" /> です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ComputerCollection.#ctor(Microsoft.SqlServer.Management.Utility.Utility)">
+      <summary>指定したユーティリティ ドメインに基づいて、<see cref="T:Microsoft.SqlServer.Management.Utility.ComputerCollection" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="parent">コレクションの親を示す <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ComputerCollection.#ctor(Microsoft.SqlServer.Management.Utility.Utility,System.Collections.Generic.IComparer{System.String})">
+      <summary>指定したユーティリティ ドメインと指定した比較演算子インターフェイスに基づいて、<see cref="T:Microsoft.SqlServer.Management.Utility.CollectionCollection" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="parent">コレクションの親を示す <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> オブジェクトです。</param>
+      <param name="customComparer">カスタムの比較演算子インターフェイスを指定する <see cref="T:System.Collections.Generic.IComparer&lt;string&gt;" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ComputerCollection.Contains(System.String)">
+      <summary>参照されたコレクションに指定された文字列が含まれるかどうかを確認します。</summary>
+      <param name="name">コレクション内で検索するコンピューター名を示す <see cref="T:System.String" /> 値です。</param>
+      <returns>指定された文字列がコレクションに含まれているかどうかを判定する <see cref="T:System.Boolean" /> 値です。True の場合は、文字列が含まれています。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DataFileAdapter.#ctor(Microsoft.SqlServer.Management.Smo.DataFile)">
+      <summary>指定したファイルを使用して、<see cref="T:Microsoft.SqlServer.Management.Utility.DataFileAdapter" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="file">データ ファイルを示す <see cref="T:Microsoft.SqlServer.Management.Smo.DataFile" /> オブジェクトの値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DeployedDac.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DeployedDac.CreateIdentityKey">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey" /> オブジェクトを作成します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DeployedDac.GetChildCollection(System.String)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.UtilityException" /> をスローします。 このようなコレクションはありません。</summary>
+      <param name="elementType">要素の種類を示す文字列値です。</param>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.UtilityException" /> オブジェクト。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DeployedDac.GetObjectFactory">
+      <summary>新しいインスタンスを作成するために使用されるファクトリ オブジェクトを取得します。</summary>
+      <returns>新しいインスタンスを作成するために使用される <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcObjectFactory" /> オブジェクトを返します。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DeployedDac.Key.#ctor(System.String,System.String)">
+      <summary>指定した名前を持つ <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac.Key" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="keyName">キーの名前を指定する <see cref="T:System.String" /> 値です。</param>
+      <param name="keyServerInstanceName">キーに関連付けられたサーバー インスタンスの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DeployedDac.Key.Equals(Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey)">
+      <summary>指定した 2 つのオブジェクトが等しいかどうかを判定します。</summary>
+      <param name="key">一方のオブジェクトを指定する <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey" /> 値です。</param>
+      <returns>指定したキーが参照先オブジェクト キーと等しいかどうかを指定する <see cref="T:System.Boolean" /> 値です。True の場合は、キー値が等しいことを意味します。 それ以外の場合は False。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DeployedDac.Key.Equals(System.Object)">
+      <summary>指定したオブジェクト キーが参照先の文字列値と等しいかどうかを確認します。</summary>
+      <param name="obj">比較するオブジェクトを指定する <see cref="T:System.Object" /> 値です。</param>
+      <returns>指定したキーが参照先オブジェクト キーと等しいかどうかを指定する <see cref="T:System.Boolean" /> 値です。True の場合は、キー値が等しいことを意味します。 それ以外の場合は False。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DeployedDac.Key.GetHashCode">
+      <summary>オブジェクトのハッシュ コードを取得します。</summary>
+      <returns>ハッシュ コードを指定する <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DeployedDac.Key.GetUrnFragment">
+      <summary>配置された DAC を表す URN パス文字列の一部を取得します。</summary>
+      <returns>URN フラグメントを格納する <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DeployedDacCollection.#ctor(Microsoft.SqlServer.Management.Utility.Utility)">
+      <summary>指定されたインポート済みオブジェクトに基づいて <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDacCollection" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="parent">コレクションの親を示す <see cref="T:Microsoft.SqlServer.Management.Utility.ImportedObject" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DeployedDacCollection.#ctor(Microsoft.SqlServer.Management.Utility.Utility,System.Collections.Generic.IComparer{System.String})">
+      <summary>指定されたインポート済みオブジェクトと指定された比較演算子インターフェイスに基づいて <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDacCollection" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="parent">コレクションの親を示す <see cref="T:Microsoft.SqlServer.Management.Utility.ImportedObject" /> オブジェクトです。</param>
+      <param name="customComparer">カスタムの比較演算子インターフェイスを指定する <see cref="T:System.Collections.Generic.IComparer&lt;string&gt;" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.DeployedDacCollection.Contains(System.String,System.String)">
+      <summary>参照されたコレクションに指定された文字列が含まれるかどうかを確認します。</summary>
+      <param name="name">コレクション内で検索する配置済み DAC 名を示す <see cref="T:System.String" /> 値です。</param>
+      <param name="serverInstanceName">サーバー インスタンスの名前を示す <see cref="T:System.String" /> 値です。</param>
+      <returns>指定された文字列がコレクションに含まれているかどうかを判定する <see cref="T:System.Boolean" /> 値です。True の場合は、文字列が含まれています。 それ以外の場合は False。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.LogFileAdapter.#ctor(Microsoft.SqlServer.Management.Smo.LogFile)">
+      <summary>指定したログ ファイルに対する <see cref="T:Microsoft.SqlServer.Management.Utility.LogFileAdapter" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="file">アダプターに関連付けられるログ ファイルを示す <see cref="T:Microsoft.SqlServer.Management.Smo.LogFile" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstance.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstance" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstance.CreateIdentityKey">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey" /> オブジェクトを作成します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstance.GetChildCollection(System.String)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.UtilityException" /> をスローします。 このようなコレクションはありません。</summary>
+      <param name="elementType">要素の種類を示す文字列値です。</param>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.UtilityException" /> オブジェクト。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstance.GetObjectFactory">
+      <summary>新しいインスタンスを作成するために使用されるファクトリ オブジェクトを取得します。</summary>
+      <returns>新しいインスタンスを作成するために使用される <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcObjectFactory" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstance.Key.#ctor(System.String)">
+      <summary>指定した名前を持つ <see cref="T:Microsoft.SqlServer.Management.Utility. ManagedInstance.Key" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="managedInstanceName">キーの名前を指定する <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstance.Key.GetUrnFragment">
+      <summary>マネージ インスタンスを表す URN パス文字列の一部を取得します。</summary>
+      <returns>URN フラグメントを格納する <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstance.Microsoft#SqlServer#Management#Common#ICreatable#Create">
+      <summary>状態が管理されているかどうかを検査して、管理状態になっている場合はサーバーと接続を作成します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstance.Microsoft#SqlServer#Management#Common#IDroppable#Drop">
+      <summary>状態が管理されているかどうかを検査して、管理されている場合はインスタンスを削除します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstance.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcCreatable#ScriptCreate">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.ISfcScript" /> オブジェクトを作成します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.ISfcScript" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstance.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDroppable#ScriptDrop">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.ISfcScript" /> オブジェクトを削除します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.ISfcScript" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstance.PostCreate(System.Object)">
+      <summary>基本データ型の ID プロパティを実行結果に設定します。</summary>
+      <param name="executionResult">作成アクションの結果の説明を含む <see cref="T:System.Object" /> です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstance.Remove(Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection)">
+      <summary>親 <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection" /> オブジェクトを取得します。</summary>
+      <param name="sqlStoreConnection">
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection" /> オブジェクト。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstanceCollection.#ctor(Microsoft.SqlServer.Management.Utility.Utility)">
+      <summary>指定した親 <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstanceCollection" /> を使用して、新しい <see cref="T:Microsoft.SqlServer.Management.Utility" /> インスタンスを作成します。</summary>
+      <param name="parent">
+        <see cref="T:Microsoft.SqlServer.Management.Utility" /> の親である <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstanceCollection" /> オブジェクトを指定します。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstanceCollection.#ctor(Microsoft.SqlServer.Management.Utility.Utility,System.Collections.Generic.IComparer{System.String})">
+      <summary>指定した親 <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstanceCollection" /> とカスタム オブジェクト比較演算子オブジェクトを使用して、新しい <see cref="T:Microsoft.SqlServer.Management.Utility" /> インスタンスを作成します。</summary>
+      <param name="parent">
+        <see cref="T:Microsoft.SqlServer.Management.Utility" /> の親である <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstanceCollection" /> オブジェクトを指定します。</param>
+      <param name="customComparer">コレクション内のマネージ インスタンスを比較するために使用される、<see cref="T:System.Collections.Generic.IComparer`1" /> インターフェイスを実装するオブジェクトを格納します。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.ManagedInstanceCollection.Contains(System.String)">
+      <summary>指定した名前のマネージ インスタンスがコレクションに含まれるかどうかを示す値を取得します。</summary>
+      <param name="name">チェックするマネージ インスタンスの名前を示す <see cref="T:System.String" /> 値です。</param>
+      <returns>指定したマネージ インスタンスがコレクション内に存在するかどうかを示す <see cref="T:System.Boolean" /> 値。 インスタンスが存在する場合は true、 それ以外の場合は false。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.NameKey.#ctor(System.String)">
+      <summary>指定したキー名を使用して、<see cref="T:Microsoft.SqlServer.Management.Utility.NameKey" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="keyName">キー名を含む <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.NameKey.Equals(Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey)">
+      <summary>現在の <see cref="T:Microsoft.SqlServer.Management.Utility.NameKey" /> によって表されるオブジェクトが、指定したキーによって表されるオブジェクトと等しいかどうかを判定します。</summary>
+      <param name="key">現在の <see cref="T:Microsoft.SqlServer.Management.Utility.NameKey" /> と比較するオブジェクトの SfcKey を指定します。</param>
+      <returns>2 つのオブジェクトが等しいかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、両方のオブジェクトは同一です。それ以外の場合は False です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.NameKey.Equals(System.Object)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.NameKey" /> によって表されるオブジェクトが、指定した <see cref="T:System.Object" /> と等しいかどうかを判定します。</summary>
+      <param name="obj">
+        <see cref="T:System.Object" /> によって表されるオブジェクトと比較する <see cref="T:Microsoft.SqlServer.Management.Utility.NameKey" /> です。</param>
+      <returns>2 つのオブジェクトが等しいかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、両方のオブジェクトは同一です。それ以外の場合は False です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.NameKey.Equals(System.Object,System.Object)">
+      <summary>指定した 2 つのオブジェクトが等しいかどうかを判定します。</summary>
+      <param name="obj1">比較する最初のオブジェクトを指定します。</param>
+      <param name="obj2">比較する 2 番目のオブジェクトを指定します。</param>
+      <returns>2 つのオブジェクトが等しいかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、両方のオブジェクトは同一です。それ以外の場合は False です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.NameKey.GetHashCode">
+      <summary>この <see cref="T:Microsoft.SqlServer.Management.Utility.NameKey" /> のハッシュ コードを返します。</summary>
+      <returns>この <see cref="T:Microsoft.SqlServer.Management.Utility.NameKey" /> インスタンスのハッシュ コードを含む、32 ビット符号付き整数です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.NameKey.op_Equality(Microsoft.SqlServer.Management.Utility.NameKey,Microsoft.SqlServer.Management.Utility.NameKey)">
+      <summary>2 つの指定した <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> 値によって表されるオブジェクトが同一かどうかを判定します。</summary>
+      <param name="leftOperand">比較する最初のオブジェクトを表す <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> オブジェクトです。</param>
+      <param name="rightOperand">比較する 2 つ目のオブジェクトを表す <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> オブジェクトです。</param>
+      <returns>
+        <see cref="T:System.Boolean" /> 値。2 つのオブジェクトが等しい場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.NameKey.op_Equality(Microsoft.SqlServer.Management.Utility.NameKey,System.Object)">
+      <summary>指定した <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> によって表されるオブジェクトが、指定した <see cref="T:System.Object" /> と同一かどうかを判定します。</summary>
+      <param name="leftOperand">比較する最初のオブジェクトを表す <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> オブジェクトです。</param>
+      <param name="obj">比較する 2 つ目のオブジェクトを指定する <see cref="T:System.Object" /> です。</param>
+      <returns>
+        <see cref="T:System.Boolean" /> 値。2 つのオブジェクトが等しい場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.NameKey.op_Equality(System.Object,Microsoft.SqlServer.Management.Utility.NameKey)">
+      <summary>指定した <see cref="T:System.Object" /> が、指定した <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> によって表されるオブジェクトと同一かどうかを判定します。</summary>
+      <param name="obj">比較する最初のオブジェクトを指定する <see cref="T:System.Object" /> です。</param>
+      <param name="rightOperand">比較する 2 つ目のオブジェクトを表す <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> オブジェクトです。</param>
+      <returns>
+        <see cref="T:System.Boolean" /> 値。2 つのオブジェクトが等しい場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.NameKey.op_Inequality(Microsoft.SqlServer.Management.Utility.NameKey,Microsoft.SqlServer.Management.Utility.NameKey)">
+      <summary>2 つの指定した <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> 値によって表されるオブジェクトが異なるかどうかを判定します。</summary>
+      <param name="leftOperand">比較する最初のオブジェクトを表す <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> オブジェクトです。</param>
+      <param name="rightOperand">比較する 2 つ目のオブジェクトを表す <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> オブジェクトです。</param>
+      <returns>
+        <see cref="T:System.Boolean" /> 値。2 つのオブジェクトが異なる場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.NameKey.op_Inequality(Microsoft.SqlServer.Management.Utility.NameKey,System.Object)">
+      <summary>指定した <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> によって表されるオブジェクトが、指定した <see cref="T:System.Object" /> と異なるかどうかを判定します。</summary>
+      <param name="leftOperand">比較する最初のオブジェクトを表す <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> オブジェクトです。</param>
+      <param name="obj">比較する 2 つ目のオブジェクトを指定する <see cref="T:System.Object" /> です。</param>
+      <returns>
+        <see cref="T:System.Boolean" /> 値。2 つのオブジェクトが異なる場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.NameKey.op_Inequality(System.Object,Microsoft.SqlServer.Management.Utility.NameKey)">
+      <summary>指定した <see cref="T:System.Object" /> が、指定した <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> によって表されるオブジェクトと異なるかどうかを判定します。</summary>
+      <param name="obj">比較する最初のオブジェクトを指定する <see cref="T:System.Object" /> です。</param>
+      <param name="rightOperand">比較する 2 つ目のオブジェクトを表す <see cref="T:Microsoft.SqlServer.Managment.Utility.NameKey" /> オブジェクトです。</param>
+      <returns>
+        <see cref="T:System.Boolean" /> 値。2 つのオブジェクトが異なる場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> クラスの新しい既定のインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.#ctor(Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection)">
+      <summary>SqlStore への指定された接続を使用して、<see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="connection">接続情報を表す SqlStoreConnection オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Alter">
+      <summary>SQL Server のインスタンスの <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> プロパティに対する変更をすべて更新します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Connect(Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection)">
+      <summary>
+        <paramref name="connection" /> によって指定された <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection" /> オブジェクトを返します。</summary>
+      <param name="connection">
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection" /> オブジェクト。</param>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.CreateUtility(System.String,Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> オブジェクトを作成します。</summary>
+      <param name="utilityName">ユーティリティの名前を指定する文字列値です。</param>
+      <param name="sqlStoreConnection">
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection" /> オブジェクト。</param>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> オブジェクト。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.CreateUtility(System.String,Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection,System.String,Microsoft.SqlServer.Common.SqlSecureString)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> オブジェクトを作成します。</summary>
+      <param name="utilityName">ユーティリティの名前を指定する文字列値です。</param>
+      <param name="sqlStoreConnection">
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection" /> オブジェクト。</param>
+      <param name="agentProxyAccount">エージェント プロキシ アカウントを示す文字列値です。</param>
+      <param name="agentProxyPassword">パスワードを含む <see cref="T:Microsoft.SqlServer.Common.SqlSecureString" /> オブジェクトです。</param>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> オブジェクト。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.EnrollInstance(Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection)">
+      <summary>
+        <paramref name="sqlStoreConnection" /> パラメーターによって指定された接続に <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> オブジェクトを登録します。</summary>
+      <param name="sqlStoreConnection">
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection" /> オブジェクト。</param>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstance" /> オブジェクト。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.EnrollInstance(Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection,System.String,Microsoft.SqlServer.Common.SqlSecureString)">
+      <summary>
+        <paramref name="sqlStoreConnection" /> パラメーターによって指定された接続に <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> オブジェクトを登録します。</summary>
+      <param name="sqlStoreConnection">
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection" /> オブジェクト。</param>
+      <param name="agentProxyAccount">エージェント プロキシ アカウントを示す文字列値です。</param>
+      <param name="agentProxyPassword">パスワードを含む <see cref="T:Microsoft.SqlServer.Common.SqlSecureString" /> オブジェクトです。</param>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstance" /> オブジェクト。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.IsLoginUtilityReader(Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection)">
+      <summary>接続で使用されるログインにユーティリティ リーダーのロールがあるかどうかを検証します。</summary>
+      <param name="storeConnection">接続を指定します。</param>
+      <returns>ログインにリーダーのロールがあるかどうかを示す <see cref="T:System.Boolean" /> 値です。 ログインにこのロールがある場合は true、 それ以外の場合は false。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.IsUtilityControlPoint(Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection)">
+      <summary>指定されたサーバーがユーティリティ コントロール ポイント (UCP) であるかどうかを判定します。</summary>
+      <param name="storeConnection">テスト対象サーバーを指定する <see cref="T:Microsoft.SqlServer.Management.Dmf.SqlStoreConnection" /> です。</param>
+      <returns>サーバーが UCP であるかどうかを示す <see cref="T:System.Boolean" /> 値です。 サーバーが UCP である場合は true、 それ以外の場合は false。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Key.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.Utility.Key" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Key.Equals(Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey)">
+      <summary>指定したキーが <see cref="T:Microsoft.SqlServer.Management.Utility.Utility.Key" /> と等しいことを確認します。</summary>
+      <param name="key">現在の <see cref="T:Microsoft.SqlServer.Management.Utility.Utility.Key" /> のインスタンスと比較するためのキーを指定します。</param>
+      <returns>指定したオブジェクトが <see cref="T:System.Boolean" /> と等しいかどうかを示す <see cref="T:Microsoft.SqlServer.Management.Utility.Utility.Key" /> 値です。 オブジェクトが <see cref="T:Microsoft.SqlServer.Management.Utility.Utility.Key" /> と等しい場合、このメソッドは true を返します。 それ以外の場合は false。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Key.Equals(System.Object)">
+      <summary>指定したオブジェクトが <see cref="T:Microsoft.SqlServer.Management.Utility.Utility.Key" /> と等しいことを確認します。</summary>
+      <param name="obj">
+        <see cref="T:System.Object" /> と比較するための <see cref="T:Microsoft.SqlServer.Management.Utility.Utility.Key" /> を指定します。</param>
+      <returns>指定したオブジェクトが <see cref="T:System.Boolean" /> と等しいかどうかを示す <see cref="T:Microsoft.SqlServer.Management.Utility.Utility.Key" /> 値です。 オブジェクトが <see cref="T:Microsoft.SqlServer.Management.Utility.Utility.Key" /> と等しい場合、このメソッドは true を返します。 それ以外の場合は false。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Key.Equals(System.Object,System.Object)">
+      <summary>指定したオブジェクトが等しいことを確認します。</summary>
+      <param name="obj1">比較する最初の <see cref="T:System.Object" /> を指定します。</param>
+      <param name="obj2">比較する 2 番目の <see cref="T:System.Object" /> を指定します。</param>
+      <returns>2 つのオブジェクトが等しいかどうかを示す <see cref="T:System.Boolean" /> 値です。 オブジェクトが同一であり、true でない場合は、null を返します。 それ以外の場合は false。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Key.GetHashCode">
+      <summary>このインスタンスのハッシュ コードを返します。</summary>
+      <returns>このインスタンスの 32 ビット符号付き整数のハッシュ コードです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Key.GetUrnFragment">
+      <summary>単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。</summary>
+      <returns>URN フラグメントを含む <see cref="T:System.String" /> です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Key.op_Equality(Microsoft.SqlServer.Management.Utility.Utility.Key,Microsoft.SqlServer.Management.Utility.Utility.Key)">
+      <summary>キーの指定した左辺と右辺が等しいかどうかを確認します。</summary>
+      <param name="leftOperand">比較するキーの左辺を含む <see cref="T:Microsoft.SqlServer.Management.Utility.Key" /> オブジェクトです。</param>
+      <param name="rightOperand">比較するキーの右辺を含む <see cref="T:Microsoft.SqlServer.Management.Utility.Key" /> オブジェクトです。</param>
+      <returns>2 つの値が等しいかどうかを示す <see cref="T:System.Boolean" /> 値です。 両方のパラメーターが true の場合、または両方のパラメーターが null でないが等しい場合は、null を返します。 それ以外の場合は false。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Key.op_Equality(Microsoft.SqlServer.Management.Utility.Utility.Key,System.Object)">
+      <summary>指定したオブジェクトとキーの左辺が等しいかどうかを確認します。</summary>
+      <param name="leftOperand">比較するキーの左辺を含む <see cref="T:Microsoft.SqlServer.Management.Utility.Key" /> オブジェクトです。</param>
+      <param name="obj">比較するオブジェクトを含む <see cref="T:System.Object" /> です。</param>
+      <returns>2 つの値が等しいかどうかを示す <see cref="T:System.Boolean" /> 値です。 両方のパラメーターが true の場合、または両方のパラメーターが null でないが等しい場合は、null を返します。 それ以外の場合は false。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Key.op_Equality(System.Object,Microsoft.SqlServer.Management.Utility.Utility.Key)">
+      <summary>指定したオブジェクトとキーの右辺が等しいかどうかを確認します。</summary>
+      <param name="obj">比較するオブジェクトを含む <see cref="T:System.Object" /> です。</param>
+      <param name="rightOperand">比較するキーの右辺を含む <see cref="T:Microsoft.SqlServer.Management.Utility.Key" /> オブジェクトです。</param>
+      <returns>2 つの値が等しいかどうかを示す <see cref="T:System.Boolean" /> 値です。 両方のパラメーターが true の場合、または両方のパラメーターが null でないが等しい場合は、null を返します。 それ以外の場合は false。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Key.op_Inequality(Microsoft.SqlServer.Management.Utility.Utility.Key,Microsoft.SqlServer.Management.Utility.Utility.Key)">
+      <summary>キーの指定した右辺と左辺が等しくないかどうかを確認します。</summary>
+      <param name="leftOperand">比較するキーの左辺を含む <see cref="T:Microsoft.SqlServer.Management.Utility.Key" /> オブジェクトです。</param>
+      <param name="rightOperand">比較するキーの右辺を含む <see cref="T:Microsoft.SqlServer.Management.Utility.Key" /> オブジェクトです。</param>
+      <returns>2 つの値が等しくないかどうかを示す <see cref="T:System.Boolean" /> 値です。 一方のパラメーターが true で、もう一方がそうでない場合、または 2 つのパラメーターが等しくない場合は、null を返します。 それ以外の場合は false。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Key.op_Inequality(Microsoft.SqlServer.Management.Utility.Utility.Key,System.Object)">
+      <summary>指定したオブジェクトとキーの左辺が等しくないかどうかを確認します。</summary>
+      <param name="leftOperand">比較するキーの左辺を含む <see cref="T:Microsoft.SqlServer.Management.Utility.Key" /> オブジェクトです。</param>
+      <param name="obj">比較するオブジェクトを含む <see cref="T:System.Object" /> です。</param>
+      <returns>2 つの値が等しくないかどうかを示す <see cref="T:System.Boolean" /> 値です。 一方のパラメーターが true で、もう一方がそうでない場合、または 2 つのパラメーターが等しくない場合は、null を返します。 それ以外の場合は false。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Key.op_Inequality(System.Object,Microsoft.SqlServer.Management.Utility.Utility.Key)">
+      <summary>指定したオブジェクトとキーの右辺が等しくないかどうかを確認します。</summary>
+      <param name="obj">比較するオブジェクトを含む <see cref="T:System.Object" /> です。</param>
+      <param name="rightOperand">比較するキーの右辺を含む <see cref="T:Microsoft.SqlServer.Management.Utility.Key" /> オブジェクトです。</param>
+      <returns>2 つの値が等しくないかどうかを示す <see cref="T:System.Boolean" /> 値です。 一方のパラメーターが true で、もう一方がそうでない場合、または 2 つのパラメーターが等しくない場合は、null を返します。 それ以外の場合は false。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomain#GetExecutionEngine">
+      <summary>新しい実行エンジン インターフェイスを取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.ISfcExecutionEngine" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomain#GetKey(Microsoft.SqlServer.Management.Sdk.Sfc.IUrnFragment)">
+      <summary>新しい <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey" /> オブジェクトを取得します。</summary>
+      <param name="urnFragment">
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.IUrnFragment" /> オブジェクトです。</param>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomain#GetType(System.String)">
+      <summary>ユーティリティの <see cref="T:System.Type" /> を取得します。</summary>
+      <param name="typeName">型の名前を指定する文字列値です。</param>
+      <returns>
+        <see cref="T:System.Type" /> オブジェクト。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomain#GetTypeMetadata(System.String)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcTypeMetadata" /> を取得します。</summary>
+      <param name="typeName">型の名前を指定する文字列値です。</param>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcTypeMetadata" /> オブジェクト。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomain#UseSfcStateManagement">
+      <summary>True を返します。</summary>
+      <returns>常に True のブール値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomain2#GetUrnSkeletonsFromType(System.Type)">
+      <summary>URN スケルトンを含む文字列値の一覧を取得します。</summary>
+      <param name="inputType">
+        <see cref="T:System.Type" /> オブジェクト。</param>
+      <returns>文字列型のジェネリック リストです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomainLite#GetLogicalVersion">
+      <summary>論理バージョンを指定する整数値を取得します。</summary>
+      <returns>整数値です。 このメソッドは常に 1 を返します。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcHasConnection#GetConnection">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ISfcConnection" /> を取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ISfcConnection" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcHasConnection#GetConnection(Microsoft.SqlServer.Management.Sdk.Sfc.SfcObjectQueryMode)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ISfcConnection" /> を取得します。</summary>
+      <param name="mode">
+        <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcObjectQueryMode" /> オブジェクトです。</param>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ISfcConnection" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcHasConnection#SetConnection(Microsoft.SqlServer.Management.Common.ISfcConnection)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Common.ISfcConnection" /> を設定します。</summary>
+      <param name="connection">
+        <see cref="T:Microsoft.SqlServer.Management.Common.ISfcConnection" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.Refresh">
+      <summary>SQL Server ユーティリティのプロパティを更新します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Utility.ScriptAlter">
+      <summary>ベース オブジェクトが変更された場合にそのプロパティを変更します。</summary>
+      <returns>変更された <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.ISfcScript" /> です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.UtilityException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.UtilityException" /> クラスの新しい既定のインスタンスを既定のプロパティ値で初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.UtilityException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>シリアル化されたデータを使用して、<see cref="T:Microsoft.SqlServer.Management.Utility.UtilityException" /> クラスの新しい既定インスタンスを初期化します。</summary>
+      <param name="info">スローされた例外についての、シリアル化されたオブジェクトのデータを保持します。</param>
+      <param name="context">転送元または転送先についてのコンテキスト情報を格納します。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.UtilityException.#ctor(System.String)">
+      <summary>指定したエラー メッセージを使用して、<see cref="T:Microsoft.SqlServer.Management.Utility.UtilityException" /> クラスの新しい既定インスタンスを初期化します。</summary>
+      <param name="message">エラーについて説明したメッセージを格納します。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.UtilityException.#ctor(System.String,System.Exception)">
+      <summary>指定したエラー メッセージと内部例外を使用して、<see cref="T:Microsoft.SqlServer.Management.Utility.UtilityException" /> クラスの新しい既定インスタンスを初期化します。</summary>
+      <param name="message">エラーについて説明したメッセージを含む <see cref="T:System.String" /> 値です。</param>
+      <param name="innerException">現在の例外の原因である <see cref="T:System.Exception" />、または内部例外が指定されていない場合は NULL 参照です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.UtilityException.Init">
+      <summary>例外プロパティを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.UtilityException.SetHelpContext(System.String)">
+      <summary>例外のヘルプ コンテキスト ID を定義します。</summary>
+      <param name="resource">
+        <see cref="T:System.String" /> オブジェクトのヘルプ コンテキストを表す <see cref="T:Microsoft.SqlServer.Management.Utility.UtilityException" /> 値です。</param>
+      <returns>ヘルプ コンテキストを表す文字列です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Fabric.Volume" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.#ctor(Microsoft.SqlServer.Management.Utility.Computer,System.String)">
+      <summary>指定した接続を使用して、<see cref="T:Microsoft.SqlServer.Management.Fabric.Volume" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="parent">
+        <see cref="T:Microsoft.SqlServer.Management.Fabric.Computer" /> オブジェクトの親であるコンピューターを指定する <see cref="T:Microsoft.SqlServer.Management.Fabric.Volume" /> 値です。</param>
+      <param name="name">ボリュームの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.GetObjectFactory">
+      <summary>新しいインスタンスを作成するために使用されるファクトリ オブジェクトを取得します。</summary>
+      <returns>新しいインスタンスを作成するために使用される <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcObjectFactory" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.#ctor">
+      <summary>指定した名前を持つ <see cref="T:Microsoft.SqlServer.Management.Utility. Volume.Key" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.#ctor(Microsoft.SqlServer.Management.Utility.Volume.Key)">
+      <summary>指定したキーに基づいて <see cref="T:Microsoft.SqlServer.Management.Utility.Volume.Key" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="other">他のキーを指定する <see cref="T:Microsoft.SqlServer.Management.Utility.Volume.Key" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.#ctor(System.String)">
+      <summary>指定した名前を持つ <see cref="T:Microsoft.SqlServer.Management.Utility. Volume.Key" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="name">キーの名前を指定する <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.Equals(Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey)">
+      <summary>指定したオブジェクト キーが参照するオブジェクト キーと等しいかどうかを確認します。</summary>
+      <param name="key">一方のオブジェクトを指定する <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.SfcKey" /> 値です。</param>
+      <returns>指定したキーが参照先オブジェクト キーと等しいかどうかを指定する <see cref="T:System.Boolean" /> 値です。True の場合は、キー値が等しいことを意味します。 それ以外の場合は False。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.Equals(System.Object)">
+      <summary>指定したオブジェクト キーが参照先の文字列値と等しいかどうかを確認します。</summary>
+      <param name="obj">比較するオブジェクトを指定する <see cref="T:System.Object" /> 値です。</param>
+      <returns>指定したキーが参照先オブジェクト キーと等しいかどうかを指定する <see cref="T:System.Boolean" /> 値です。True の場合は、キー値が等しいことを意味します。 それ以外の場合は False。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.Equals(System.Object,System.Object)">
+      <summary>指定した 2 つのオブジェクトが等しいかどうかを判定します。</summary>
+      <param name="obj1">一方のオブジェクトを指定する <see cref="T:System.Object" /> 値です。</param>
+      <param name="obj2">もう一方のオブジェクトを指定する <see cref="T:System.Object" /> 値です。</param>
+      <returns>指定したキーが参照先オブジェクト キーと等しいかどうかを指定する <see cref="T:System.Boolean" /> 値です。True の場合は、キー値が等しいことを意味します。 それ以外の場合は False。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.GetHashCode">
+      <summary>オブジェクトのハッシュ コードを取得します。</summary>
+      <returns>ハッシュ コードを指定する <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.GetUrnFragment">
+      <summary>ボリュームを表す URN パス文字列の一部を取得します。</summary>
+      <returns>URN フラグメントを格納する <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.op_Equality(Microsoft.SqlServer.Management.Utility.Volume.Key,Microsoft.SqlServer.Management.Utility.Volume.Key)">
+      <summary>指定したオペランドを使用して、2 つのキー オブジェクトが同一の値を持っているかどうかを判定します。</summary>
+      <param name="leftOperand">等値演算子の左側のオペランド オブジェクトです。</param>
+      <param name="rightOperand">等値演算子の右側のオペランド オブジェクトです。</param>
+      <returns>オブジェクトが等しい場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.op_Equality(Microsoft.SqlServer.Management.Utility.Volume.Key,System.Object)">
+      <summary>指定したオブジェクトとキーの左辺が等しいかどうかを確認します。</summary>
+      <param name="leftOperand">比較するキーの左辺を含むキー オブジェクトです。</param>
+      <param name="obj">比較するオブジェクトを含むオブジェクトです。</param>
+      <returns>2 つのオブジェクトが等しい場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.op_Equality(System.Object,Microsoft.SqlServer.Management.Utility.Volume.Key)">
+      <summary>指定したオブジェクトとキーの右辺が等しいかどうかを確認します。</summary>
+      <param name="obj">比較するオブジェクトを含むオブジェクトです。</param>
+      <param name="rightOperand">比較するキーの右辺を含むキー オブジェクトです。</param>
+      <returns>2 つのオブジェクトが等しい場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.op_Inequality(Microsoft.SqlServer.Management.Utility.Volume.Key,Microsoft.SqlServer.Management.Utility.Volume.Key)">
+      <summary>指定したオペランドを使用して、2 つの指定したキー オブジェクトが異なる値を持っているかどうかを判定します。</summary>
+      <param name="leftOperand">非等値演算子の左側のオペランド オブジェクトです。</param>
+      <param name="rightOperand">非等値演算子の右側のオペランド オブジェクトです。</param>
+      <returns>2 つのオブジェクトが異なる場合は true、それ以外の場合は false。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.op_Inequality(Microsoft.SqlServer.Management.Utility.Volume.Key,System.Object)">
+      <summary>指定したオブジェクトとキーの左辺が等しくないかどうかを確認します。</summary>
+      <param name="leftOperand">比較するキーの左辺を含むキー オブジェクトです。</param>
+      <param name="obj">比較するオブジェクトを含むオブジェクトです。</param>
+      <returns>2 つのオブジェクトが等しくない場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.Volume.Key.op_Inequality(System.Object,Microsoft.SqlServer.Management.Utility.Volume.Key)">
+      <summary>指定したオブジェクトとキーの右辺が等しくないかどうかを確認します。</summary>
+      <param name="obj">比較するオブジェクトを含むオブジェクトです。</param>
+      <param name="rightOperand">比較するキーの右辺を含むキー オブジェクトです。</param>
+      <returns>2 つのオブジェクトが等しくない場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.VolumeCollection.#ctor(Microsoft.SqlServer.Management.Utility.Computer)">
+      <summary>指定したコンピューターの <see cref="T:Microsoft.SqlServer.Management.Utility.VolumeCollection" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="parent">コレクションの親を示す <see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.VolumeCollection.#ctor(Microsoft.SqlServer.Management.Utility.Computer,System.Collections.Generic.IComparer{System.String})">
+      <summary>指定されたコンピューター上で、指定された比較演算子インターフェイスを使用して <see cref="T:Microsoft.SqlServer.Management.Utility.VolumeCollection" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="parent">コレクションの親を示す <see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> オブジェクトです。</param>
+      <param name="customComparer">カスタムの比較演算子インターフェイスを指定する <see cref="T:System.Collections.Generic.IComparer&lt;string&gt;" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Utility.VolumeCollection.Contains(System.String)">
+      <summary>参照されたコレクションに指定された文字列が含まれるかどうかを確認します。</summary>
+      <param name="name">コレクション内で検索するボリューム名を示す <see cref="T:System.String" /> 値です。</param>
+      <returns>指定された文字列がコレクションに含まれているかどうかを判定する <see cref="T:System.Boolean" /> 値です。True の場合は、文字列が含まれています。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Computer.CpuMaxClockSpeed">
+      <summary>最大 CPU クロック速度を取得します。</summary>
+      <returns>最大クロック速度を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Computer.CpuName">
+      <summary>CPU 名を取得します。</summary>
+      <returns>CPU 名を含む文字列値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Computer.ID">
+      <summary>コンピューターを一意に識別する ID 値を取得します。</summary>
+      <returns>コンピューターを一意に識別する ID 値を指定する <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Computer.IdentityKey">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> オブジェクトを一意に識別するキー値を取得します。</summary>
+      <returns>オブジェクトを一意に識別する <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Computer.IsClustered">
+      <summary>コンピューターがクラスター内にあるかどうかを示す <see cref="T:System.Boolean" /> 値を取得します。</summary>
+      <returns>コンピューターがクラスター内にあるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合は、コンピューターがクラスター内にあることを意味します。 それ以外の場合は False。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Computer.Key.Name">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> キーの名前を取得します。</summary>
+      <returns>キー値の名前を指定する <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Computer.Name">
+      <summary>コンピューターの名前を取得します。</summary>
+      <returns>コンピューターの名前を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Computer.Parent">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> オブジェクトの親であるユーティリティ オブジェクトを取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> オブジェクトの親であることを示す <see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Computer.ProcessorUtilization">
+      <summary>プロセッサ使用率をパーセント単位で取得します。</summary>
+      <returns>プロセッサ使用率をパーセント単位で示す <see cref="T:System.Double" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Computer.Volumes">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.Volume" /> オブジェクトのコレクションを表します。</summary>
+      <returns>コンピューター上で定義されたすべての <see cref="T:Microsoft.SqlServer.Management.Utility.VolumneCollection" /> オブジェクトを表す <see cref="T:Microsoft.SqlServer.Management.Utility.Volume" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ComputerCollection.Item(System.String)">
+      <summary>コレクション内の指定された名前のオブジェクトを返します。</summary>
+      <param name="name">コンピューターの名前を示す <see cref="T:System.String" /> 値です。</param>
+      <returns>指定した名前のコンピューターを表す <see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> オブジェクト値。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DataFileAdapter.SpaceUtilization">
+      <summary>親アクション シーケンスを取得します。</summary>
+      <returns>データ ファイルの使用量をバイト単位で示す <see cref="T:System.Int64" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.Collation">
+      <summary>DAC データベースで使用される照合順序を取得します。</summary>
+      <returns>DAC データベースの照合順序情報を含む <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.CompatibilityLevel">
+      <summary>DAC データベースの互換性レベルを取得します。</summary>
+      <returns>DAC データベースの互換性レベルを示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.ComputerName">
+      <summary>DAC パッケージが配置されたコンピューターの名前を取得します。</summary>
+      <returns>DAC パッケージが配置されたコンピューターの名前を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.ComputerProcessorHealthState">
+      <summary>コンピューター プロセッサの正常性状態を取得します。</summary>
+      <returns>コンピューター プロセッサの現在の正常性状態を示す <see cref="T:Microsoft.Sql.Management.Utility.HealthState" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.ContainsOverUtilizedFileGroups">
+      <summary>配置済み DAC に使用率が高いファイル グループが含まれるかどうかを示す値を取得します。</summary>
+      <returns>配置済み DAC に使用率が高いファイル グループが含まれるかどうかを示す <see cref="T:System.Boolean" /> 値です。true の場合、配置済み DAC に使用率が高いファイル グループが含まれます。 それ以外の場合は false。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.ContainsOverUtilizedVolumes">
+      <summary>配置済み DAC に使用率が高いボリュームが含まれるかどうかを示す値を取得します。</summary>
+      <returns>配置済み DAC に使用率が高いボリュームが含まれるかどうかを示す <see cref="T:System.Boolean" /> 値です。true の場合、配置済み DAC に使用率が高いボリュームが含まれます。 それ以外の場合は false。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.ContainsUnderUtilizedFileGroups">
+      <summary>配置済み DAC に使用率が低いファイル グループが含まれるかどうかを示す値を取得します。</summary>
+      <returns>配置済み DAC に使用率が低いファイル グループが含まれるかどうかを示す <see cref="T:System.Boolean" /> 値です。true の場合、配置済み DAC に使用率が低いファイル グループが含まれます。 それ以外の場合は false。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.ContainsUnderUtilizedVolumes">
+      <summary>配置済み DAC に使用率が低いボリュームが含まれるかどうかを示す値を取得します。</summary>
+      <returns>配置済み DAC に使用率が低いボリュームが含まれるかどうかを示す <see cref="T:System.Boolean" /> 値です。true の場合、配置済み DAC に使用率が低いボリュームが含まれます。 それ以外の場合は false。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.DacProcessorHealthState">
+      <summary>サーバー インスタンス プロセッサの正常性状態を取得します。</summary>
+      <returns>DAC プロセッサの現在の正常性状態を示す <see cref="T:Microsoft.Sql.Management.Utility.HealthState" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.DatabaseName">
+      <summary>DAC パッケージから配置されたデータベースの名前を取得します。</summary>
+      <returns>DAC パッケージから配置されたデータベースの名前を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.DatabaseState">
+      <summary>DAC パッケージから配置されたデータベースの状態を取得します。</summary>
+      <returns>DAC パッケージから配置されたデータベースの状態を表す <see cref="T:Microsoft.SqlServer.Management.Utility.DatabaseState" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.DeployedDate">
+      <summary>DAC パッケージが SQL Server のインスタンスに配置された日時を取得します。</summary>
+      <returns>SQL Server のインスタンスへの配置時に一時ファイルを格納するために使用できる、キャッシュ ディレクトリを示す <see cref="T:System.DateTime" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.Description">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> オブジェクトの説明テキストを取得します。</summary>
+      <returns>
+        <see cref="T:System.String" /> オブジェクトの説明を示す <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.EncryptionEnabled">
+      <summary>DAC データベースが暗号化されているかどうかを示す値を取得します。</summary>
+      <returns>暗号化が DAC データベースに対して有効になっているかどうかを示す <see cref="T:System.Boolean" /> 値です。true の場合は、暗号化が有効になっていることを意味します。 それ以外の場合は false。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.FileSpaceHealthState">
+      <summary>ファイル領域の正常性状態を取得します。</summary>
+      <returns>ファイル領域の現在の正常性状態を示す <see cref="T:Microsoft.Sql.Management.Utility.HealthState" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.Id">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> オブジェクトを一意に識別する ID 値を取得します。</summary>
+      <returns>
+        <see cref="T:System.Int32" /> オブジェクトを識別する ID 値を示す <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.IsPolicyOverridden">
+      <summary>このオブジェクト用にオーバーライドされたポリシーがあるかどうかを示す値を取得します。</summary>
+      <returns>
+        <see cref="T:System.Boolean" /> ポリシーのいずれかがオーバーライドされているかどうかを示す <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> 値です。true の場合は、ポリシーがオーバーライドされていることを意味します。 それ以外の場合は false。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.Key.Name">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> キーの名前を取得します。</summary>
+      <returns>キー値の名前を指定する <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.Key.ServerInstanceName">
+      <summary>キーに関連付けられたサーバー インスタンスの名前を取得します。</summary>
+      <returns>キーに関連付けられたサーバー インスタンスの名前を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.LastReportedTime">
+      <summary>配置済み DAC による最終報告時刻を取得します。</summary>
+      <returns>最終報告日時を示す <see cref="T:System.DateTimeOffset" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.Name">
+      <summary>配置済み DAC の名前を取得します。</summary>
+      <returns>配置済み DAC の名前を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.Parent">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> オブジェクトの親である SQL Server ユーティリティ オブジェクトを取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> オブジェクトの親であることを示す <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.ProcessorUtilization">
+      <summary>プロセッサ使用率をパーセント単位で取得します。</summary>
+      <returns>プロセッサ使用率をパーセント単位で示す <see cref="T:System.Double" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.RecoveryModel">
+      <summary>DAC データベースによって使用されている復旧モデルの種類を示す値を取得します。</summary>
+      <returns>どの復旧モデルが使用されるかを示す <see cref="T:System.Int" /> 値です。 この値は、<see cref="T:Microsoft.Sql.Management.Smo.RecoveryModel" /> 列挙体によって列挙される値のいずれかに対応します。Full = 1、BulkLogged = 2、Simple = 3 です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.ServerInstanceName">
+      <summary>DAC パッケージが配置された SQL Server のインスタンスの名前を ServerName\InstanceName 形式で取得します。</summary>
+      <returns>DAC パッケージが配置されたコンピューター上で実行されている SQL Server インスタンスの名前を ServerName\InstanceName 形式で示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.Trustworthy">
+      <summary>SQL Server のインスタンスが <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> とその内容を信頼するかどうかを示す値を取得します。</summary>
+      <returns>
+        <see cref="T:System.Boolean" /> が信頼されているかどうかを示す <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> 値です。true の場合は、<see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> が信頼されていることを意味します。 それ以外の場合は false。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDac.VolumeSpaceHealthState">
+      <summary>ボリューム領域の正常性状態を取得します。</summary>
+      <returns>ボリューム領域の現在の正常性状態を示す <see cref="T:Microsoft.Sql.Management.Utility.HealthState" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.DeployedDacCollection.Item(System.String,System.String)">
+      <summary>コレクション内の指定された名前のオブジェクトを返します。</summary>
+      <param name="name">コンピューターの名前を示す <see cref="T:System.String" /> 値です。</param>
+      <param name="serverInstanceName">サーバー インスタンスの名前を示す <see cref="T:System.String" /> 値です。</param>
+      <returns>指定した名前の配置済み DAC を表す <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> オブジェクト値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.IDataFilePerformanceFacet.SpaceUtilization">
+      <summary>ファイルによって使用されている領域をバイト単位で取得します。</summary>
+      <returns>使用されている領域をバイト単位で示す <see cref="T:System.Int64" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ILogFilePerformanceFacet.SpaceUtilization">
+      <summary>ログ ファイルの領域使用率を取得します。</summary>
+      <returns>ログ ファイルの領域使用率を示す <see cref="T:System.Double" /> 値です。 </returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.LogFileAdapter.SpaceUtilization">
+      <summary>ログ ファイル アダプターによって使用される領域の割合 (%) を取得します。</summary>
+      <returns>領域の使用率を示す <see cref="T:System.Double" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.AgentProxyAccount">
+      <summary>SQL Server のインスタンスに対して定期ジョブを実行するために使用される、SQL Server エージェント プロキシ アカウントを取得します。</summary>
+      <returns>SQL Server エージェント プロキシ アカウントの名前を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.BackupDirectory">
+      <summary>サーバー インスタンスのバックアップ ディレクトリを取得します。</summary>
+      <returns>サーバーのバックアップ ディレクトリを指定する <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.CacheDirectory">
+      <summary>SQL Server のインスタンスへの配置時に一時ファイルを格納するために使用できる、キャッシュ ディレクトリを取得します。</summary>
+      <returns>SQL Server のインスタンスへの配置時に一時ファイルを格納するために使用できる、キャッシュ ディレクトリを示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.Collation">
+      <summary>サーバー インスタンスの照合順序を取得します。</summary>
+      <returns>マネージ インスタンスによって使用される照合順序を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.ComputerNamePhysicalNetBIOS">
+      <summary>サーバー インスタンスの物理 NetBIOS を指定します。</summary>
+      <returns>サーバー インスタンスの物理 NetBIOS 情報を含む <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.ComputerProcessorHealthState">
+      <summary>コンピューター プロセッサの正常性状態を取得します。</summary>
+      <returns>コンピューター プロセッサの現在の正常性状態を示す <see cref="T:Microsoft.Sql.Management.Utility.HealthState" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.ContainsOverUtilizedDatabases">
+      <summary>サーバー インスタンスに使用率が高いデータベースが含まれるかどうかを示す値を取得します。</summary>
+      <returns>サーバー インスタンスに使用率が高いデータベースが含まれるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、サーバー インスタンスに使用率が高いデータベースが含まれます。 それ以外の場合は False。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.ContainsOverUtilizedVolumes">
+      <summary>サーバー インスタンスに使用率が高いボリュームが含まれるかどうかを示す値を取得します。</summary>
+      <returns>サーバー インスタンスに使用率が高いボリュームが含まれるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、サーバー インスタンスに使用率が高いボリュームが含まれます。 それ以外の場合は False。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.ContainsUnderUtilizedDatabases">
+      <summary>サーバー インスタンスに使用率が低いデータベースが含まれるかどうかを示す値を取得します。</summary>
+      <returns>サーバー インスタンスに使用率が低いデータベースが含まれるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、サーバー インスタンスに使用率が低いデータベースが含まれます。 それ以外の場合は False。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.ContainsUnderUtilizedVolumes">
+      <summary>サーバー インスタンスに使用率が低いボリュームが含まれるかどうかを示す値を取得します。</summary>
+      <returns>サーバー インスタンスに使用率が低いボリュームが含まれるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、サーバー インスタンスに使用率が低いボリュームが含まれます。 それ以外の場合は False。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.CpuMaxClockSpeed">
+      <summary>CPU の最大クロック速度を取得します。</summary>
+      <returns>CPU の最大クロック速度を含む <see cref="T:System.Int32" /> 値を取得します。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.CpuName">
+      <summary>CPU の名前を取得します。</summary>
+      <returns>CPU の名前を含む文字列値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.DateCreated">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstance" /> オブジェクトが作成された日時を取得します。</summary>
+      <returns>
+        <see cref="T:System.DateTime" /> オブジェクトが作成された日時を示す <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstance" /> システム値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.Edition">
+      <summary>SQL Server のインスタンスのエディションを取得します。</summary>
+      <returns>SQL Server インスタンスのエディションを指定する <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.EngineEdition">
+      <summary>SQL Server のインスタンスのエンジンのエディションを取得します。</summary>
+      <returns>エンジンのエディションを示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.FileSpaceHealthState">
+      <summary>ファイル領域の正常性状態を取得します。</summary>
+      <returns>ファイル領域の現在の正常性状態を示す <see cref="T:Microsoft.Sql.Management.Utility.HealthState" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.ID">
+      <summary>SQL Server のマネージ インスタンスを一意に識別する ID 値を取得します。</summary>
+      <returns>マネージ インスタンスを一意に識別する ID 値を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.IdentityKey">
+      <summary>マネージ インスタンスを識別するキー値を取得します。</summary>
+      <returns>マネージ インスタンスを識別するキー値を示す <see cref="T:Microsoft.SqlServer.Management.Utility.managedInstance.Key" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.InstanceName">
+      <summary>SQL Server のインスタンスの名前を取得します。</summary>
+      <returns>SQL Server のインスタンスの名前を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.IsCaseSensitive">
+      <summary>サーバー インスタンスで大文字と小文字を区別するかどうかを示す値を取得します。</summary>
+      <returns>サーバー インスタンスで大文字と小文字を区別するかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合は、サーバー インスタンスで大文字と小文字が区別されることを意味します。 それ以外の場合は False。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.IsClustered">
+      <summary>サーバー インスタンスがクラスター サーバーの一部であるかどうかを示す値を取得します。</summary>
+      <returns>サーバー インスタンスがクラスターの一部であるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、サーバー インスタンスはクラスター化されていることを意味します。 それ以外の場合は False。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.IsPolicyOverridden">
+      <summary>オーバーライドされたサーバー インスタンス ポリシーがあるかどうかを示す値を取得します。</summary>
+      <returns>サーバー インスタンス ポリシーがオーバーライドされているかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合は、サーバー インスタンスのポリシーがオーバーライドされていることを意味します。 それ以外の場合は False。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.Language">
+      <summary>SQL Server のマネージ インスタンスによって使用される言語を取得します。</summary>
+      <returns>言語を指定する文字列値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.LastReportedTime">
+      <summary>サーバー インスタンス オブジェクトのプロパティに関する最終報告時刻を取得します。</summary>
+      <returns>サーバー インスタンスのプロパティが最後に報告された日時を示す <see cref="T:System.DateTime" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.ManagementState">
+      <summary>SQL Server ユーティリティ サービスによる管理に関して、SQL Server インスタンスの現在の状態を取得します。</summary>
+      <returns>SQL Server のインスタンスの管理状態を示す <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedState" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.Name">
+      <summary>マネージ インスタンスの名前を取得または設定します。</summary>
+      <returns>マネージ インスタンスの名前を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.NetName">
+      <summary>サーバー インスタンスが実行されているネットワークの NetBIOS 名を取得します。</summary>
+      <returns>サーバー インスタンス ネットワークの NetBIOS 名を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.OSVersion">
+      <summary>SQL Server のマネージ インスタンスのオペレーティング システムのバージョンを取得します。</summary>
+      <returns>オペレーティング システムのバージョンを示す文字列値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.Parent">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstance" /> オブジェクトの親である Utility オブジェクトを取得または設定します。</summary>
+      <returns>ManagedInstance オブジェクトの親を示す <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.PhysicalMemory">
+      <summary>SQL Server のマネージ インスタンスの物理メモリを取得します。</summary>
+      <returns>SQL Server のマネージ インスタンスを含む <see cref="T:System.Int32" /> です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.Processors">
+      <summary>SQL Server のマネージ インスタンスのプロセッサ数を取得します。</summary>
+      <returns>SQL Server のマネージ インスタンスのプロセッサ数を含む <see cref="T:System.Int32" /> です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.ProductLevel">
+      <summary>サーバー インスタンスの製品レベルを取得します。</summary>
+      <returns>サーバー インスタンス バージョンのレベルを示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.ServerProcessorHealthState">
+      <summary>サーバー インスタンス プロセッサの正常性状態を取得します。</summary>
+      <returns>サーバー インスタンス プロセッサの現在の正常性状態を示す <see cref="T:Microsoft.Sql.Management.Utility.HealthState" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.ServerType">
+      <summary>サーバー インスタンスの種類を取得します。</summary>
+      <returns>サーバーの種類を示す <see cref="T:System.Int32" /> 値です。<see cref="T:System.Int32" /> の値は、<see cref="T:Microsoft.SqlServerm.Management.Smo.ServerType" /> 列挙のメンバーに対応します。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.ServerUrn">
+      <summary>サーバー インスタンスの URN (Uniform Resource Name) を取得します。</summary>
+      <returns>サーバーの URN を含む <see cref="T:System.String" /> です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.Version">
+      <summary>サーバー インスタンスのバージョンを指定します。</summary>
+      <returns>サーバー インスタンスのバージョンを含む <see cref="T:System.String" /> です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstance.VolumeSpaceHealthState">
+      <summary>ボリューム領域の正常性状態を取得します。</summary>
+      <returns>サーバー インスタンス ボリューム領域の現在の正常性状態を示す <see cref="T:Microsoft.Sql.Management.Utility.HealthState" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.ManagedInstanceCollection.Item(System.String)">
+      <summary>指定した名前のマネージ インスタンスを <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstanceCollection" /> から取得します。</summary>
+      <param name="name">コレクションから取得するマネージ インスタンスの名前を示す <see cref="T:System.String" /> 値です。</param>
+      <returns>指定した名前の <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstance" /> オブジェクトです。 指定した名前のオブジェクトがコレクションの一部でない場合、このメソッドは null を返します。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.NameKey.Name">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.NameKey" /> によって表されるオブジェクトの名前を取得します。</summary>
+      <returns>キー名を含む <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.Computers">
+      <summary>マネージ インスタンスを実行しているコンピューターのコレクションを取得します。</summary>
+      <returns>SQL Server のマネージ インスタンスを実行しているコンピューターのコレクションを含む、<see cref="T:Microsoft.SqlServer.Management.Utility.ComputerCollection" /> 値。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.CreatedBy">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> を作成したユーザーの認証資格情報を取得します。</summary>
+      <returns>
+        <see cref="T:System.String" /> を作成したユーザーの認証資格情報を含む <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> 値。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DateCreated">
+      <summary>SQL Server ユーティリティが作成された日時を取得します。</summary>
+      <returns>SQL Server ユーティリティが作成された日時を示す <see cref="T:System.DateTime" /> 値。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacCount">
+      <summary>SQL Server ユーティリティによって管理される SQL Server のインスタンスに配置された DAC の数を取得します。</summary>
+      <returns>この SQL Server ユーティリティによって管理されるインスタンスに配置されている DAC の数を示す <see cref="T:System.Int32" /> 値。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacHealthyCount">
+      <summary>SQL Server ユーティリティによって管理される SQL Server のインスタンスに配置された正常な DAC の数を取得します。</summary>
+      <returns>この SQL Server ユーティリティによって管理されるインスタンスに配置された正常な DAC の数を示す <see cref="T:System.Int32" /> 値。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacManagementPendingCount">
+      <summary>保留中の管理ステータスを持つ配置済み DAC インスタンスの数を取得します。</summary>
+      <returns>インスタンスの数を指定する <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacOnOverutilizedComputerCount">
+      <summary>過大使用されたコンピューター上で実行されているマネージ インスタンスに配置された DAC の数を取得します。</summary>
+      <returns>過大使用されたコンピューター上で実行されているマネージ インスタンスに DAC がいくつ配置されているかを示す <see cref="T:System.Int32" /> 値。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacOnUnderutilizedComputerCount">
+      <summary>過小使用されたコンピューター上で実行されているマネージ インスタンスに配置された DAC の数を取得します。</summary>
+      <returns>過小使用されたコンピューター上で実行されているマネージ インスタンスに DAC がいくつ配置されているかを示す <see cref="T:System.Int32" /> 値。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacOverutilizedCount">
+      <summary>過大使用されている配置済み DAC の数を取得します。</summary>
+      <returns>インスタンスの数を指定する <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacs">
+      <summary>マネージ インスタンスに配置された DAC の数を取得します。</summary>
+      <returns>マネージ インスタンスに配置されている DAC の一覧を含む <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDacCollection" />。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacUnderutilizedCount">
+      <summary>すべてのマネージ インスタンスに配置されている、過小使用された DAC の数を取得します。</summary>
+      <returns>マネージ インスタンスに配置されている、過小使用された DAC の数を示す <see cref="T:System.Int32" /> 値。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacUnhealthyCount">
+      <summary>すべてのマネージ インスタンスに配置されている、異常な DAC の数を取得します。</summary>
+      <returns>マネージ インスタンスに配置されている、異常な DAC の数を示す <see cref="T:System.Int32" /> 値。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacWithFilesOnOverutilizedVolumeCount">
+      <summary>過大使用されたボリューム上にファイルを持つ、配置済み DAC の数を取得します。</summary>
+      <returns>過大使用されたボリューム上にファイルを持つ配置済み DAC がいくつあるかを示す <see cref="T:System.Int32" /> 値。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacWithFilesOnUnderutilizedVolumeCount">
+      <summary>過小使用されたボリューム上にファイルを持つ、配置済み DAC の数を取得します。</summary>
+      <returns>過小使用されたボリューム上にファイルを持つ配置済み DAC がいくつあるかを示す <see cref="T:System.Int32" /> 値。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacWithOverutilizedFileCount">
+      <summary>過大使用されたファイルを持つ、配置済み DAC の数を取得します。</summary>
+      <returns>過小使用されたボリューム上にファイルを持つ配置済み DAC がいくつあるかを示す <see cref="T:System.Int32" /> 値。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacWithOverutilizedProcessorCount">
+      <summary>過大使用されたプロセッサに対して作用する、配置済み DAC の数を取得します。</summary>
+      <returns>過大使用されたプロセッサに対して作用する配置済み DAC がいくつあるかを示す <see cref="T:System.Int32" /> 値。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacWithUnderutilizedFileCount">
+      <summary>過小使用されたファイルを持つ、配置済み DAC の数を取得します。</summary>
+      <returns>過小使用されたファイルを持つ配置済み DAC がいくつあるかを示す <see cref="T:System.Int32" /> 値。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.DeployedDacWithUnderutilizedProcessorCount">
+      <summary>過小使用されたプロセッサに対して作用する、配置済み DAC の数を取得します。</summary>
+      <returns>過小使用されたプロセッサに対して作用する配置済み DAC がいくつあるかを示す <see cref="T:System.Int32" /> 値。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.Description">
+      <summary>UCP について説明する <see cref="T:System.String" /> を取得または設定します。</summary>
+      <returns>UCP の説明を含む <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceCount">
+      <summary>UCP によって管理される SQL Server のインスタンス数を取得します。</summary>
+      <returns>UCP によって管理される SQL Server のインスタンスの数を指定する <see cref="T:System.Int32" /> 値。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceHealthyCount">
+      <summary>UCP によって管理される SQL Server の正常なインスタンスの数を取得します。</summary>
+      <returns>UCP によって管理される SQL Server の正常なインスタンスの数を指定する <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceManagementPendingCount">
+      <summary>保留中の管理ステータスを持つ SQL Server のインスタンスの数を取得します。</summary>
+      <returns>インスタンスの数を指定する <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceOnOverutilizedComputerCount">
+      <summary>過大使用されたコンピューター上で実行されている、SQL Server のマネージ インスタンス数を取得します。</summary>
+      <returns>過大使用されたコンピューター上で実行されている、SQL Server のマネージ インスタンス数を指定する <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceOnUnderutilizedComputerCount">
+      <summary>過小使用されたコンピューター上で実行されている、SQL Server のマネージ インスタンス数を取得します。</summary>
+      <returns>過小使用されたコンピューター上で実行されている、SQL Server のマネージ インスタンス数を指定する <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceOverutilizedCount">
+      <summary>SQL Server の過大使用されたマネージ インスタンスの数を取得します。</summary>
+      <returns>インスタンスの数を指定する <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstances">
+      <summary>この <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> によって管理されている SQL Server の各インスタンスを含むコレクションを取得します。</summary>
+      <returns>このユーティリティによって管理される SQL Server のインスタンスをすべて含む <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstanceCollection" /> です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceUnderutilizedCount">
+      <summary>過小使用されている SQL Server のマネージ インスタンス数を取得します。</summary>
+      <returns>過小使用されている SQL Server のマネージ インスタンスの数を指定する <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceUnhealthyCount">
+      <summary>SQL Server の異常なマネージ インスタンスの数を取得します。</summary>
+      <returns>SQL Server の異常なマネージ インスタンスの数を指定する <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceWithFilesOnOverutilizedVolumeCount">
+      <summary>過大使用されたボリューム上にファイルを持つ、SQL Server のマネージ インスタンス数を取得します。</summary>
+      <returns>過大使用されたボリューム上にある、SQL Server のマネージ インスタンス数を指定する <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceWithFilesOnUnderutilizedVolumeCount">
+      <summary>過小使用されたボリューム上にファイルを持つ、SQL Server のマネージ インスタンス数を取得します。</summary>
+      <returns>過大使用されたボリューム上にある、SQL Server のマネージ インスタンス数を指定する <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceWithOverutilizedFileCount">
+      <summary>過大使用されたファイルを持つ SQL Server のマネージ インスタンスの数を取得します。</summary>
+      <returns>過大使用されたファイルを持つ SQL Server のマネージ インスタンスの数を指定する <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceWithOverutilizedProcessorCount">
+      <summary>過大使用されたプロセッサ上で実行されている、SQL Server のマネージ インスタンス数を取得します。</summary>
+      <returns>過大使用されたプロセッサ上で実行されている、SQL Server のマネージ インスタンス数を指定する <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceWithUnderutilizedFileCount">
+      <summary>過小使用されたファイルを持つ SQL Server のマネージ インスタンス数を取得します。</summary>
+      <returns>過小使用されたファイルを持つ SQL Server のマネージ インスタンスの数を指定する <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.ManagedInstanceWithUnderutilizedProcessorCount">
+      <summary>過小使用されたプロセッサ上で実行されている、SQL Server のマネージ インスタンス数を取得します。</summary>
+      <returns>過小使用されたプロセッサ上で実行されている、SQL Server のマネージ インスタンス数を指定する <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.MdwDatabaseName">
+      <summary>ユーティリティ管理データ ウェアハウス (UMDW) データベースの名前を取得または設定します。</summary>
+      <returns>UMDW データベースの名前を含む <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.MdwRetentionLengthInDaysForDaysHistory">
+      <summary>管理データ ウェアハウス (MDW) の履歴テーブルに 1 日ごとのデータを保存する期間を日数単位で取得または設定します。</summary>
+      <returns>管理データ ウェアハウス (MDW) の履歴テーブルにデータを保存する期間を日数単位で指定した <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.MdwRetentionLengthInDaysForHoursHistory">
+      <summary>ユーティリティ管理データ ウェアハウス (UMDW) の履歴テーブルに 1 時間ごとのデータを保存する期間を日数単位で取得または設定します。</summary>
+      <returns>UMDW の履歴テーブルにデータを保存する期間を日数単位で指定した <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.MdwRetentionLengthInDaysForMinutesHistory">
+      <summary>ユーティリティ管理データ ウェアハウス (UMDW) の履歴テーブルに 1 分ごとのデータを保存する期間を日数単位で取得または設定します。</summary>
+      <returns>UMDW の履歴テーブルにデータを保存する期間を日数単位で指定した <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomainLite#DomainInstanceName">
+      <summary />
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcDomainLite#DomainName">
+      <summary />
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.Microsoft#SqlServer#Management#Sdk#Sfc#ISfcHasConnection#ConnectionContext">
+      <summary />
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.Name">
+      <summary>接続された SQL ストア サーバーの名前を取得します。</summary>
+      <returns>SQL ストア サーバー名を含む <see cref="T:System.String" /> です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.OverUtilizationOccurenceFrequency">
+      <summary>過大使用時の正常性状態を指定された継続時間を通して計算するために使用される出現頻度を取得または設定します。</summary>
+      <returns>プロセッサや I/O など、変動の多いリソースの過大使用時の正常性状態を計算するために使用される、出現頻度比率 (%) を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.OverUtilizationTrailingWindow">
+      <summary>正常性状態を計算するために使用される継続時間を時間単位で取得または設定します。</summary>
+      <returns>プロセッサや I/O など、変動の多いリソースの過大使用時の正常性状態を計算するために使用される、継続時間の長さ (時間単位) を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.PolicyStore">
+      <summary>SQL ストア接続のポリシーを定義する <see cref="T:Microsoft.SqlServer.Management.Dmf.PolicyStore" /> オブジェクトを取得します。</summary>
+      <returns>SQL ストア接続のポリシーを定義する <see cref="T:Microsoft.SqlServer.Management.Dmf.PolicyStore" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.SqlStoreConnection">
+      <summary>SQL ストア接続を取得または設定します。 </summary>
+      <returns>SQL ストア接続情報を含む <see cref="T:Microsoft.SQlServer.Management.Sdk.Sfc.SqlStoreConnection" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.TotalStorageCapacity">
+      <summary>ユーティリティの記憶域容量を取得します。</summary>
+      <returns>
+        <see cref="T:System.Double" /> の記憶域容量をメガバイト単位で指定する <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.TotalStorageUtilization">
+      <summary>現在使用されている SQL Server ユーティリティの記憶域容量を取得します。</summary>
+      <returns>現在使用されている記憶域容量をメガバイト単位で示す <see cref="T:System.Double" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.UnderUtilizationOccurenceFrequency">
+      <summary>過小使用時の正常性状態を指定された継続時間を通して計算するために使用される出現頻度を取得または設定します。</summary>
+      <returns>プロセッサや I/O など、変動の多いリソースの過小使用時の正常性状態を計算するために使用される、出現頻度比率 (%) を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.UnderUtilizationTrailingWindow">
+      <summary>正常性状態を計算するために使用される継続時間を時間単位で取得または設定します。</summary>
+      <returns>プロセッサや I/O など、変動の多いリソースの過小使用時の正常性状態を計算するために使用される、継続時間の長さ (時間単位) を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Utility.UtilityName">
+      <summary>ユーティリティ コントロール ポイント (UCP) の名前を取得します。</summary>
+      <returns>UCP 名を含む <see cref="T:System.String" /> です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.UtilityException.HelpLink">
+      <summary>SQL Server ヘルプ Web サイトへのリンクを取得します。</summary>
+      <returns>SQL Server ヘルプ Web サイトへのリンクを含む <see cref="T:System.String" /> です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.UtilityException.ProdVer">
+      <summary>SQL Server の製品バージョンを取得します。</summary>
+      <returns>製品バージョンを示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Volume.DeviceId">
+      <summary>ボリューム インスタンスのデバイス ID を取得します。</summary>
+      <returns>デバイス ID を含む文字列値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Volume.ID">
+      <summary>ボリュームを一意に識別する ID 値を取得します。</summary>
+      <returns>ボリュームを一意に識別する ID 値である <see cref="T:System.Int32" /> システム値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Volume.IdentityKey">
+      <summary>ボリュームを一意に識別する <see cref="T:Microsoft.SqlServer.Management.Fabric.Voukme.Key" /> 値を取得します。</summary>
+      <returns>ボリュームを一意に識別する ID 値である <see cref="T:Microsoft.SqlServer.Management.Fabric.Voukme.Key" /> システム値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Volume.Key.Name">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.Volume" /> キーの名前を取得します。</summary>
+      <returns>キー値の名前を指定する <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Volume.Name">
+      <summary>ボリュームの名前を指定する <see cref="T:System.String" /> 値を取得します。</summary>
+      <returns>ボリュームの名前を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Volume.Parent">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Fabric.Computer" /> オブジェクトの親を示す <see cref="T:Microsoft.SqlServer.Management.Fabric.Volume" /> オブジェクトの値を取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Fabric.Computer" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Fabric.Volume" /> オブジェクト値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Volume.TotalSpace">
+      <summary>ボリュームの合計記憶域容量をメガバイト単位で取得します。</summary>
+      <returns>ボリュームの合計記憶域容量をメガバイト単位で表す <see cref="T:System.Double" /> オブジェクト値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Volume.TotalSpaceUsed">
+      <summary>ボリューム上の使用済み記憶域容量の合計をメガバイト単位で取得します。</summary>
+      <returns>ボリューム上の使用済み記憶域容量の合計をメガバイト単位で表す <see cref="T:System.Double" /> オブジェクト値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.Volume.TotalSpaceUtilization">
+      <summary>既に使用されているボリュームの記憶域の容量が合計記憶域容量に対して占める割合を取得します。</summary>
+      <returns>既に使用されているボリュームの記憶域の容量が合計記憶域容量に対して占める割合を示す <see cref="T:System.Double" /> オブジェクト値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Utility.VolumeCollection.Item(System.String)">
+      <summary>コレクション内の指定された名前のオブジェクトを返します。</summary>
+      <param name="name">コンピューターの名前を示す <see cref="T:System.String" /> 値です。</param>
+      <returns>指定された名前のボリュームを表す <see cref="T:Microsoft.SqlServer.Management.Utility.Volume" /> オブジェクトです。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.Computer">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> 型は、ユーティリティ ドメイン内のコンピューターを表します。これには、コンピューターのパフォーマンスや負荷を示す特定の物理プロパティが含まれます。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.Computer.Key">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.Computer.Key" /> クラスは、<see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> クラスを識別するキーを表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.ComputerCollection">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.ComputerCollection" /> クラスは、ユーティリティ ドメイン内で管理されているすべてのコンピューターを表す <see cref="T:Microsoft.SqlServer.Management.Utility.Computer" /> オブジェクトのコレクションを表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.DatabaseState">
+      <summary>データベースの状態の列挙です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Utility.DatabaseState.Unknown">
+      <summary>データベースは不明な状態です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Utility.DatabaseState.Available">
+      <summary>データベースはオンラインです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Utility.DatabaseState.Unavailable">
+      <summary>データベースはオフラインです</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.DataFileAdapter">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.DataFileAdapter" /> 型は、データ ファイルに関する情報を表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.DeployedDac">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> 型は、データベース アプリケーション構造を、SQL Server のインスタンスを実行しているコンピューターにインストールされた DAC パッケージの形式で表します。 </summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.DeployedDac.Key">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac.Key" /> クラスは、<see cref="T:Microsoft.SqlServer.Management.Utility.DeployedDac" /> クラスを識別するキーを表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.DeployedDacCollection">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.DeployedDacCollection" /> クラスは、ユーティリティ ドメイン内に配置されたすべての DAC を表す <see cref="T:Microsoft.SqlServer.Management.Smo.DeployedDac" /> オブジェクトのコレクションを表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.HealthState">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.HealthState" /> 列挙体には、配置の状態を示すために使用される値が含まれます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Utility.HealthState.None">
+      <summary>稼動の状態が未指定です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Utility.HealthState.Steady">
+      <summary>稼動が定常状態です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Utility.HealthState.Warning">
+      <summary>稼動が警告状態です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Utility.HealthState.Critical">
+      <summary>稼動が重大な状態です。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.IDataFilePerformanceFacet">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Fabric.IDataFilePerformanceFacet" /> は、データ ファイルのパフォーマンスを表すインターフェイスです。 パフォーマンス ベースのポリシーを判断する際に使用されます。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.ILogFilePerformanceFacet">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Fabric.ILogFilePerformanceFacet" /> は、ログ ファイルのパフォーマンスを表すインターフェイスです。 パフォーマンス ベースのポリシーを判断する際に使用されます。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.LogFileAdapter">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.LogFileAdapter" /> インターフェイスは、ログ ファイル アダプターによって実装される必要がある、拡張プロパティを記述します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.ManagedInstance">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstance" /> 型は、ポリシーと配置を制御するために SQL Server ユーティリティ サービスによって管理されている、SQL Server のインスタンスを表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.ManagedInstance.Key">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstance.Key" /> クラスは、<see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstance" /> クラスを識別するキーを表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.ManagedInstanceCollection">
+      <summary>SQL Server ユーティリティ内にある SQL Server のマネージ インスタンスのコレクションを表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.ManagementState">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.ManagedInstance" /> オブジェクトの可能な状態を列挙します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Utility.ManagementState.Unknown">
+      <summary>状態が不明です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Utility.ManagementState.Discovered">
+      <summary>インスタンスが検出されました。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Utility.ManagementState.Manageable">
+      <summary>インスタンスが管理可能として検証されました。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Utility.ManagementState.ManagementPending">
+      <summary>インスタンスをマネージ インスタンスにするための操作が開始されましたが、現在保留中になっています。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Utility.ManagementState.Managed">
+      <summary>インスタンスがマネージ インスタンスです。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.NameKey">
+      <summary>name プロパティを Sfc キーとして使用する <see cref="N:Microsoft.SqlServer.Utility" /> オブジェクトを識別します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.Utility">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> クラスは、SQL Server の 1 つ以上のリモート インスタンスを管理するためのメソッドとプロパティを定義する、ユーティリティ コントロール ポイント (UCP) を表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.Utility.Key">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.Utility.Key" /> クラスは、システム ファイル チェッカー (SFC) 内の <see cref="T:Microsoft.SqlServer.Management.Utility.Utility" /> を識別するために使用されるメソッドとプロパティを定義します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.UtilityException">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.UtilityException" /> クラスは、ユーティリティ例外情報を記録するメソッドとプロパティを定義します。 これは、すべてのユーティリティ例外の種類の基本クラスです。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.Volume">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Fabric.Volume" /> 型は、SQL Server ユーティリティ ドメイン内のコンピューター上にあるボリュームまたはディスク パーティションに関する情報を表します。 </summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.Volume.Key">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.Volume.Key" /> クラスは、<see cref="T:Microsoft.SqlServer.Management.Utility.Volume" /> クラスを識別するキーを表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Utility.VolumeCollection">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Utility.VolumeCollection" /> クラスは、コンピューター上のすべてのボリュームを表す <see cref="T:Microsoft.SqlServer.Management.Utility.Volume" /> オブジェクトのコレクションを表します。</summary>
+    </member>
+  </members>
+</doc>

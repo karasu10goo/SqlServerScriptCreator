@@ -1,0 +1,880 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.SqlServer.SqlWmiManagement</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> クラスは、ネットワーク経由で SQL Server のインスタンスと通信できるクライアント インスタンスにインストールされたネットワーク プロトコルを表します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol.DisplayName">
+      <summary>参照先のプロトコルの表示名を取得します。値の設定も可能です。</summary>
+      <returns>プロトコルの表示名を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol.IsEnabled">
+      <summary>クライアント ネットワーク プロトコルが有効か無効かを示す <see cref="T:System.Boolean" /> プロパティを取得します。値の設定も可能です。</summary>
+      <returns>クライアント ネットワーク プロトコルが有効か無効かを示す <see cref="T:System.Boolean" /> 値です。True の場合、クライアント ネットワーク プロトコルは有効です。False (既定値) の場合、クライアント ネットワーク プロトコルは無効です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol.NetLibInfo">
+      <summary>参照先のプロトコルのネットワーク ライブラリ情報ファイルを取得します。</summary>
+      <returns>ネットワーク ライブラリ情報ファイルを示す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.NetLibInfo" /> オブジェクトの値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol.NetworkLibrary">
+      <summary>参照先のプロトコルのネットワーク ライブラリ ファイルの名前を取得します。</summary>
+      <returns>参照先のプロトコルのネットワーク ライブラリ ファイルの名前を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol.Order">
+      <summary>現在サポートされているプロトコルの一覧内で、参照先のプロトコルが表示および適用される順序を取得します。値の設定も可能です。</summary>
+      <returns>現在サポートされているプロトコルの一覧内での参照先のプロトコルの順序を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol.Parent">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> オブジェクトを取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol.Refresh">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> オブジェクトのオブジェクトとプロパティを更新します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection" /> クラスは、親オブジェクトで定義されたすべてのクライアント プロトコルを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> オブジェクトのコレクションを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection.Contains(System.String)">
+      <summary>指定したキーの値がコレクション内に存在するかどうかを確認します。</summary>
+      <returns>コレクション内にキーの値が存在するかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、キーの値はコレクション内に存在します。False の場合、キーの値はコレクション内に存在しません。</returns>
+      <param name="key">コレクション内に存在するかどうかを確認するためのキーの値を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection.CopyTo(Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol[],System.Int32)">
+      <summary>1 次元の配列にコレクション オブジェクトをコピーします。その際、指定されたインデックス値の位置からコピーを開始します。</summary>
+      <param name="array">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> オブジェクトの配列です。</param>
+      <param name="index">コピーを開始するインデックス位置を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection.Count">
+      <summary>参照先のコレクションに含まれる <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> オブジェクトの数を取得します。</summary>
+      <returns>参照先のコレクションに含まれる <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> オブジェクトの数を示す int32 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection.GetEnumerator">
+      <summary>オブジェクトの一覧を繰り返し処理できる列挙子を取得します。</summary>
+      <returns>コレクションの繰り返し処理に使用できる <see cref="T:System.Collections.IEnumerator" /> オブジェクトの値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection.Item(System.Int32)">
+      <summary>コレクション内にある指定したインデックス番号の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> オブジェクトを取得します。</summary>
+      <returns>クライアント プロトコルを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> オブジェクトの値です。</returns>
+      <param name="index">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection" /> コレクション内の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> オブジェクトの位置を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection.Item(System.String)">
+      <summary>コレクション内にある指定した名前の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> オブジェクトを取得します。</summary>
+      <returns>クライアント プロトコルを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> オブジェクトの値です。</returns>
+      <param name="name">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection" /> コレクション内の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> オブジェクトの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection.Parent">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> オブジェクトを取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <summary>1 次元の配列にコレクション オブジェクトをコピーします。その際、指定されたインデックス値の位置からコピーを開始します。</summary>
+      <param name="array">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> オブジェクトの配列です。</param>
+      <param name="index">コピーを開始するインデックス位置を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolProperty">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolProperty" /> クラスは、Windows Management Instrumentation (WMI) クライアント プロトコルの属性を表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolPropertyCollection">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolPropertyCollection" /> クラスは、親オブジェクトで定義されたクライアント プロトコルのすべての属性を表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolProperty" /> オブジェクトのコレクションを表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.IPAddressProperty">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.IPAddressProperty" /> クラスは、Windows Management Instrumentation (WMI) の IP アドレスの属性を表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.IPAddressPropertyCollection">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.IPAddressPropertyCollection" /> クラスは、親オブジェクトで定義された IP アドレスのすべての属性を表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.IPAddressProperty" /> オブジェクトのコレクションを表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> クラスは、Microsoft SQL Server のインスタンスの Windows Management Instrumentation (WMI) インストールを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer.#ctor(System.String)">
+      <summary>指定したコンピューター名を使用して、<see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="machineName">コンピューターの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer.#ctor(System.String,System.String,System.String)">
+      <summary>指定したコンピューター名と、指定したログインおよびパスワードを使用して、<see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="machineName">コンピューターの名前を示す <see cref="T:System.String" /> 値です。</param>
+      <param name="userName">ユーザー名を示す <see cref="T:System.String" /> 値です。</param>
+      <param name="password">パスワードを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer.#ctor(System.String,System.String,System.String,Microsoft.SqlServer.Management.Smo.Wmi.ProviderArchitecture)">
+      <summary>指定したコンピューター名、指定したログインとパスワード、指定した <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProviderArchitecture" /> を使用して、<see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="machineName">コンピューターの名前を示す <see cref="T:System.String" /> 値です。</param>
+      <param name="userName">ユーザー名を示す <see cref="T:System.String" /> 値です。</param>
+      <param name="password">パスワードを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="providerArchitecture">プロバイダー アーキテクチャの種類を示す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProviderArchitecture" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer.ClientProtocols">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> オブジェクトのコレクションを表します。各 <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocol" /> オブジェクトは、WMI インストールで定義されたクライアント プロトコルを表します。</summary>
+      <returns>WMI インストールで定義されたすべてのクライアント プロトコルを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ClientProtocolCollection" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer.ConnectionSettings">
+      <summary>参照先の WMI インストールの接続設定を取得します。</summary>
+      <returns>WMI インストールで定義されたすべての接続設定を表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiConnectionInfo" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer.GetSmoObject(Microsoft.SqlServer.Management.Sdk.Sfc.Urn)">
+      <summary>指定した URN (Uniform Resource Name) アドレスの <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject" /> オブジェクトを取得します。</summary>
+      <returns>指定した URN アドレスのオブジェクトを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject" /> オブジェクトです。</returns>
+      <param name="urn">指定した URN アドレスの <see cref="T:Microsoft.SqlServer.Management.Smo.Urn" /> オブジェクトです。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer.ServerAliases">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> オブジェクトのコレクションを表します。各 <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> オブジェクトは、WMI インストールで定義されたサーバーの別名を表します。</summary>
+      <returns>WMI インストールで定義されたすべてのサーバーの別名を表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer.ServerInstances">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> オブジェクトのコレクションを表します。各 <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> オブジェクトは、WMI インストールで定義された SQL Server のインスタンスを表します。</summary>
+      <returns>WMI インストールで定義されたすべてのサーバー インスタンスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer.Services">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> オブジェクトのコレクションを表します。各 <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> オブジェクトは、WMI インストールで定義された SQL Server のサービスを表します。</summary>
+      <returns>WMI インストールで定義されたすべての SQL Server のサービスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection" /> オブジェクトです。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.NetLibInfo">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.NetLibInfo" /> オブジェクトは、ネットワーク ライブラリ ファイルに関する情報を表します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.NetLibInfo.Date">
+      <summary>ネットワーク ライブラリ ファイルが作成された日付と時刻を取得します。</summary>
+      <returns>ネットワーク ライブラリ ファイルが作成された日付と時刻を示す <see cref="T:System.DateTime" /> システム オブジェクトの値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.NetLibInfo.FileName">
+      <summary>ネットワーク ライブラリ ファイルの名前を取得します。</summary>
+      <returns>ネットワーク ライブラリ ファイルの名前を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.NetLibInfo.Size">
+      <summary>ネットワーク ライブラリ ファイルのサイズ (バイト単位) を取得します。</summary>
+      <returns>ネットワーク ライブラリ ファイルのサイズをバイト単位で示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.NetLibInfo.Version">
+      <summary>ネットワーク ライブラリ ファイルのバージョン情報を取得します。</summary>
+      <returns>ネットワーク ライブラリ ファイルのバージョン情報を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolBase">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolBase" /> クラスは、SQL Server クライアントまたは SQL Server を実行しているサーバーで使用するプロトコルを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolBase.Alter">
+      <summary>SQL Server のインスタンスで、<see cref="T:Microsoft.SqlServer.Management.Smo.Protocol" /> オブジェクトのプロパティに対する変更をすべて更新します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolBase.GetManagementObject">
+      <summary>参照先のプロトコル オブジェクトを管理するオブジェクトを返します。</summary>
+      <returns>管理オブジェクトを示す <see cref="T:System.Management.ManagementObject" /> システム オブジェクトの値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolBase.ProtocolProperties">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> オブジェクトのコレクションを表します。各 <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> オブジェクトは、参照先のプロトコルで定義された 1 つの属性を表します。</summary>
+      <returns>参照先のプロトコルで定義されたすべての属性を表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolBase.Refresh">
+      <summary>参照先オブジェクトのプロパティを更新します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> クラスは、Windows Management Instrumentation (WMI) インストールのプロトコルの属性を表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection" /> クラスは、親オブジェクトで定義されたプロトコルのすべての属性を表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> オブジェクトのコレクションを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection.Contains(System.String)">
+      <summary>指定したキーの値がコレクション内に存在するかどうかを確認します。</summary>
+      <returns>コレクション内にキーの値が存在するかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、キーの値はコレクション内に存在します。False の場合、キーの値はコレクション内に存在しません。</returns>
+      <param name="name">コレクション内に存在するかどうかを確認するためのキーの値を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection.CopyTo(Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty[],System.Int32)">
+      <summary>1 次元の配列にコレクション オブジェクトをコピーします。その際、指定されたインデックス値の位置からコピーを開始します。</summary>
+      <param name="array">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> オブジェクトの配列です。</param>
+      <param name="index">コピーを開始するインデックス位置を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection.Count">
+      <summary>参照先のコレクションに含まれる <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> オブジェクトの数を取得します。</summary>
+      <returns>参照先のコレクションに含まれる <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> オブジェクトの数を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection.GetEnumerator">
+      <summary>
+        <see cref="T:System.Collections.IEnumerator" /> インターフェイスを返します。このインターフェイスを使用すると、コレクション内のオブジェクトを繰り返し処理できます。</summary>
+      <returns>参照先のコレクション オブジェクトの <see cref="T:System.Collections.IEnumerator" /> システム インターフェイスです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection.IsSynchronized">
+      <summary>コレクションへのアクセスが同期され、スレッド セーフかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得します。</summary>
+      <returns>コレクションへのアクセスが同期されるかどうかを示す <see cref="T:System.Boolean" /> 値。True の場合、コレクションへのアクセスは同期されます。False (既定値) の場合、コレクションへのアクセスは同期されません。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection.Item(System.Int32)">
+      <summary>コレクション内にある指定したインデックス番号の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection" /> オブジェクトを取得します。</summary>
+      <returns>プロトコルの属性を表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> オブジェクトの値です。</returns>
+      <param name="index">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection" /> コレクション内の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> オブジェクトの位置を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection.Item(System.String)">
+      <summary>コレクション内にある指定した名前の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> オブジェクトを取得します。</summary>
+      <returns>プロトコルの属性を表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> オブジェクトの値です。</returns>
+      <param name="name">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection" /> コレクション内の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> オブジェクトの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection.SyncRoot">
+      <summary>コレクションへのアクセスの同期に使用できるオブジェクトを取得します。</summary>
+      <returns>コレクションへのアクセスの同期に使用されるオブジェクトを示す <see cref="T:System.Object" /> システム オブジェクトの値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <summary>1 次元の配列にコレクション オブジェクトをコピーします。その際、指定されたインデックス値の位置からコピーを開始します。</summary>
+      <param name="array">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> オブジェクトの配列です。</param>
+      <param name="index">コピーを開始するインデックス位置を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ProviderArchitecture">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProviderArchitecture" /> 列挙には、Windows Management Instrumentation (WMI) プロバイダーのアーキテクチャを示す値が含まれます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ProviderArchitecture.Default">
+      <summary>既定のアーキテクチャです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ProviderArchitecture.Use32bit">
+      <summary>WMI プロバイダーのアーキテクチャは、32 ビットです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Wmi.ProviderArchitecture.Use64bit">
+      <summary>WMI プロバイダーのアーキテクチャは、64 ビットです。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> クラスは、Windows Management Instrumentation (WMI) インストールのサーバー接続の別名を表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias.#ctor(Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer,System.String)">
+      <summary>指定した WMI インストールで、指定した名前を使用して <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="managedComputer">サーバー接続の別名を使用する WMI インストールを示す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> オブジェクトの値です。</param>
+      <param name="name">サーバー接続の別名を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias.ConnectionString">
+      <summary>別名からサーバーへの接続に使用する接続文字列を取得します。値の設定も可能です。</summary>
+      <returns>接続文字列を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias.Create">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> オブジェクトの定義に基づいて、WMI インストールでサーバー接続の別名を作成します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias.Drop">
+      <summary>WMI インストールからサーバー接続の別名を削除します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias.Parent">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> オブジェクトを取得します。値の設定も可能です。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> オブジェクトの親を示す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias.ProtocolName">
+      <summary>サーバー接続の別名で使用されるプロトコルの名前を取得します。値の設定も可能です。</summary>
+      <returns>サーバー接続の別名で使用されるプロトコルの名前を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias.ServerName">
+      <summary>サーバーの別名の接続先である SQL Server のインスタンスの名前を取得します。値の設定も可能です。</summary>
+      <returns>サーバーの別名の接続先である SQL Server のインスタンスの名前を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection" /> クラスは、親オブジェクトで定義されたすべての SQL Server の別名を表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> オブジェクトのコレクションを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection.Contains(System.String)">
+      <summary>指定したキーの値がコレクション内に存在するかどうかを確認します。</summary>
+      <returns>コレクション内にキーの値が存在するかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、キーの値はコレクション内に存在します。False の場合、キーの値はコレクション内に存在しません。</returns>
+      <param name="key">コレクション内に存在するかどうかを確認するためのキーの値を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection.CopyTo(Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias[],System.Int32)">
+      <summary>1 次元の配列にコレクション オブジェクトをコピーします。その際、指定されたインデックス値の位置からコピーを開始します。</summary>
+      <param name="array">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> オブジェクトの配列です。</param>
+      <param name="index">コピーを開始するインデックス位置を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection.Count">
+      <summary>参照先のコレクションに含まれる <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> オブジェクトの数を取得します。</summary>
+      <returns>参照先のコレクションに含まれる <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> オブジェクトの数を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection.GetEnumerator">
+      <summary>
+        <see cref="T:System.Collections.IEnumerator" /> インターフェイスを返します。このインターフェイスを使用すると、コレクション内のオブジェクトを繰り返し処理できます。</summary>
+      <returns>参照先のコレクション オブジェクトの <see cref="T:System.Collections.IEnumerator" /> システム インターフェイスです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection.Item(System.Int32)">
+      <summary>コレクション内にある指定したインデックス番号の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> オブジェクトを取得します。</summary>
+      <returns>SQL Server の別名を表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> オブジェクトの値です。</returns>
+      <param name="index">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection" /> コレクション内の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> オブジェクトの位置を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection.Item(System.String)">
+      <summary>コレクション内にある指定した名前の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> オブジェクトを取得します。</summary>
+      <returns>SQL Server の別名を表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> オブジェクトの値です。</returns>
+      <param name="name">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection" /> コレクション内の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> オブジェクトの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection.Parent">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> オブジェクトを取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection" /> オブジェクトを所有する <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerAliasCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <summary>1 次元の配列にコレクション オブジェクトをコピーします。その際、指定されたインデックス値の位置からコピーを開始します。</summary>
+      <param name="array">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerAlias" /> オブジェクトの配列です。</param>
+      <param name="index">コピーを開始するインデックス位置を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> クラスは、Microsoft SQL Server のインスタンスを表します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance.Parent">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> オブジェクトを取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance.ServerProtocols">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> オブジェクトのコレクションを表します。各 <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> オブジェクトは、Microsoft Management Instrumentation (WMI) インストールで定義されたサーバー プロトコルを表します。</summary>
+      <returns>WMI インストールで定義されたすべてのサーバー プロトコルを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection" /> オブジェクトです。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection" /> クラスは、親オブジェクトで定義された SQL Server のすべてのインスタンスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> オブジェクトのコレクションを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection.Contains(System.String)">
+      <summary>指定したキーの値がコレクション内に存在するかどうかを確認します。</summary>
+      <returns>コレクション内にキーの値が存在するかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、キーの値はコレクション内に存在します。False の場合、キーの値はコレクション内に存在しません。</returns>
+      <param name="key">コレクション内に存在するかどうかを確認するためのキーの値を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection.CopyTo(Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance[],System.Int32)">
+      <summary>1 次元の配列にコレクション オブジェクトをコピーします。その際、指定されたインデックス値の位置からコピーを開始します。</summary>
+      <param name="array">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> オブジェクトの配列です。</param>
+      <param name="index">コピーを開始するインデックス位置を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection.Count">
+      <summary>参照先のコレクションに含まれる <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> オブジェクトの数を取得します。</summary>
+      <returns>参照先のコレクションに含まれる <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> オブジェクトの数を示す int32 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection.GetEnumerator">
+      <summary>
+        <see cref="T:System.Collections.IEnumerator" /> インターフェイスを返します。このインターフェイスを使用すると、コレクション内のオブジェクトを繰り返し処理できます。</summary>
+      <returns>参照先のコレクション オブジェクトの <see cref="T:System.Collections.IEnumerator" /> システム インターフェイスです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection.Item(System.Int32)">
+      <summary>コレクション内にある指定したインデックス番号の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> オブジェクトを取得します。</summary>
+      <returns>SQL Server のインスタンスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> オブジェクトの値です。</returns>
+      <param name="index">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection" /> コレクション内の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> オブジェクトの位置を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection.Item(System.String)">
+      <summary>コレクション内にある指定した名前の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> オブジェクトを取得します。</summary>
+      <returns>SQL Server のインスタンスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> オブジェクトの値です。</returns>
+      <param name="name">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection" /> コレクション内の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> オブジェクトの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection.Parent">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> オブジェクトを取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstanceCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <summary>1 次元の配列にコレクション オブジェクトをコピーします。その際、指定されたインデックス値の位置からコピーを開始します。</summary>
+      <param name="array">
+        <see cref="T:System.Object" /> の配列です。</param>
+      <param name="index">コピーを開始するインデックス位置を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> クラスは、Windows Management Instrumentation (WMI) インストールで定義されたサーバー プロトコルの IP アドレスを表します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress.IPAddress">
+      <summary>サーバーに関連付けられた IP アドレスを取得します。</summary>
+      <returns>サーバーの IP アドレスを示す <see cref="T:System.Net.IPAddress" /> システム オブジェクトの値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress.IPAddressProperties">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.IPAddressProperty" /> オブジェクトのコレクションを表します。各 <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.IPAddressProperty" /> オブジェクトは、IP アドレスの 1 つの属性を表します。</summary>
+      <returns>IP アドレスのすべての属性を表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.IPAddressPropertyCollection" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress.Parent">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> オブジェクトを取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> オブジェクトです。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection" /> クラスは、親オブジェクトで定義されたすべてのサーバー IP アドレスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> オブジェクトのコレクションを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection.Contains(System.String)">
+      <summary>指定したキーの値がコレクション内に存在するかどうかを確認します。</summary>
+      <returns>コレクション内にキーの値が存在するかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、キーの値はコレクション内に存在します。False の場合、キーの値はコレクション内に存在しません。</returns>
+      <param name="key">コレクション内に存在するかどうかを確認するためのキーの値を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection.CopyTo(Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress[],System.Int32)">
+      <summary>1 次元の配列にコレクション オブジェクトをコピーします。その際、指定されたインデックス値の位置からコピーを開始します。</summary>
+      <param name="array">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> オブジェクトの配列です。</param>
+      <param name="index">コピーを開始するインデックス位置を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection.Count">
+      <summary>参照先のコレクションに含まれる <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> オブジェクトの数を取得します。</summary>
+      <returns>参照先のコレクションに含まれる <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> オブジェクトの数を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection.GetEnumerator">
+      <summary>
+        <see cref="T:System.Collections.IEnumerator" /> インターフェイスを返します。このインターフェイスを使用すると、コレクション内のオブジェクトを繰り返し処理できます。</summary>
+      <returns>参照先のコレクション オブジェクトの <see cref="T:System.Collections.IEnumerator" /> システム インターフェイスです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection.Item(System.Int32)">
+      <summary>コレクション内にある指定したインデックス番号の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> オブジェクトを取得します。</summary>
+      <returns>サーバー IP アドレスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> オブジェクトの値です。</returns>
+      <param name="index">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection" /> コレクション内の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> オブジェクトの位置を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection.Item(System.String)">
+      <summary>コレクション内にある指定した名前の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> オブジェクトを取得します。</summary>
+      <returns>サーバー IP アドレスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> オブジェクトの値です。</returns>
+      <param name="name">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection" /> コレクション内の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> オブジェクトの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection.Parent">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> オブジェクトを取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <summary>1 次元の配列にコレクション オブジェクトをコピーします。その際、指定されたインデックス値の位置からコピーを開始します。</summary>
+      <param name="array">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> オブジェクトの配列です。</param>
+      <param name="index">コピーを開始するインデックス位置を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> クラスは、ネットワーク経由で SQL Server クライアントと通信できるサーバー インスタンスにインストールされたネットワーク プロトコルを表します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol.DisplayName">
+      <summary>参照先のプロトコルの表示名を取得します。値の設定も可能です。</summary>
+      <returns>プロトコルの表示名を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol.HasMultiIPAddresses">
+      <summary>サーバー プロトコルに複数の IP アドレスが関連付けられているかどうかを示す <see cref="T:System.Boolean" /> プロパティを取得します。</summary>
+      <returns>サーバー プロトコルに複数の IP アドレスが関連付けられているかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、サーバー プロトコルには複数の IP アドレスがあります。False (既定値) の場合、サーバー プロトコルの IP アドレスは 1 つです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol.IPAddresses">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> オブジェクトのコレクションを表します。各 <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddress" /> オブジェクトは、サーバー プロトコルで定義された 1 つの IP アドレスを表します。</summary>
+      <returns>サーバー プロトコルで定義されたすべての IP アドレスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerIPAddressCollection" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol.IsEnabled">
+      <summary>サーバー ネットワーク プロトコルが有効か無効かを示す <see cref="T:System.Boolean" /> プロパティを取得します。値の設定も可能です。</summary>
+      <returns>サーバー ネットワーク プロトコルが有効か無効かを示す <see cref="T:System.Boolean" /> 値です。True の場合、サーバー ネットワーク プロトコルは有効です。False (既定値) の場合、サーバー ネットワーク プロトコルは無効です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol.Parent">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> オブジェクトを取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> オブジェクトです。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection" /> クラスは、親オブジェクトで定義されたすべてのサーバー プロトコルを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> オブジェクトのコレクションを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection.Contains(System.String)">
+      <summary>指定したキーの値がコレクション内に存在するかどうかを確認します。</summary>
+      <returns>コレクション内にキーの値が存在するかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、キーの値はコレクション内に存在します。False の場合、キーの値はコレクション内に存在しません。</returns>
+      <param name="key">コレクション内に存在するかどうかを確認するためのキーの値を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection.CopyTo(Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol[],System.Int32)">
+      <summary>1 次元の配列にコレクション オブジェクトをコピーします。その際、指定されたインデックス値の位置からコピーを開始します。</summary>
+      <param name="array">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> オブジェクトの配列です。</param>
+      <param name="index">コピーを開始するインデックス位置を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection.Count">
+      <summary>参照先のコレクションに含まれる <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> オブジェクトの数を取得します。</summary>
+      <returns>参照先のコレクションに含まれる <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> オブジェクトの数を示す int32 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection.GetEnumerator">
+      <summary>
+        <see cref="T:System.Collections.IEnumerator" /> インターフェイスを返します。このインターフェイスを使用すると、コレクション内のオブジェクトを繰り返し処理できます。</summary>
+      <returns>参照先のコレクション オブジェクトの <see cref="T:System.Collections.IEnumerator" /> システム インターフェイスです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection.Item(System.Int32)">
+      <summary>コレクション内にある指定したインデックス番号の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> オブジェクトを取得します。</summary>
+      <returns>サーバー プロトコルを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> オブジェクトの値です。</returns>
+      <param name="index">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection" /> コレクション内の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> オブジェクトの位置を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection.Item(System.String)">
+      <summary>コレクション内にある指定した名前の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> オブジェクトを取得します。</summary>
+      <returns>サーバー プロトコルを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> オブジェクトの値です。</returns>
+      <param name="name">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection" /> コレクション内の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocol" /> オブジェクトの名前を示す <see cref="T:System.STring" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection.Parent">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> オブジェクトを取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection" /> オブジェクトを所有する <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerInstance" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <summary>1 次元の配列にコレクション オブジェクトをコピーします。その際、指定されたインデックス値の位置からコピーを開始します。</summary>
+      <param name="array">
+        <see cref="T:System.Object" /> の配列です。</param>
+      <param name="index">コピーを開始するインデックス位置を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolProperty">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolProperty" /> クラスは、Windows Management Instrumentation (WMI) サーバー プロトコルの属性を表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolPropertyCollection">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolPropertyCollection" /> クラスは、親オブジェクトで定義されたサーバー プロトコルのすべての属性を表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServerProtocolProperty" /> オブジェクトのコレクションを表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.Service">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> クラスは、SQL Server サービスのインスタンスを表します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.AcceptsPause">
+      <summary>SQL Server サービスを一時停止できるかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得します。</summary>
+      <returns>SQL Server サービスを一時停止できるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、サービスを一時停止できます。False (既定値) の場合、サービスを一時停止できません。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.AcceptsStop">
+      <summary>SQL Server サービスを停止できるかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得します。</summary>
+      <returns>SQL Server サービスを停止できるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、サービスを停止できます。False (既定値) の場合、サービスを停止できません。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.AdvancedProperties">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Property" /> オブジェクトのコレクションを表します。各 <see cref="T:Microsoft.SqlServer.Management.Smo.Property" /> オブジェクトは、SQL Server サービスで定義される詳細プロパティを表します。</summary>
+      <returns>SQL Server サービスで定義されるすべての詳細プロパティを表す <see cref="T:Microsoft.SqlServer.Management.Smo.PropertyCollection" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.Service.Alter">
+      <summary>SQL Server のインスタンスの <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> オブジェクトのプロパティに対する変更をすべて更新します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.Service.ChangeHadrServiceSetting(System.Boolean)">
+      <summary>HA/DR サービスの設定を変更します。</summary>
+      <param name="enable">HA/DR サービスの設定の状態です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.Service.ChangePassword(System.String,System.String)">
+      <summary>SQL Server サービスを実行しているシステム アカウントのパスワードを変更します。</summary>
+      <param name="oldPassword">既存のパスワードを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="newPassword">新しいパスワードを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.Dependencies">
+      <summary>参照先の SQL Server サービスに依存するサービスの一覧を返します。</summary>
+      <returns>SQL Server サービスに関連付けられたサービスを示す <see cref="T:System.Collections.Specialized.StringCollection" /> システム オブジェクトの値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.Description">
+      <summary>SQL Server サービスの説明テキストを取得します。</summary>
+      <returns>SQL Server サービスの説明テキストを表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.DisplayName">
+      <summary>SQL Server サービスの表示名を取得します。</summary>
+      <returns>SQL Server サービスの表示名を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.ErrorControl">
+      <summary>SQL Server サービスがスタートアップ時に正しく開始しない場合、エラーの重大度を取得します。</summary>
+      <returns>Microsoft SQL Server のスタートアップ時にサービスが正しく開始しない場合のエラー重大度を示す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceErrorControl" /> オブジェクトの値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.ExitCode">
+      <summary>SQL Server サービスの開始時と停止時に発生する問題を定義する Win32 エラー コードを取得します。</summary>
+      <returns>サービスの開始時と停止時に発生する問題を定義する Win32 エラー コードを示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.IsHadrEnabled">
+      <summary>高可用性/災害復旧が有効になっているかどうかを取得します。</summary>
+      <returns>HA/DR id が有効な場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Smo.Wmi.Service.ManagementStateChange">
+      <summary>管理状態が変化したときに発生するイベントです。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.Parent">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> オブジェクトを取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.PathName">
+      <summary>SQL Server サービスを実装するバイナリ ファイルのパスとファイル名を取得します。</summary>
+      <returns>サービスを実装するバイナリ ファイルのパスとファイル名を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.Service.Pause">
+      <summary>SQL Server サービスを一時停止します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.ProcessId">
+      <summary>SQL Server サービスを一意に識別するプロセス ID を取得します。</summary>
+      <returns>サービスを一意に識別する ID 値を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.Service.Refresh">
+      <summary>SQL Server サービスを更新します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.Service.Resume">
+      <summary>SQL Server サービスを再開します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.ServiceAccount">
+      <summary>SQL Server サービスを実行しているシステム アカウントを取得します。</summary>
+      <returns>サービスを実行しているシステム アカウントを示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.ServiceState">
+      <summary>実行、停止、一時停止などの SQL Server サービスの状態を取得します。</summary>
+      <returns>SQL Server サービスの状態を示す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceState" /> オブジェクトの値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.Service.SetServiceAccount(System.String,System.String)">
+      <summary>SQL Server サービスの実行に使用するアカウントを設定します。</summary>
+      <param name="userName">SQL Server サービスを実行しているシステム アカウントを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="password">システム アカウントのパスワードを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.Service.Start">
+      <summary>SQL Server サービスを開始します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.StartMode">
+      <summary>SQL Server サービスを開始するメソッドを取得します。値の設定も可能です。</summary>
+      <returns>サービスを開始するメソッドを示す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceStartMode" /> オブジェクトの値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.StartupParameters">
+      <summary>SQL Server サービスのすべてのスタートアップ パラメーターを取得します。値の設定も可能です。</summary>
+      <returns>SQL Server サービスのスタートアップ パラメーターを示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.Service.Stop">
+      <summary>SQL Server サービスを停止します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.Service.Type">
+      <summary>Microsoft Search サービス、SQL Server エージェント サービス、SQL Server サービスなど、サービスの種類を取得します。</summary>
+      <returns>SQL Server サービスの種類を示す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedServiceType" /> オブジェクトです。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection" /> クラスは <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> オブジェクトのコレクションです。これは、親オブジェクトで定義されているすべての SQL Server サービスを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection.Contains(System.String)">
+      <summary>指定したキーの値がコレクション内に存在するかどうかを確認します。</summary>
+      <returns>コレクション内にキーの値が存在するかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、キーの値はコレクション内に存在します。False の場合、キーの値はコレクション内に存在しません。</returns>
+      <param name="key">コレクション内に存在するかどうかを確認するためのキーの値を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection.CopyTo(Microsoft.SqlServer.Management.Smo.Wmi.Service[],System.Int32)">
+      <summary>1 次元の配列にコレクション オブジェクトをコピーします。その際、指定されたインデックス値の位置からコピーを開始します。</summary>
+      <param name="array">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> オブジェクトの配列です。</param>
+      <param name="index">コピーを開始するインデックス位置を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection.Count">
+      <summary>参照先のコレクションに含まれる <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> オブジェクトの数を取得します。</summary>
+      <returns>参照先のコレクションに含まれる <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> オブジェクトの数を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection.GetEnumerator">
+      <summary>
+        <see cref="T:System.Collections.IEnumerator" /> インターフェイスを返します。このインターフェイスを使用すると、コレクション内のオブジェクトを繰り返し処理できます。</summary>
+      <returns>参照先のコレクション オブジェクトの <see cref="T:System.Collections.IEnumerator" /> システム インターフェイスです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection.Item(System.Int32)">
+      <summary>コレクション内にある指定したインデックス番号の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> オブジェクトを取得します。</summary>
+      <returns>SQL Server のサービスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> オブジェクトの値です。</returns>
+      <param name="index">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection" /> コレクション内の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> オブジェクトの位置を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection.Item(System.String)">
+      <summary>コレクション内にある指定した名前の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> オブジェクトを取得します。</summary>
+      <returns>SQL Server のサービスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> オブジェクトの値です。</returns>
+      <param name="name">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection" /> コレクション内の <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.Service" /> オブジェクトの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection.Parent">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> オブジェクトを取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.ServiceCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <summary>1 次元の配列にコレクション オブジェクトをコピーします。その際、指定されたインデックス値の位置からコピーを開始します。</summary>
+      <param name="array">オブジェクトの配列です。</param>
+      <param name="index">コピーを開始するインデックス位置を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiCollectionBase">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiCollectionBase" /> クラスは、Windows Management Instrumentation (WMI) オブジェクト参照のすべてのコレクション オブジェクトを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiCollectionBase.Add(Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject)">
+      <summary>指定したオブジェクトを参照先コレクションに追加します。</summary>
+      <param name="wmiObj">コレクションに追加するオブジェクトの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Wmi.WmiCollectionBase.initialized">
+      <summary>Windows Management Instrumentation (WMI) オブジェクト設定内のオブジェクトのコレクションを初期化するブール演算型メソッドを定義します。このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Wmi.WmiCollectionBase.innerColl">
+      <summary>
+            単に情報を示すためだけに特定されます。サポートされていません。将来の互換性は保証されません。
+          </summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.WmiCollectionBase.IsSynchronized">
+      <summary>コレクションへのアクセスが同期されるかどうか (スレッド セーフかどうか) を示す <see cref="T:System.Boolean" /> プロパティ値を取得します。</summary>
+      <returns>コレクションへのアクセスがスレッド セーフであるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、コレクションへのアクセスは同期されます。False (既定値) の場合、コレクションへのアクセスは同期されません。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiCollectionBase.Remove(System.String)">
+      <summary>指定したオブジェクトを参照先コレクションから削除します。</summary>
+      <param name="objname">コレクションから削除するオブジェクトの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.WmiCollectionBase.SyncRoot">
+      <summary>コレクションへのアクセスの同期に使用できるオブジェクトを取得します。</summary>
+      <returns>コレクションへのアクセスの同期に使用できる <see cref="T:System.Object" /> 値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiConnectionInfo">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiConnectionInfo" /> クラスは、Windows Management Instrumentation (WMI) のインストールで使用される接続情報を表します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.WmiConnectionInfo.MachineName">
+      <summary>Windows Management Instrumentation (WMI) がインストールされたコンピューターの名前を取得します。値の設定も可能です。</summary>
+      <returns>WMI がインストールされたコンピューターの名前を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.WmiConnectionInfo.ProviderArchitecture">
+      <summary>このインスタンスのプロバイダー アーキテクチャを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiConnectionInfo.ProviderArchitecture" /> 値を取得します。値の設定も可能です。</summary>
+      <returns>このインスタンスのプロバイダー アーキテクチャを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiConnectionInfo.ProviderArchitecture" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiConnectionInfo.SetPassword(System.String)">
+      <summary>接続を確立するために使用するアカウントのパスワードを設定します。</summary>
+      <param name="password">パスワードを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.WmiConnectionInfo.Timeout">
+      <summary>Windows Management Instrumentation (WMI) 接続がタイムアウトした後の期間を秒単位で取得します。値の設定も可能です。</summary>
+      <returns>WMI 接続がタイムアウトした後の期間を秒単位で示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.WmiConnectionInfo.Username">
+      <summary>接続を確立するために使用するアカウントの名前を取得します。</summary>
+      <returns>接続を確立するために使用するアカウントの名前を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject" /> クラスは、すべての Windows Management Instrumentation (WMI) オブジェクトの作成元となる基本的な WMI オブジェクトを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.#ctor(Microsoft.SqlServer.Management.Smo.Wmi.WmiCollectionBase,System.String)">
+      <summary>指定した名前とコレクションの基本クラスで <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="parentColl">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject" /> オブジェクトの基になる <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiCollectionBase" /> オブジェクトです。</param>
+      <param name="name">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject" /> オブジェクトの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.#ctor(System.String)">
+      <summary>指定した名前を使用して、<see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="name">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject" /> オブジェクトの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.AlterProtocolProperties(Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection)">
+      <summary>Windows Management Instrumentation (WMI) インストールでプロトコル オブジェクトのプロパティの変更をすべて更新します。</summary>
+      <param name="protocolProperties">更新するプロパティを示す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.CheckObjectState">
+      <summary>参照先のオブジェクトの状態を確認します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.CreateProtocolPropertyCollection">
+      <summary>参照先のオブジェクトの一連のプロトコル属性を作成します。</summary>
+      <returns>一連のプロトコル属性を示す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.GetPropertyManagementObject(Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty)">
+      <summary>指定したプロトコル プロパティの管理オブジェクトを取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> オブジェクトを管理するオブジェクトを示す <see cref="T:System.Management.ManagementObject" /> システム オブジェクトです。</returns>
+      <param name="pp">プロトコルのプロパティを示す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.GetPropertyObject(Microsoft.SqlServer.Management.Smo.PropertyCollection,System.Data.DataRow,System.Object)">
+      <summary>指定した位置にある指定した値のプロパティを、指定したコレクションから取得します。</summary>
+      <returns>プロトコルのプロパティを示す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolProperty" /> オブジェクトです。</returns>
+      <param name="properties">プロパティを含んでいるプロパティ コレクションを示す <see cref="T:Microsoft.SqlServer.Management.Smo.PropertyCollection" /> オブジェクトです。</param>
+      <param name="dr">プロパティ コレクション内のプロパティの位置を示す <see cref="T:System.Data.DataRow" /> システム オブジェクトの値です。</param>
+      <param name="propValue">プロパティ値を示す <see cref="T:System.Object" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.GetProtocolPropertyCollection">
+      <summary>参照先のオブジェクトを表すプロトコル プロパティのコレクションを返します。</summary>
+      <returns>参照先のオブジェクトを表すプロトコル プロパティのコレクションを示す <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.ProtocolPropertyCollection" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.ImplInitialize(System.String[],Microsoft.SqlServer.Management.Sdk.Sfc.OrderBy[])">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject" /> オブジェクトのフィールドを初期化します。</summary>
+      <returns>ブール値。メソッドが成功した場合は true、それ以外の場合は false です。</returns>
+      <param name="fields">初期化するフィールドを示す文字列値の配列です。</param>
+      <param name="orderby">フィールドの順序を示す <see cref="T:Microsoft.SqlServer.Management.Sdk.Sfc.OrderBy" /> オブジェクトの配列です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.Initialize">
+      <summary>参照先のオブジェクトを初期化します。</summary>
+      <returns>初期化されたオブジェクトの順序情報を示す <see cref="T:Microsoft.SqlServer.Management.Smo.OrderBy" /> オブジェクト配列の値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.InvokeMgmtMethod(System.Management.ManagementObject,System.Management.ManagementOperationObserver,System.String,System.Object[])">
+      <summary>指定した管理オブジェクト、オブザーバー、メソッド名、およびパラメーターを使用して、参照先のオブジェクトの管理メソッドを呼び出します。</summary>
+      <param name="mo">参照先のオブジェクトの管理オブジェクトを示す <see cref="T:System.Management.ManagementObject" /> システム オブジェクト値です。</param>
+      <param name="observer">参照先オブジェクトの管理メソッドのオブザーバーを示す <see cref="T:System.Management.ManagementOperationObserver" /> システム オブジェクトの値です。</param>
+      <param name="methodName">管理メソッドの名前を示す <see cref="T:System.String" /> 値です。</param>
+      <param name="parameters">管理メソッドのパラメーターを示す <see cref="T:System.Object" /> システム オブジェクトの配列値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.InvokeMgmtMethod(System.Management.ManagementObject,System.String,System.Object[])">
+      <summary>指定した管理オブジェクト、メソッド名、およびパラメーターを使用して、参照先のオブジェクトの管理メソッドを呼び出します。</summary>
+      <param name="mo">参照先のオブジェクトの管理オブジェクトを示す <see cref="T:System.Management.ManagementObject" /> 値です。</param>
+      <param name="methodName">管理メソッドの名前を示す <see cref="T:System.String" /> 値です。</param>
+      <param name="parameters">管理メソッドのパラメーターを示す <see cref="T:System.Object" /> 配列値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.IsObjectInitialized">
+      <summary>参照先のオブジェクトが初期化されているかどうかを示します。</summary>
+      <returns>参照先のオブジェクトが初期化されているかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、オブジェクトは初期化されます。False の場合、オブジェクトは初期化されません。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.Name">
+      <summary>参照先の Windows Management Instrumentation (WMI) オブジェクトの名前を取得します。値の設定も可能です。</summary>
+      <returns>参照先の WMI オブジェクトの名前を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.Properties">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Property" /> オブジェクトのコレクションを表します。各 <see cref="T:Microsoft.SqlServer.Management.Smo.Property" /> オブジェクトは、Windows Management Instrumentation (WMI) オブジェクトで定義されたプロパティを表します。</summary>
+      <returns>WMI オブジェクトで定義されるプロパティを表す <see cref="T:Microsoft.SqlServer.Management.Smo.PropertyCollection" /> です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.Refresh">
+      <summary>参照先のオブジェクトとそのプロパティを更新します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.SetName(System.String)">
+      <summary>参照先のオブジェクトの名前を設定します。</summary>
+      <param name="name">参照先のオブジェクトの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.SetParentImpl(Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject)">
+      <summary>参照先のオブジェクトの親を設定します。</summary>
+      <param name="newParent">参照先のオブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject" /> です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.Trace(System.String)">
+      <summary>参照先のオブジェクトのトレースを作成します。</summary>
+      <param name="traceText">トレース出力を格納するバッファーを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.UpdateObjectState">
+      <summary>オブジェクトの状態を更新します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Wmi.WmiSmoObject.Urn">
+      <summary>Windows Management Instrumentation (WMI) オブジェクトを表す Uniform Resource Name (URN) アドレスを取得します。</summary>
+      <returns>WMI オブジェクトを示す <see cref="T:Microsoft.SqlServer.Management.Smo.Urn" /> オブジェクトの値です。</returns>
+    </member>
+  </members>
+</doc>

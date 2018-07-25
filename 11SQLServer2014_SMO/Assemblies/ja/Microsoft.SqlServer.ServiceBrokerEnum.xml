@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.SqlServer.ServiceBrokerEnum</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Broker.DialogEndPointState">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Broker.DialogEndPointState" /> 列挙には、サービスのエンドポイントの状態を示す定数値が含まれます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.DialogEndPointState.ClosedWait">
+      <summary>エンドポイントが閉じており、再生タイムアウトの有効期限が切れるのを待機しています。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.DialogEndPointState.ClosingWait">
+      <summary>エンドポイントが閉じており、操作できません。相手側のエンドポイントが閉じるのを待機しています。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.DialogEndPointState.Disabled">
+      <summary>エンドポイントが無効になっています。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.DialogEndPointState.ErrorWait">
+      <summary>エンドポイントがエラーを宣言しており、相手側のエンドポイントからの応答を待機しています。 </summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.DialogEndPointState.Open">
+      <summary>ダイアログが開いており、正常に通信しています。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.DialogEndPointState.OpenWait">
+      <summary>エンドポイントが作成されています。相手側のエンドポイントからの応答を待機しています。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Broker.DialogType">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Broker.DialogType" /> 列挙には、Service Broker エンドポイント間のダイアログの種類を示す定数値が含まれます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.DialogType.MonologPublish">
+      <summary>
+            単に情報を示すためだけに特定されます。サポートされていません。将来の互換性は保証されません。
+          </summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.DialogType.MonologReceive">
+      <summary>
+            単に情報を示すためだけに特定されます。サポートされていません。将来の互換性は保証されません。
+          </summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.DialogType.Regular2Way">
+      <summary>標準の双方向ダイアログです。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Broker.MessageSource">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Broker.MessageSource" /> 列挙には、メッセージを送信したエンドポイントを示す定数値が含まれます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.MessageSource.Initiator">
+      <summary>ダイアログ発信側エンドポイントによってメッセージが送信されたことを示します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.MessageSource.InitiatorAndTarget">
+      <summary>発信側エンドポイントまたは対象エンドポイントによってメッセージが送信されたことを示します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.MessageSource.Target">
+      <summary>対象エンドポイントによってメッセージが送信されたことを示します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Broker.MessageTypeValidation">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Broker.MessageTypeValidation" /> 列挙には、Service Broker メッセージ本文で実行する検証の種類を示す定数値が含まれます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.MessageTypeValidation.Empty">
+      <summary>このメッセージ型の場合、メッセージ本文は NULL である必要があります。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.MessageTypeValidation.None">
+      <summary>検証は実行されません。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.MessageTypeValidation.Xml">
+      <summary>メッセージの本文には、整形式 XML データが含まれる必要があります。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Broker.MessageTypeValidation.XmlSchemaCollection">
+      <summary>メッセージの本文には、このメッセージ型に対して指定された XML スキーマ コレクションによる検証に合格する XML が含まれる必要があります。</summary>
+    </member>
+  </members>
+</doc>

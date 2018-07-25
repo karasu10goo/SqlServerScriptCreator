@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.SqlServer.ConnectionInfoExtended</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.SqlServer.Management.Trace.IDataRecordChanger">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.IDataRecordChanger" /> オブジェクトは、現在のレコードを表す Trace オブジェクトと Replay オブジェクトです。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.IDataRecordChanger.SetValue(System.Int32,System.Object)">
+      <summary>指定した位置に値を設定します。</summary>
+      <param name="ordinal">値を設定するインデックス位置を示す <see cref="T:System.Int32" /> 値です。</param>
+      <param name="value">指定した位置にフィールドを設定するための値を示す <see cref="T:System.Object" /> システム オブジェクトの値です。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Trace.ITraceDataWriter">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.ITraceDataWriter" /> オブジェクトを使用すると、SQL トレースのデータ ライターにプログラムでアクセスできます。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.ITraceDataWriter.Write">
+      <summary>SQL トレースを書き込みます。</summary>
+      <returns>書き込み操作が成功したかどうかを示す <see cref="T:System.Boolean" /> 値です。書き込み操作が成功した場合は True、それ以外の場合は False です。</returns>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Trace.ITraceDataWriter.WriteNotify">
+      <summary>書き込み通知イベントを発生させます。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Trace.ReplayEventArgs">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.ReplayEventArgs" /> オブジェクトを使用すると、SQL Server のインスタンスでトレースを再生するときに発生するイベントをレポートするために使用される引数にプログラムでアクセスできます。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Trace.ReplayEventArgs.RecordNumber">
+      <summary>イベントで生成されたデータからレコード数を取得します。</summary>
+      <returns>レコード数を表す整数です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Trace.ReplayEventHandler">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.ReplayEventHandler" /> イベント ハンドラーを表します。</summary>
+      <param name="sender">イベントのソースを示す <see cref="T:System.Object" /> 値です。</param>
+      <param name="args">イベント データを含む <see cref="T:Microsoft.SqlServer.Management.Trace.ReplayEventArgs" /> オブジェクトです。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Trace.ReplayMode">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.ReplayMode" /> 列挙には、トレース再生中に使用される同期の種類を指定するための値が含まれます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Trace.ReplayMode.ConnectionLevelSync">
+      <summary>再生は、接続レベルで同期されます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Trace.ReplayMode.SequentialReplay">
+      <summary>再生は、シーケンシャルです。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Trace.ReplayPauseHandler">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.ReplayPauseHandler" /> イベント ハンドラーを表します。</summary>
+      <param name="sender">イベントのソースを示す <see cref="T:System.Object" /> 値です。</param>
+      <param name="args">イベント データを含む <see cref="T:Microsoft.SqlServer.Management.Trace.TraceEventArgs" /> オブジェクトです。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Trace.ReplayResultEventHandler">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.ReplayResultEventHandler" /> イベント ハンドラーを表します。</summary>
+      <param name="sender">イベントのソースを示す <see cref="T:System.Object" /> 値です。</param>
+      <param name="args">イベント データを含む <see cref="T:Microsoft.SqlServer.Management.Trace.TraceEventArgs" /> オブジェクトです。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Trace.ReplayStartHandler">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.ReplayStartHandler" /> イベント ハンドラーを表します。</summary>
+      <param name="sender">イベントのソースを示す <see cref="T:System.Object" /> 値です。</param>
+      <param name="args">イベント データを含む <see cref="T:Microsoft.SqlServer.Management.Trace.TraceEventArgs" /> オブジェクトです。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Trace.ReplayStopHandler">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.ReplayStopHandler" /> イベント ハンドラーを表します。</summary>
+      <param name="sender">イベントのソースを示す <see cref="T:System.Object" /> 値です。</param>
+      <param name="args">イベント データを含む <see cref="T:Microsoft.SqlServer.Management.Trace.TraceEventArgs" /> オブジェクトです。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Trace.SqlTraceException">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.SQLTraceException" /> クラスは、SMO トレース オブジェクトによって発生する一般的な例外を表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.SqlTraceException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.SQLTraceException" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.SqlTraceException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>指定したシリアル化情報と指定したストリーム コンテキストを使用して、<see cref="T:Microsoft.SqlServer.Management.Trace.SQLTraceException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="info">SQL トレースの例外のシリアル化情報を示す <see cref="T:System.Runtime.Serialization.SerializationInfo" /> オブジェクトの値です。</param>
+      <param name="context">SQL トレースの例外のストリーム コンテキストを示す <see cref="T:System.Runtime.Serialization.StreamingContext" /> オブジェクトの値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.SqlTraceException.#ctor(System.String)">
+      <summary>指定したメッセージを使用して、<see cref="T:Microsoft.SqlServer.Management.Trace.SQLTraceException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">一般的な SQL トレースの例外と関連付けられたメッセージを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.SqlTraceException.#ctor(System.String,System.Exception)">
+      <summary>指定したメッセージと内部例外を使用して、<see cref="T:Microsoft.SqlServer.Management.Trace.SQLTraceException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">一般的な SQL トレースの例外と関連付けられたメッセージを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="innerException">SQL トレースの例外の内部例外を示す <see cref="T:System.Exception" /> オブジェクトの値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.SqlTraceException.#ctor(System.Type,System.String)">
+      <summary>指定したソースの種類と指定したメッセージを使用して <see cref="T:Microsoft.SqlServer.Management.Trace.SQLTraceException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="messageSource">例外のソースを示す <see cref="T:System.Type" /> システム オブジェクトの値です。</param>
+      <param name="messageID">一般的な SQL トレースの例外と関連付けられたメッセージを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.SqlTraceException.#ctor(System.Type,System.String,System.Exception)">
+      <summary>指定したソースの種類、メッセージおよび内部例外を使用して <see cref="T:Microsoft.SqlServer.Management.Trace.SQLTraceException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="messageSource">例外のソースを示す <see cref="T:System.Type" /> システム オブジェクトの値です。</param>
+      <param name="messageID">一般的な SQL トレースの例外と関連付けられたメッセージを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="innerException">内部例外を示す <see cref="T:System.Exception" /> オブジェクトの値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Trace.SqlTraceException.ProdVer">
+      <summary>製品バージョンを示す <see cref="T:System.String" /> 値を取得します。</summary>
+      <returns>製品バージョンを示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Trace.SqlTraceFailToInstantiateTypeException">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.SQLTraceFailToInstantiateTypeException" /> クラスは、SMO トレース オブジェクトの操作が失敗してオブジェクトのインスタンスを作成できなかった場合に発生する例外を表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.SqlTraceFailToInstantiateTypeException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.SQLTraceFailToInstantiateTypeException" /> クラスの新しいインスタンスを開始します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.SqlTraceFailToInstantiateTypeException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>指定したシリアル化情報と指定したストリーム コンテキストを使用して、<see cref="T:Microsoft.SqlServer.Management.Trace.SQLTraceFailToInstantiateTypeException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="info">SQL Trace Fail to Instantiate Type 例外のシリアル化情報を示す <see cref="T:System.Runtime.Serialization.SerializationInfo" /> オブジェクトの値です。</param>
+      <param name="context">SQL Trace Fail to Instantiate Type 例外のストリーム コンテキストを示す <see cref="T:System.Runtime.Serialization.StreamingContext" /> オブジェクトの値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.SqlTraceFailToInstantiateTypeException.#ctor(System.String)">
+      <summary>指定したメッセージを使用して、<see cref="T:Microsoft.SqlServer.Management.Trace.SQLTraceFailToInstantiateTypeException" /> クラスの新しいインスタンスを開始します。</summary>
+      <param name="typeName">SQL Trace Fail to Instantiate Type 例外に関連付けられたメッセージを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.SqlTraceFailToInstantiateTypeException.#ctor(System.String,System.Exception)">
+      <summary>指定したメッセージと内部例外を使用して、<see cref="T:Microsoft.SqlServer.Management.Trace.SQLTraceFailToInstantiateTypeException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="typeName">一般的な SQL Trace Fail to Instantiate Type 例外に関連付けられたメッセージを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="innerException">SQL Trace Fail to Instantiate Type 例外の内部例外を示す <see cref="T:System.Exception" /> オブジェクトの値です。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Trace.SqlTraceFailToLoadInstAPIAssemblyException">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.SQLTraceFailToLoadInstAPIAssemblyException" /> クラスは、INST API アセンブリの読み込みに失敗した場合に SMO トレース オブジェクトによって発生する例外を表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.SqlTraceFailToLoadInstAPIAssemblyException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.SQLTraceFailToLoadInstAPIAssemblyException" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.SqlTraceFailToLoadInstAPIAssemblyException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>指定したシリアル化情報と指定したストリーム コンテキストを使用して、<see cref="T:Microsoft.SqlServer.Management.Trace.SQLTraceFailToLoadInstAPIAssemblyException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="info">SQL Trace Fail to Load Inst API Assembly 例外のシリアル化情報を示す <see cref="T:System.Runtime.Serialization.SerializationInfo" /> オブジェクトの値です。</param>
+      <param name="context">SQL Trace Fail to Load Inst API Assembly 例外のストリーム コンテキストを示す <see cref="T:System.Runtime.Serialization.StreamingContext" /> オブジェクトの値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.SqlTraceFailToLoadInstAPIAssemblyException.#ctor(System.String)">
+      <summary>指定したメッセージを使用して、<see cref="T:Microsoft.SqlServer.Management.Trace.SQLTraceFailToLoadInstAPIAssemblyException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">一般的な SQL Trace Fail to Load Inst API Assembly 例外に関連付けられたメッセージを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.SqlTraceFailToLoadInstAPIAssemblyException.#ctor(System.String,System.Exception)">
+      <summary>指定したメッセージと内部例外を使用して、<see cref="T:Microsoft.SqlServer.Management.Trace.SQLTraceFailToLoadInstAPIAssemblyException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">一般的な SQL Trace Fail to Load Inst API Assembly 例外に関連付けられたメッセージを示す <see cref="T:System.String" /> 値です。</param>
+      <param name="innerException">SQL Trace Fail to Load Inst API Assembly 例外の内部例外を示す <see cref="T:System.Exception" /> オブジェクトの値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.SqlTraceFailToLoadInstAPIAssemblyException.#ctor(System.Type,System.String)">
+      <summary>指定したメッセージ ソースとメッセージを使用して、<see cref="T:Microsoft.SqlServer.Management.Trace.SQLTraceFailToLoadInstAPIAssemblyException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="messageSource">メッセージのソースを示す <see cref="T:System.Type" /> システム オブジェクトの値です。</param>
+      <param name="messageID">一般的な SQL Trace Fail to Load Inst API Assembly 例外に関連付けられたメッセージを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Trace.TraceEventArgs">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.TraceEventArgs" /> オブジェクトを使用すると、SQL Server のインスタンスからトレースを収集するときに発生するイベントのレポートに使用される引数にプログラムでアクセスできます。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Trace.TraceEventArgs.CurrentRecord">
+      <summary>トレース内の現在のレコードを取得します。</summary>
+      <returns>現在のレコードを示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Trace.TraceEventArgs.SkipRecord">
+      <summary>現在のレコードがトレースされるか、またはスキップされるかを示すブール値を取得します。</summary>
+      <returns>現在のレコードがトレースされるか、またはスキップされるかを示す <see cref="T:System.Boolean" /> 値です。True の場合、現在のレコードがスキップされます。False (既定値) の場合、現在のレコードがトレースされます。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Trace.TraceFile">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.TraceFile" /> クラスは、トレース ログ ファイルを表す Trace オブジェクトです。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceFile.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.TraceFile" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceFile.InitializeAsReader(System.String)">
+      <summary>トレース ログ ファイルからデータを読み取るために、指定した <see cref="T:Microsoft.SqlServer.Management.Trace.TraceFile" /> オブジェクトを初期化します。</summary>
+      <param name="fileName">トレース データを読み取るトレース ログ ファイルを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceFile.InitializeAsReplayOutputWriter(System.String)">
+      <summary>トレース ログ ファイルのみにデータを書き込むために、指定した <see cref="T:Microsoft.SqlServer.Management.Trace.TraceFile" /> オブジェクトを初期化します。</summary>
+      <param name="destinationFileName">新しいトレース データを書き込む保存先トレース ログ ファイルを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceFile.InitializeAsWriter(Microsoft.SqlServer.Management.Trace.TraceReader,System.String)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.TraceReader" /> オブジェクトからのトレース データの読み取り、データの分析、および参照先トレース ログ ファイルへのデータの書き込みを行うために、指定した <see cref="T:Microsoft.SqlServer.Management.Trace.TraceFile" /> オブジェクトを初期化します。</summary>
+      <param name="source">トレース データを含むトレース ログ ファイルを示す <see cref="T:Microsoft.SqlServer.Management.Trace.TraceReader" /> オブジェクトです。このオブジェクトは、トレース テーブルまたはトレース ファイルを表すことができます。</param>
+      <param name="destinationFileName">新しいトレース データを書き込む保存先トレース ログ ファイルを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Trace.TraceReader">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.TraceReader" /> クラスは、<see cref="T:Microsoft.SqlServer.Management.Trace.TraceServer" /> クラス、<see cref="T:Microsoft.SqlServer.Management.Trace.TraceTable" /> クラス、および <see cref="T:Microsoft.SqlServer.Management.Trace.TraceFile" /> クラスの作成に使用される Trace Object 抽象クラスです。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.TraceReader" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.Close">
+      <summary>トレース リーダーを閉じます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Trace.TraceReader.currentRow">
+      <summary>現在の行を示します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Trace.TraceReader.Depth">
+      <summary>トレース リーダーの深さを示す値を取得します。</summary>
+      <returns>トレース リーダーの深さを示す <see cref="T:System.Int32" /> 値。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.Dispose">
+      <summary>トレース リーダー情報を削除します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Trace.TraceReader.FieldCount">
+      <summary>データに含まれる列の数を取得します。</summary>
+      <returns>フィールド数を示す <see cref="T:System.Int32" /> 値。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetBoolean(System.Int32)">
+      <summary>指定した列の位置にあるレコードから <see cref="T:System.Boolean" /> 値を返します。</summary>
+      <returns>指定した列の位置にあるデータを表す <see cref="T:System.Boolean" /> 値。</returns>
+      <param name="ordinal">値を取得する列の位置を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetByte(System.Int32)">
+      <summary>指定した列の位置にあるレコードから <see cref="T:System.Byte" /> 値を返します。</summary>
+      <returns>指定した列の位置にあるデータを表す <see cref="T:System.Uint8" /> 値。</returns>
+      <param name="ordinal">値を取得する列の位置を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetBytes(System.Int32,System.Int64,System.Byte[],System.Int32,System.Int32)">
+      <summary>指定した列オフセットからバッファーにバイト ストリームを配列として取得します。その際、指定したバッファー オフセット位置から開始します。</summary>
+      <returns>配列に返されるバイト数を示す <see cref="T:System.Int64" /> 値。</returns>
+      <param name="ordinal">バイト配列値を取得する列の位置を示す <see cref="T:System.Int32" /> 値。</param>
+      <param name="fieldOffset">読み取り操作を開始するフィールド内のインデックスを示す <see cref="T:System.Int32" /> 値。</param>
+      <param name="buffer">バイト ストリームの読み込み先の <see cref="T:System.Uint8" /> 配列。</param>
+      <param name="bufferoffset">読み取り操作を開始するインデックスを示す <see cref="T:System.Int32" /> 値。</param>
+      <param name="length">読み取るバイト数を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetChar(System.Int32)">
+      <summary>指定した列の文字値を取得します。</summary>
+      <returns>指定した列の <see cref="T:System.Char" /> 値。</returns>
+      <param name="ordinal">文字値を取得する列の位置を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetChars(System.Int32,System.Char[],System.Int32,System.Int32,System.Int32)">
+      <summary>指定した列の位置にあるレコードから文字配列値を取得します。</summary>
+      <returns>配列に返される文字数を示す int32 値。</returns>
+      <param name="ordinal">文字配列値を取得する列の位置を示す <see cref="T:System.Int32" /> 値。</param>
+      <param name="buffer">文字配列の読み込み先のバッファーを示す <see cref="T:System.Uint8" /> 配列。</param>
+      <param name="length">読み取る文字数を示す <see cref="T:System.Int32" /> 値。</param>
+      <param name="bufferoffset">読み取り操作を開始するインデックスを示す <see cref="T:System.Int32" /> 値。</param>
+      <param name="fieldoffset">読み取り操作を開始するレコード内のインデックス位置を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetChars(System.Int32,System.Int64,System.Char[],System.Int32,System.Int32)">
+      <summary>指定した列の位置にあるレコードから文字配列値を取得します。</summary>
+      <returns>配列に返される文字数を示す <see cref="T:System.Int64" /> 値。</returns>
+      <param name="ordinal">文字配列値を取得する列の位置を示す <see cref="T:System.Int32" /> 値。</param>
+      <param name="fieldoffset">読み取り操作を開始するレコード内のインデックス位置を示す <see cref="T:System.Int32" /> 値。</param>
+      <param name="buffer">文字配列の読み込み先のバッファーを示す <see cref="T:System.Uint8" /> 配列。</param>
+      <param name="bufferoffset">読み取り操作を開始するインデックスを示す <see cref="T:System.Int32" /> 値。</param>
+      <param name="length">読み取る文字数を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetData(System.Int32)">
+      <summary>フィールドがリモート データ構造を指す場合に使用される <see cref="T:System.Data.IDataReader" /> オブジェクトを返します。</summary>
+      <returns>リモート データ構造を示す <see cref="T:System.Data.IDataReader" /> システム オブジェクト。</returns>
+      <param name="ordinal">フィールドのインデックスを示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetDataTypeName(System.Int32)">
+      <summary>指定した列の位置にあるデータ値のデータ型を取得します。</summary>
+      <returns>指定した列の位置にあるデータを表す <see cref="T:System.String" /> 値。</returns>
+      <param name="ordinal">データの列の位置を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetDateTime(System.Int32)">
+      <summary>指定した列の位置にあるデータ値の <see cref="T:System.DateTime" /> 値を取得します。</summary>
+      <returns>指定した列の位置にあるデータを表す <see cref="T:System.DateTime" /> システム オブジェクトの値。</returns>
+      <param name="ordinal">データの列の位置を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetDecimal(System.Int32)">
+      <summary>指定した列の位置にあるデータ値の <see cref="T:System.Decimal" /> 値を取得します。</summary>
+      <returns>指定した列の位置にあるデータを表す <see cref="T:System.Decimal" /> システム オブジェクトの値。</returns>
+      <param name="ordinal">データの列の位置を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetDouble(System.Int32)">
+      <summary>指定した列の位置にあるデータ値の浮動小数点値を取得します。</summary>
+      <returns>指定した列の位置にあるデータを表す <see cref="T:System.Float64" /> 値。</returns>
+      <param name="ordinal">データの列の位置を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetFieldType(System.Int32)">
+      <summary>指定した列の位置にあるフィールド型のデータ値を返します。</summary>
+      <returns>データ値のフィールド型を示す <see cref="T:System.Type" /> システム オブジェクトの値。</returns>
+      <param name="ordinal">データの列の位置を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetFloat(System.Int32)">
+      <summary>指定した列の位置にあるデータ値の浮動小数点値を取得します。</summary>
+      <returns>指定した列の位置にあるデータを表す <see cref="T:System.Float32" /> 値。</returns>
+      <param name="ordinal">データの列の位置を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetGuid(System.Int32)">
+      <summary>指定した列の位置にあるデータ値の <see cref="T:System.Guid" /> システム値を取得します。</summary>
+      <returns>指定した列の位置にあるデータを表す <see cref="T:System.Guid" /> システム オブジェクトの値。</returns>
+      <param name="ordinal">データの列の位置を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetInt16(System.Int32)">
+      <summary>指定した列の位置にあるデータ値の短整数値を取得します。</summary>
+      <returns>指定した列の位置にあるデータを表す <see cref="T:System.Int16" /> 値。</returns>
+      <param name="ordinal">データの列の位置を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetInt32(System.Int32)">
+      <summary>指定した列の位置にあるデータ値の整数値を取得します。</summary>
+      <returns>指定した列の位置にあるデータを表す <see cref="T:System.Int32" /> 値。</returns>
+      <param name="ordinal">データの列の位置を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetInt64(System.Int32)">
+      <summary>指定した列の位置にあるデータ値の長整数値を取得します。</summary>
+      <returns>指定した列の位置にあるデータを表す <see cref="T:System.Int64" /> 値。</returns>
+      <param name="ordinal">データの列の位置を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetName(System.Int32)">
+      <summary>指定した列の位置にあるフィールドの名前を取得します。</summary>
+      <returns>指定した列の名前を示す <see cref="T:System.String" /> 値。</returns>
+      <param name="ordinal">データの列の位置を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetOrdinal(System.String)">
+      <summary>指定した列の位置にあるデータ値の序数値を取得します。</summary>
+      <returns>指定した列の位置にある序数値を示す <see cref="T:System.Int32" /> 値。</returns>
+      <param name="name">データの列の位置を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetSchemaTable">
+      <summary>スキーマを表すテーブルを取得します。</summary>
+      <returns>スキーマの説明を示す <see cref="T:System.Data.DataTable" /> システム オブジェクトの値。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetStream(System.Int32)">
+      <summary>データ ストリームを取得します。</summary>
+      <returns>列の位置にあるデータ ストリームを示す <see cref="T:System.IO.Stream" /> システム オブジェクトの値。</returns>
+      <param name="ordinal">データを取得する列の位置を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetString(System.Int32)">
+      <summary>指定した列の位置にある <see cref="T:System.String" /> 値を取得します。</summary>
+      <returns>指定した列の位置にあるデータを表す <see cref="T:System.String" /> 値。</returns>
+      <param name="ordinal">データを取得する列の位置を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetTimeSpan(System.Int32)">
+      <summary>指定した列の位置にあるデータ値の <see cref="T:System.TimeSpan" /> 値を取得します。</summary>
+      <returns>指定した列の位置にあるデータを表す <see cref="T:System.TimeSpan" /> システム値。</returns>
+      <param name="ordinal">データの列の位置を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetValue(System.Int32)">
+      <summary>指定した列の位置にあるデータ値の値を取得します。</summary>
+      <returns>指定した列の位置にあるデータを表す <see cref="T:System.Object" /> システム値。</returns>
+      <param name="ordinal">データの列の位置を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.GetValues(System.Object[])">
+      <summary>指定した列の位置にあるデータ値から値の配列を取得します。</summary>
+      <returns>配列に返されるオブジェクトの数を示す <see cref="T:System.Int32" /> 値。</returns>
+      <param name="values">データの列の位置を示す <see cref="T:System.Object" /> 値の配列。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Trace.TraceReader.IsClosed">
+      <summary>トレース リーダーが閉じているかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得します。</summary>
+      <returns>トレース リーダーが閉じているかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、トレース リーダーは閉じています。False (既定値) の場合、トレース リーダーは開いています。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.IsDBNull(System.Int32)">
+      <summary>指定した列が null に設定されているかどうかを示します。</summary>
+      <returns>指定した列が null に設定されているかどうかを示す <see cref="T:System.Boolean" /> 値。True の場合、値は null です。False の場合、値は null ではありません。</returns>
+      <param name="ordinal">データの列の位置を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.IsNull(System.Int32)">
+      <summary>指定した列の位置にあるデータの値が null であるかどうかを示す <see cref="T:System.Boolean" /> 値を取得します。</summary>
+      <returns>指定した列にあるデータの値が null であるかどうかを示す <see cref="T:System.Boolean" /> 値。True の場合、値は null です。False の場合、値は null ではありません。</returns>
+      <param name="ordinal">データの列の位置を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Trace.TraceReader.Item(System.Int32)">
+      <summary>インデックス位置で指定した列を取得します。</summary>
+      <returns>列を示す <see cref="T:System.Object" /> システム オブジェクトの値。</returns>
+      <param name="index">レコード内の列のインデックス位置を示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Trace.TraceReader.Item(System.String)">
+      <summary>指定した名前の列を取得します。</summary>
+      <returns>列を示す <see cref="T:System.Object" /> システム オブジェクトの値。</returns>
+      <param name="name">列の名前を示す <see cref="T:System.String" /> 値。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.NextResult">
+      <summary>トレースの次の結果に移動します。</summary>
+      <returns>次の結果が存在するかどうかを示す <see cref="T:System.Boolean" /> 値。True の場合、次の結果が存在します。False の場合、次の結果は存在せず、メソッドが失敗します。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.Read">
+      <summary>トレース レコードを読み取ります。</summary>
+      <returns>メソッドがトレース レコードの読み取りに成功したかどうかを示す <see cref="T:System.Boolean" /> 値。True の場合、トレースは正常に読み取られています。False の場合、トレースは読み取られていません。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Trace.TraceReader.RecordsAffected">
+      <summary>データのレコード数を取得します。</summary>
+      <returns>データのレコード数を示す <see cref="T:System.Int32" /> 値。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReader.TranslateSubclass(System.String,System.String,System.Int32)">
+      <summary>サブクラスを変換します。</summary>
+      <returns>サブクラス変換を示す <see cref="T:System.String" /> 値。</returns>
+      <param name="eventClass">イベント クラスを示す <see cref="T:System.String" /> 値。</param>
+      <param name="column">列を示す <see cref="T:System.String" /> 値。</param>
+      <param name="subclass">サブクラスを示す <see cref="T:System.Int32" /> 値。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Trace.TraceReaderWriter">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.TraceReaderWriter" /> クラスは、<see cref="T:Microsoft.SqlServer.Management.Trace.TraceTable" /> クラスと <see cref="T:Microsoft.SqlServer.Management.Trace.TraceFile" /> クラスの作成に使用される TraceObject 抽象クラスです。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReaderWriter.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.TraceReaderWriter" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReaderWriter.Close">
+      <summary>トレース リーダーとライターを閉じます。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReaderWriter.Write">
+      <summary>トレース ファイルまたはトレース テーブルにトレースを書き込みます。</summary>
+      <returns>トレース ファイルまたはトレース テーブルにトレースが正常に書き込まれたかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、トレースは正常に書き込まれています。False の場合、トレースは正常に書き込まれていません。</returns>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Trace.TraceReaderWriter.WriteNotify">
+      <summary>トレース ファイルまたはトレース テーブルにトレースが書き込まれたときにイベントを発生させます。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Trace.TraceReplay">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.TraceReplay" /> オブジェクトは、トレース ログ ファイルとトレース テーブルの再生操作を表す Replay オブジェクトです。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReplay.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.TraceReplay" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Trace.TraceReplay.Connection">
+      <summary>SQL Server のインスタンスとの接続を取得します。値の設定も可能です。</summary>
+      <returns>SQL Server のインスタンスとの接続を示す <see cref="T:Microsoft.SqlServer.Management.Common.SqlConnectionInfo" /> オブジェクトの値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReplay.Dispose">
+      <summary>トレース情報を削除します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReplay.Finalize">
+      <summary>トレース再生を完了します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Trace.TraceReplay.Options">
+      <summary>トレースを再生するための構成オプションを取得します。値の設定も可能です。</summary>
+      <returns>トレースを再生するための構成オプションを示す <see cref="T:Microsoft.SqlServer.Management.Trace.TraceReplayOptions" /> オブジェクトの値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Trace.TraceReplay.OutputFile">
+      <summary>トレース再生の出力ストリームの送信先となるオプション ファイルの名前を取得します。値の設定も可能です。</summary>
+      <returns>出力ファイルを示す <see cref="T:Microsoft.SqlServer.Management.Trace.TraceFile" /> オブジェクトの値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Trace.TraceReplay.OutputTable">
+      <summary>トレース再生の出力ストリームの送信先となるオプション テーブルの名前を取得します。値の設定も可能です。</summary>
+      <returns>出力テーブルを示す <see cref="T:Microsoft.SqlServer.Management.Trace.TraceTable" /> オブジェクトの値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReplay.Pause">
+      <summary>トレース再生を一時停止します。</summary>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Trace.TraceReplay.ReplayEvent">
+      <summary>イベントが再生される前にハンドラーを呼び出します。</summary>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Trace.TraceReplay.ReplayPause">
+      <summary>再生されたトレースが一時停止される前にハンドラーを呼び出します。</summary>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Trace.TraceReplay.ReplayResultEvent">
+      <summary>再生されたイベントから結果が返される前にハンドラーを呼び出します。</summary>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Trace.TraceReplay.ReplayStart">
+      <summary>再生されたトレースが開始される前にハンドラーを呼び出します。</summary>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Trace.TraceReplay.ReplayStop">
+      <summary>再生されたトレースが停止される前にハンドラーを呼び出します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Trace.TraceReplay.Source">
+      <summary>再生されるトレースを含む <see cref="T:Microsoft.SqlServer.Management.Trace.TraceReader" /> オブジェクトを取得します。値の設定も可能です。</summary>
+      <returns>トレースのソースを示す <see cref="T:Microsoft.SqlServer.Management.Trace.TraceReader" /> オブジェクトの値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReplay.Start">
+      <summary>トレース再生を開始します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReplay.Stop">
+      <summary>トレース再生を停止します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Trace.TraceReplayOptions">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.TraceReplayOptions" /> オブジェクトは、トレース再生時に必要な構成設定を表す Replay オブジェクトです。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceReplayOptions.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.TraceReplayOptions" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Trace.TraceReplayOptions.BlockedProcessesEnabled">
+      <summary>ブロックされるプロセス モニターで、ブロックされるプロセスまたはブロックするプロセスの検索が有効かどうかを示す値を取得します。値の設定も可能です。</summary>
+      <returns>ブロックされるプロセス モニターで、ブロックされるプロセスまたはブロックするプロセスの検索が有効である場合は True、無効である場合は false (既定値) です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Trace.TraceReplayOptions.BlockedProcessesWaitInterval">
+      <summary>ブロックされたプロセスのレポートを生成するためのしきい値 (秒単位) を取得します。</summary>
+      <returns>ブロックされたプロセスのレポートを生成するためのしきい値 (秒単位) です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Trace.TraceReplayOptions.DisplayPerfEvent">
+      <summary>実行時間を報告する追加イベントが再生されたイベントごとに表示されるかどうかを示す値を取得します。値の設定も可能です。</summary>
+      <returns>追加イベントが再生されたイベントごとに表示される場合は True、表示されない場合は false (既定値) です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Trace.TraceReplayOptions.HealthMonitorPollInterval">
+      <summary>未使用のスレッドの有無を確認する間隔 (秒) を取得します。値の設定も可能です。</summary>
+      <returns>未使用のスレッドの有無を確認する間隔 (秒) を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Trace.TraceReplayOptions.HealthMonitorWaitInterval">
+      <summary>未使用のスレッドの最大有効期間を取得します。値の設定も可能です。</summary>
+      <returns>未使用のスレッドの最大有効期間を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Trace.TraceReplayOptions.KeepResults">
+      <summary>再生結果を保持するかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得します。値の設定も可能です。</summary>
+      <returns>結果を保持するかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、結果が保持されます。False (既定値) の場合、結果は保持されません。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Trace.TraceReplayOptions.Mode">
+      <summary>トレースをシーケンシャルに再生するか同期再生するかを取得します。値の設定も可能です。</summary>
+      <returns>トレース モードを示す <see cref="T:Microsoft.SqlServer.Management.Trace.ReplayMode" /> オブジェクトの値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Trace.TraceReplayOptions.NumberOfReplayThreads">
+      <summary>トレース再生時に使用するスレッドの数を取得します。値の設定も可能です。</summary>
+      <returns>トレースの再生に使用するスレッドの数を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Trace.TraceServer">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.TraceServer" /> クラスは、SQL Server のインスタンスの新しいトレースを表す Trace オブジェクトです。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceServer.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.TraceServer" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceServer.InitializeAsReader(Microsoft.SqlServer.Management.Common.ConnectionInfoBase,System.String)">
+      <summary>サーバーをトレース リーダーとして初期化します。</summary>
+      <param name="serverConnInfo">トレースされる SQL Server のインスタンスとの接続を確立するために必要な接続情報を示す <see cref="T:Microsoft.SqlServer.Management.Common.SqlConnectionInfo" /> オブジェクトの値です。</param>
+      <param name="profileFileName">SQL Server Profiler トレース プロファイルを含むファイルのパスと名前を示す <see cref="T:System.String" /> 値です。SQL Server Profiler を使用して手動でトレース プロファイルを作成する方法については、「SQL Server Profiler Procedures」を参照してください。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceServer.Pause">
+      <summary>トレースを一時停止します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceServer.Restart">
+      <summary>トレースを再開します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceServer.Stop">
+      <summary>トレースを停止します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Trace.TraceTable">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.TraceTable" /> クラスは、トレース情報のテーブルを表す Trace オブジェクトです。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceTable.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.TraceTable" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceTable.InitializeAsReader(Microsoft.SqlServer.Management.Common.ConnectionInfoBase,System.String,System.String)">
+      <summary>トレース データの読み取り用に <see cref="T:Microsoft.SqlServer.Management.Trace.TraceTable" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="serverConnInfo">トレース テーブルを含む Microsoft SQL Server のインスタンスとの接続を確立するために必要な情報を示す <see cref="T:Microsoft.SqlServer.Management.Common.SqlConnectionInfo" /> オブジェクトの値です。</param>
+      <param name="tableName">トレース テーブルの名前を示す <see cref="T:System.String" /> 値です。</param>
+      <param name="tableOwner">トレース テーブルが属するスキーマを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceTable.InitializeAsReplayOutputWriter(Microsoft.SqlServer.Management.Common.ConnectionInfoBase,System.String)">
+      <summary>トレース再生情報の書き込み用に <see cref="T:Microsoft.SqlServer.Management.Trace.TraceTable" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="serverConnInfo">トレース テーブルを含む Microsoft SQL Server のインスタンスとの接続を確立するために必要な情報を示す <see cref="T:Microsoft.SqlServer.Management.Common.SqlConnectionInfo" /> オブジェクトの値です。</param>
+      <param name="destinationTableName">トレース再生の出力データを書き込むトレース テーブルの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Trace.TraceTable.InitializeAsWriter(Microsoft.SqlServer.Management.Trace.TraceReader,Microsoft.SqlServer.Management.Common.ConnectionInfoBase,System.String)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.TraceReader" /> オブジェクトからのトレース データの読み取り、データの分析、および参照先トレース テーブルへのデータの書き込みを行うために、指定した <see cref="T:Microsoft.SqlServer.Management.Trace.TraceTable" /> オブジェクトを初期化します。</summary>
+      <param name="source">トレース テーブルのソースを示す <see cref="T:Microsoft.SqlServer.Management.Trace.TraceReader" /> オブジェクトの値です。このオブジェクトは、トレース テーブルまたはトレース ファイルを表すことができます。</param>
+      <param name="serverConnInfo">トレース テーブルを含む Microsoft SQL Server のインスタンスとの接続を確立するために必要な情報を示す <see cref="T:Microsoft.SqlServer.Management.Common.SqlConnectionInfo" /> オブジェクトの値です。</param>
+      <param name="destinationTableName">トレース再生の出力データを書き込むトレース テーブルの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Trace.WriteNotifyEventHandler">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Trace.WriteNotifyEventHandler" /> ハンドラーを表します。</summary>
+      <param name="sender">イベントのソースを示す <see cref="T:System.Object" /> 値です。</param>
+      <param name="args">イベント データを含む <see cref="T:Microsoft.SqlServer.Management.Trace.TraceEventArgs" /> オブジェクトです。</param>
+    </member>
+  </members>
+</doc>

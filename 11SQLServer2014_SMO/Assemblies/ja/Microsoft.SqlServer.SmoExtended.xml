@@ -1,0 +1,1627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.SqlServer.SmoExtended</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.SqlServer.Management.Smo.AsyncStatus">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.AsyncStatus" /> オブジェクトは、非同期プロセスの状態を表します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.AsyncStatus.ExecutionStatus">
+      <summary>非同期プロセスの実行状態を取得します。</summary>
+      <returns>非同期プロセスの実行状態を示す <see cref="T:Microsoft.SqlServer.Management.Smo.ExecutionStatus" /> オブジェクト値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.AsyncStatus.LastException">
+      <summary>非同期プロセスで最後に生成された例外を取得します。</summary>
+      <returns>非同期プロセスで最後に生成された例外を示す <see cref="T:System.Exception" /> システム オブジェクトです。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Backup">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Backup" /> オブジェクトを使用すると、Microsoft SQL Server のバックアップ操作にプログラムでアクセスできます。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Backup.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Backup" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Backup.Action">
+      <summary>実行するバックアップの種類を取得します。値の設定も可能です。</summary>
+      <returns>実行するバックアップの種類を表す <see cref="T:Microsoft.SqlServer.Management.Smo.BackupActionType" /> オブジェクトです。既定では、この値は <see cref="F:Microsoft.SqlServer.Management.Smo.BackupActionType.Database" /> に設定されます。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Backup.BackupSetDescription">
+      <summary>特定のバックアップ セットの説明テキストを取得します。値の設定も可能です。</summary>
+      <returns>バックアップ セットの説明テキストを表す <see cref="T:System.String" /> 値です。既定値は空の文字列です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Backup.BackupSetName">
+      <summary>特定のバックアップ セットを識別するために使用される名前を取得します。値の設定も可能です。</summary>
+      <returns>バックアップ セット名を示す <see cref="T:System.String" /> 値です。既定では、この値は空の文字列に設定されます。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Backup.CompressionOption">
+      <summary>バックアップ圧縮オプションを取得または設定します。</summary>
+      <returns>バックアップ圧縮オプションです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Backup.CopyOnly">
+      <summary>バックアップがコピーのみのバックアップであることを示す <see cref="T:System.Boolean" /> プロパティ値を取得します。値の設定も可能です。これは、通常のバックアップ スケジュールにおけるバックアップのシーケンスには影響しません。</summary>
+      <returns>バックアップがコピーのみのバックアップであるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、バックアップはコピーのみのバックアップです。False (既定値) の場合、バックアップはコピーのみのバックアップではなく、通常のバックアップ シーケンスの一部です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Backup.EncryptionOption"></member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Backup.ExpirationDate">
+      <summary>バックアップ セットの有効期限が切れ、バックアップ データが適切と見なされなくなる日時を取得します。値の設定も可能です。</summary>
+      <returns>有効期限の日付を示す <see cref="T:System.DateTime" /> オブジェクトの値です。既定では、値は指定されません。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Backup.FormatMedia">
+      <summary>バックアップ操作の最初のステップとしてテープがフォーマットされるかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得します。値の設定も可能です。</summary>
+      <returns>データベースがフォーマットされるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、Microsoft SQL Server のバックアップ操作は、最初のステップとしてテープのフォーマットを試みます。False (既定値) の場合、SQL Server のバックアップ操作では、テープのフォーマットを試みません。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Backup.Incremental">
+      <summary>差分バックアップを実行するかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得します。値の設定も可能です。</summary>
+      <returns>差分バックアップが実行されるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、前回のフル バックアップまたは差分バックアップ後の変更のみがバックアップ操作の対象になります。False (既定値) の場合、フル バックアップが実行されます。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Backup.Initialize">
+      <summary>バックアップ操作に関連するデバイスがバックアップ操作の一部として初期化されるかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得します。値の設定も可能です。</summary>
+      <returns>バックアップ デバイスが初期化されるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、指定されたバックアップはそのメディアでの最初のバックアップ セットとなり、メディア上の既存のバックアップ セットをすべて上書きします。次の条件のいずれかを満たす場合、バックアップ メディアは上書きされません。メディア上のすべてのバックアップ セットがまだ失効していない。オプションで指定されたバックアップ セット名がバックアップ メディア上の名前と一致しない。<see cref="P:Microsoft.SqlServer.Management.Smo.Backup.BackupSetName" /> プロパティで、バックアップ セット名を指定してください。False (既定値) の場合、指定されたバックアップでは、前回のバックアップ セットとしてメディアに追加される新しいバックアップ セットが作成されます。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Backup.LogTruncation">
+      <summary>バックアップ操作の一部としてデータベース ログの切り捨てに使用するメソッドを取得します。値の設定も可能です。</summary>
+      <returns>選択されているログの切り捨てオプションを示す <see cref="T:Microsoft.SqlServer.Management.Smo.BackupTruncateLogType" /> オブジェクト値です。既定では、この値は <see cref="F:Microsoft.SqlServer.Management.Smo.BackupTruncateLogType.Truncate" /> に設定されます。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Backup.MediaDescription">
+      <summary>バックアップ セットを格納するメディアの説明テキストを取得します。値の設定も可能です。</summary>
+      <returns>メディアの説明テキストを表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Backup.Mirrors">
+      <summary>ミラー化されたバックアップによって使用されるバックアップ デバイスの一覧を取得または設定します。</summary>
+      <returns>ミラー化されたバックアップによって使用されるバックアップ デバイスを示す BackupDeviceList オブジェクトの配列です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Backup.RetainDays">
+      <summary>バックアップ セットを上書きできるようになるまでの日数を取得します。値の設定も可能です。</summary>
+      <returns>保有期間を日単位で示す <see cref="T:System.Int32" /> 値です。既定では、この値は 0 に設定されます。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Backup.Script(Microsoft.SqlServer.Management.Smo.Server)">
+      <summary>参照されたバックアップを実行するために使用できる Transact-SQL ステートメントを含む <see cref="T:System.String" /> を返します。</summary>
+      <returns>参照されたバックアップを実行するために使用できる Transact-SQL ステートメントを含む <see cref="T:System.String" /> です。</returns>
+      <param name="targetServer">バックアップ操作のソースである Microsoft SQL Server インスタンスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトです。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Backup.SkipTapeHeader">
+      <summary>テープ ヘッダーを読み取るかどうかを示す <see cref="T:System.Boolean" /> プロパティを取得します。値の設定も可能です。</summary>
+      <returns>テープ ヘッダーを読み取るかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、メディアに記録されたメディア名は選択されません。バックアップ セットは、メディアに追加されます。False (既定値) の場合、記録されたメディア名が選択されます。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup(Microsoft.SqlServer.Management.Smo.Server)">
+      <summary>使用される <see cref="T:Microsoft.SqlServer.Management.Smo.Backup" /> オブジェクトのプロパティでの指定どおりに、データベースのバックアップ操作を実行します。</summary>
+      <param name="srv">バックアップ操作のソースである Microsoft SQL Server インスタンスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Backup.SqlBackupAsync(Microsoft.SqlServer.Management.Smo.Server)">
+      <summary>使用される <see cref="T:Microsoft.SqlServer.Management.Smo.Backup" /> オブジェクトのプロパティでの指定どおりに、非同期でデータベースのバックアップ操作を実行します。</summary>
+      <param name="srv">バックアップ操作のソースである Microsoft SQL Server インスタンスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトです。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Backup.UndoFileName">
+      <summary>復旧中にロールバックされるコミットされていないトランザクションを格納するために使用される UNDO ファイルの名前を取得します。値の設定も可能です。</summary>
+      <returns>UNDO ファイル名を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.BackupActionType">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.BackupActionType" /> 列挙には、バックアップの種類を指定するときに使用する値が含まれます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.BackupActionType.Database">
+      <summary>データベース内のすべてのデータ ファイルをバックアップします。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.BackupActionType.Files">
+      <summary>指定されたデータ ファイルをバックアップします。このオプションは、最後のバックアップ以降に発生したトランザクションが、バックアップ対象のファイルやファイル グループと分離できる場合にのみ使用することをお勧めします。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.BackupActionType.Log">
+      <summary>トランザクション ログをバックアップします。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.BackupCompressionOptions">
+      <summary>BackupCompressionOptions 列挙には、バックアップ圧縮オプションを指定するために使用される値が含まれます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.BackupCompressionOptions.Default">
+      <summary>値 = 0。既定のバックアップ圧縮サーバー構成を使用します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.BackupCompressionOptions.Off">
+      <summary>値 = 2。バックアップ圧縮を無効にします。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.BackupCompressionOptions.On">
+      <summary>値 = 1。バックアップ圧縮を有効にします。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.BackupDeviceItem">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceItem" /> オブジェクトを使用すると、指定した名前の SQL Server バックアップ デバイスにプログラムでアクセスできます。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupDeviceItem.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceItem" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupDeviceItem.#ctor(System.String,Microsoft.SqlServer.Management.Smo.DeviceType)">
+      <summary>指定した名前とデバイスの種類を持つ <see cref="BackupDeviceItem" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="name">バックアップ デバイス アイテムの名前を示す <see cref="T:System.String" /> 値です。</param>
+      <param name="deviceType">バックアップ デバイスの種類を示す <see cref="BackupDeviceType" /> オブジェクトの値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupDeviceItem.#ctor(System.String,Microsoft.SqlServer.Management.Smo.DeviceType,System.String)"></member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupDeviceItem.CompareTo(System.Object)">
+      <summary>指定したオブジェクトが、参照先の <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceItem" /> オブジェクトと同じ名前を使用しているかどうかを確認します。</summary>
+      <returns>2 つの文字列の語彙的な関係を示す <see cref="T:System.Int32" /> 値。値説明<paramref name="Less than zero" />参照先オブジェクト名は、パラメーターで指定したオブジェクト名よりも小さいです。<paramref name="Zero" />参照先オブジェクト名は、パラメーターで指定したオブジェクト名と同じです。<paramref name="Greater than zero" />参照先オブジェクト名は、パラメーターで指定したオブジェクト名よりも大きいです。</returns>
+      <param name="obj">参照先の <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceItem" /> オブジェクトと比較されるオブジェクトを示す <see cref="T:System.Object" /> オブジェクトの値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.BackupDeviceItem.CredentialName"></member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.BackupDeviceItem.DeviceType">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceItem" /> オブジェクトのデバイスの種類を取得します。</summary>
+      <returns>バックアップ デバイスの種類を示す <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceType" /> オブジェクト値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupDeviceItem.Equals(System.Object)">
+      <summary>現在のオブジェクトが指定したオブジェクトと同じかどうかを示します。</summary>
+      <returns>オブジェクトが等しい場合、<see cref="T:System.Boolean" /> は true です。それ以外の場合は false です。</returns>
+      <param name="obj">現在のバックアップ デバイス アイテムと比較するオブジェクトを示す <see cref="T:System.Object" /> です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupDeviceItem.GetHashCode">
+      <summary>オブジェクトのハッシュ コードを取得します。</summary>
+      <returns>ハッシュ コードを示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.BackupDeviceItem.Name">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceItem" /> オブジェクトのデバイスの名前を取得します。</summary>
+      <returns>バックアップ デバイスの名前を示す <see cref="T:System.String" /> オブジェクト値。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupDeviceItem.op_Equality(Microsoft.SqlServer.Management.Smo.BackupDeviceItem,Microsoft.SqlServer.Management.Smo.BackupDeviceItem)">
+      <summary>2 つの <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceItem" /> オブジェクトに対する等価演算を実行し、これらのオブジェクトが等しいかどうかを示します。</summary>
+      <returns>等価演算の結果を示す <see cref="T:System.Boolean" /> 値。True の場合、2 つのオブジェクトが等しいことを示します。それ以外の場合は、False です。</returns>
+      <param name="r1">等価演算で使用される <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceItem" /> オブジェクトです。</param>
+      <param name="r2">等価演算で使用される <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceItem" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupDeviceItem.op_GreaterThan(Microsoft.SqlServer.Management.Smo.BackupDeviceItem,Microsoft.SqlServer.Management.Smo.BackupDeviceItem)">
+      <summary>2 つの <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceItem" /> オブジェクトに対する演算を実行して、一方のオブジェクトが他方のオブジェクトより大きいかどうかを示します。</summary>
+      <returns>一方のオブジェクトが他方のオブジェクトより大きいかどうかを判断するための演算の結果を示す <see cref="T:System.Boolean" /> 値。True の場合、最初のオブジェクトが 2 つ目のオブジェクトより大きいことを示します。それ以外の場合は、False です。</returns>
+      <param name="r1">演算で使用される最初の <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceItem" /> オブジェクトです。</param>
+      <param name="r2">比較演算で使用される 2 つ目の <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceItem" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupDeviceItem.op_Inequality(Microsoft.SqlServer.Management.Smo.BackupDeviceItem,Microsoft.SqlServer.Management.Smo.BackupDeviceItem)">
+      <summary>2 つの <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceItem" /> オブジェクトに対する非等価演算を実行し、これらのオブジェクトが等しくないかどうかを示します。</summary>
+      <returns>非等価演算の結果を示す <see cref="T:System.Boolean" /> 値。True の場合、2 つのオブジェクトが等しくないことを示します。それ以外の場合は、False です。</returns>
+      <param name="r1">非等価演算で使用される <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceItem" /> オブジェクトです。</param>
+      <param name="r2">非等価演算で使用される <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceItem" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupDeviceItem.op_LessThan(Microsoft.SqlServer.Management.Smo.BackupDeviceItem,Microsoft.SqlServer.Management.Smo.BackupDeviceItem)">
+      <summary>2 つの <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceItem" /> オブジェクトに対する演算を実行して、一方のオブジェクトが他方のオブジェクトより小さいかどうかを示します。</summary>
+      <returns>一方のオブジェクトが他方のオブジェクトより小さいかどうかを判断するための演算の結果を示す <see cref="T:System.Boolean" /> 値。True の場合、最初のオブジェクトが 2 つ目のオブジェクトより小さいことを示します。それ以外の場合は、False です。</returns>
+      <param name="r1">演算で使用される最初の <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceItem" /> オブジェクトです。</param>
+      <param name="r2">比較演算で使用される 2 つ目の <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceItem" /> オブジェクトです。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.BackupDeviceList">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceList" /> オブジェクトを使用すると、プログラムでバックアップ デバイスの一覧にアクセスできます。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupDeviceList.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceList" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupDeviceList.#ctor(System.Collections.Generic.IEnumerable{Microsoft.SqlServer.Management.Smo.BackupDeviceItem})">
+      <summary>指定した <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceList" /> オブジェクトに基づいて <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceItem" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="collection">バックアップ デバイスを示す <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceItem" /> オブジェクトの値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupDeviceList.#ctor(System.Int32)">
+      <summary>指定した容量を使用して、<see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceList" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="capacity">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceList" /> オブジェクトの容量を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupDeviceList.AddDevice(System.String,Microsoft.SqlServer.Management.Smo.DeviceType)">
+      <summary>指定した名前のデバイスの種類を一覧に追加します。</summary>
+      <param name="name">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceList" /> オブジェクトに追加するデバイスの名前を示す <see cref="T:System.String" /> 値です。</param>
+      <param name="deviceType">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceList" /> オブジェクトに追加するデバイスの種類を示す <see cref="T:Microsoft.SqlServer.Management.Smo.DeviceType" /> オブジェクトの値です。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.BackupEncryptionAlgorithm"></member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.BackupEncryptionAlgorithm.Aes128">
+      <summary />
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.BackupEncryptionAlgorithm.Aes192">
+      <summary />
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.BackupEncryptionAlgorithm.Aes256">
+      <summary />
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.BackupEncryptionAlgorithm.TripleDes">
+      <summary />
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.BackupEncryptionOptions"></member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupEncryptionOptions.#ctor"></member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupEncryptionOptions.#ctor(Microsoft.SqlServer.Management.Smo.BackupEncryptionAlgorithm,Microsoft.SqlServer.Management.Smo.BackupEncryptorType,System.String)"></member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.BackupEncryptionOptions.Algorithm"></member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.BackupEncryptionOptions.EncryptorName"></member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.BackupEncryptionOptions.EncryptorType"></member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.BackupEncryptorType"></member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.BackupEncryptorType.ServerAsymmetricKey">
+      <summary />
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.BackupEncryptorType.ServerCertificate">
+      <summary />
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.BackupRestoreBase">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.BackupRestoreBase" /> クラスは、バックアップと復元の両方の操作に共通した機能を表す基本クラスです。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.BackupRestoreBase" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.Abort">
+      <summary>実行中のバックアップまたは復元操作を終了します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.AsyncStatus">
+      <summary>バックアップまたは復元プロセスの非同期状態を取得します。</summary>
+      <returns>プロセスの非同期状態を示す <see cref="T:Microsoft.SqlServer.Management.Smo.AsyncStatus" /> オブジェクトの値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.BlockSize">
+      <summary>バックアップまたは復元の物理ブロック サイズ (バイト単位) を取得します。値の設定も可能です。</summary>
+      <returns>ブロック サイズをバイト単位で示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.BufferCount">
+      <summary>バックアップ操作または復元操作に使用される I/O バッファーの総数を取得します。値の設定も可能です。</summary>
+      <returns>バックアップ操作に使用される I/O バッファーの総数を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.Checksum">
+      <summary>バックアップまたは復元操作中にチェックサム値を計算するかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得または設定します。</summary>
+      <returns>チェックサム値を計算するかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、チェックサム値が計算されます。False (既定値) の場合、チェックサム値は計算されません。</returns>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.Complete">
+      <summary>バックアップまたは復元操作が完了すると発生します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.ContinueAfterError">
+      <summary>バックアップまたは復元がチェックサム エラーが発生した後も続行されるかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得または設定します。</summary>
+      <returns>チェックサム エラーの後も操作が続行されるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、チェックサム エラーが発生しても操作が続行されます。False (既定値) の場合、チェックサム エラーが発生すると、操作は停止します。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.CredentialName">
+      <summary>Windows Azure ストレージ アカウントへの認証に使用する Credential プロパティ値を取得または設定します。</summary>
+      <returns>資格情報の名前。</returns>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.currentAsyncOperation">
+      <summary>バックアップ操作、復元操作、操作なしなどの現在の非同期操作を指定します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.Database">
+      <summary>バックアップまたは復元操作を実行する対象のデータベースを取得または設定します。</summary>
+      <returns>データベース名を示す <see cref="T:System.String" /> 値です。既定値は空の文字列です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.DatabaseFileGroups">
+      <summary>バックアップまたは復元操作の対象となる SQL Server ファイル グループを取得します。</summary>
+      <returns>対象となるファイル グループ名の一覧を示す <see cref="T:System.Collections.Specialized.StringCollection" /> システム オブジェクトの値です。既定では、値は指定されません。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.DatabaseFiles">
+      <summary>バックアップまたは復元操作の対象となるオペレーティング システム ファイルを取得します。</summary>
+      <returns>対象となるファイル名の一覧を示す <see cref="T:System.Collections.Specialized.StringCollection" /> システム オブジェクトの値です。既定では、値は指定されません。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.Devices">
+      <summary>バックアップまたは復元操作に対して指定されているバックアップ デバイスを取得します。</summary>
+      <returns>必要なバックアップ デバイス名の一覧を示す <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceList" /> オブジェクト配列の値です。既定では、値は指定されません。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.ExecuteSql(Microsoft.SqlServer.Management.Smo.Server,System.Collections.Specialized.StringCollection)">
+      <summary>SQL Server の指定したインスタンスについて結果セットが返される必要のない、Transact-SQL ステートメントのバッチを実行します。</summary>
+      <param name="server">Transact-SQL ステートメントのバッチを実行する SQL Server のインスタンスを示す <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトです。</param>
+      <param name="queries">実行される Transact-SQL ステートメントのバッチを含む <see cref="T:System.Collections.Specialized.StringCollection" /> システム オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.ExecuteSqlAsync(Microsoft.SqlServer.Management.Smo.Server,System.Collections.Specialized.StringCollection)">
+      <summary>SQL Server の指定したインスタンスについて結果セットが返される必要のない、Transact-SQL ステートメントのバッチを非同期に実行します。</summary>
+      <param name="server">Transact-SQL ステートメントのバッチを実行する SQL Server のインスタンスを示す <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトです。</param>
+      <param name="queries">実行される Transact-SQL ステートメントのバッチを含む <see cref="T:System.Collections.Specialized.StringCollection" /> システム オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.ExecuteSqlWithResults(Microsoft.SqlServer.Management.Smo.Server,System.String)">
+      <summary>SQL Server の指定したインスタンスについて 1 つ以上の結果セットが返される必要のある、Transact-SQL ステートメントのバッチを実行します。</summary>
+      <returns>実行される Transact-SQL コマンド バッチから返される結果セットを含む <see cref="T:System.Data.DataSet" /> システム オブジェクトです。</returns>
+      <param name="server">Transact-SQL ステートメントのバッチを実行する SQL Server のインスタンスを示す <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトです。</param>
+      <param name="cmd">実行される Transact-SQL ステートメントのバッチを含む <see cref="T:System.Collections.Specialized.StringCollection" /> システム オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.GetDevicesScript(System.Text.StringBuilder,Microsoft.SqlServer.Management.Smo.BackupDeviceList,Microsoft.SqlServer.Management.Common.ServerVersion)">
+      <summary>デバイスの作成に使用されるスクリプトを取得します。</summary>
+      <param name="query">Transact-SQL クエリを示す <see cref="T:System.Text.StringBuilder" /> 値です。</param>
+      <param name="devices">バックアップまたは復元操作に関連付けられたデバイスを示す <see cref="T:Microsoft.SqlServer.Management.Smo.BackupDeviceItem" /> オブジェクトの値です。</param>
+      <param name="targetVersion">デバイスを再作成する SQL Server のインスタンスのバージョンを示す <see cref="T:Microsoft.SqlServer.Management.Common.ServerVersion" /> オブジェクトです。</param>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.Information">
+      <summary>
+        <see cref="E:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.Complete" />、<see cref="E:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.NextMedia" />、または <see cref="E:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.PercentComplete" /> イベントによって処理できない情報メッセージが Microsoft SQL Server により発行されると発生します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.IsStringValid(System.String)">
+      <summary>指定した文字列が有効かどうかを確認します。</summary>
+      <returns>文字列が有効かどうかを示す <see cref="T:System.Boolean" /> です。</returns>
+      <param name="s">確認する文字列を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.m_BackupAction">
+      <summary>データベース、ログなどのバックアップ操作の種類を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.m_LogTruncation">
+      <summary>ログを切り捨てるかどうかを指定します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.m_RestoreAction">
+      <summary>データベース、ログなどの復元操作の種類を指定します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.MaxTransferSize">
+      <summary>バックアップ メディアと SQL Server のインスタンス間で転送される最大バイト数を取得します。値の設定も可能です。</summary>
+      <returns>バックアップ操作および復元操作で転送される最大バイト数を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.MediaName">
+      <summary>特定のメディア セットを識別するために使用する名前を取得します。値の設定も可能です。</summary>
+      <returns>メディア名を示す <see cref="T:System.String" /> システム値です。既定値は空の文字列です。</returns>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.NextMedia">
+      <summary>バックアップまたは復元操作が対象デバイスのメディアを使い果たすと発生します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.NoRecovery">
+      <summary>ログの末尾がバックアップされるかどうか、およびデータベースが Restoring 状態に復元されるかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得または設定します。</summary>
+      <returns>操作の終わりにテープが巻き戻されるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、ログの末尾はバックアップされません。復元時には、データベースは Restoring 状態になります。False (既定値) の場合、ログの末尾がバックアップされます。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.NoRewind">
+      <summary>バックアップまたは復元操作の後に Microsoft SQL Server でテープを開いたままにするかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得します。値の設定も可能です。</summary>
+      <returns>操作の終わりにテープが巻き戻されるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、テープ ドライブは開いた状態で、テープはその位置のままとなります。False  (既定値) の場合、テープは巻き戻されます。</returns>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.PercentComplete">
+      <summary>バックアップまたは復元操作が完了ユニットに達すると発生します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.PercentCompleteNotification">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.PercentCompleteEventHandler" /> イベント ハンドラーの呼び出し間隔の割合を取得または設定します。</summary>
+      <returns>イベント ハンドラーの呼び出し間隔の割合を示す <see cref="T:System.Int32" /> です。既定値は 10 です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.Restart">
+      <summary>バックアップまたは復元操作が中断された場合に再開するかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得または設定します。</summary>
+      <returns>中断の後、操作を再開するかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、SQL Server は、部分的なバックアップまたは復元の操作の処理続行を試行します。False (既定値) の場合、SQL Server は、中断されたバックアップまたは復元操作を、バックアップ セットの開始時点から再開します。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.SetMediaPassword(System.Security.SecureString)">
+      <summary>メディア セットのパスワードを設定します。</summary>
+      <param name="value">メディア セットのパスワードを示す <see cref="T:System.Security.SecureString" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.SetMediaPassword(System.String)">
+      <summary>メディア セットのパスワードを設定します。</summary>
+      <param name="value">メディア セットのパスワードを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.SetPassword(System.Security.SecureString)">
+      <summary>バックアップ セットのパスワードを設定します。</summary>
+      <param name="value">バックアップ セットのパスワードを示す <see cref="T:System.Security.SecureString" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.SetPassword(System.String)">
+      <summary>バックアップ セットのパスワードを設定します。</summary>
+      <param name="value">バックアップ セットのパスワードを示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.UnloadTapeAfter">
+      <summary>バックアップまたは復元操作の完了後にテープ メディアが巻き戻されてアンロードされるかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得または設定します。</summary>
+      <returns>バックアップまたは復元操作の完了後にテープ メディアが巻き戻され、アンロードされるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、操作の完了後にテーブ デバイスのテープ メディアは巻き戻され、アンロードされます。False (既定値) の場合、テープ メディアの巻き戻しやアンロードは行われません。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.Wait">
+      <summary>次のプロセスに進む前に、現在のバックアップまたは復元操作が完了するまで待機します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.AsyncOperation">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.AsyncOperation" /> 列挙には、非同期で実行されているバックアップ コンポーネントを指定するために使用される値が含まれます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.AsyncOperation.Backup">
+      <summary>バックアップ プロセスは非同期操作です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.AsyncOperation.None">
+      <summary>非同期操作はありません。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.BackupRestoreBase.AsyncOperation.Restore">
+      <summary>復元プロセスは非同期操作です。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.BackupTruncateLogType">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.BackupTruncateLogType" /> 列挙には、ログで実行される切り捨てアクションを指定するために使用される値が含まれます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.BackupTruncateLogType.NoTruncate">
+      <summary>ログは切り捨てられません。すべてのトランザクションは、ログに残ります。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.BackupTruncateLogType.Truncate">
+      <summary>ログは切り捨てられます。完了したすべてのトランザクションは、ログから削除されます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.BackupTruncateLogType.TruncateOnly">
+      <summary>バックアップを実行せずにログを切り捨てます。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.DatabaseRecoveryState">
+      <summary>データベースの復元操作の状態を示します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.DatabaseRecoveryState.WithNoRecovery">
+      <summary>これから復元するトランザクション ログ バックアップが他にもあるため、コミットされていないトランザクションを一切ロールバックしないよう復元操作に対して指示します。復元操作後もデータベースは復元中の状態になります。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.DatabaseRecoveryState.WithRecovery">
+      <summary>コミットされていないトランザクションをロールバックして、データベースを使用可能な状態にします。別のトランザクション ログは復元できません。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.DatabaseRecoveryState.WithStandBy">
+      <summary>コミットされていないトランザクションをロールバックします。ただし、復旧結果を取り消すことができるよう、ロールバック操作をスタンバイ ファイルに保存します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.DatabaseRestorePlanner">
+      <summary>データベース復元プランナーを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.DatabaseRestorePlanner.#ctor(Microsoft.SqlServer.Management.Smo.Server)">
+      <summary>指定されたサーバーを使用して、<see cref="T:Microsoft.SqlServer.Management.Smo.DatabaseRestorePlanner" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="server">サーバーです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.DatabaseRestorePlanner.#ctor(Microsoft.SqlServer.Management.Smo.Server,System.String)">
+      <summary>指定されたサーバーとデータベース名を使用して、<see cref="T:Microsoft.SqlServer.Management.Smo.DatabaseRestorePlanner" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="server">サーバーです。</param>
+      <param name="databaseName">データベースの名前です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.DatabaseRestorePlanner.#ctor(Microsoft.SqlServer.Management.Smo.Server,System.String,System.DateTime,System.String)">
+      <summary>指定されたサーバー、データベース名、特定の時点、および回復ファイルを使用して、<see cref="T:Microsoft.SqlServer.Management.Smo.DatabaseRestorePlanner" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="server">サーバーです。</param>
+      <param name="databaseName">データベースの名前です。</param>
+      <param name="pointInTime">復元する特定の時点です。</param>
+      <param name="tailLogBackupFile">ログ末尾のバックアップ デバイス項目です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.DatabaseRestorePlanner.BackupMediaList">
+      <summary>バックアップ デバイス項目リストを取得します。</summary>
+      <returns>バックアップ デバイス項目リストのコレクションです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.DatabaseRestorePlanner.BackupTailLog">
+      <summary>ログ末尾をバックアップするかどうかを示す値を取得または設定します。</summary>
+      <returns>ログ末尾をバックアップする場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.DatabaseRestorePlanner.CreateRestorePlan">
+      <summary>復元プランを作成します。</summary>
+      <returns>作成された復元プランです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.DatabaseRestorePlanner.CreateRestorePlan(Microsoft.SqlServer.Management.Smo.RestoreOptions)">
+      <summary>指定された復元オプションで復元プランを作成します。</summary>
+      <returns>復元プランです。</returns>
+      <param name="ro">復元オプションです。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.DatabaseRestorePlanner.DatabaseName">
+      <summary>データベースの名前を取得または設定します。</summary>
+      <returns>データベースの名前です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.DatabaseRestorePlanner.ReadHeaderFromMedia">
+      <summary>ヘッダーをデバイスから読み取るかどうかを示す値を取得または設定します。</summary>
+      <returns>ヘッダーをメディアから読み取る場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.DatabaseRestorePlanner.RestoreToLastBackup">
+      <summary>最後のバックアップを復元するかどうかを示す値を取得または設定します。</summary>
+      <returns>最後のバックアップを復元する場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.DatabaseRestorePlanner.RestoreToPointInTime">
+      <summary>特定の時点までの復元を取得または設定します。</summary>
+      <returns>特定の時点までの復元です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.DatabaseRestorePlanner.Server">
+      <summary>サーバーを取得または設定します。</summary>
+      <returns>サーバーです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.DatabaseRestorePlanner.TailLogBackupFile">
+      <summary>ログ末尾のバックアップ ファイルを取得または設定します。</summary>
+      <returns>新しいログ末尾のバックアップ ファイルです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.DatabaseRestorePlanner.TailLogWithNoRecovery">
+      <summary>データベース復元プランナーが復旧を使用しないでログ末尾をバックアップするかどうかを取得または設定します。</summary>
+      <returns>データベース復元プランナーが復旧を使用しないでログ末尾をバックアップする場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.DataTransferBase">
+      <summary>データ転送ベースを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.DataTransferBase.#ctor">
+      <summary>既定値を使用して <see cref="T:Microsoft.SqlServer.Management.Smo.DataTransferBase" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.DataTransferBase.#ctor(Microsoft.SqlServer.Management.Smo.Database)">
+      <summary>指定されたデータベースを使用して <see cref="T:Microsoft.SqlServer.Management.Smo.DataTransferBase" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="database">データベースです。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.InvalidRestorePlanException">
+      <summary>無効な復元プランを実行または検証しようとするとスローされる例外です。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.NextRestoreEventArgs">
+      <summary>次の復元イベント引数を表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.NextRestoreEventArgs.#ctor(System.String,System.String,System.String,System.Int32)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.NextRestoreEventArgs" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="backupSetName">バックアップ セットの名前です。</param>
+      <param name="backupSetDescription">バックアップ セットの説明です。</param>
+      <param name="deviceName">デバイスの名前です。</param>
+      <param name="count">カウントです。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.NextRestoreEventArgs.BackupSetDescription">
+      <summary>バックアップ セットの説明を取得します。値の設定も可能です。</summary>
+      <returns>バックアップ セットの説明です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.NextRestoreEventArgs.BackupSetName">
+      <summary>バックアップ セットの名前を取得します。値の設定も可能です。</summary>
+      <returns>バックアップ セットの名前です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.NextRestoreEventArgs.Continue">
+      <summary>次の復元操作を続行するかどうかを示す値を取得します。値の設定も可能です。</summary>
+      <returns>続行する場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.NextRestoreEventArgs.Count">
+      <summary>次の復元イベントのカウントを取得します。値の設定も可能です。</summary>
+      <returns>次の復元イベントのカウントです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.NextRestoreEventArgs.DevicesName">
+      <summary>バックアップ メディアの名前を取得します。値の設定も可能です。</summary>
+      <returns>バックアップ メディアの名前です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.NextRestoreEventHandler">
+      <summary>NextRestoreEvent クラスを処理します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.PageRestorePlanner">
+      <summary>ページ復元プランナーを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.PageRestorePlanner.#ctor(Microsoft.SqlServer.Management.Smo.Database)">
+      <summary>指定されたデータベースを使用して <see cref="T:Microsoft.SqlServer.Management.Smo.PageRestorePlanner" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="database">データベースです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.PageRestorePlanner.#ctor(Microsoft.SqlServer.Management.Smo.Database,System.String)">
+      <summary>指定されたデータベースとログ末尾のバックアップ ファイルを使用して、<see cref="T:Microsoft.SqlServer.Management.Smo.PageRestorePlanner" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="database">データベースです。</param>
+      <param name="tailLogBackupFileName">ログ末尾のバックアップ ファイルの名前です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.PageRestorePlanner.CreateRestorePlan">
+      <summary>復元プランを作成します。</summary>
+      <returns>作成された復元プランです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.PageRestorePlanner.Database">
+      <summary>データベースを取得または設定します。</summary>
+      <returns>データベースです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.PageRestorePlanner.SuspectPages">
+      <summary>未確認のページを取得または設定します。</summary>
+      <returns>未確認のページです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.PageRestorePlanner.TailLogBackupFile">
+      <summary>ログ末尾のバックアップ ファイルを取得または設定します。</summary>
+      <returns>ログ末尾のバックアップ ファイルです。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.PercentCompleteEventArgs">
+      <summary>プロセスが完了の割合マーカーに達したときに発生するイベントによって渡される引数を表します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.PercentCompleteEventArgs.Message">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.PercentCompleteEventArgs" /> のメッセージを取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.PercentCompleteEventArgs" /> のメッセージ。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.PercentCompleteEventArgs.Percent">
+      <summary>整数の倍数単位で使用され、進行状況をレポートするポイントをマークする割合値を取得します。</summary>
+      <returns>割合値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.PercentCompleteEventHandler">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.PercentCompleteEventHandler" /> クラスは、完了割合イベントを処理するためのイベント ハンドラーを表します。</summary>
+      <param name="sender">イベントのソースを示す <see cref="T:System.Object" /> 値です。</param>
+      <param name="e">イベント データを含んだ <see cref="T:Microsoft.SqlServer.Management.Smo.PercentComplete" />http://msdn.microsoft.com/library/ja-jp/cpref/html/frlrfsystemeventargsclasstopic.asp EventArgs オブジェクトです。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.RelocateFile">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RelocateFile" /> オブジェクトは、ファイルの再配置を可能にするプログラム ツールです。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RelocateFile.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RelocateFile" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RelocateFile.#ctor(System.String,System.String)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RelocateFile" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="logicalFileName">論理ファイル名を示す <see cref="T:System.String" /> 値です。</param>
+      <param name="physicalFileName">物理ファイル名を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RelocateFile.LogicalFileName">
+      <summary>指定したファイルの論理ファイル名を取得します。値の設定も可能です。</summary>
+      <returns>指定したファイルの論理ファイル名を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RelocateFile.PhysicalFileName">
+      <summary>指定したファイルの物理ファイル名を取得します。値の設定も可能です。</summary>
+      <returns>指定したファイルの物理ファイル名を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Restore">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Restore" /> オブジェクトを使用すると、プログラムで復元操作にアクセスできます。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Restore.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Restore" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Restore.#ctor(System.String,Microsoft.SqlServer.Management.Smo.BackupSet)">
+      <summary>指定した対象データベース名とバックアップ セットを使用して <see cref="T:Microsoft.SqlServer.Management.Smo.Restore" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="DestinationDatabaseName">復元するデータベースの名前です。</param>
+      <param name="backupSet">バックアップ セットです。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Restore.Action">
+      <summary>実行する復元の種類を取得します。値の設定も可能です。</summary>
+      <returns>実行する復元の種類を表す <see cref="T:Microsoft.SqlServer.Management.Smo.RestoreActionType" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Restore.ClearSuspectPageTable(Microsoft.SqlServer.Management.Smo.Server)">
+      <summary>未確認のページ テーブルのエントリを削除します。</summary>
+      <param name="srv">復元操作の対象となる SQL Server のインスタンスです。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Restore.ClearSuspectPageTableAfterRestore">
+      <summary>復元操作の後に未確認のページ テーブル内のエントリを削除するかどうかを示す <see cref="T:System.Boolean" /> 値を取得します。値の設定も可能です。</summary>
+      <returns>未確認のページ テーブルを消去するかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、未確認のページ テーブルは復元操作後に消去されます。False (既定値) の場合、未確認のページ テーブルは消去されません。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Restore.DatabasePages">
+      <summary>復元ページの一覧を取得します。</summary>
+      <returns>復元ページの一覧です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Restore.FileNumber">
+      <summary>バックアップ メディア上の対象のバックアップ セットを識別するために使用されるインデックス番号を取得します。値の設定も可能です。</summary>
+      <returns>バックアップ セットのインデックス番号を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Restore.KeepReplication">
+      <summary>復元操作時にレプリケーション構成を維持するかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得します。値の設定も可能です。</summary>
+      <returns>レプリケーション構成を維持するかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、レプリケーション構成は維持されます。False (既定値) の場合、レプリケーション構成は復元操作によって無視されます。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Restore.Offset">
+      <summary>復元するページ アドレスの配列を取得します。値の設定も可能です。</summary>
+      <returns>復元するページのページ アドレスを示す <see cref="T:System.Int64" /> 配列の値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Restore.Partial">
+      <summary>部分的な復元操作と完全な復元操作のどちらを実行するかを示す <see cref="T:System.Boolean" /> プロパティ値を取得します。値の設定も可能です。</summary>
+      <returns>完全な復元操作と部分的な復元操作のどちらであるかを示す <see cref="T:System.Boolean" /> 値です。True の場合、復元操作は部分的な復元です。False (既定値) の場合、復元操作は完全な復元です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Restore.ReadBackupHeader(Microsoft.SqlServer.Management.Smo.Server)">
+      <summary>バックアップ ヘッダーを読み取り、メディアの内容に関する情報を返します。</summary>
+      <returns>メディアの内容に関する情報を示す <see cref="T:System.Data.DataTable" /> オブジェクトです。</returns>
+      <param name="srv">対象メディアへのアクセスを提供する SQL Server のインスタンスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Restore.ReadFileList(Microsoft.SqlServer.Management.Smo.Server)">
+      <summary>対象メディアのデータベース ファイルの一覧を返します。</summary>
+      <returns>データベース ファイルの一覧を示す <see cref="T:System.Data.DataTable" /> オブジェクトです。</returns>
+      <param name="srv">対象メディアへのアクセスを提供する SQL Server のインスタンスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Restore.ReadMediaHeader(Microsoft.SqlServer.Management.Smo.Server)">
+      <summary>メディア ヘッダーを読み取り、メディア ヘッダー値を返します。</summary>
+      <returns>メディア ヘッダー データを示す <see cref="T:System.Data.DataTable" /> オブジェクトです。</returns>
+      <param name="srv">対象メディアへのアクセスを提供する SQL Server のインスタンスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Restore.ReadSuspectPageTable(Microsoft.SqlServer.Management.Smo.Server)">
+      <summary>対象となる SQL Server インスタンスの未確認のページ テーブルを返します。</summary>
+      <returns>未確認のページ テーブル データを示す <see cref="T:System.Data.DataTable" /> オブジェクトです。</returns>
+      <param name="server">復元操作の対象となる SQL Server のインスタンスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトです。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Restore.RelocateFiles">
+      <summary>データベースを新しい物理的な場所に復元するときにデータベース ストレージのリダイレクトに使用される、データベース論理ファイル名とオペレーティング システム物理ファイル名の配列を取得します。</summary>
+      <returns>ファイル名を示す <see cref="T:System.ArrayList" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Restore.ReplaceDatabase">
+      <summary>復元したデータベースの新しいイメージを復元操作で作成するかどうかを示す <see cref="T:System.Boolean" /> 値を取得します。値の設定も可能です。</summary>
+      <returns>復元したデータベースの新しいイメージを作成するかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、データベースの新しいイメージが作成されます。イメージは、同じ名前の既存のデータベースが存在するかどうかに関係なく作成されます。False (既定値) の場合、データベースの新しいイメージは復元操作で作成されません。復元操作の対象となるデータベースは、SQL Server のインスタンス上に存在している必要があります。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Restore.RestrictedUser">
+      <summary>復元したデータベースへのアクセスを、固定データベース ロール db_owner のメンバーと固定サーバー ロール dbcreator および sysadmin のメンバーに制限するかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得します。値の設定も可能です。</summary>
+      <returns>復元したデータベースへのアクセスを制限するかどうかを示す <see cref="T:System.Boolean" /> 値です。If True の場合、復元したデータベースへのアクセスは、固定データベース ロール db_owner と、固定サーバー ロール dbcreator および sysadmin に制限されます。False (既定値) の場合、復元したデータベースへのアクセスは制限されません。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Restore.Script(Microsoft.SqlServer.Management.Smo.Server)">
+      <summary>復元操作の再作成に使用できる Transact-SQL スクリプトを生成します。</summary>
+      <returns>スクリプト内の Transact-SQL ステートメントの一覧を含む <see cref="T:System.Collections.Specialized.StringCollection" /> システム オブジェクトの値です。</returns>
+      <param name="server">復元操作の対象となる SQL Server のインスタンスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore(Microsoft.SqlServer.Management.Smo.Server)">
+      <summary>指定したサーバーで復元操作を実行します。</summary>
+      <param name="srv">復元操作の対象となる SQL Server のインスタンスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Restore.SqlRestoreAsync(Microsoft.SqlServer.Management.Smo.Server)">
+      <summary>復元操作を非同期で実行します。</summary>
+      <param name="srv">復元操作の対象となる SQL Server のインスタンスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify(Microsoft.SqlServer.Management.Smo.Server)">
+      <summary>指定した <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトによって表される SQL Server のインスタンス上のメディアを確認します。</summary>
+      <returns>対象のバックアップ セットが読み取り可能で、完全なバックアップ セットであるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、バックアップ セットの確認は成功しています。それ以外の場合は、False になります。</returns>
+      <param name="srv">復元操作の対象となる SQL Server のインスタンスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify(Microsoft.SqlServer.Management.Smo.Server,System.Boolean)">
+      <summary>指定した <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトによって表される SQL Server のインスタンス上のメディアを確認し、履歴テーブルにバックアップ履歴情報を読み込みます。</summary>
+      <returns>対象のバックアップ セットが読み取り可能で、完全なバックアップ セットであるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、バックアップ セットの確認は成功しています。それ以外の場合は、False になります。</returns>
+      <param name="srv">復元操作の対象となる SQL Server のインスタンスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトです。</param>
+      <param name="loadHistory">適切なバックアップ情報を履歴テーブルに代入するかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、履歴テーブルにデータが代入されます。それ以外の場合は、False になります。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify(Microsoft.SqlServer.Management.Smo.Server,System.Boolean,System.String@)">
+      <summary>指定した <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトによって表される SQL Server のインスタンス上のメディアを確認し、履歴テーブルにバックアップ履歴情報を読み込み、エラー メッセージを返します。</summary>
+      <returns>対象のバックアップ セットが読み取り可能で、完全なバックアップ セットであるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、バックアップ セットの確認は成功しています。それ以外の場合は、False になります。</returns>
+      <param name="srv">復元操作の対象となる SQL Server のインスタンスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトです。</param>
+      <param name="loadHistory">適切なバックアップ情報を履歴テーブルに代入するかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、履歴テーブルにデータが代入されます。それ以外の場合は、False になります。</param>
+      <param name="errorMessage">メソッドの実行が完了したときのエラー メッセージを含む <see cref="T:System.String" /> 値です。これは出力パラメーターです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify(Microsoft.SqlServer.Management.Smo.Server,System.String@)">
+      <summary>指定した <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトによって表される SQL Server のインスタンス上のメディアを確認し、エラー メッセージを返します。</summary>
+      <returns>対象のバックアップ セットが読み取り可能で、完全なバックアップ セットであるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、バックアップ セットの確認は成功しています。それ以外の場合は、False になります。</returns>
+      <param name="srv">復元操作の対象となる SQL Server のインスタンスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトです。</param>
+      <param name="errorMessage">メソッドの実行が完了したときのエラー メッセージを含む <see cref="T:System.String" /> 値です。これは出力パラメーターです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Restore.SqlVerifyAsync(Microsoft.SqlServer.Management.Smo.Server)">
+      <summary>指定した <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトによって表される SQL Server のインスタンス上のメディアを非同期で確認します。</summary>
+      <param name="srv">復元操作の対象となる SQL Server のインスタンスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Restore.SqlVerifyAsync(Microsoft.SqlServer.Management.Smo.Server,System.Boolean)">
+      <summary>指定した <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトによって表される SQL Server のインスタンス上のメディアを非同期で確認し、履歴テーブルにバックアップ履歴情報を読み込みます。</summary>
+      <param name="srv">復元操作の対象となる SQL Server のインスタンスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトです。</param>
+      <param name="loadHistory">適切なバックアップ情報を履歴テーブルに代入するかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、履歴テーブルにデータが代入されます。それ以外の場合は、False になります。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Restore.SqlVerifyLatest(Microsoft.SqlServer.Management.Smo.Server)">
+      <summary>最新のバックアップを確認しますが、復元は行いません。また、バックアップ セットが完全なバックアップ セットであり、バックアップ全体が読み取り可能であることを確認します。</summary>
+      <returns>対象のバックアップ セットが読み取り可能で、完全なバックアップ セットであるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、バックアップ セットの確認は成功しています。それ以外の場合は、False になります。</returns>
+      <param name="srv">復元操作の対象となる SQL Server のインスタンスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Restore.SqlVerifyLatest(Microsoft.SqlServer.Management.Smo.Server,Microsoft.SqlServer.Management.Smo.SqlVerifyAction)">
+      <summary>指定したアクションで最新のバックアップを確認します。また、バックアップ セットが完全なバックアップ セットであり、バックアップ全体が読み取り可能であることを確認します。</summary>
+      <returns>対象のバックアップ セットが読み取り可能で、完全なバックアップ セットであるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、バックアップ セットの確認は成功しています。それ以外の場合は、False になります。</returns>
+      <param name="srv">復元操作の対象となる SQL Server のインスタンスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトです。</param>
+      <param name="sqlVerifyAction">検証するバックアップの種類を示す <see cref="T:Microsoft.SqlServer.Management.Smo.SqlVerifyAction" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Restore.SqlVerifyLatest(Microsoft.SqlServer.Management.Smo.Server,Microsoft.SqlServer.Management.Smo.SqlVerifyAction,System.String@)">
+      <summary>指定したアクションで最新のバックアップを確認します。また、バックアップ セットが完全なバックアップ セットであり、バックアップ全体が読み取り可能であることを確認して、エラー メッセージを返します。</summary>
+      <returns>対象のバックアップ セットが読み取り可能で、完全なバックアップ セットであるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、バックアップ セットの確認は成功しています。それ以外の場合は、False になります。</returns>
+      <param name="srv">復元操作の対象となる SQL Server のインスタンスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトです。</param>
+      <param name="sqlVerifyAction">検証するバックアップの種類を示す <see cref="T:Microsoft.SqlServer.Management.Smo.SqlVerifyAction" /> 値です。</param>
+      <param name="errorMessage">メソッドの実行が完了したときのエラー メッセージを含む <see cref="T:System.String" /> 値です。これは出力パラメーターです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Restore.SqlVerifyLatest(Microsoft.SqlServer.Management.Smo.Server,System.String@)">
+      <summary>最新のバックアップを確認しますが、復元は行いません。また、バックアップ セットが完全なバックアップ セットであり、バックアップ全体が読み取り可能であることを確認して、エラー メッセージを返します。</summary>
+      <returns>対象のバックアップ セットが読み取り可能で、完全なバックアップ セットであるかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、バックアップ セットの確認は成功しています。それ以外の場合は、False になります。</returns>
+      <param name="srv">復元操作の対象となる SQL Server のインスタンスを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Server" /> オブジェクトです。</param>
+      <param name="errorMessage">メソッドの実行が完了したときのエラー メッセージを含む <see cref="T:System.String" /> 値です。これは出力パラメーターです。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Restore.StandbyFile">
+      <summary>SQL Server インスタンスのイメージング方法の一部として使用される UNDO ファイルの名前を取得します。値の設定も可能です。</summary>
+      <returns>UNDO ファイルの名前を示す <see cref="T:System.String" /> です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Restore.StopAtMarkAfterDate">
+      <summary>復旧操作の停止位置を表すために <see cref="P:Microsoft.SqlServer.Management.Smo.Restore.StopAtMarkName" /> が示すマーク名と共に使用される日付を取得または設定します。</summary>
+      <returns>日付での停止を示す <see cref="T:System.String" /> です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Restore.StopAtMarkName">
+      <summary>復旧操作の停止位置を表すために <see cref="P:Microsoft.SqlServer.Management.Smo.Restore.StopAtMarkAfterDate" /> が示す日付と共に使用されるマーク名を取得します。値の設定も可能です。</summary>
+      <returns>マーク名を示す <see cref="T:System.String" /> です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Restore.StopBeforeMarkAfterDate">
+      <summary>復旧操作の停止位置を表すために <see cref="P:Microsoft.SqlServer.Management.Smo.Restore.StopBeforeMarkName" /> が示すマーク名と共に使用される日付を取得または設定します。</summary>
+      <returns>日付以前での停止を示す <see cref="T:System.String" /> です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Restore.StopBeforeMarkName">
+      <summary>復旧操作の停止位置を表すために <see cref="P:Microsoft.SqlServer.Management.Smo.Restore.StopBeforeMarkAfterDate" /> が示す日付と共に使用されるマーク名を取得します。値の設定も可能です。</summary>
+      <returns>マーク名を示す文字列です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime">
+      <summary>データベース ログの復元のエンドポイントを取得します。値の設定も可能です。</summary>
+      <returns>エンドポイントを識別する日時の値を示す文字列です。</returns>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.Restore.VerifyComplete">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.VerifyCompleteEventHandler" /> を指定します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.RestoreActionType">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RestoreActionType" /> 列挙には、データの復元操作で必要となるアクションの種類を指定するための値が含まれます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RestoreActionType.Database">
+      <summary>データベースを復元します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RestoreActionType.Files">
+      <summary>1 つ以上のデータ ファイルを復元します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RestoreActionType.Log">
+      <summary>トランザクション ログを復元します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RestoreActionType.OnlineFiles">
+      <summary>他のユーザーがデータベースを利用できる場合でも、1 つ以上のデータ ファイルを復元します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RestoreActionType.OnlinePage">
+      <summary>他のユーザーがデータベースを利用できる場合でも、オンラインのデータ ページを復元します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.RestoreOptions">
+      <summary>復元オプションを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RestoreOptions.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RestoreOptions" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RestoreOptions.Blocksize">
+      <summary>物理ブロック サイズをバイト単位で指定します。</summary>
+      <returns>バイト単位の物理ブロック サイズです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RestoreOptions.BufferCount">
+      <summary>復元操作に使用される I/O バッファーの総数を指定します。</summary>
+      <returns>復元操作に使用される I/O バッファーの総数です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RestoreOptions.ClearSuspectPageTableAfterRestore">
+      <summary>復元後、未確認のページ テーブル内のエントリを削除するかどうかを取得または設定します。</summary>
+      <returns>復元後、未確認のページ テーブル内のエントリを削除する場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RestoreOptions.ContinueAfterError">
+      <summary>エラーが発生した後も復元操作を続行するかどうかを取得または設定します。</summary>
+      <returns>エラーが発生した後も復元操作を続行する場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RestoreOptions.KeepReplication">
+      <summary>データベースまたはログのバックアップをウォーム スタンバイ サーバーで復元し、データベースが復旧したときに、レプリケーションの設定が削除されるのを防ぐかどうかを取得または設定します。</summary>
+      <returns>レプリケーションの設定が削除されるのを防ぐ場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RestoreOptions.MaxTransferSize">
+      <summary>バックアップ メディアと SQL Server 間で使用される最大転送単位 (バイト) を取得または設定します。</summary>
+      <returns>最大転送サイズです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RestoreOptions.PercentCompleteNotification">
+      <summary>復元操作ごとの PercentCompleteEventHandler イベント ハンドラーの呼び出し間隔の割合を取得または設定します。</summary>
+      <returns>完了した割合の通知です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RestoreOptions.RecoveryState">
+      <summary>復旧状態を取得または設定します。</summary>
+      <returns>データベースの復元オプションです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RestoreOptions.ReplaceDatabase">
+      <summary>指定したデータベースと同じ名前のデータベースが既に存在していても、SQL Server でデータベースとその関連ファイルを作成するかどうかを取得または設定します。</summary>
+      <returns>指定されたデータベースを SQL Server で作成する場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RestoreOptions.SetRestrictedUser">
+      <summary>新しく復元したデータベースへのアクセスを、db_owner、dbcreator、sysadmin の各ロールのメンバーに制限するかどうかを取得または設定します。</summary>
+      <returns>新しく復元したデータベースへのアクセスを、db_owner、dbcreator、sysadmin の各ロールのメンバーに制限する場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RestoreOptions.StandByFile">
+      <summary>コミットされていないトランザクションを元に戻します。ただし、復旧結果を取り消すことができるよう、元に戻す操作をスタンバイ ファイルに保存します。</summary>
+      <returns>復旧およびスタンバイ ファイルです。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.RestorePlan">
+      <summary>特定の時点の特定の状態までデータベースを復元する一連のデータベース復元操作を表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RestorePlan.#ctor(Microsoft.SqlServer.Management.Smo.Database)">
+      <summary>指定されたデータベースを使用して <see cref="T:Microsoft.SqlServer.Management.Smo.RestorePlan" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="database">データベースです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RestorePlan.#ctor(Microsoft.SqlServer.Management.Smo.Server)">
+      <summary>指定されたサーバーを使用して、<see cref="T:Microsoft.SqlServer.Management.Smo.RestorePlan" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="server">サーバーです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RestorePlan.#ctor(Microsoft.SqlServer.Management.Smo.Server,System.String)">
+      <summary>指定されたサーバーとデータベース名を使用して、<see cref="T:Microsoft.SqlServer.Management.Smo.RestorePlan" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="server">サーバーです。</param>
+      <param name="databaseName">データベースの名前。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RestorePlan.AddRestoreOperation(Microsoft.SqlServer.Management.Smo.BackupSet)">
+      <summary>復元操作を追加します。復元するバックアップ セットを引数として受け取ります。</summary>
+      <param name="backupSet">復元するバックアップ セットです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RestorePlan.AddRestoreOperation(System.Collections.Generic.List{Microsoft.SqlServer.Management.Smo.BackupSet})">
+      <summary>復元操作を追加します。バックアップ セット (複数可) を引数として受け取ります。</summary>
+      <param name="backupSets">バックアップ セットです。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RestorePlan.AsyncStatus">
+      <summary>発生する可能性のあるエラーなど、直近の非同期操作の状態を取得します。</summary>
+      <returns>非同期操作の状態です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RestorePlan.CloseExistingConnections">
+      <summary>既存の接続を閉じるかどうかを示す値を取得または設定します。</summary>
+      <returns>既存の接続を閉じる場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Smo.RestorePlan.Complete">
+      <summary>復元プランが完了したときに発生します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RestorePlan.DatabaseName">
+      <summary>データベースの名前を取得または設定します。</summary>
+      <returns>データベースの名前です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RestorePlan.Execute">
+      <summary>復元プランを検証して実行します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RestorePlan.ExecuteAsync">
+      <summary>非同期的に復元プランを検証して実行します。</summary>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Smo.RestorePlan.Information">
+      <summary>サーバーから情報が送信されたときに発生します。</summary>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Smo.RestorePlan.NextMedia">
+      <summary>次のメディアを読み込む必要性が生じたときに発生します。</summary>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Smo.RestorePlan.NextRestore">
+      <summary>次の復元処理が発生したときに発生します。</summary>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Smo.RestorePlan.PercentComplete">
+      <summary>完了した割合の情報がサーバーから送信されたときに発生します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RestorePlan.RestoreAction">
+      <summary>復元アクションの種類 (データベース、ファイル、ログ、ページ) を取得または設定します。</summary>
+      <returns>復元アクションです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RestorePlan.RestoreOperations">
+      <summary>復元操作を取得または設定します。</summary>
+      <returns>復元操作です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RestorePlan.Script">
+      <summary>復元プランを検証し、その操作をスクリプト化します。</summary>
+      <returns>操作の T-SQL スクリプトの文字列コレクションです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RestorePlan.Server">
+      <summary>復元プランが実行されるサーバーを取得または設定します。</summary>
+      <returns>サーバーです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RestorePlan.SetRestoreOptions(Microsoft.SqlServer.Management.Smo.RestoreOptions)">
+      <summary>復元オプションを設定します。</summary>
+      <param name="restoreOptions">復元オプションです。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RestorePlan.TailLogBackupOperation">
+      <summary>ログ末尾のバックアップ操作を取得または設定します。</summary>
+      <returns>ログ末尾のバックアップ操作です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RestorePlan.Verify(System.Boolean)">
+      <summary>復元プランを検証します。</summary>
+      <param name="checkBackupMediaIntegrity">バックアップ メディアの整合性をチェックする場合は true、それ以外の場合は false です。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.SqlServerRegistrations">
+      <summary>SQL Server の登録済みインスタンスを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.SqlServerRegistrations.#ctor">
+      <summary>SQL Server の登録済みインスタンスを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.SqlServerRegistrations.EnumRegisteredServers">
+      <summary>サーバーの配列を返します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトの配列です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.SqlServerRegistrations.Refresh">
+      <summary>登録済みサーバーのコレクションを更新します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.SqlServerRegistrations.RegisteredServers">
+      <summary>登録済みサーバーのコレクションを取得します。</summary>
+      <returns>登録済みサーバーのコレクションです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.SqlServerRegistrations.ServerGroups">
+      <summary>登録済みサーバーのグループを取得します。</summary>
+      <returns>登録済みサーバーのグループです。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.SqlVerifyAction">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.SqlVerifyAction" /> 列挙には、バックアップの検証の種類を指定するために使用される値が含まれます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.SqlVerifyAction.VerifyDatabase">
+      <summary>値 = 0。最新のデータベース バックアップを検証します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.SqlVerifyAction.VerifyFile">
+      <summary>値 = 2。最新のファイルまたはファイル グループ バックアップを検証します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.SqlVerifyAction.VerifyIncremental">
+      <summary>値 = 3。最新の増分バックアップを検証します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.SqlVerifyAction.VerifyLog">
+      <summary>値 = 1。最新のログ バックアップを検証します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.SuspectPage">
+      <summary>ページ復元に使用されるデータベース ページを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.SuspectPage.#ctor(System.Int32,System.Int64)">
+      <summary>指定されたファイル識別子およびページ識別子を使用して <see cref="T:Microsoft.SqlServer.Management.Smo.SuspectPage" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="fileID">ファイル識別子です。</param>
+      <param name="pageID">ページ識別子です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.SuspectPage.CompareTo(Microsoft.SqlServer.Management.Smo.SuspectPage)">
+      <summary>他の SuspectPage と比較します。</summary>
+      <returns>CompareTo メソッドによって指定されたオブジェクトの値です。</returns>
+      <param name="other">他の SuspectPage です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.SuspectPage.Equals(System.Object)">
+      <summary>指定されたオブジェクトがこのインスタンスと等しいかどうかを示します。</summary>
+      <returns>指定されたオブジェクトがこのインスタンスと等しい場合は true、それ以外の場合は false です。</returns>
+      <param name="obj">このインスタンスと比較するオブジェクトです。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.SuspectPage.FileID">
+      <summary>ファイル識別子を取得または設定します。</summary>
+      <returns>ファイル識別子です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.SuspectPage.GetHashCode">
+      <summary>インスタンスのハッシュ コードを返します。</summary>
+      <returns>インスタンスのハッシュ コードです。ハッシュ アルゴリズムや、ハッシュ テーブルなどのデータ構造での使用に適しています。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.SuspectPage.PageID">
+      <summary>ページ識別子を取得または設定します。</summary>
+      <returns>ページ識別子です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.SuspectPage.ToString">
+      <summary>インスタンスを表す文字列を返します。</summary>
+      <returns>インスタンスを表す文字列です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.Transfer">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Transfer" /> オブジェクトは、SQL Server の他のインスタンスにスキーマおよびデータをコピーする操作をプログラムで制御する手段を提供するツール オブジェクトです。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Transfer.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Transfer" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Transfer.#ctor(Microsoft.SqlServer.Management.Smo.Database)">
+      <summary>転送操作の転送元として指定したデータベースを使用する <see cref="T:Microsoft.SqlServer.Management.Smo.Transfer" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="database">転送操作の転送元のデータベースを示す <see cref="T:Microsoft.SqlServer.Management.Smo.Database" /> オブジェクトです。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Transfer.BatchSize">
+      <summary>バッチ サイズ プロパティを取得または設定します。</summary>
+      <returns>バッチ サイズ プロパティです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Transfer.BulkCopyTimeout">
+      <summary>タイムアウトになる前に完了する操作を取得または設定します。</summary>
+      <returns>タイムアウトになる前に完了する操作です。</returns>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Smo.Transfer.DataTransferEvent">
+      <summary>データが転送されたことをレポートします。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Transfer.GetTransferProvider">
+      <summary>内部使用のみです。呼び出し元から呼び出されると、System.NotSupportedException をスローします。</summary>
+      <returns>データ転送プロバイダー インターフェイスを示す <see cref="T:Microsoft.SqlServer.Management.Common.IDataTransferProvider" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Transfer.Microsoft#SqlServer#Management#Common#ITransferMetadataProvider#GetOptions">
+      <summary>ITransferMetadataProvider クラスは、参照された接続でメタデータ転送プロセスを実装するインターフェイスを表します。</summary>
+      <returns>キーによって並べ替えられ、キーとインデックスを使ってアクセスできる、キー/値ペアのコレクションを表す <see cref="T:System.Collections.SortedList" /> です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Transfer.Microsoft#SqlServer#Management#Common#ITransferMetadataProvider#SaveMetadata">
+      <summary>インスタンス間でのデータベースの転送時にメタデータを保存します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Transfer.ProcessDependencyChain(Microsoft.SqlServer.Management.Smo.Server,Microsoft.SqlServer.Management.Sdk.Sfc.DependencyChainCollection,System.Boolean,System.Boolean)">
+      <summary>オプションを使用して URN 配列を返します。</summary>
+      <returns>URN 配列です。</returns>
+      <param name="server">サーバーです。</param>
+      <param name="dependencyChain">依存関係チェーンです。</param>
+      <param name="isDataOnly">データのみの場合は true、それ以外の場合は false です。</param>
+      <param name="isCreateOrder">順序を作成する場合は true、それ以外の場合は false です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.Transfer.TemporaryPackageDirectory">
+      <summary>内部使用のみです。このプロパティの値は、呼び出し元で設定しても無視されます。</summary>
+      <returns>転送操作中に作成された一時パッケージを保存するためのファイルの場所を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.Transfer.TransferData">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.Transfer" /> オブジェクトによる指定に従ってデータを転送します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.TransferBase">
+      <summary>転送の基本クラスを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.TransferBase.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.TransferBase" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.TransferBase.#ctor(Microsoft.SqlServer.Management.Smo.Database)">
+      <summary>転送操作の転送元として指定したデータベースを使用する <see cref="T:Microsoft.SqlServer.Management.Smo.TransferBase" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="database">転送操作の転送元となるデータベースです。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllDatabaseTriggers">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべてのデータベース トリガーをコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべてのデータベース トリガーを転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllDefaults">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべての既定値をコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべての既定値を転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllFullTextCatalogs">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべてのフルテキスト カタログをコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべてのフルテキスト カタログを転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllFullTextStopLists">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべてのフルテキスト ストップ リストをコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべてのフルテキスト ストップ リストを転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllLogins">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべてのログインをコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべてのログインを転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllObjects">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべてのオブジェクトをコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべてのオブジェクトを転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllPartitionFunctions">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべてのパーティション関数をコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべてのパーティション関数を転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllPartitionSchemes">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべてのパーティション スキーマをコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべてのパーティション スキーマを転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllPlanGuides">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべてのプラン ガイドをコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべてのプラン ガイドを転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllRoles">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべてのロールをコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべてのロールを転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllRules">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべてのルールをコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべてのルールを転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllSchemas">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべてのスキーマをコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべてのスキーマを転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllSearchPropertyLists">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべての検索プロパティ リストをコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべての検索プロパティ リストを転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllSequences">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべてのシーケンスをコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべてのシーケンスを転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllSqlAssemblies">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべてのアセンブリをコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべてのアセンブリを転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllStoredProcedures">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべてのストアド プロシージャをコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべてのストアド プロシージャを転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllSynonyms">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべてのシノニムをコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべてのシノニムを転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllTables">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべてのテーブルをコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべてのテーブルを転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllUserDefinedAggregates">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべてのユーザー定義集計をコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべてのユーザー定義集計を転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllUserDefinedDataTypes">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべてのユーザー定義データ型をコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべてのユーザー定義データ型を転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllUserDefinedFunctions">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべてのユーザー定義関数をコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべてのユーザー定義関数を転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllUserDefinedTableTypes">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべてのユーザー定義テーブル型をコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべてのユーザー定義テーブル型を転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllUserDefinedTypes">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべてのユーザー定義型をコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべてのユーザー定義型を転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllUsers">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべてのデータベース ユーザーをコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべてのデータベース ユーザーを転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllViews">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべてのビューをコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべてのビューを転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyAllXmlSchemaCollections">
+      <summary>転送操作で転送元データベースから転送先データベースに SQL Server のすべての XML スキーマ コレクションをコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server のすべての XML スキーマ コレクションを転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopyData">
+      <summary>転送操作で転送元データベースから転送先データベースにすべてのデータをコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>転送操作で転送元データベースから転送先データベースにすべてのデータをコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CopySchema">
+      <summary>転送操作で転送元データベースから転送先データベースにスキーマをコピーするかどうかを示す値を取得または設定します。</summary>
+      <returns>転送元データベースから転送先データベースにスキーマをコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.CreateTargetDatabase">
+      <summary>転送操作で転送先のデータベースを作成するかどうかを示す値を取得または設定します。</summary>
+      <returns>転送操作で転送先データベースを作成する場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.Database">
+      <summary>スキーマまたはデータの転送元となるデータベースを取得または設定します。</summary>
+      <returns>スキーマまたはデータの転送元となるデータベースです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.DatabaseFileMappings">
+      <summary>ディクショナリに基づいてフラット ファイルの転送先に関連付けられたプロパティを取得または設定します。</summary>
+      <returns>ディクショナリに基づいてフラット ファイルの転送先に関連付けられたプロパティです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.DestinationDatabase">
+      <summary>転送操作の転送先となるデータベースを取得または設定します。</summary>
+      <returns>転送操作の転送先となるデータベースです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.DestinationLogin">
+      <summary>転送先データベースが属する SQL Server のインスタンスのログオンを取得または設定します。</summary>
+      <returns>転送先データベースが属する SQL Server のインスタンスのログオンです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.DestinationLoginSecure">
+      <summary>転送先データベースが存在する SQL Server のインスタンスで Windows 認証が有効であるかどうかを示す値を取得または設定します。</summary>
+      <returns>転送先の SQL Server インスタンスが Windows 認証を要求する場合は true、転送先の SQL Server インスタンスが SQL Server 認証を要求する場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.DestinationPassword">
+      <summary>転送先データベースが属する SQL Server のインスタンスのログオン パスワードを取得または設定します。</summary>
+      <returns>転送先データベースが属する SQL Server のインスタンスのログオン パスワードです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.DestinationServer">
+      <summary>転送操作の転送先となるデータベースを所有する SQL Server のインスタンスを取得または設定します。</summary>
+      <returns>転送操作の転送先となるデータベースを所有する SQL Server のインスタンスです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.DestinationTranslateChar">
+      <summary>転送操作で転送先データベースの文字のコード ページを変換するかどうかを示す値を取得または設定します。</summary>
+      <returns>転送操作で転送先データベースの文字のコード ページを変換する場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Smo.TransferBase.DiscoveryProgress">
+      <summary>検出プロセスの進行状況をマークします。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.DropDestinationObjectsFirst">
+      <summary>転送操作の前に転送先データベースのオブジェクトを削除するかどうかを示す値を取得または設定します。</summary>
+      <returns>転送操作の前に転送先データベースのオブジェクトを削除する場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.TransferBase.EnumObjects">
+      <summary>転送操作に含まれるオブジェクトを表す URN (Uniform Resource Name) 値が列挙されたリストを返します。</summary>
+      <returns>転送操作に含まれるオブジェクトを表す URN 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.TransferBase.EnumScriptTransfer">
+      <summary>データベース オブジェクト、またはデータベース オブジェクトとデータを別のデータベース インスタンスに転送するために使用する Transact-SQL のコマンド バッチ スクリプトを作成します。</summary>
+      <returns>スクリプトを含む IEnumerable 文字列リスト インターフェイスです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.ObjectList">
+      <summary>転送操作で転送元から転送先にコピーされるオブジェクトを取得または設定します。</summary>
+      <returns>転送操作でコピーするオブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.Options">
+      <summary>転送操作のオプションを取得または設定します。</summary>
+      <returns>転送操作のオプションです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.PrefetchObjects">
+      <summary>転送操作の前にオブジェクトをプレフェッチするかどうかを示す値を取得または設定します。</summary>
+      <returns>オブジェクトをプレフェッチする場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.PreserveDbo">
+      <summary>転送プロセスで DBO 所有権が保持されるかどうかを示す値を取得または設定します。</summary>
+      <returns>SQL Server の DBO 所有権を転送元データベースから転送先データベースにコピーする場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.PreserveLogins">
+      <summary>転送操作でログインを保持するかどうかを示す値を取得または設定します。</summary>
+      <returns>ログインを保持する場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.Scripter">
+      <summary>転送操作のスクリプターを取得します。</summary>
+      <returns>転送操作のスクリプターです。</returns>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Smo.TransferBase.ScriptingError">
+      <summary>スクリプト作成プロセスで発生したエラーをレポートします。</summary>
+    </member>
+    <member name="E:Microsoft.SqlServer.Management.Smo.TransferBase.ScriptingProgress">
+      <summary>スクリプト作成プロセスの進行状況をマークします。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.TransferBase.ScriptTransfer">
+      <summary>転送操作によって転送されるデータベース オブジェクトを作成する Transact-SQL のコマンド バッチ スクリプトを作成します。</summary>
+      <returns>転送操作の Transact-SQL スクリプトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.TransferBase.SetTargetServerInfo">
+      <summary>転送先サーバーのバージョン (SQL Server のバージョンに基づく) を設定します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.SourceTranslateChar">
+      <summary>転送操作で転送元データベースの文字のコード ページを変換するかどうかを示す値を取得または設定します。</summary>
+      <returns>転送操作で転送元データベースの文字のコード ページを変換する場合は true、それ以外の場合は false です。既定値は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.TargetDatabaseFilePath">
+      <summary>データベース ファイルのコピー先となるパスを取得または設定します。</summary>
+      <returns>データベース ファイルのコピー先となるパスです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.TargetLogFilePath">
+      <summary>ログ ファイルのコピー先となるパスを取得または設定します。</summary>
+      <returns>ログ ファイルのコピー先となるパスです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.TransferBase.UseDestinationTransaction">
+      <summary>転送先のトランザクションを使用するかどうかを示す値を取得または設定します。</summary>
+      <returns>転送先のトランザクションを使用する場合は true、それ以外の場合は false。既定値は false です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.VerifyCompleteEventArgs">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.VerifyCompleteEventArgs" /> オブジェクトを使用すると、バックアップ検証操作の完了時に発生するイベントの詳細をレポートするための引数にプログラムからアクセスできます。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.VerifyCompleteEventArgs.VerifySuccess">
+      <summary>検証操作が成功したかどうかを示す <see cref="T:System.Boolean" /> プロパティを取得します。</summary>
+      <returns>検証操作が成功したかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、検証操作は成功しています。False (既定値) の場合、検証操作が失敗しています。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.VerifyCompleteEventHandler">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.VerifyCompleteEventHandler" /> クラスは、完了イベントを処理するイベント ハンドラーを表します。</summary>
+      <param name="sender">イベントのソースを示す <see cref="T:System.Object" /> 値です。</param>
+      <param name="args">イベント データを含む <see cref="T:Microsoft.SqlServer.Management.Smo.VerifyCompleteEventArgs" /> オブジェクトです。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトは、SQL Server 登録済みサーバーを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer.#ctor(Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServerCollection,System.String)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトの新しいインスタンスを初期化します。</summary>
+      <param name="regServers">新しい登録済みサーバーを追加する必要のある T: <see cref="Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServerCollection" /> です。</param>
+      <param name="name">登録済みサーバーの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer.#ctor(Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup,System.String)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトの新しいインスタンスを初期化します。</summary>
+      <param name="serverGroup">新しい登録済みサーバーを追加する必要のある T: <see cref="Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> です。</param>
+      <param name="name">登録済みサーバーの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer.#ctor(System.String)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトの新しいインスタンスを初期化します。</summary>
+      <param name="name">登録済みサーバーの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer.Alter">
+      <summary>SQL Server のインスタンスの <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトのプロパティに対する変更をすべて更新します。 </summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer.Create">
+      <summary>SQL Server のインスタンスで、<see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトによる定義に基づいて登録済みサーバーを作成します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer.Description">
+      <summary>参照先の登録済みサーバーの説明テキストを取得します。値の設定も可能です。</summary>
+      <returns>参照先の登録済みサーバーの説明テキストを示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer.Drop">
+      <summary>サーバー グループと登録済みサーバー コレクションから <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> を削除します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer.GetSmoObject(Microsoft.SqlServer.Management.Sdk.Sfc.Urn)">
+      <summary>URN で示される <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrSmoObject" /> を取得します。</summary>
+      <returns>URN で示される <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrSmoObject" /> です。</returns>
+      <param name="urn">取得するオブジェクトを識別する Microsoft.SqlServer.Management.Sdk.Sfc.Urn です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer.Login">
+      <summary>登録済みサーバーへの接続を確立するために使用するログインを取得します。値の設定も可能です。</summary>
+      <returns>登録済みサーバーへの接続を確立するために使用するログインを示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer.LoginSecure">
+      <summary>接続が Windows 認証によって認証されるかどうかを示す <see cref="T:System.Boolean" /> プロパティ値を取得します。値の設定も可能です。</summary>
+      <returns>接続が Windows 認証によって認証されるかどうかを示す <see cref="T:System.Boolean" /> 値です。True (既定値) の場合、接続は Windows 認証によって認証されます。False の場合、接続は SQL Server 標準認証を使用して認証されます。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer.Parent">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトの親を示す <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトの値を取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer.SecurePassword">
+      <summary>登録済みサーバーへの接続を確立するために SQL Server 標準認証で使用するパスワードを取得します。値の設定も可能です。</summary>
+      <returns>SQL Server 標準認証での接続に使用するセキュリティで保護された文字列パスワードを示す <see cref="T:System.Security.SecureString" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer.ServerInstance">
+      <summary>登録済みサーバーである SQL Server のインスタンスを取得します。</summary>
+      <returns>登録済みサーバーである SQL Server のインスタンスを示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer.Urn">
+      <summary>参照先の登録済みサーバーを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Urn" /> オブジェクトの値を取得します。</summary>
+      <returns>参照先の登録済みサーバーを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Urn" /> オブジェクトの値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServerCollection">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServerCollection" /> クラスは、登録済みサーバー グループのすべての登録済みサーバーを表す <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトのコレクションを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServerCollection.Add(Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトを <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServerCollection" /> コレクションに追加します。</summary>
+      <param name="registeredServer">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServerCollection" /> オブジェクトに追加される <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServerCollection.Contains(System.String)">
+      <summary>指定した文字列値がコレクション内に存在するかどうかを判別します。</summary>
+      <returns>コレクション内に文字列値が存在するかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、文字列値はコレクション内に存在します。False の場合は存在しません。</returns>
+      <param name="key">コレクション内に存在することを判別するための値を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServerCollection.CopyTo(System.Array,System.Int32)">
+      <summary>1 次元の配列にオブジェクトのコレクションをコピーします。その際、指定したインデックス値からコピーを開始します。</summary>
+      <param name="array">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトの配列です。</param>
+      <param name="index">コレクション内のコピーを開始するインデックス値を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServerCollection.Count">
+      <summary>コレクションに含まれる <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトの数を取得します。</summary>
+      <returns>コレクション内の <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトの数を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServerCollection.GetEnumerator">
+      <summary>
+        <see cref="T:System.Collections.IEnumerator" /> インターフェイスを返します。このインターフェイスを使用すると、コレクション内のオブジェクトを繰り返し処理できます。</summary>
+      <returns>参照先のコレクション オブジェクトの <see cref="T:System.Collections.IEnumerator" /> システム インターフェイスです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServerCollection.Item(System.Int32)">
+      <summary>コレクション内にある指定したインデックス番号の <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトを取得します。</summary>
+      <returns>登録済みサーバーを表す <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトの値です。</returns>
+      <param name="index">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServerCollection" /> コレクション内の <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトの位置を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServerCollection.Item(System.String)">
+      <summary>コレクション内にある指定した名前の <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトを取得します。</summary>
+      <returns>登録済みサーバーを表す <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトの値です。</returns>
+      <param name="name">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServerCollection" /> コレクション内の <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServerCollection.Parent">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServerCollection" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトを取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServerCollection" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServerCollection.Remove(System.String)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトを <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServerCollection" /> オブジェクトから削除します。</summary>
+      <param name="key">コレクションから削除する登録済みサーバーの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrCollectionBase">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrCollectionBase" /> クラスは、<see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServerCollection" /> オブジェクトの作成に使用される基本クラスです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrCollectionBase.initialized">
+      <summary>コレクションが初期化されていることを示す <see cref="T:System.Boolean" /> 値を取得します。True の場合、コレクションは初期化されます。False の場合、コレクションは初期化されません。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrCollectionBase.innerColl">
+      <summary>登録済みサーバーの基になるコレクションを含んだ並べ替えリストです。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrCollectionBase.IsSynchronized">
+      <summary>コレクションへのアクセスが同期され、スレッド セーフかどうかを示す <see cref="T:System.Boolean" /> 値を取得します。</summary>
+      <returns>コレクションへのアクセスが同期されるかどうかを示す <see cref="T:System.Boolean" /> 値。True の場合、コレクションへのアクセスは同期されます。False (既定値) の場合、コレクションへのアクセスは同期されません。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrCollectionBase.SyncRoot">
+      <summary>コレクションへのアクセスの同期に使用できるオブジェクトを取得します。</summary>
+      <returns>コレクションへのアクセスの同期に使用できる <see cref="T:System.Object" /> 値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrSmoObject">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrSmoObject" /> クラスは、Microsoft SQL Server の登録済みサーバー オブジェクトの作成に使用されるクラスです。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrSmoObject.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrSmoObject" /> オブジェクトの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrSmoObject.#ctor(Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrCollectionBase,System.String)">
+      <summary>指定した親列と名前に基づいて、<see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrSmoObject" /> オブジェクトの新しいインスタンスを初期化します。</summary>
+      <param name="parentColl">親オブジェクトを示す <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrCollectionBase" /> オブジェクトです。</param>
+      <param name="name">オブジェクトの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrSmoObject.CheckObjectState">
+      <summary>オブジェクトの状態を確認します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrSmoObject.ImplInitialize(System.String[],Microsoft.SqlServer.Management.Sdk.Sfc.OrderBy[])">
+      <summary>オブジェクトを初期化します。</summary>
+      <returns>オブジェクトの初期化が成功したかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、オブジェクトの初期化が成功したことを示します。False の場合、オブジェクトの初期化が失敗したことを示します。</returns>
+      <param name="fields">
+        <see cref="T:System.String" /> 配列です。</param>
+      <param name="orderby">OrderBy オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrSmoObject.Initialize">
+      <summary>オブジェクトを初期化します。</summary>
+      <returns>オブジェクトの初期化が成功したかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、オブジェクトの初期化が成功したことを示します。False の場合、オブジェクトの初期化が失敗したことを示します。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrSmoObject.IsObjectInitialized">
+      <summary>オブジェクトが初期化されたかどうかを示す <see cref="T:System.Boolean" /> 値を取得します。</summary>
+      <returns>オブジェクトが初期化されていた場合、<see cref="T:System.Boolean" /> 値は true です。それ以外の場合は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrSmoObject.Name">
+      <summary>オブジェクトの名前を取得または設定します。</summary>
+      <returns>オブジェクトの名前を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrSmoObject.Properties">
+      <summary>オブジェクトに関連付けられたプロパティを取得します。</summary>
+      <returns>オブジェクトのプロパティを示す <see cref="T:Microsoft.SqlServer.Management.Smo.PropertyCollection" /> オブジェクトの値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrSmoObject.Refresh">
+      <summary>オブジェクトのプロパティを更新します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrSmoObject.SetParentImpl(Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrSmoObject)">
+      <summary>親を設定します。</summary>
+      <param name="newParent">RegSvrSmoObject です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrSmoObject.Trace(System.String)">
+      <summary>トレース テキストを設定します。</summary>
+      <param name="traceText">トレース テキストを指定する <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrSmoObject.UpdateObjectState">
+      <summary>更新されたオブジェクトの状態を取得します。</summary>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrSmoObject.Urn">
+      <summary>オブジェクトを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Urn" /> オブジェクトを取得します。</summary>
+      <returns>オブジェクトを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Urn" /> オブジェクトの値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrSmoObject.UrnSkeleton">
+      <summary>オブジェクトを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Urn" /> オブジェクトを取得します。</summary>
+      <returns>オブジェクトを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Urn" /> オブジェクトの値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトは、Microsoft SQL Server 登録済みサーバーのグループを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup.#ctor(Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup,System.String)">
+      <summary>指定したサーバー グループと指定した名前に基づいて、<see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトの新しいインスタンスを初期化します。</summary>
+      <param name="serverGroup">新しいサーバー グループの基になるサーバー グループを示す <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトの値です。</param>
+      <param name="name">サーバー グループの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup.#ctor(System.String)">
+      <summary>指定した名前を持つ <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトの新しいインスタンスを初期化します。</summary>
+      <param name="name">サーバー グループの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup.Description">
+      <summary>参照先登録済みサーバー グループの説明テキストを取得します。値の設定も可能です。</summary>
+      <returns>サーバー グループの説明テキストを表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup.Parent">
+      <summary>参照先 <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトを取得します。値の設定も可能です。</summary>
+      <returns>参照先 <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup.Path">
+      <summary>参照先サーバー グループのパスを取得します。</summary>
+      <returns>参照先サーバー グループのパスを示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup.ServerType">
+      <summary>サーバー グループに関連付けられたサーバーの種類を示す <see cref="T:System.Guid" /> オブジェクトの値を取得します。</summary>
+      <returns>サーバー グループに関連付けられたサーバーの種類を示す <see cref="T:System.Guid" /> システム オブジェクトの値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup.Urn">
+      <summary>サーバー グループを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Urn" /> オブジェクトの値を取得します。</summary>
+      <returns>サーバー グループを表す <see cref="T:Microsoft.SqlServer.Management.Smo.Urn" /> オブジェクトの値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupBase">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupBase" /> クラスは、Microsoft SQL Server 登録済みサーバーのグループを表す <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> クラスを作成するときに使用される基本クラスです。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupBase.Alter">
+      <summary>Microsoft SQL Server のインスタンスの <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupBase" /> オブジェクトのプロパティに対する変更をすべて更新します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupBase.ClearCollections">
+      <summary>サーバー グループのコレクションを消去します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupBase.Create">
+      <summary>Microsoft SQL Server のインスタンスで、<see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupBase" /> オブジェクトによる定義に基づいてサーバー グループを作成します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupBase.Drop">
+      <summary>親サーバー グループから <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupBase" /> を削除します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupBase.GetSmoObject(Microsoft.SqlServer.Management.Sdk.Sfc.Urn)">
+      <summary>URN で示される <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrSmoObject" /> を取得します。</summary>
+      <returns>URN で示される <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegSvrSmoObject" /> です。</returns>
+      <param name="urn">取得するオブジェクトを識別する Microsoft.SqlServer.Management.Sdk.Sfc.Urn です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupBase.RegisteredServers">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトのコレクションを表します。各 <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトは、親サーバー グループに含まれる 1 つの登録済みサーバーを表します。</summary>
+      <returns>親サーバー グループに含まれるすべての登録済みサーバーを表す <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServerCollection" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupBase.ServerGroups">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトのコレクションを表します。各 <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトは、親サーバー グループに含まれる 1 つのサーバー グループを表します。</summary>
+      <returns>親サーバー グループに含まれるすべてのサーバー グループを表す <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupCollection" /> オブジェクトです。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupCollection">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupCollection" /> クラスは、サーバー グループのすべてのサーバー グループを表す <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトのコレクションを表します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupCollection.Add(Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトを <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupCollection" /> コレクションに追加します。</summary>
+      <param name="registeredServer">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupCollection" /> オブジェクトに追加される <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupCollection.Contains(System.String)">
+      <summary>指定した文字列値がコレクション内に存在するかどうかを判別します。</summary>
+      <returns>コレクション内に文字列値が存在するかどうかを示す <see cref="T:System.Boolean" /> 値です。True の場合、文字列値はコレクション内に存在します。False の場合、文字列値はコレクション内に存在しません。</returns>
+      <param name="key">コレクション内に存在することを判別するための値を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupCollection.CopyTo(System.Array,System.Int32)">
+      <summary>1 次元の配列にコレクション オブジェクトをコピーします。その際、指定されたインデックス値の位置からコピーを開始します。</summary>
+      <param name="array">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.RegisteredServer" /> オブジェクトの配列です。</param>
+      <param name="index">
+        <see cref="T:System" /> です。
+                    Int32
+                   コピーを開始するインデックス位置を示す値。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupCollection.Count">
+      <summary>参照先のコレクションに含まれるオブジェクトの数を取得します。</summary>
+      <returns>参照先のコレクションに含まれるオブジェクトの数を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupCollection.GetEnumerator">
+      <summary>
+        <see cref="T:System.Collections.IEnumerator" /> インターフェイスを返します。このインターフェイスを使用すると、コレクション内のオブジェクトを繰り返し処理できます。</summary>
+      <returns>参照先のコレクション オブジェクトの <see cref="T:System.Collections.IEnumerator" /> システム インターフェイスです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupCollection.Item(System.Int32)">
+      <summary>コレクション内にある指定したインデックス番号の <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトを取得します。</summary>
+      <returns>サーバー グループを表す <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトの値です。</returns>
+      <param name="index">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupCollection" /> コレクション内の <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトの位置を示す <see cref="T:System.Int32" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupCollection.Item(System.String)">
+      <summary>コレクション内にある指定した名前の <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトを取得します。</summary>
+      <returns>サーバー グループを表す <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトの値です。</returns>
+      <param name="name">
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupCollection" /> コレクション内の <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupCollection.Parent">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupCollection" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトを取得します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupCollection" /> オブジェクトの親である <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupCollection.Remove(System.String)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroup" /> オブジェクトを <see cref="T:Microsoft.SqlServer.Management.Smo.RegisteredServers.ServerGroupCollection" /> オブジェクトから削除します。</summary>
+      <param name="key">コレクションから削除するサーバー グループの名前を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,1406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.SqlServer.Replication</name>
+  </assembly>
+  <members>
+    <member name="E:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ComStatus">
+      <summary>マージ エージェントが同期の Com 状態情報を返すと発生します。</summary>
+    </member>
+    <member name="E:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status">
+      <summary>マージ エージェントが同期の状態情報を返すと発生します。</summary>
+    </member>
+    <member name="E:Microsoft.SqlServer.Replication.TransSynchronizationAgent.ComStatus">
+      <summary>ディストリビューション エージェントが同期の Com 状態情報を返すと発生します。</summary>
+    </member>
+    <member name="E:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Status">
+      <summary>ディストリビューション エージェントが同期の状態情報を返すと発生します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.AlternateSynchronizationPartner.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Replication.AlternateSynchronizationPartner" /> クラスのインスタンスを作成します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.AlternateSynchronizationPartner.#ctor(System.String,System.String,System.String,System.String,System.String)">
+      <summary>すべての必須プロパティを使用して <see cref="T:Microsoft.SqlServer.Replication.AlternateSynchronizationPartner" /> クラスのインスタンスを作成します。</summary>
+      <param name="publisher">代替パブリッシャーの名前です。</param>
+      <param name="publisherDatabase">パブリケーション データベースの名前です。</param>
+      <param name="publication">パブリケーションの名前です。</param>
+      <param name="distributor">ディストリビューターの名前です。</param>
+      <param name="friendlyName">代替同期パートナーを構成するパブリッシャー、パブリケーション、およびディストリビューターの関連付けの表示名です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ComErrorException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Replication.ComErrorException" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ComErrorException.#ctor(System.Int32,System.String,System.Int32,System.String,System.String,System.Guid,System.String)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Replication.ComErrorException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="comHResult">この例外に関連付けられているエラー コード (HRESULT) 値です。</param>
+      <param name="description">エラーの説明。</param>
+      <param name="helpContext">ヘルプ ファイルのトピックのコンテキストです。</param>
+      <param name="helpFile">ヘルプ ファイルへの絶対パスです。</param>
+      <param name="source">エラーのソースの名前です。</param>
+      <param name="interfaceId">エラーのソースである COM インターフェイスの識別子です。</param>
+      <param name="errorMessage">エラー メッセージ文字列です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ComErrorException.#ctor(System.String)">
+      <summary>指定したエラー メッセージを使用して、<see cref="T:Microsoft.SqlServer.Replication.ComErrorException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">エラーを説明するメッセージです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ComErrorException.#ctor(System.String,System.Exception)">
+      <summary>指定したエラー メッセージとこの例外の原因となった内部例外への参照を使用して、<see cref="T:Microsoft.SqlServer.Replication.ComErrorException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因を示すエラー メッセージです。</param>
+      <param name="innerException">現在の例外の原因になった例外です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ComErrorException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>例外に関する情報で指定した <see cref="T:System.Runtime.Serialization.SerializationInfo" /> を設定します。</summary>
+      <param name="info">シリアル化されたオブジェクトのデータを保持するオブジェクトです。</param>
+      <param name="context">送信元または送信先に関するコンテキスト情報。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ComErrorRecord.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Replication.ComErrorRecord" /> クラスのインスタンスを作成します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ComErrorRecord.#ctor(System.String,System.String,System.Int32)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Replication.ComErrorRecord" /> クラスのインスタンスとエラーの設定プロパティを作成します。</summary>
+      <param name="sourceType">エラーのソースを識別する値です。</param>
+      <param name="description">エラーの説明。</param>
+      <param name="errorNumber">数値エラー コードです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ConnectionFailureException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Replication.ConnectionFailureException" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ConnectionFailureException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>シリアル化されたデータを使用して、<see cref="T:Microsoft.SqlServer.Replication.ConnectionFailureException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="info">シリアル化されたオブジェクトのデータを保持するオブジェクトです。</param>
+      <param name="context">送信元または送信先に関するコンテキスト情報。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ConnectionFailureException.#ctor(System.String)">
+      <summary>指定したエラー メッセージを使用して、<see cref="T:Microsoft.SqlServer.Replication.ConnectionFailureException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">エラーを説明するメッセージです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ConnectionFailureException.#ctor(System.String,System.Exception)">
+      <summary>指定したエラー メッセージとこの例外の原因となった内部例外への参照を使用して、<see cref="T:Microsoft.SqlServer.Replication.ConnectionFailureException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因を示すエラー メッセージです。</param>
+      <param name="innerException">現在の例外の原因になった例外です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.FciException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Replication.FciException" /> クラスの新しいインスタンスを作成します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.FciException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>シリアル化されたデータを使用して <see cref="T:Microsoft.SqlServer.Replication.FciException" /> クラスの新しいインスタンスを作成します。</summary>
+      <param name="info">シリアル化されたオブジェクトのデータを保持するオブジェクトです。</param>
+      <param name="context">送信元または送信先に関するコンテキスト情報。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.FciException.#ctor(System.String)">
+      <summary>指定したエラー メッセージを使用して <see cref="T:Microsoft.SqlServer.Replication.FciException" /> クラスの新しいインスタンスを作成します。</summary>
+      <param name="message">エラーを説明するメッセージです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.FciException.#ctor(System.String,System.Exception)">
+      <summary>指定したエラー メッセージとこの例外の原因となった内部例外への参照を使用して、<see cref="T:Microsoft.SqlServer.Replication.FciException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">例外の原因を示すエラー メッセージです。</param>
+      <param name="innerException">現在の例外の原因になった例外です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Replication.MergeSynchronizationAgent" /> クラスのインスタンスを作成します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Abort">
+      <summary>同期を停止します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ClearAllTraceFlags">
+      <summary>同期エージェントで使用されたすべてのトレース フラグをクリアします。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ClearTraceFlag(System.Int32)">
+      <summary>トレース フラグをクリアします。</summary>
+      <param name="traceFlag">クリアするトレース フラグです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Dispose">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Replication.MergeSynchronizationAgent" /> によって使用されているアンマネージ リソースを解放します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Dispose(System.Boolean)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Replication.MergeSynchronizationAgent" /> によって使用されているアンマネージ リソースを解放します。</summary>
+      <param name="disposing">マネージ リソースとアンマネージ リソースの両方を解放する場合は true。アンマネージ リソースだけを解放する場合は false。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.EnableTraceFlag(System.Int32)">
+      <summary>フラグのトレースを有効にします。</summary>
+      <param name="traceFlag">有効にするトレース フラグ。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Finalize">
+      <summary>エージェントを終了します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.IsSnapshotRequired">
+      <summary>パブリッシャーまたはディストリビューターとサブスクライバーに接続して、エージェントの次回の同期の際に新しいスナップショットが適用されるかどうかを示します。</summary>
+      <returns>新しいスナップショットが適用されるかどうかを示す <see cref="T:System.Boolean" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ProcessMessagesAtPublisher">
+      <summary>パブリッシャーにあるメッセージを処理します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ProcessMessagesAtSubscriber">
+      <summary>サブスクライバーにあるメッセージを処理します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize">
+      <summary>マージ エージェントを開始してサブスクリプションを同期します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.NativeSqlConnectionException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Replication.NativeSqlConnectionException" /> クラスの新しいインスタンスを作成します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.NativeSqlConnectionException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>シリアル化されたデータを使用して <see cref="T:Microsoft.SqlServer.Replication.NativeSqlConnectionException" /> クラスの新しいインスタンスを作成します。</summary>
+      <param name="info">シリアル化されたオブジェクトのデータを保持するオブジェクトです。</param>
+      <param name="context">送信元または送信先に関するコンテキスト情報。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.NativeSqlConnectionException.#ctor(System.String)">
+      <summary>指定したエラー メッセージを使用して <see cref="T:Microsoft.SqlServer.Replication.NativeSqlConnectionException" /> クラスの新しいインスタンスを作成します。</summary>
+      <param name="message">エラーを説明するメッセージです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.NativeSqlConnectionException.#ctor(System.String,System.Exception)">
+      <summary>指定したエラー メッセージとこの例外の原因になった内部例外への参照を使用して、<see cref="T:Microsoft.SqlServer.Replication.NativeSqlConnectionException" /> クラスの新しいインスタンスを作成します。</summary>
+      <param name="message">例外の原因を示すエラー メッセージです。</param>
+      <param name="innerException">現在の例外の原因になった例外です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.NativeSqlConnectionException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>例外に関する情報で指定した <see cref="T:System.Runtime.Serialization.SerializationInfo" /> を設定します。</summary>
+      <param name="info">シリアル化されたオブジェクトのデータを保持するオブジェクトです。</param>
+      <param name="context">送信元または送信先に関するコンテキスト情報。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.OciException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Replication.OciException" /> クラスの新しいインスタンスを作成します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.OciException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>シリアル化されたデータを使用して <see cref="T:Microsoft.SqlServer.Replication.OciException" /> クラスの新しいインスタンスを作成します。</summary>
+      <param name="info">シリアル化されたオブジェクトのデータを保持するオブジェクトです。</param>
+      <param name="context">送信元または送信先に関するコンテキスト情報。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.OciException.#ctor(System.String)">
+      <summary>指定したエラー メッセージを使用して <see cref="T:Microsoft.SqlServer.Replication.OciException" /> クラスの新しいインスタンスを作成します。</summary>
+      <param name="message">エラーを説明するメッセージです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.OciException.#ctor(System.String,System.Exception)">
+      <summary>指定したエラー メッセージとこの例外の原因になった内部例外への参照を使用して、<see cref="T:Microsoft.SqlServer.Replication.OciException" /> クラスの新しいインスタンスを作成します。</summary>
+      <param name="message">例外の原因を示すエラー メッセージです。</param>
+      <param name="innerException">現在の例外の原因になった例外です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.OSException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Replication.OSException" /> クラスの新しいインスタンスを作成します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.OSException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>シリアル化されたデータを使用して <see cref="T:Microsoft.SqlServer.Replication.OSException" /> クラスの新しいインスタンスを作成します。</summary>
+      <param name="info">シリアル化されたオブジェクトのデータを保持するオブジェクトです。</param>
+      <param name="context">送信元または送信先に関するコンテキスト情報。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.OSException.#ctor(System.String)">
+      <summary>指定したエラー メッセージを使用して <see cref="T:Microsoft.SqlServer.Replication.OSException" /> クラスの新しいインスタンスを作成します。</summary>
+      <param name="message">エラーを説明するメッセージです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.OSException.#ctor(System.String,System.Exception)">
+      <summary>指定したエラー メッセージとこの例外の原因になった内部例外への参照を使用して、<see cref="T:Microsoft.SqlServer.Replication.OSException" /> クラスの新しいインスタンスを作成します。</summary>
+      <param name="message">例外の原因を示すエラー メッセージです。</param>
+      <param name="innerException">現在の例外の原因になった例外です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ParameterValueOutOfRangeException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Replication.ParameterValueOutOfRangeException" /> クラスの新しいインスタンスを既定値で初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ParameterValueOutOfRangeException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>情報パラメーターとコンテキスト パラメーターが指定された場合に、<see cref="T:Microsoft.SqlServer.Replication.ParameterValueOutOfRangeException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="info">データを読み込む先の <see cref="T:System.Runtime.Serialization.SerializationInfo" /> オブジェクトです。</param>
+      <param name="context">このシリアル化のシリアル化先です (<see cref="T:System.Runtime.Serialization.StreamingContext" /> を参照)。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ParameterValueOutOfRangeException.#ctor(System.String)">
+      <summary>メッセージ パラメーターが指定された場合に、<see cref="T:Microsoft.SqlServer.Replication.ParameterValueOutOfRangeException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">エラーの説明です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ParameterValueOutOfRangeException.#ctor(System.String,System.Exception)">
+      <summary>メッセージ パラメーターと内部例外パラメーターが指定された場合に、<see cref="T:Microsoft.SqlServer.Replication.ParameterValueOutOfRangeException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">エラーの説明です。</param>
+      <param name="innerException">外部コンポーネントからの、ラップされた例外です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.PasswordWriteOnlyException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Replication.PasswordWriteOnlyException" /> クラスの新しいインスタンスを作成します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.PasswordWriteOnlyException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>シリアル化されたデータを使用して <see cref="T:Microsoft.SqlServer.Replication.PasswordWriteOnlyException" /> クラスの新しいインスタンスを作成します。</summary>
+      <param name="info">シリアル化されたオブジェクトのデータを保持するオブジェクトです。</param>
+      <param name="context">送信元または送信先に関するコンテキスト情報。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.PasswordWriteOnlyException.#ctor(System.String)">
+      <summary>指定したエラー メッセージを使用して <see cref="T:Microsoft.SqlServer.Replication.PasswordWriteOnlyException" /> クラスの新しいインスタンスを作成します。</summary>
+      <param name="message">エラーを説明するメッセージです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.PasswordWriteOnlyException.#ctor(System.String,System.Exception)">
+      <summary>指定したエラー メッセージとこの例外の原因になった内部例外への参照を使用して、<see cref="T:Microsoft.SqlServer.Replication.PasswordWriteOnlyException" /> クラスの新しいインスタンスを作成します。</summary>
+      <param name="message">例外の原因を示すエラー メッセージです。</param>
+      <param name="innerException">現在の例外の原因になった例外です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentContainerException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Replication.ReplicationAgentContainerException" /> クラスの新しいインスタンスを作成します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentContainerException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>指定した情報とコンテキストを使用して、<see cref="T:Microsoft.SqlServer.Replication.ReplicationAgentContainerException" /> クラスの新しいインスタンスを作成します。</summary>
+      <param name="info">情報です。</param>
+      <param name="context">コンテキストです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentContainerException.#ctor(System.String)">
+      <summary>指定したエラー メッセージを使用して <see cref="T:Microsoft.SqlServer.Replication.ReplicationAgentContainerException" /> クラスの新しいインスタンスを作成します。</summary>
+      <param name="message">エラーを説明するメッセージです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentContainerException.#ctor(System.String,System.Exception)">
+      <summary>指定したエラー メッセージとこの例外の原因になった内部例外への参照を使用して、<see cref="T:Microsoft.SqlServer.Replication.ReplicationAgentContainerException" /> クラスの新しいインスタンスを作成します。</summary>
+      <param name="message">例外の原因を示すエラー メッセージです。</param>
+      <param name="innerException">現在の例外の原因になった例外です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentContainerException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>例外に関する情報で指定した <see cref="T:System.Runtime.Serialization.SerializationInfo" /> を設定します。</summary>
+      <param name="info">シリアル化されたオブジェクトのデータを保持するオブジェクトです。</param>
+      <param name="context">送信元または送信先に関するコンテキスト情報。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentContainerWithWatsonException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Replication.ReplicationAgentContainerWithWatsonException" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentContainerWithWatsonException.#ctor(System.String)">
+      <summary>指定したメッセージを使用して、<see cref="T:Microsoft.SqlServer.Replication.ReplicationAgentContainerWithWatsonException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">メッセージ。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentContainerWithWatsonException.#ctor(System.String,System.Exception)">
+      <summary>指定したメッセージと内部例外を使用して、<see cref="T:Microsoft.SqlServer.Replication.ReplicationAgentContainerWithWatsonException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">メッセージ。</param>
+      <param name="innerException">内部例外。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Replication.ReplicationAgentException" /> クラスの新しいインスタンスを作成します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>シリアル化されたデータを使用して <see cref="T:Microsoft.SqlServer.Replication.ReplicationAgentException" /> クラスの新しいインスタンスを作成します。</summary>
+      <param name="info">シリアル化されたオブジェクトのデータを保持するオブジェクトです。</param>
+      <param name="context">送信元または送信先に関するコンテキスト情報。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentException.#ctor(System.String)">
+      <summary>指定したエラー メッセージを使用して <see cref="T:Microsoft.SqlServer.Replication.ReplicationAgentException" /> クラスの新しいインスタンスを作成します。</summary>
+      <param name="message">エラーを説明するメッセージです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentException.#ctor(System.String,System.Exception)">
+      <summary>指定したエラー メッセージとこの例外の原因になった内部例外への参照を使用して、<see cref="T:Microsoft.SqlServer.Replication.ReplicationAgentException" /> クラスの新しいインスタンスを作成します。</summary>
+      <param name="message">例外の原因を示すエラー メッセージです。</param>
+      <param name="innerException">現在の例外の原因になった例外です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.ReplicationAgentException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>例外に関する情報で指定した <see cref="T:System.Runtime.Serialization.SerializationInfo" /> を設定します。</summary>
+      <param name="info">シリアル化されたオブジェクトのデータを保持するオブジェクトです。</param>
+      <param name="context">送信元または送信先に関するコンテキスト情報。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.StatusEventArgs.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Replication.StatusEventArgs" /> クラスの新しいインスタンスを作成します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.StatusEventArgs.#ctor(System.String,System.Byte,Microsoft.SqlServer.Replication.MessageStatus)">
+      <summary>提供されたレプリケーション エージェント状態情報を使用して <see cref="T:Microsoft.SqlServer.Replication.StatusEventArgs" /> クラスの新しいインスタンスを作成します。</summary>
+      <param name="message">レプリケーション エージェントによって返される状態メッセージです。</param>
+      <param name="percentCompleted">同期が全体のどの程度完了したかを示す <see cref="T:System.Byte" /> 値です。</param>
+      <param name="messageStatus">レプリケーション エージェントの現在の操作状態を示す <see cref="T:Microsoft.SqlServer.Replication.MessageStatus" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.TransSynchronizationAgent.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Replication.TransSynchronizationAgent" /> クラスのインスタンスを作成します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Abort">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Replication.TransSynchronizationAgent" /> の操作を停止します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Dispose">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Replication.TransSynchronizationAgent" /> クラスの現在のインスタンスによって使用されているすべてのリソースを解放します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Dispose(System.Boolean)">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Replication.TransSynchronizationAgent" /> クラスで使用されたすべてのリソースを解放します。</summary>
+      <param name="">マネージ リソースとアンマネージ リソースの両方を解放する場合は true。アンマネージ リソースだけを解放する場合は false。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Finalize">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Replication.TransSynchronizationAgent" /> を終了します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.TransSynchronizationAgent.IsSnapshotRequired">
+      <summary>ディストリビューターとサブスクライバーに接続して、エージェントの次回の同期の際に新しいスナップショットが適用されるかどうかを示します。</summary>
+      <returns>新しいスナップショットが適用される場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Synchronize">
+      <summary>ディストリビューション エージェントを開始してサブスクリプションを同期します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.DumpClient.GetDumper">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.SqlDumper.DumpClient" /> に関連付けられたダンパーを返します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.SqlDumper.DumpClient" /> に関連付けられたダンパーです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.DumpClient.Initialize">
+      <summary>現在の <see cref="T:Microsoft.SqlServer.SqlDumper.DumpClient" /> オブジェクトを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.DumpClient.InitializeStandalone">
+      <summary>スタンドアロン ダンプ クライアントを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.DumpClient.IsInitialized">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.SqlDumper.DumpClient" /> が初期化されているかどうかを示します。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.SqlDumper.DumpClient" /> が初期化されている場合は true、初期化されていない場合は false です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.DumpClient.SetDefaultExceptionHandling(System.AppDomain)">
+      <summary>既定の例外処理を設定します。</summary>
+      <param name="appDomain">アプリケーション ドメインです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.AddMemoryRaw(System.IntPtr,System.Int32)">
+      <summary>メモリ raw を追加します。</summary>
+      <param name="pData">データ。</param>
+      <param name="size">メモリ raw のサイズです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.Dispose">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.SqlDumper.Dumper" /> クラスで使用されたリソースを解放します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.Dump">
+      <summary>ダンプ ファイルです。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.GetDumpResultText">
+      <summary>ダンプの結果のテキストを返します。</summary>
+      <returns>ダンプの結果のテキストです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.RemoveMemoryRaw(System.IntPtr,System.Int32)">
+      <summary>メモリ raw を削除します。</summary>
+      <param name="pData">データ。</param>
+      <param name="size">メモリ raw のサイズです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetAppImageName(System.String)">
+      <summary>ダンパーのアプリケーション イメージを設定します。</summary>
+      <param name="appImageName">アプリケーション イメージの名前です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetAppVersion(System.Int32,System.Int32)">
+      <summary>ダンパーのアプリケーション バージョンを設定します。</summary>
+      <param name="mostSignificant">最上位バージョンです。</param>
+      <param name="leastSignificant">最下位バージョンです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetBucket(System.Int32,System.Int32)">
+      <summary>ダンパーのバケットを設定します。</summary>
+      <param name="framesToInclude">含めるフレームです。</param>
+      <param name="framesToSkip">スキップするフレームです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetBucketingParameters(System.Int32,System.Int32)">
+      <summary>ダンパーのバケット パラメーターを設定します。</summary>
+      <param name="offset">オフセット。</param>
+      <param name="signature">署名。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetDirectory(System.String)">
+      <summary>ダンパーのディレクトリを設定します。</summary>
+      <param name="dirPath">ディレクトリのパスです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetErrorDetails(System.String)">
+      <summary>ダンパーのエラーの詳細を設定します。</summary>
+      <param name="errorDetail">エラーの詳細です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetErrorText(System.String)">
+      <summary>ダンパーのエラー テキストを設定します。</summary>
+      <param name="errorText">エラー テキストです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetException(System.Exception)">
+      <summary>ダンパーの例外を設定します。</summary>
+      <param name="ex">例外です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetExtraFile(System.String)">
+      <summary>ダンパーの追加ファイルを設定します。</summary>
+      <param name="fileName">追加ファイルの名前です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetFileName(System.String)">
+      <summary>ダンパーのファイル名を設定します。</summary>
+      <param name="fileName">ファイル名。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetFlags(Microsoft.SqlServer.SqlDumper.DumperFlags,Microsoft.SqlServer.SqlDumper.DumperFlags)">
+      <summary>ダンパーの指定されたフラグを設定します。</summary>
+      <param name="flagsTurnOn">フラグが有効になっています。</param>
+      <param name="flagsTurnOff">フラグが無効になっています。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetInstanceName(System.String)">
+      <summary>ダンパーのインスタンス名を設定します。</summary>
+      <param name="instanceName">インスタンス名。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetLogFile(System.String,System.Int32)">
+      <summary>ダンパーのログ ファイルを設定します。</summary>
+      <param name="logName">ログ名です。</param>
+      <param name="size">ログ ファイルのサイズです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetMiniDumpFlags(Microsoft.SqlServer.SqlDumper.MiniDumpFlags,Microsoft.SqlServer.SqlDumper.MiniDumpFlags)">
+      <summary>ミニ ダンプ フラグを設定します。</summary>
+      <param name="miniDumpFlagsTurnOn">ミニ ダンプ フラグが有効になっています。</param>
+      <param name="miniDumpFlagsTurnOff">ミニ ダンプ フラグが無効になっています。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetServiceName(System.String)">
+      <summary>ダンパーのサービス名を設定します。</summary>
+      <param name="serviceName">サービス名。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetThreadId(System.Int32)">
+      <summary>ダンパーのスレッド識別子を設定します。</summary>
+      <param name="threadId">スレッド識別子です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetTitleName(System.String)">
+      <summary>ダンパーのタイトル名を設定します。</summary>
+      <param name="titleName">タイトル名です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.SqlDumper.Dumper.SetWaitTime(System.Int32)">
+      <summary>ダンパーの待機時間を設定します。</summary>
+      <param name="waitTime">待機時間です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.AlternateSynchronizationPartner.Distributor">
+      <summary>ディストリビューターの名前です。</summary>
+      <returns>
+        <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.AlternateSynchronizationPartner.FriendlyName">
+      <summary>代替同期パートナーを構成するパブリッシャー、パブリケーション、およびディストリビューターの関連付けの表示名です。 </summary>
+      <returns>
+        <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.AlternateSynchronizationPartner.Publication">
+      <summary>パブリケーションの名前を指定します。</summary>
+      <returns>
+        <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.AlternateSynchronizationPartner.Publisher">
+      <summary>代替パブリッシャーの名前です。</summary>
+      <returns>
+        <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.AlternateSynchronizationPartner.PublisherDatabase">
+      <summary>パブリケーション データベースの名前です。</summary>
+      <returns>
+        <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ComErrorException.ComHResult">
+      <summary>この例外に関連付けられているエラー コード (HRESULT) 値を取得します。</summary>
+      <returns>エラー コード (HRESULT) です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ComErrorException.Description">
+      <summary>エラーの説明を取得します。</summary>
+      <returns>エラーの説明です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ComErrorException.ErrorMessage">
+      <summary>エラー メッセージ文字列を取得します。</summary>
+      <returns>エラー メッセージです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ComErrorException.HelpContext">
+      <summary>ヘルプ ファイルのトピックのコンテキストを取得します。</summary>
+      <returns>ヘルプ ファイルのトピックのコンテキストです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ComErrorException.HelpFile">
+      <summary>ヘルプ ファイルへの絶対パスを取得します。</summary>
+      <returns>ヘルプ ファイルへの絶対パスです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ComErrorException.InterfaceId">
+      <summary>エラーのソースである COM インターフェイスの識別子を取得します。</summary>
+      <returns>COM インターフェイスの識別子です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ComErrorException.Source">
+      <summary>エラーのソースであるオブジェクトまたはアプリケーションの名前を取得します。</summary>
+      <returns>エラーのソースであるオブジェクトまたはアプリケーションの名前です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ComErrorRecord.Description">
+      <summary>エラーの説明です。</summary>
+      <returns>
+        <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ComErrorRecord.ErrorNumber">
+      <summary>数値エラー コードです。</summary>
+      <returns>
+        <see cref="T:System.Int32" /> 値。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ComErrorRecord.SourceType">
+      <summary>エラーのソースを識別する値です。</summary>
+      <returns>
+        <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.AlternateSynchronizationPartnerCollection">
+      <summary>サブスクリプションの代替同期パートナーを取得します。</summary>
+      <returns>サブスクリプションの代替同期パートナーです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.AltSnapshotFolder">
+      <summary>サブスクリプションの代替スナップショット フォルダーを取得します。値の設定も可能です。</summary>
+      <returns>代替スナップショット フォルダーのパスを表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ComErrorCollection">
+      <summary>レプリケーション エージェントで発生したエラーのコレクションを取得します。</summary>
+      <returns>
+        <see cref="T:System.Collections.IEnumerable" /> オブジェクトの <see cref="T:Microsoft.SqlServer.Replication.ComErrorRecord" /> コレクションです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor">
+      <summary>サブスクリプションのディストリビューターとして動作している Microsoft SQL Server のインスタンスの名前を取得します。値の設定も可能です。</summary>
+      <returns>ディストリビューターの名前を表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorAddress">
+      <summary>
+        <see cref="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorNetwork" /> プロパティが指定されている場合にディストリビューターへの接続に使用されるネットワーク アドレスを取得します。値の設定も可能です。</summary>
+      <returns>ディストリビューターのアドレスを表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorEncryptedPassword">
+      <summary>ディストリビューターの暗号化パスワードを取得します。値の設定も可能です。</summary>
+      <returns>ディストリビューターの暗号化パスワードです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin">
+      <summary>SQL Server 認証を使用してディストリビューターに接続するときに使用されるログイン名を取得します。値の設定も可能です。</summary>
+      <returns>ログイン名を表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorNetwork">
+      <summary>ディストリビューターに接続するときに使用されるクライアントの Net-Library を取得します。値の設定も可能です。</summary>
+      <returns>使用する Net-Library を示す <see cref="T:Microsoft.SqlServer.Replication.NetworkType" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword">
+      <summary>SQL Server 認証を使用してディストリビューターに接続するときに使用されるパスワードを設定します。</summary>
+      <returns>パスワード。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode">
+      <summary>ディストリビューターに接続するときに使用されるセキュリティ モードを取得します。値の設定も可能です。</summary>
+      <returns>セキュリティ モードを表す <see cref="T:Microsoft.SqlServer.Replication.SecurityMode" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DownloadGenerationsPerBatch">
+      <summary>パブリッシャーからサブスクライバーに変更をダウンロードする間に、1 つのバッチで処理される生成結果の数を取得します。値の設定も可能です。 生成結果は、アーティクルごとに変更の論理グループとして定義されます。</summary>
+      <returns>バッチごとの生成結果の数です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DynamicSnapshotLocation">
+      <summary>このサブスクライバーのパーティション スナップショットの場所を取得します。値の設定も可能です。</summary>
+      <returns>パーティション スナップショット ファイルの場所の完全なパスです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType">
+      <summary>同期中のデータ交換の方法を取得します。値の設定も可能です。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Replication.MergeExchangeType" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.FileTransferType">
+      <summary>初期スナップショット ファイルをサブスクライバーに転送する方法を取得します。値の設定も可能です。</summary>
+      <returns>
+        <see cref="T:Microsoft.SqlServer.Replication.FileTransferOption" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName">
+      <summary>HOST_NAME 関数を使用するパラメーター化されたフィルターを評価するときにマージ エージェントが使用する値を取得します。値の設定も可能です。</summary>
+      <returns>マージ エージェントで使用される値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InputMessageFile">
+      <summary>入力メッセージ ファイルを取得します。値の設定も可能です。</summary>
+      <returns>入力メッセージ ファイルです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetLogin">
+      <summary>Web 同期でインターネット認証を使用してパブリッシャーに接続するときに使用されるログイン名を取得します。値の設定も可能です。</summary>
+      <returns>
+        <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetPassword">
+      <summary>Web 同期でインターネット認証を使用してパブリッシャーに接続するときに使用される <see cref="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetLogin" /> プロパティのパスワードを設定します。</summary>
+      <returns>
+        <see cref="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetLogin" /> プロパティのパスワードです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetProxyLogin">
+      <summary>Web 同期でインターネット プロキシ サーバーを使用して Web サーバーに接続するときに使用されるログイン名を取得します。値の設定も可能です。</summary>
+      <returns>Web 同期で使用されるログイン名です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetProxyPassword">
+      <summary>Web 同期でインターネット プロキシ サーバーを使用して Web サーバーに接続するときに使用されるログイン名を設定します。</summary>
+      <returns>ログインのパスワードです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetProxyServer">
+      <summary>Web 同期で Web サーバーに接続するときに使用されるインターネット プロキシ サーバーの名前を取得します。値の設定も可能です。</summary>
+      <returns>サーバーの名前。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode">
+      <summary>Web 同期で Web サーバーに接続するときに使用される HTTP 認証方法を取得します。値の設定も可能です。</summary>
+      <returns>使用する HTTP 認証方法です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetTimeout">
+      <summary>Web サーバーに接続するときの HTTP タイムアウトを取得します。値の設定も可能です。</summary>
+      <returns>HTTP タイムアウトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetUrl">
+      <summary>Web 同期用に構成された Web サービスの URL を取得します。値の設定も可能です。</summary>
+      <returns>有効な URL を表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.LastUpdatedTime">
+      <summary>レプリケーション エージェントが最後にサブスクリプションの同期をとったときのタイムスタンプを取得します。</summary>
+      <returns>日付と時刻を表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.LoginTimeout">
+      <summary>接続が確立されるまで待機する最大秒数を取得します。値の設定も可能です。</summary>
+      <returns>秒単位の最大時間を表す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.MetadataRetentionCleanup">
+      <summary>メタデータをクリーンアップするかどうかを取得します。値の設定も可能です。</summary>
+      <returns>メタデータをクリーンアップする場合は True、それ以外の場合は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Output">
+      <summary>エージェントの出力ファイルを返します。値の設定も可能です。</summary>
+      <returns>出力ファイルの名前と完全なパスを表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.OutputMessageFile">
+      <summary>入力メッセージ ファイルを取得します。値の設定も可能です。</summary>
+      <returns>入力メッセージ ファイルです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.OutputVerboseLevel">
+      <summary>エージェントの出力ファイルに書き込まれる情報の詳細さのレベルを取得します。値の設定も可能です。</summary>
+      <returns>次のいずれかの <see cref="T:System.Int32" /> 値を指定できます。ValueDescription0Only error messages are logged.1All progress report messages are logged.2All progress report messages and error messages are logged.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ProfileName">
+      <summary>エージェントが使用するプロファイルの名前を取得します。値の設定も可能です。</summary>
+      <returns>プロファイルの名前を表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Publication">
+      <summary>パブリケーションの名前を取得します。値の設定も可能です。</summary>
+      <returns>パブリケーションの名前です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Publisher">
+      <summary>サブスクリプションのパブリッシャーとして動作している Microsoft SQL Server のインスタンスの名前を取得します。値の設定も可能です。</summary>
+      <returns>パブリッシャーです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherAddress">
+      <summary>
+        <see cref="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherNetwork" /> プロパティが指定されている場合にパブリッシャーへの接続に使用されるネットワーク アドレスを取得します。値の設定も可能です。</summary>
+      <returns>パブリッシャーのアドレスを表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherChanges">
+      <summary>前回の同期の間にサブスクライバーで適用されたパブリッシャーの変更の合計数を取得します。</summary>
+      <returns>パブリッシャーの変更の合計数です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherConflicts">
+      <summary>前回の同期の間にパブリッシャーで発生した競合の合計数を取得します。</summary>
+      <returns>発生した競合の合計数です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherDatabase">
+      <summary>パブリケーション データベースの名前を取得します。値の設定も可能です。</summary>
+      <returns>パブリケーション データベースの名前です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherEncryptedPassword">
+      <summary>パブリッシャーの暗号化パスワードを取得します。値の設定も可能です。</summary>
+      <returns>パブリッシャーの暗号化パスワードです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherFailoverPartner">
+      <summary>パブリケーション データベースとのデータベース ミラーリング セッションに参加しているフェールオーバー パートナーの SQL Server インスタンスを取得します。値の設定も可能です。</summary>
+      <returns>フェールオーバー パートナーの SQL Server インスタンスです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin">
+      <summary>SQL Server 認証を使用してパブリッシャーに接続するときに使用されるログイン名を取得します。値の設定も可能です。</summary>
+      <returns>ログイン名を表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherNetwork">
+      <summary>パブリッシャーに接続するときに使用されるクライアントの Net-Library を取得します。値の設定も可能です。</summary>
+      <returns>使用する Net-Library を示す <see cref="T:Microsoft.SqlServer.Replication.NetworkType" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword">
+      <summary>SQL Server 認証を使用してパブリッシャーに接続するときに使用されるパスワードを設定します。</summary>
+      <returns>使用されるパスワードです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode">
+      <summary>パブリッシャーに接続するときに使用されるセキュリティ モードを取得します。値の設定も可能です。</summary>
+      <returns>セキュリティ モードを表す <see cref="T:Microsoft.SqlServer.Replication.SecurityMode" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.QueryTimeout">
+      <summary>内部クエリがタイムアウトになるまでの秒数を取得します。値の設定も可能です。</summary>
+      <returns>秒数を表す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SecureDistributorEncryptedPassword">
+      <summary>ディストリビューターの、セキュリティで保護された暗号化パスワードを取得します。値の設定も可能です。</summary>
+      <returns>ディストリビューターの、セキュリティで保護された暗号化パスワードです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SecurePublisherEncryptedPassword">
+      <summary>パブリッシャーの、セキュリティで保護された暗号化パスワードを取得します。値の設定も可能です。</summary>
+      <returns>パブリッシャーの、セキュリティで保護された暗号化パスワードです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SecureSubscriberEncryptedPassword">
+      <summary>サブスクライバーの、セキュリティで保護された暗号化パスワードを取得します。値の設定も可能です。</summary>
+      <returns>サブスクライバーの、セキュリティで保護された暗号化パスワードです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Subscriber">
+      <summary>サブスクライバーとして動作している Microsoft SQL Server のインスタンスの名前を取得します。値の設定も可能です。</summary>
+      <returns>サブスクライバー。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberChanges">
+      <summary>前回の同期の間にパブリッシャーで適用されたサブスクライバーの変更の合計数を取得します。</summary>
+      <returns>前回の同期の間にパブリッシャーで適用されたサブスクライバーの変更の合計数です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberConflicts">
+      <summary>前回の同期の間にパブリッシャーで発生した競合の合計数を取得します。</summary>
+      <returns>発生した競合の合計数です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberDatabase">
+      <summary>サブスクリプション データベースの名前を取得します。値の設定も可能です。</summary>
+      <returns>サブスクリプション データベースの名前です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberDatabasePath">
+      <summary>サブスクライバー データベースのパスを取得します。値の設定も可能です。</summary>
+      <returns>サブスクライバー データベースのパスです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberDataSourceType">
+      <summary>サブスクライバーとして使用されるデータ ソースの種類を取得します。値の設定も可能です。</summary>
+      <returns>サブスクライバーとして使用されるデータ ソースの種類です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberEncryptedPassword">
+      <summary>サブスクライバーの暗号化パスワードを取得します。値の設定も可能です。</summary>
+      <returns>サブスクライバーの暗号化パスワードです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberLogin">
+      <summary>SQL Server 認証を使用してサブスクライバーに接続するときに使用されるログイン名を取得します。値の設定も可能です。</summary>
+      <returns>ログイン名を表す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberPassword">
+      <summary>SQL Server 認証を使用してサブスクライバーに接続するときに使用されるパスワードを設定します。</summary>
+      <returns>サブスクライバーに接続するときに使用するパスワードです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberSecurityMode">
+      <summary>サブスクライバーに接続するときに使用されるセキュリティ モードを取得します。値の設定も可能です。</summary>
+      <returns>セキュリティ モードを表す <see cref="T:Microsoft.SqlServer.Replication.SecurityMode" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType">
+      <summary>サブスクリプションがプッシュ サブスクリプションかプル サブスクリプションかを取得します。値の設定も可能です。</summary>
+      <returns>サブスクリプションの種類を示す <see cref="T:Microsoft.SqlServer.Replication.SubscriptionOption" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SyncToAlternate">
+      <summary>同期の対象が代替同期パートナーかどうかを取得します。値の設定も可能です。</summary>
+      <returns>同期の対象が代替同期パートナーの場合は True、それ以外の場合は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.UploadGenerationsPerBatch">
+      <summary>サブスクライバーからパブリッシャーに変更をアップロードする間に、1 つのバッチで処理される生成結果の数を取得します。値の設定も可能です。 生成結果は、アーティクルごとに変更の論理グループとして定義されます。</summary>
+      <returns>バッチごとの生成結果の数です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.UseInteractiveResolver">
+      <summary>調整時に対話型の競合回避モジュールを使用するかどうかを取得します。値の設定も可能です。</summary>
+      <returns>調整時に対話型の競合回避モジュールを使用する場合は True、それ以外の場合は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.UseWebSynchronization">
+      <summary>Web 同期が使用されるかどうかを取得します。値の設定も可能です。</summary>
+      <returns>Web 同期が使用される場合は True、それ以外の場合は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Validate">
+      <summary>同期の最後にサブスクライバー データのデータを検証するかどうかを取得します。値の設定も可能です。</summary>
+      <returns>実行する検証の種類を示す <see cref="T:Microsoft.SqlServer.Replication.ValidateType" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.WorkingDirectory">
+      <summary>FTP を使用する場合にスナップショット ファイルにアクセスできる作業ディレクトリを取得します。値の設定も可能です。</summary>
+      <returns>スナップショット ファイルにアクセスできる作業ディレクトリです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.NativeSqlConnectionException.ErrorSource">
+      <summary>エラーのソースです。</summary>
+      <returns>
+        <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.NativeSqlConnectionException.SqlState">
+      <summary>エラーの Microsoft SQL Server SQL 状態を示します。</summary>
+      <returns>ANSI SQL 標準に従った 5 文字の <see cref="T:System.String" /> 値で、エラー コードを示します。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ReplicationAgentContainerException.ExceptionCollection">
+      <summary>レプリケーション エージェントによって返された例外オブジェクトのコレクションを取得します。</summary>
+      <returns>例外オブジェクトの <see cref="T:System.Collections.ArrayList" /> です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ReplicationAgentContainerException.FlatExceptionCollection">
+      <summary>
+        <see cref="T:System.Collections.IEnumerable" /> インターフェイスを使用してアクセスする例外オブジェクトのコレクションを取得します。</summary>
+      <returns>コレクションにアクセスするために使用する <see cref="T:System.Collections.IEnumerable" /> インターフェイスです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.ReplicationAgentException.MessageCode">
+      <summary>基になるエラーのエラー コードを取得します。</summary>
+      <returns>
+        <see cref="T:System.Int32" /> 値。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.StatusEventArgs.Message">
+      <summary>レプリケーション エージェントによって返される状態メッセージです。</summary>
+      <returns>状態メッセージを含む <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.StatusEventArgs.MessageStatus">
+      <summary>レプリケーション エージェントの現在の操作状態です。</summary>
+      <returns>レプリケーション エージェントの現在の操作状態を示す <see cref="T:Microsoft.SqlServer.Replication.MessageStatus" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.StatusEventArgs.PercentCompleted">
+      <summary>同期が全体のどの程度完了したかを示します。</summary>
+      <returns>同期が全体のどの程度完了したかを示す、0 (開始) ～ 100 (完了) の <see cref="T:System.Byte" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.AltSnapshotFolder">
+      <summary>サブスクリプションの代替スナップショット フォルダーを取得します。値の設定も可能です。</summary>
+      <returns>代替スナップショット フォルダーです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.ComErrorCollection">
+      <summary>レプリケーション エージェントで発生したエラーのコレクションを取得します。</summary>
+      <returns>レプリケーション エージェントで発生したエラーの <see cref="T:System.Collections.IEnumerable" /> コレクションです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Distributor">
+      <summary>サブスクリプションのディストリビューターとして動作している Microsoft SQL Server のインスタンスの名前を取得します。値の設定も可能です。</summary>
+      <returns>ディストリビューターの名前です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorAddress">
+      <summary>
+        <see cref="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorNetwork" /> プロパティが指定されている場合にディストリビューターへの接続に使用されるネットワーク アドレスを取得します。値の設定も可能です。</summary>
+      <returns>ディストリビューターのアドレスです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorEncryptedPassword">
+      <summary>SQL Server 認証を使用してディストリビューターに接続するときに使用される暗号化パスワードを取得します。値の設定も可能です。</summary>
+      <returns>使用される暗号化パスワードです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorLogin">
+      <summary>SQL Server 認証を使用してディストリビューターに接続するときに使用されるログイン名を取得します。値の設定も可能です。</summary>
+      <returns>ログイン名です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorNetwork">
+      <summary>ディストリビューターに接続するときに使用されるクライアントの Net-Library を取得します。値の設定も可能です。</summary>
+      <returns>使用する Net-Library です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorPassword">
+      <summary>SQL Server 認証を使用してディストリビューターに接続するときに使用されるパスワードを取得します。値の設定も可能です。</summary>
+      <returns>使用されるパスワードです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DistributorSecurityMode">
+      <summary>ディストリビューターに接続するときに使用されるセキュリティ モードを取得します。値の設定も可能です。</summary>
+      <returns>セキュリティ モードです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DtsPackageFileName">
+      <summary>コマンド行セットをサブスクライバーに適用する前に変換するための Microsoft SQL Server 2000 データ変換サービス (DTS) パッケージの名前とパスを取得します。値の設定も可能です。</summary>
+      <returns>Microsoft SQL Server 2000 データ変換サービス (DTS) パッケージの名前とパスです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DtsPackagePassword">
+      <summary>
+        <see cref="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.DtsPackageFileName" /> プロパティで指定された Microsoft SQL Server 2000 データ変換サービス (DTS) パッケージへのアクセスに使用される所有者パスワードを取得します。値の設定も可能です。</summary>
+      <returns>Microsoft SQL Server 2000 データ変換サービス (DTS) パッケージへのアクセスに使用される所有者パスワードです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.FileTransferType">
+      <summary>初期スナップショット ファイルをサブスクライバーに転送する方法を取得します。値の設定も可能です。</summary>
+      <returns>スナップショット ファイルを取得するためのオプションです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.HostName">
+      <summary>使用されるホスト名を取得します。値の設定も可能です。</summary>
+      <returns>ホスト名です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.LastUpdatedTime">
+      <summary>レプリケーション エージェントが最後にサブスクリプションの同期をとったときのタイムスタンプを取得します。</summary>
+      <returns>レプリケーション エージェントが最後にサブスクリプションの同期をとったときのタイムスタンプです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.LoginTimeout">
+      <summary>接続が確立されるまで待機する最大秒数を取得します。値の設定も可能です。</summary>
+      <returns>接続が確立されるまで待機する最大秒数です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.MaxDeliveredTransactions">
+      <summary>1 回のエージェント実行でサブスクライバーに適用されるトランザクションの最大数を取得します。値の設定も可能です。</summary>
+      <returns>トランザクションの最大数です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Output">
+      <summary>エージェントの出力ファイルの名前とパスを取得します。値の設定も可能です。</summary>
+      <returns>エージェントの出力ファイルの名前とパスです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.OutputVerboseLevel">
+      <summary>ディストリビューション エージェントによってエージェントの出力ファイルに記録される情報の量を取得します。値の設定も可能です。</summary>
+      <returns>次のいずれかの <see cref="T:System.Int32" /> 値を指定できます。ValueDescription0 Only error messages are printed.1All the progress report messages are printed.2 (default)All error messages and progress report messages are printed. This is useful for debugging.</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.ProfileName">
+      <summary>エージェントが使用するプロファイルの名前を取得します。値の設定も可能です。</summary>
+      <returns>プロファイルの名前。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Publication">
+      <summary>パブリケーションの名前を取得します。値の設定も可能です。</summary>
+      <returns>パブリケーションの名前を指定します。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Publisher">
+      <summary>サブスクリプションのパブリッシャーとして動作している Microsoft SQL Server のインスタンスの名前を取得します。値の設定も可能です。</summary>
+      <returns>Microsoft SQL Server のインスタンスの名前です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.PublisherDatabase">
+      <summary>パブリケーション データベースの名前を取得します。値の設定も可能です。</summary>
+      <returns>パブリケーション データベースの名前です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.QueryTimeout">
+      <summary>内部クエリがタイムアウトになるまでの秒数を取得します。値の設定も可能です。</summary>
+      <returns>内部クエリがタイムアウトになるまでの秒数です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.SecureDistributorEncryptedPassword">
+      <summary>ディストリビューターの、セキュリティで保護された暗号化パスワードを取得します。値の設定も可能です。</summary>
+      <returns>ディストリビューターの、セキュリティで保護された暗号化パスワードです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.SecureSubscriberEncryptedPassword">
+      <summary>サブスクライバーの、セキュリティで保護された暗号化パスワードを取得します。値の設定も可能です。</summary>
+      <returns>サブスクライバーの、セキュリティで保護された暗号化パスワードです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.SkipErrors">
+      <summary>このエージェントによってスキップされるエラー番号のコロン区切りの一覧を取得します。値の設定も可能です。</summary>
+      <returns>Microsoft SQL Server エラー番号のコロン区切りの一覧です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.Subscriber">
+      <summary>サブスクライバーとして動作している Microsoft SQL Server のインスタンスの名前を取得します。値の設定も可能です。</summary>
+      <returns>Microsoft SQL Server のインスタンスの名前です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.SubscriberDatabase">
+      <summary>サブスクリプション データベースの名前を取得します。値の設定も可能です。</summary>
+      <returns>サブスクリプション データベースの名前です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.SubscriberDatabasePath">
+      <summary>サブスクライバーのデータベース パスを取得します。値の設定も可能です。</summary>
+      <returns>サブスクライバーのデータベース パスです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.SubscriberDataSourceType">
+      <summary>サブスクライバーとして使用されるデータ ソースの種類を取得します。値の設定も可能です。</summary>
+      <returns>サブスクライバーとして使用されるデータ ソースの種類です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.SubscriberEncryptedPassword">
+      <summary>サブスクライバーの暗号化パスワードを取得します。値の設定も可能です。</summary>
+      <returns>サブスクライバーの暗号化パスワードです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.SubscriberLogin">
+      <summary>SQL Server 認証を使用してサブスクライバーに接続するときに使用されるログイン名を取得します。値の設定も可能です。</summary>
+      <returns>ログイン名です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.SubscriberPassword">
+      <summary>SQL Server 認証を使用してサブスクライバーに接続するときに使用されるパスワードを取得します。値の設定も可能です。</summary>
+      <returns>サブスクライバーのパスワードです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.SubscriberSecurityMode">
+      <summary>パブリッシャーに接続するときに使用されるセキュリティ モードを取得します。値の設定も可能です。</summary>
+      <returns>セキュリティ モードです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.SubscriptionType">
+      <summary>サブスクリプションがプッシュ サブスクリプションかプル サブスクリプションかを取得します。値の設定も可能です。</summary>
+      <returns>サブスクリプションの種類です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.UndeliveredCommands">
+      <summary>配信されなかったコマンドの数を取得します。</summary>
+      <returns>配信されなかったコマンドの数です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.UndeliveredTransactions">
+      <summary>配信されなかったトランザクションの数を取得します。</summary>
+      <returns>配信されなかったトランザクションの数です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.UseInProcLoader">
+      <summary>サブスクライバーでスナップショット ファイルを適用するときに BULK INSERT コマンドを使用するかどうかを示す値を取得します。値の設定も可能です。</summary>
+      <returns>サブスクライバーでスナップショット ファイルを適用するときに BULK INSERT コマンドを使用する場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Replication.TransSynchronizationAgent.WorkingDirectory">
+      <summary>ファイル転送プロトコル (FTP) を使用する場合にスナップショット ファイルにアクセスできる作業ディレクトリを取得します。値の設定も可能です。</summary>
+      <returns>作業ディレクトリです。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.AbortPolicy">
+      <summary>予期しないシャットダウンが発生した場合に実行中のレプリケーション エージェント スレッドを終了するためのオプションを列挙します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.AbortPolicy.Synchronous">
+      <summary>シャットダウンが開始されると、クエリの実行やメッセージの記録の前後などの決まった場所でのみエージェント スレッドが終了されます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.AbortPolicy.Asynchronous">
+      <summary>シャットダウンを開始するエージェント スレッドによって他の実行中のエージェント スレッドが強制的に中止される可能性があります。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.AlternateSynchronizationPartner">
+      <summary>プライマリ パブリッシャーが利用できない場合にサブスクリプションの同期をとるために使用できる代替パブリッシャーを表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.ComErrorException">
+      <summary>レプリケーション エージェントで一般エラーが発生するとスローされる例外です。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.ComErrorRecord">
+      <summary>レプリケーション エージェントによって生成されるエラーの情報を表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.ConnectionFailureException">
+      <summary>レプリケーション エージェントの実行時にデータベース接続が失敗するとスローされる例外です。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.DataSourceType">
+      <summary>レプリケーション サブスクライバーとしてサポートされるデータ ソースを列挙します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DataSourceType.SqlServer">
+      <summary>Microsoft SQL Server サブスクライバー</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DataSourceType.OdbcDsn">
+      <summary>ODBC データ ソース サブスクライバー</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DataSourceType.Jet4Database">
+      <summary>Microsoft Jet&amp;amp;#xA0;4.0 (Access) データベース サブスクライバー</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DataSourceType.OleDBDataSource">
+      <summary>OLE DB データ ソース サブスクライバー</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DataSourceType.Exchange">
+      <summary>Microsoft Exchange サブスクライバー </summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DataSourceType.Oracle">
+      <summary>Oracle データベース サブスクライバー</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DataSourceType.DB2Universal">
+      <summary>DB2 Universal Database サブスクライバー</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DataSourceType.SqlServerCE">
+      <summary>Microsoft SQL Server Compact サブスクライバー</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DataSourceType.XmlDataSource">
+      <summary>XML データ ソース サブスクライバー</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.DeadlockPriority">
+      <summary>スナップショットの生成中に発生したデッドロックを解決するために使用される優先度を列挙します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.MinusTen">
+      <summary>「解説」を参照してください。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.MinusNine">
+      <summary>「解説」を参照してください。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.MinusEight">
+      <summary>「解説」を参照してください。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.MinusSeven">
+      <summary>「解説」を参照してください。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.MinusSix">
+      <summary>「解説」を参照してください。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.MinusFive">
+      <summary>「解説」を参照してください。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.MinusFour">
+      <summary>「解説」を参照してください。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.MinusThree">
+      <summary>「解説」を参照してください。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.MinusTwo">
+      <summary>「解説」を参照してください。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.MinusOne">
+      <summary>「解説」を参照してください。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.Zero">
+      <summary>「解説」を参照してください。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.One">
+      <summary>「解説」を参照してください。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.Two">
+      <summary>「解説」を参照してください。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.Three">
+      <summary>「解説」を参照してください。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.Four">
+      <summary>「解説」を参照してください。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.Five">
+      <summary>「解説」を参照してください。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.Six">
+      <summary>「解説」を参照してください。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.Seven">
+      <summary>「解説」を参照してください。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.Eight">
+      <summary>「解説」を参照してください。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.Nine">
+      <summary>「解説」を参照してください。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.Ten">
+      <summary>「解説」を参照してください。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.Low">
+      <summary>現在のセッションがデッドロックに含まれ、デッドロック チェーンに含まれる他のセッションが、デッドロックの優先度を NORMAL または HIGH に設定しているか、-5 より大きい整数値に設定している場合、現在のセッションがデッドロックの対象になります。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.Normal">
+      <summary>デッドロック チェーンに含まれる他のセッションが、デッドロック優先度を HIGH または 0 より大きい整数値に設定している場合、現在のセッションがデッドロックの対象になります。ただし、他のセッションがデッドロックの優先度を LOW または 0 より小さい整数値に設定している場合は、現在のセッションはデッドロックの対象にはなりません。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.DeadlockPriority.High">
+      <summary>デッドロック チェーンに含まれる他のセッションが、デッドロック優先度を 5 より大きい整数値に設定している場合、現在のセッションがデッドロックの対象になります。また、別のセッションがデッドロックの優先度を HIGH または 5 に等しい整数値に設定している場合、現在のセッションはデッドロック対象の候補になります。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.FciException">
+      <summary>ファイル圧縮インターフェイス (FCI) でエラーが発生した場合にスローされる例外です。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.FileTransferOption">
+      <summary>スナップショット ファイルを取得するためのオプションを列挙します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.FileTransferOption.Unc">
+      <summary>汎用名前付け規則 (UNC) ネットワーク共有からスナップショット ファイルにアクセスします。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.FileTransferOption.Ftp">
+      <summary>FTP を使用してスナップショット ファイルをダウンロードします。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.MergeExchangeType">
+      <summary>マージ エージェントでデータの同期をとるためのオプションを列挙します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MergeExchangeType.None">
+      <summary>交換形式は指定されていません。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MergeExchangeType.Upload">
+      <summary>サブスクライバーの変更のアップロードのみが行われます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MergeExchangeType.Download">
+      <summary>パブリッシャーの変更のダウンロードのみが行われます。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MergeExchangeType.Bidirectional">
+      <summary>変更がパブリッシャーからダウンロードされ、サブスクライバーからアップロードされます (既定値)。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.MergeSynchronizationAgent">
+      <summary>レプリケーション マージ エージェントの機能を提供します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.MessageStatus">
+      <summary>レプリケーション エージェントの状態コードを列挙します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MessageStatus.None">
+      <summary>状態を示す情報はありません。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MessageStatus.Start">
+      <summary>エージェントを開始しています。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MessageStatus.Succeed">
+      <summary>エージェント操作が正常に完了しました。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MessageStatus.InProgress">
+      <summary>エージェント操作を実行中です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MessageStatus.Idle">
+      <summary>エージェントは実行中で、変更を待っています。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MessageStatus.Retry">
+      <summary>失敗したエージェント操作を再試行しています。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MessageStatus.Fail">
+      <summary>エージェント操作が失敗しました。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MessageStatus.ValidationFail">
+      <summary>エージェントがデータ検証を実行し、検証が失敗しました。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MessageStatus.ValidationPass">
+      <summary>エージェントがデータ検証を実行し、検証が正常に完了しました。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MessageStatus.RequestShutdownOnValidationFail">
+      <summary>エージェントがデータ検証を実行し、検証が失敗しました。 エージェントはシャットダウンします。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.MessageStatus.Abort">
+      <summary>エージェント操作が中止されました。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.NativeSqlConnectionException">
+      <summary>一括コピー操作の間に ODBC ドライバーまたは OLEDB プロバイダーでエラーが発生するとスローされる例外です。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.NetworkType">
+      <summary>レプリケーション エージェントがレプリケーション サーバーに接続するときに使用する、サポートされている Net-Library を列挙します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.NetworkType.DefaultNetwork">
+      <summary>現在設定されているクライアントの Net-Library です (既定値)。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.NetworkType.TcpIPSockets">
+      <summary>TCP/IP ソケット Net-Library です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.NetworkType.Multiprotocol">
+      <summary />
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.OciException">
+      <summary>Oracle Call Interface (OCI) でエラーが発生するとスローされる例外です。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.OSException">
+      <summary>ファイル圧縮インターフェイス (FCI) の操作中にオペレーティング システムでエラーが発生した場合にスローされる例外です。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.ParameterValueOutOfRangeException">
+      <summary>パラメーターに渡された値がパラメーターのデータ型の範囲外である場合にスローされる例外です。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.PasswordWriteOnlyException">
+      <summary>レプリケーション エージェントのパスワード プロパティにアクセスするとスローされる例外です。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.ReplicationAgentContainerException">
+      <summary>マネージ コード ベースのレプリケーション エージェントで 1 つ以上のエラーが発生した場合にスローされる例外です。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.ReplicationAgentContainerWithWatsonException">
+      <summary>ワトソン博士プログラムを使用するマネージ コード ベースのレプリケーション エージェントで 1 つ以上のエラーが発生した場合にスローされる例外を表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.ReplicationAgentException">
+      <summary>レプリケーション エージェントの実行中に生成される例外の基本例外クラスです。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.ReplicationType">
+      <summary>スナップショットが生成されるパブリケーションの種類を列挙します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.ReplicationType.None">
+      <summary>パブリケーションの種類が指定されていません。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.ReplicationType.Transactional">
+      <summary>トランザクション パブリケーションです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.ReplicationType.Snapshot">
+      <summary>スナップショット パブリケーションです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.ReplicationType.Merge">
+      <summary>マージ パブリケーションです。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.SecurityMode">
+      <summary>レプリケーション エージェントがレプリケーション トポロジのサーバーに接続するときに使用する認証の種類を列挙します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.SecurityMode.Standard">
+      <summary>Web 同期の Web サーバーへの SSL (Secure Sockets Layer) 接続で使用する SQL Server&amp;amp;#xA0;認証または HTTP 基本認証です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.SecurityMode.Integrated">
+      <summary>[Windows 認証]</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.StatusEventArgs">
+      <summary>
+        <see cref="E:Microsoft.SqlServer.Replication.AgentCore.Status" /> イベントが発生した場合にレプリケーション エージェントによって返される状態情報を表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.SubscriptionOption">
+      <summary>サブスクリプションの種類を列挙します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.SubscriptionOption.Push">
+      <summary>プッシュ サブスクリプションです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.SubscriptionOption.Pull">
+      <summary>プル サブスクリプションです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.SubscriptionOption.Anonymous">
+      <summary>匿名サブスクリプションです。 パブリッシャー側でサブスクリプションを登録せずにサブスクリプションを作成する場合、匿名サブスクリプションは必須です。 これは、サブスクリプションの構成時にパブリッシャーに SQL Server 接続を確立できない場合に必要です。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.TransSynchronizationAgent">
+      <summary>レプリケーション ディストリビューション エージェントの機能を提供します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Replication.ValidateType">
+      <summary>同期中に実行される検証の種類を列挙します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.ValidateType.NoValidation">
+      <summary>サブスクライバー データを検証しません (既定値)。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.ValidateType.RowCountOnly">
+      <summary>サブスクライバー データの行数の完全検証を実行します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.ValidateType.RowCountAndChecksum">
+      <summary>サブスクライバー データの行数の完全検証とチェックサムの検証を実行します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.ValidateType.FastRowCountOnly">
+      <summary>サブスクライバー データの行数の高速検証のみを実行します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.ValidateType.FastRowCountAndChecksum">
+      <summary>サブスクライバー データの行数の高速検証とチェックサムの検証を実行します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.ValidateType.RowCountAndBinaryChecksum">
+      <summary>サブスクライバー データの行数の完全検証とバイナリ チェックサムの検証を実行します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Replication.ValidateType.FastRowCountAndBinaryChecksum">
+      <summary>サブスクライバー データの行数の高速検証とバイナリ チェックサムの検証を実行します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.SqlDumper.DumpClient">
+      <summary>ダンプ クライアントを表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.SqlDumper.Dumper">
+      <summary>ダンパーを表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.SqlDumper.DumperFlags">
+      <summary>この列挙体には、メンバー値のビットごとの組み合わせを可能にする <see cref="T:System.FlagsAttribute" /> 属性が含まれています。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.Default">
+      <summary>Default 属性です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.NoMiniDump">
+      <summary>NoMiniDump 属性です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.ReferencedMemory">
+      <summary>ReferencedMemory 属性です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.AllMemory">
+      <summary>AllMemory 属性です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.AllThreads">
+      <summary>AllThreads 属性です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.MatchFilename">
+      <summary>MatchFilename 属性です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.Verbose">
+      <summary>Verbose 属性です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.WaitAtExit">
+      <summary>WaitAtExit 属性です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.SendToWatson">
+      <summary>SendToWatson 属性です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.UseDefault">
+      <summary>UseDefault 属性です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.MaximumDump">
+      <summary>MaximumDump 属性です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.DoubleDump">
+      <summary>DoubleDump 属性です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.ForceWatson">
+      <summary>ForceWatson 属性です。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.Filtered">
+      <summary />
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.CriticalClr">
+      <summary />
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.NoRegistry">
+      <summary />
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.LocalOnly">
+      <summary />
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.DeleteFiles">
+      <summary />
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.ShowUI">
+      <summary />
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.ForceUserThread">
+      <summary />
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.DumperFlags.MatchSignatureTime">
+      <summary />
+    </member>
+    <member name="T:Microsoft.SqlServer.SqlDumper.MiniDumpFlags">
+      <summary>ミニ ダンプ フラグの列挙体を指定します。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.Normal">
+      <summary>Normal ダンプ フラグです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.DataSegs">
+      <summary>DataSegs ダンプ フラグです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.FullMemory">
+      <summary>FullMemory ダンプ フラグです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.HandleData">
+      <summary>HandleData ダンプ フラグです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.FilterMemory">
+      <summary>FilterMemory ダンプ フラグです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.ScanMemory">
+      <summary>ScanMemory ダンプ フラグです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.UnloadedModules">
+      <summary>UnloadedModules ダンプ フラグです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.IndirectlyReferencedMemory">
+      <summary>IndirectlyReferencedMemory ダンプ フラグです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.FilterModulePaths">
+      <summary>FilterModulePaths ダンプ フラグです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.ProcessThreadData">
+      <summary>ProcessThreadData ダンプ フラグです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.PrivateReadWriteMemory">
+      <summary>PrivateReadWriteMemory ダンプ フラグです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.outOptionalData">
+      <summary>outOptionalData ダンプ フラグです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.FullMemoryInfo">
+      <summary>FullMemoryInfo ダンプ フラグです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.ThreadInfo">
+      <summary>ThreadInfo ダンプ フラグです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.CodeSegs">
+      <summary>CodeSegs ダンプ フラグです。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.SqlDumper.MiniDumpFlags.WithoutManagedState">
+      <summary>WithoutManagedState ダンプ フラグです。</summary>
+    </member>
+  </members>
+</doc>

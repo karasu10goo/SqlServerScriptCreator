@@ -1,0 +1,1491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.ReportingServices.Interfaces</name>
+  </assembly>
+  <members>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AceStruct.CatalogOperations">
+      <summary>Specifies operations that users can perform on catalog item types.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AceStruct.DatasourceOperations">
+      <summary>Specifies operations that users can perform on data source item types.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AceStruct.FolderOperations">
+      <summary>Specifies operations that users can perform on folder item types.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AceStruct.ModelItemOperations">
+      <summary>Specifies operations that users can perform on model item operation types.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AceStruct.ModelOperations">
+      <summary>Specifies operations that users can perform on model operation types.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AceStruct.PrincipalName">
+      <summary>Specifies a user, group, or computer name.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AceStruct.ReportOperations">
+      <summary>Specifies operations that users can perform on report item types.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AceStruct.ResourceOperations">
+      <summary>Specifies operations that users can perform on resource item types.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.ExecuteReportDefinition">
+      <summary>Specifies the “Execute Report Definition” operation.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperCancelJobs">
+      <summary>Specifies the operation "Cancel Jobs".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperCreateAnySubscription">
+      <summary>Specifies the operation "Create Any Subscription".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperCreateDatasource">
+      <summary>Specifies the operation "Create Data Source".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperCreateFolder">
+      <summary>Specifies the operation "Create Folder".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperCreateLink">
+      <summary>Specifies the operation "Create Link".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperCreateModel">
+      <summary>Specifies the operation “Create Model”.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperCreateReport">
+      <summary>Specifies the operation "Create Report".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperCreateResource">
+      <summary>Specifies the operation "Create Resource".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperCreateRoles">
+      <summary>Specifies the operation "Create Roles".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperCreateSchedules">
+      <summary>Specifies the operation "Create Schedules".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperCreateSnapshot">
+      <summary>Specifies the operation "Create Report History".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperCreateSubscription">
+      <summary>Specifies the operation "Create Subscription".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperDelete">
+      <summary>Specifies the operation "Delete".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperDeleteAnySubscription">
+      <summary>Specifies the operation "Delete Any Subscription".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperDeleteHistory">
+      <summary>Specifies the operation "Delete Report History".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperDeleteRoles">
+      <summary>Specifies the operation "Delete Roles".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperDeleteSchedules">
+      <summary>Specifies the operation "Delete Schedules".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperDeleteSubscription">
+      <summary>Specifies the operation "Delete Subscription".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperExecute">
+      <summary>Specifies the operation "Execute".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperExecuteAndView">
+      <summary>Specifies the operation "Execute and View".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperGenerateEvents">
+      <summary>Specifies the operation "Generate Events".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperListHistory">
+      <summary>Specifies the operation "List Report History".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperListJobs">
+      <summary>Specifies the operation "List Jobs".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperManageSharedSchedules">
+      <summary>Specifies the operation "Manage Shared Schedules".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadAnySubscription">
+      <summary>Specifies the operation "Read Any Subscription".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadAuthorizationPolicy">
+      <summary>Specifies the operation "Read Security Policies".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadContent">
+      <summary>Specifies the operation "Read Content".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadDatasources">
+      <summary>Specifies the operation "Read Data Sources".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadModelItemSecurityPolicies">
+      <summary>Specifies the operation “Read Model Item Security Policies”.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadParameters">
+      <summary>Specifies the operation "Read Parameters".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadPolicy">
+      <summary>Specifies the operation "Read Policy".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadProperties">
+      <summary>Specifies the operation "Read Properties".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadReportDefinition">
+      <summary>Specifies the operation "Read Report Definition".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadRoleProperties">
+      <summary>Specifies the operation "Read Role Properties".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadSchedules">
+      <summary>Specifies the operation "Read Schedules".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadSubscription">
+      <summary>Specifies the operation "Read Subscription".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadSystemProperties">
+      <summary>Specifies the operation "Read System Properties".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperReadSystemSecurityPolicy">
+      <summary>Specifies the operation "Read System Security Policies".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateAnySubscription">
+      <summary>Specifies the operation "Update Any Subscription".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateContent">
+      <summary>Specifies the operation "Update Content".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateDatasources">
+      <summary>Specifies the operation "Update Data Sources".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateDeleteAuthorizationPolicy">
+      <summary>Specifies the operation "Update Security Policies".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateModelItemSecurityPolicies">
+      <summary>Specifies the operation “Update Model Item Security Policies”.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateParameters">
+      <summary>Specifies the operation "Update Parameters".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdatePolicy">
+      <summary>Specifies the operation "Update Policy".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateProperties">
+      <summary>Specifies the operation "Update Properties".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateReportDefinition">
+      <summary>Specifies the operation "Update Report Definition".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateRoleProperties">
+      <summary>Specifies the operation "Update Role Properties".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateSchedules">
+      <summary>Specifies the operation "Update Schedules".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateSubscription">
+      <summary>Specifies the operation "Update Subscription".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateSystemProperties">
+      <summary>Specifies the operation "Update System Properties".</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.OperationNames.OperUpdateSystemSecurityPolicy">
+      <summary>Specifies the operation "Update System Security Policies."</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDataParameterCollection.Add(Microsoft.ReportingServices.DataProcessing.IDataParameter)">
+      <summary>Adds an object to the end of the parameter collection.</summary>
+      <param name="parameter">The <see cref="T:Microsoft.ReportingServices.DataProcessing.IDataParameter" /> to add to the collection.</param>
+      <returns>The position into which the new element was inserted.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDataReader.GetFieldType(System.Int32)">
+      <summary>Gets the Type information corresponding to the type of object that is returned from <see cref="M:Microsoft.ReportingServices.DataProcessing.IDataReader.GetValue(System.Int32)" />.</summary>
+      <param name="fieldIndex">The index of the field to find.</param>
+      <returns>The Type information corresponding to the type of Object that would be returned from <see cref="M:Microsoft.ReportingServices.DataProcessing.IDataReader.GetValue(System.Int32)" />.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDataReader.GetName(System.Int32)">
+      <summary>Gets the name of the field to find.</summary>
+      <param name="fieldIndex">The index of the field to find.</param>
+      <returns>The name of the field, or the empty string ("") if there is no value to return.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDataReader.GetOrdinal(System.String)">
+      <summary>Return the index of the named field.</summary>
+      <param name="fieldName">The name of the field to find.</param>
+      <returns>The index of the named field.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDataReader.GetValue(System.Int32)">
+      <summary>Return the value of the specified field.</summary>
+      <param name="fieldIndex">The index of the field to find.</param>
+      <returns>The value of the field at the specified index. </returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDataReader.Read">
+      <summary>Advances the <see cref="T:Microsoft.ReportingServices.DataProcessing.IDataReader" /> to the next record.</summary>
+      <returns>A value of true if the enumerator was successfully advanced to the next record, or a value of false if the enumerator has passed the end of the result set.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension.IsAggregationField(System.Int32)">
+      <summary>Indicates whether the data is aggregated by the field with the given index.</summary>
+      <param name="index">The index of the field within the record.</param>
+      <returns>A value of true if the current row is an aggregation field; otherwise, false.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDataReaderFieldProperties.GetPropertyCount(System.Int32)">
+      <summary>Returns the number of properties for a specified field.</summary>
+      <param name="fieldIndex">The index of the field.</param>
+      <returns>The property count for the specified field.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDataReaderFieldProperties.GetPropertyName(System.Int32,System.Int32)">
+      <summary>Returns the name of a specified property for a specified field.</summary>
+      <param name="fieldIndex">The index of the field.</param>
+      <param name="propertyIndex">The index of the property.</param>
+      <returns>A string containing the name of the specified property.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDataReaderFieldProperties.GetPropertyValue(System.Int32,System.Int32)">
+      <summary>Returns the name of a specified property for a specified field.</summary>
+      <param name="fieldIndex">The index of the field.</param>
+      <param name="propertyIndex">The index of the property.</param>
+      <returns>An object containing the value of the specified property.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDbCollationProperties.GetCollationProperties(System.String@,System.Boolean@,System.Boolean@,System.Boolean@,System.Boolean@)">
+      <summary>Returns the collation properties used for a connection.</summary>
+      <param name="cultureName">The name of the culture to use for collation.</param>
+      <param name="caseSensitive">Indicates that the collation should be case sensitive.</param>
+      <param name="accentSensitive">Indicates that the collation should be accent sensitive.</param>
+      <param name="kanatypeSensitive">Indicates that the collation should be kana type sensitive.</param>
+      <param name="widthSensitive">Indicates that the collation should be width sensitive.</param>
+      <returns>Returns true if the collation properties could be detected for the current connection. </returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDbCommand.Cancel">
+      <summary>Attempts to cancel the execution of an <see cref="T:Microsoft.ReportingServices.DataProcessing.IDbCommand" />.</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDbCommand.CreateParameter">
+      <summary>Creates a new instance of an <see cref="T:Microsoft.ReportingServices.DataProcessing.IDataParameter" /> object.</summary>
+      <returns>An <see cref="T:Microsoft.ReportingServices.DataProcessing.IDataParameter" /> object.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDbCommand.ExecuteReader(Microsoft.ReportingServices.DataProcessing.CommandBehavior)">
+      <summary>Executes the <see cref="P:Microsoft.ReportingServices.DataProcessing.IDbCommand.CommandText" /> against the Connection and builds an <see cref="T:Microsoft.ReportingServices.DataProcessing.IDataReader" />.</summary>
+      <param name="behavior">The index of the field for which to retrieve properties.</param>
+      <returns>An <see cref="T:Microsoft.ReportingServices.DataProcessing.IDataReader" /> object.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDbCommandAnalysis.GetParameters">
+      <summary>Returns an <see cref="T:Microsoft.ReportingServices.DataProcessing.IDataParameterCollection" /> object representing a list of parameters used in the query.</summary>
+      <returns>An <see cref="T:Microsoft.ReportingServices.DataProcessing.IDataParameterCollection" /> object representing a list of parameters used in the query.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDbConnection.BeginTransaction">
+      <summary>Begins a database transaction.</summary>
+      <returns>An object representing the new transaction.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDbConnection.Close">
+      <summary>Closes the connection to the database.</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDbConnection.CreateCommand">
+      <summary>Creates and returns a Command object associated with the connection.</summary>
+      <returns>A Command object associated with the connection.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDbConnection.Open">
+      <summary>Initializes a database connection with the settings specified by the <see cref="P:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString" /> property of the provider-specific Connection object.</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDbTransaction.Commit">
+      <summary>Commits the database transaction.</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.IDbTransaction.Rollback">
+      <summary>Rolls back a transaction from a pending state.</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.DataProcessing.ITokenDataExtension.SetUserToken(System.Byte[])">
+      <summary>Sets the SharePoint user token. This method is used by the report server to send the SharePoint user token to the data processing extension.</summary>
+      <param name="UserToken">An array of byte that represents the token data.</param>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.AceCollection.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.ReportingServices.Interfaces.AceCollection" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.AceCollection.Add(Microsoft.ReportingServices.Interfaces.AceStruct)">
+      <summary>Adds an object to the end of the <see cref="T:Microsoft.ReportingServices.Interfaces.AceCollection" />.</summary>
+      <param name="ace">An <see cref="T:Microsoft.ReportingServices.Interfaces.AceStruct" /> object that represents an access control entry to add to the collection.</param>
+      <returns>The position into which the new access control entry was inserted.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.AceStruct.#ctor(Microsoft.ReportingServices.Interfaces.AceStruct)">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.ReportingServices.Interfaces.AceStruct" /> class based on an existing <see cref="T:Microsoft.ReportingServices.Interfaces.AceStruct" /> object.</summary>
+      <param name="other">An existing <see cref="T:Microsoft.ReportingServices.Interfaces.AceStruct" /> object.</param>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.AceStruct.#ctor(System.String)">
+      <summary>Creates a new instance of the <see cref="T:Microsoft.ReportingServices.Interfaces.AceStruct" /> class with the specified principal name.</summary>
+      <param name="name">A user, group, or computer name.</param>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.CatalogOperationsCollection.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.ReportingServices.Interfaces.CatalogOperationsCollection" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.CatalogOperationsCollection.Add(Microsoft.ReportingServices.Interfaces.CatalogOperation)">
+      <summary>Adds an object to the end of the <see cref="T:Microsoft.ReportingServices.Interfaces.CatalogOperationsCollection" />.</summary>
+      <param name="operation">The catalog operation to add to the collection.</param>
+      <returns>The position into which the new catalog operation was inserted.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.DatasourceOperationsCollection.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.ReportingServices.Interfaces.DatasourceOperationsCollection" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.DatasourceOperationsCollection.Add(Microsoft.ReportingServices.Interfaces.DatasourceOperation)">
+      <summary>Adds an object to the end of the <see cref="T:Microsoft.ReportingServices.Interfaces.DatasourceOperationsCollection" />.</summary>
+      <param name="operation">The data source operation to add to the collection.</param>
+      <returns>The position into which the new data source operation was inserted.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.Extension.#ctor(System.String,System.String,System.Boolean)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.ReportingServices.Interfaces.Extension" /> class.</summary>
+      <param name="name">The name of the extension as defined in the configuration file.</param>
+      <param name="localizedName">The localized name of the extension to be used for display purposes in a user interface.</param>
+      <param name="visible">Indicates whether an extension is visible in a user interface.</param>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.FolderOperationsCollection.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.ReportingServices.Interfaces.FolderOperationsCollection" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.FolderOperationsCollection.Add(Microsoft.ReportingServices.Interfaces.FolderOperation)">
+      <summary>Adds an object to the end of the <see cref="T:Microsoft.ReportingServices.Interfaces.FolderOperationsCollection" />.</summary>
+      <param name="operation">The folder operation to add to the collection.</param>
+      <returns>The position into which the new folder operation was inserted.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension.GetUserInfo(System.Security.Principal.IIdentity@,System.IntPtr@)">
+      <summary>Returns the current user identity.</summary>
+      <param name="userIdentity">[out] The identity of the current user. The value of IIdentity may appear in a user interface and should be human readable.</param>
+      <param name="userId">[out] A user account token. This token is primarily used by the report server as a handle to a Windows account in support of credential management for Windows Authentication.</param>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension.IsValidPrincipalName(System.String)">
+      <summary>Indicates whether the specified principal name is valid.</summary>
+      <param name="principalName">The user, group, or computer name.</param>
+      <returns>Returns true if the supplied user name represents a valid principal name.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension.LogonUser(System.String,System.String,System.String)">
+      <summary>Creates a logon session for the user associated with the given credentials.</summary>
+      <param name="userName">The name associated with the credentials.</param>
+      <param name="password">The password associated with the credentials.</param>
+      <param name="authority">Optional. The specific authority to use to authenticate a user (for example, a Windows domain).</param>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2.GetUserInfo(Microsoft.ReportingServices.Interfaces.IRSRequestContext,System.Security.Principal.IIdentity@,System.IntPtr@)">
+      <summary />
+      <param name="requestContext" />
+      <param name="userIdentity" />
+      <param name="userId" />
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2.GetUserInfo(System.Security.Principal.IIdentity@,System.IntPtr@)">
+      <summary />
+      <param name="userIdentity" />
+      <param name="userId" />
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2.IsValidPrincipalName(System.String)">
+      <summary />
+      <param name="principalName" />
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2.LogonUser(System.String,System.String,System.String)">
+      <summary />
+      <param name="userName" />
+      <param name="password" />
+      <param name="authority" />
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess(System.String,System.IntPtr,System.Byte[],Microsoft.ReportingServices.Interfaces.CatalogOperation)">
+      <summary>Indicates whether a user is authorized to access an item in the report server database for a given catalog operation.</summary>
+      <param name="userName">The name of the user requesting access to the report server.</param>
+      <param name="userToken">A user account token. This token is primarily used by the report server as a handle to a Microsoft Windows account in support of credential management for Windows Authentication.</param>
+      <param name="secDesc">The security descriptor for the item.</param>
+      <param name="requiredOperation">The operation being requested by the report server for a given user.</param>
+      <returns>Returns true if the currently authenticated user is granted access to the item based on the supplied operation and security descriptor.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess(System.String,System.IntPtr,System.Byte[],Microsoft.ReportingServices.Interfaces.CatalogOperation[])">
+      <summary>Indicates whether a user is authorized to access an item in the report server database for a given array of catalog operation.</summary>
+      <param name="userName">The name of the user requesting access to the report server.</param>
+      <param name="userToken">A user account token. This token is primarily used by the report server as a handle to a Microsoft Windows account in support of credential management for Windows Authentication.</param>
+      <param name="secDesc">The security descriptor for the item.</param>
+      <param name="requiredOperations">The operations being requested by the report server for a given user.</param>
+      <returns>Returns true if the currently authenticated user is granted access to the item based on the supplied operation and security descriptor.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess(System.String,System.IntPtr,System.Byte[],Microsoft.ReportingServices.Interfaces.DatasourceOperation)">
+      <summary>Indicates whether a user is authorized to access an item in the report server database for a given data source operation.</summary>
+      <param name="userName">The name of the user requesting access to the report server.</param>
+      <param name="userToken">A user account token. This token is primarily used by the report server as a handle to a Microsoft Windows account in support of credential management for Windows Authentication.</param>
+      <param name="secDesc">The security descriptor for the item.</param>
+      <param name="requiredOperation">The operation being requested by the report server for a given user.</param>
+      <returns>Returns true if the currently authenticated user is granted access to the item based on the supplied operation and security descriptor.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess(System.String,System.IntPtr,System.Byte[],Microsoft.ReportingServices.Interfaces.FolderOperation)">
+      <summary>Indicates whether a user is authorized to access an item in the report server database for a given folder operation.</summary>
+      <param name="userName">The name of the user requesting access to the report server.</param>
+      <param name="userToken">A user account token. This token is primarily used by the report server as a handle to a Microsoft Windows account in support of credential management for Windows Authentication.</param>
+      <param name="secDesc">The security descriptor for the item.</param>
+      <param name="requiredOperation">The operation being requested by the report server for a given user.</param>
+      <returns>Returns true if the currently authenticated user is granted access to the item based on the supplied operation and security descriptor.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess(System.String,System.IntPtr,System.Byte[],Microsoft.ReportingServices.Interfaces.FolderOperation[])">
+      <summary>Checks a user's authorization credentials against a security descriptor for operations on an item in the report server database</summary>
+      <param name="userName">The name of the user requesting access to the report server.</param>
+      <param name="userToken">A user account token. This token is primarily used by the report server as a handle to a Microsoft Windows account in support of credential management for Windows Authentication.</param>
+      <param name="secDesc">The security descriptor for the item.</param>
+      <param name="requiredOperations">The operations being requested by the report server for a given user.</param>
+      <returns>Returns true if the currently authenticated user is granted access to the item based on the supplied operation and security descriptor.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess(System.String,System.IntPtr,System.Byte[],Microsoft.ReportingServices.Interfaces.ModelItemOperation)">
+      <summary>Indicates whether a user is authorized to access an item in the report server database for a given model item operation.</summary>
+      <param name="userName">The name of the user requesting access to the report server.</param>
+      <param name="userToken">A user account token. This token is primarily used by the report server as a handle to a Microsoft Windows account in support of credential management for Windows Authentication.</param>
+      <param name="secDesc">The security descriptor for the item.</param>
+      <param name="requiredOperation">The operations being requested by the report server for a given user.</param>
+      <returns>Returns true if the currently authenticated user is granted access to the item based on the supplied operation and security descriptor.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess(System.String,System.IntPtr,System.Byte[],Microsoft.ReportingServices.Interfaces.ModelOperation)">
+      <summary>Indicates whether a user is authorized to access an item in the report server database for a given model operation.</summary>
+      <param name="userName">The name of the user requesting access to the report server.</param>
+      <param name="userToken">A user account token. This token is primarily used by the report server as a handle to a Microsoft Windows account in support of credential management for Windows Authentication.</param>
+      <param name="secDesc">The security descriptor for the item.</param>
+      <param name="requiredOperation">The operations being requested by the report server for a given user.</param>
+      <returns>Returns true if the currently authenticated user is granted access to the item based on the supplied operation and security descriptor.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess(System.String,System.IntPtr,System.Byte[],Microsoft.ReportingServices.Interfaces.ReportOperation)">
+      <summary>Indicates whether a user is authorized to access an item in the report server database for a given report operation.</summary>
+      <param name="userName">The name of the user requesting access to the report server.</param>
+      <param name="userToken">A user account token. This token is primarily used by the report server as a handle to a Microsoft Windows account in support of credential management for Windows Authentication.</param>
+      <param name="secDesc">The security descriptor for the item.</param>
+      <param name="requiredOperation">The operation being requested by the report server for a given user.</param>
+      <returns>Returns true if the currently authenticated user is granted access to the item based on the supplied operation and security descriptor.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess(System.String,System.IntPtr,System.Byte[],Microsoft.ReportingServices.Interfaces.ResourceOperation)">
+      <summary>Indicates whether a user is authorized to access an item in the report server database for a given resource operation.</summary>
+      <param name="userName">The name of the user requesting access to the report server.</param>
+      <param name="userToken">A user account token. This token is primarily used by the report server as a handle to a Microsoft Windows account in support of credential management for Windows Authentication.</param>
+      <param name="secDesc">The security descriptor for the item.</param>
+      <param name="requiredOperation">The operation being requested by the report server for a given user.</param>
+      <returns>Returns true if the currently authenticated user is granted access to the item based on the supplied operation and security descriptor.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess(System.String,System.IntPtr,System.Byte[],Microsoft.ReportingServices.Interfaces.ResourceOperation[])">
+      <summary>Indicates whether a user is authorized to access an item in the report server database for a given array of resource operations.</summary>
+      <param name="userName">The name of the user requesting access to the report server.</param>
+      <param name="userToken">A user account token. This token is primarily used by the report server as a handle to a Microsoft Windows account in support of credential management for Windows Authentication.</param>
+      <param name="secDesc">The security descriptor for the item.</param>
+      <param name="requiredOperations">The operations being requested by the report server for a given user.</param>
+      <returns>Returns true if the currently authenticated user is granted access to the item based on the supplied operation and security descriptor.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CreateSecurityDescriptor(Microsoft.ReportingServices.Interfaces.AceCollection,Microsoft.ReportingServices.Interfaces.SecurityItemType,System.String@)">
+      <summary>Returns the security descriptor that is stored with an individual item in the report server database.</summary>
+      <param name="acl">The access code list created by the report server for the item. It contains a collection of access code entries.</param>
+      <param name="itemType">The type of item for which the security descriptor is created.</param>
+      <param name="stringSecDesc">Optional. A user-friendly description of the security descriptor that can be used for debugging. This is not stored by the report server.</param>
+      <returns>A serialized access code list.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.GetPermissions(System.String,System.IntPtr,Microsoft.ReportingServices.Interfaces.SecurityItemType,System.Byte[])">
+      <summary>Returns the set of permissions granted a specific user for an item in the report server database.</summary>
+      <param name="userName">The name of the user as returned by the <see cref="M:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension.GetUserInfo(System.Security.Principal.IIdentity@,System.IntPtr@)" /> method of <see cref="T:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension" />.</param>
+      <param name="userToken">A pointer to the user ID returned by the <see cref="M:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension.GetUserInfo(System.Security.Principal.IIdentity@,System.IntPtr@)" /> method.</param>
+      <param name="itemType">The type of item in the report server database for which the permissions are returned.</param>
+      <param name="secDesc">The security descriptor associated with the item.</param>
+      <returns>A StringCollection that contains the name of each permission associated with the user for a given item.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver(Microsoft.ReportingServices.Interfaces.Notification)">
+      <summary>Delivers the report notification to a user based on the contents of the notification.</summary>
+      <param name="notification">A <see cref="T:Microsoft.ReportingServices.Interfaces.Notification" /> object containing information required by the delivery extension to deliver a report.</param>
+      <returns>A Boolean value indicating whether or not the delivery was successful.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ValidateUserData(Microsoft.ReportingServices.Interfaces.Setting[])">
+      <summary>Used to determine whether a given set of delivery extension settings are valid.</summary>
+      <param name="settings">An array of <see cref="T:Microsoft.ReportingServices.Interfaces.Setting" /> objects containing extension settings supplied by a client.</param>
+      <returns>An array of <see cref="T:Microsoft.ReportingServices.Interfaces.Setting" /> objects containing extension settings that have been validated by the delivery extension.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IExtension.SetConfiguration(System.String)">
+      <summary>Used to pass custom configuration data to an extension.</summary>
+      <param name="configuration">The XML string from the configuration file that contains extension configuration data.</param>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IRenderStream.Finish">
+      <summary>Allows the rendering extension to indicate that there is no additional content to be added to the given stream. </summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IReportDefinitionCustomizationExtension.ProcessReportDefinition(System.Byte[],Microsoft.ReportingServices.Interfaces.IReportContext,Microsoft.ReportingServices.Interfaces.IUserContext,System.Byte[]@,System.Collections.Generic.IEnumerable{Microsoft.ReportingServices.Interfaces.RdceCustomizableElementId}@)">
+      <summary>Processes changes to a report definition.</summary>
+      <param name="reportDefinition">The original report definition. For linked reports, the definition is the link target.</param>
+      <param name="reportContext">An <see cref="T:Microsoft.ReportingServices.Interfaces.IReportContext" /> object that specifies the context of the report.</param>
+      <param name="userContext">An <see cref="T:Microsoft.ReportingServices.Interfaces.IUserContext" /> object that specifies the context of the user session.</param>
+      <param name="reportDefinitionProcessed">The new report definition.</param>
+      <param name="customizedElementIds">The collection of the report elements that are customized. Reporting Services merges these elements with the original report definition.If null is returned, the new report definition is not merged with the original report definition.</param>
+      <returns>A Boolean that indicates whether the report definition is changed.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.ISemanticModelGenerator.Generate(System.Data.IDbConnection,System.Xml.XmlWriter)">
+      <summary>Generates a semantic model using the specified connection and model writer.</summary>
+      <param name="connection">The connection to a data source.</param>
+      <param name="newModelWriter">The new writer of the model.</param>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.ISemanticModelGenerator.ReGenerateModel(System.Data.IDbConnection,System.Xml.XmlReader,System.Xml.XmlWriter)">
+      <summary>Regenerates the model using the specified connection, model reader and model writer.</summary>
+      <param name="connection">The connection to a data source.</param>
+      <param name="currentModelReader">The current reader of the model.</param>
+      <param name="newModelWriter">The new writer of the model.</param>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl.Validate">
+      <summary>Used to determine whether the settings for a delivery extension are valid.</summary>
+      <returns>A Boolean indicating whether the information specified in the <see cref="P:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl.UserData" /> property is valid.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IWindowsAuthenticationExtension.PrincipalNameToSid(System.String)">
+      <summary>Gets the Windows SID for the given principal name.</summary>
+      <param name="name">The name of the principal.</param>
+      <returns>A byte array that contains Windows SID.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IWindowsAuthenticationExtension.SidToPrincipalName(System.Byte[])">
+      <summary>Gets the principal name for the given Windows SID.</summary>
+      <param name="sid">The Windows SID assigned to the principal.</param>
+      <returns>A string that contains the name of the principal.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IWindowsAuthenticationExtension2.PrincipalNameToSid(System.String)">
+      <summary />
+      <param name="name" />
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.IWindowsAuthenticationExtension2.SidToPrincipalName(System.Byte[])">
+      <summary />
+      <param name="sid" />
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.LocalizedNameAttribute.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.ReportingServices.Interfaces.LocalizedNameAttribute" /> class. </summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.LocalizedNameAttribute.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.ReportingServices.Interfaces.LocalizedNameAttribute" /> class. </summary>
+      <param name="name">The name of the extension.  Used as the key to determine which localization to return.</param>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.LocalizedNameAttribute.Equals(System.Object)">
+      <summary>Determines if the object supplied is the same as the current object.</summary>
+      <param name="obj">The object used for comparison.</param>
+      <returns>A Boolean value indicating if the objects are equal.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.LocalizedNameAttribute.GetHashCode">
+      <summary>Returns a unique hash code for the object.</summary>
+      <returns>An integer representing the hash code for the object.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.LocalizedNameAttribute.GetLocalizedString(System.String)">
+      <summary>Returns the correct localized extension name.</summary>
+      <param name="value">The language-neutral name of the extension.</param>
+      <returns>A string containing the localized name of the extension.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.ModelItemOperationsCollection.#ctor">
+      <summary>Constructs a <see cref="T:Microsoft.ReportingServices.Interfaces.ModelItemOperationsCollection" /> object.</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.ModelItemOperationsCollection.Add(Microsoft.ReportingServices.Interfaces.ModelItemOperation)">
+      <summary>Adds a <see cref="T:Microsoft.ReportingServices.Interfaces.ModelItemOperation" /> to the <see cref="T:Microsoft.ReportingServices.Interfaces.ModelItemOperationsCollection" />.</summary>
+      <param name="operation">A <see cref="T:Microsoft.ReportingServices.Interfaces.ModelItemOperation" /> object.</param>
+      <returns>The position into which the new <see cref="T:Microsoft.ReportingServices.Interfaces.ModelItemOperation" /> was inserted.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.ModelOperationsCollection.#ctor">
+      <summary>Constructs a new <see cref="T:Microsoft.ReportingServices.Interfaces.ModelOperationsCollection" /> object.</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.ModelOperationsCollection.Add(Microsoft.ReportingServices.Interfaces.ModelOperation)">
+      <summary>Adds a <see cref="T:Microsoft.ReportingServices.Interfaces.ModelOperation" /> to the <see cref="T:Microsoft.ReportingServices.Interfaces.ModelOperationsCollection" />.</summary>
+      <param name="operation">A <see cref="T:Microsoft.ReportingServices.Interfaces.ModelOperation" /> object.</param>
+      <returns>An integer value representing the position into which the new <see cref="T:Microsoft.ReportingServices.Interfaces.ModelOperation" /> was inserted.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.Notification.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.ReportingServices.Interfaces.Notification" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.Notification.Save">
+      <summary>Saves changes made to a <see cref="T:Microsoft.ReportingServices.Interfaces.Notification" /> object in the associated subscription.</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.NotificationWithResult.#ctor">
+      <summary />
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.OperationNames.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.ReportingServices.Interfaces.OperationNames" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.RenderedOutputFile.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.ReportingServices.Interfaces.RenderedOutputFile" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.Report.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.ReportingServices.Interfaces.Report" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.Report.Render(System.String,System.String)">
+      <summary>Renders a report in a specific format using the information stored in the properties of the <see cref="T:Microsoft.ReportingServices.Interfaces.Report" /> object. </summary>
+      <param name="renderFormat">The name of the format that is used to render the report. The format corresponds to one of the available rendering extensions installed on the report server.</param>
+      <param name="deviceInfo">An XML string that defines a list of extension parameters for the rendering extension that is used to format the report so that it can be delivered correctly based on the requirements of the delivery extension.</param>
+      <returns>An array of <see cref="T:Microsoft.ReportingServices.Interfaces.RenderedOutputFile" /> objects produced by the rendering extension selected in the <paramref name="renderFormat" /> parameter.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.ReportOperationsCollection.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.ReportingServices.Interfaces.ReportOperationsCollection" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.ReportOperationsCollection.Add(Microsoft.ReportingServices.Interfaces.ReportOperation)">
+      <summary>Adds an object to the end of the <see cref="T:Microsoft.ReportingServices.Interfaces.ReportOperationsCollection" />.</summary>
+      <param name="operation">The report operation to add to the collection.</param>
+      <returns>The position into which the new report operation was inserted.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.ResourceOperationsCollection.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.ReportingServices.Interfaces.ResourceOperationsCollection" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.ResourceOperationsCollection.Add(Microsoft.ReportingServices.Interfaces.ResourceOperation)">
+      <summary>Adds an object to the end of the <see cref="T:Microsoft.ReportingServices.Interfaces.ResourceOperationsCollection" />.</summary>
+      <param name="operation">The resource operation to add to the collection.</param>
+      <returns>The position into which the new resource operation was inserted.</returns>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.Setting.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.ReportingServices.Interfaces.Setting" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.Setting.AddValidValue(Microsoft.ReportingServices.Interfaces.ValidValue)">
+      <summary>Adds a valid value using the <see cref="T:Microsoft.ReportingServices.Interfaces.ValidValue" /> class.</summary>
+      <param name="val">A <see cref="T:Microsoft.ReportingServices.Interfaces.ValidValue" /> object that contains the label and the value for the setting.</param>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.Setting.AddValidValue(System.String,System.String)">
+      <summary>Adds a valid value for a setting using a label and a value.</summary>
+      <param name="label">The display value for the setting as presented in a user interface.</param>
+      <param name="val">The actual value of the setting that is passed to the delivery extension.</param>
+    </member>
+    <member name="M:Microsoft.ReportingServices.Interfaces.ValidValue.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.ReportingServices.Interfaces.ValidValue" /> class.</summary>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDataMultiValueParameter.Values">
+      <summary>Gets or sets the values of the parameters.</summary>
+      <returns>A collection of objects containing the values for the parameters.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDataParameter.ParameterName">
+      <summary>Gets or sets the name of the <see cref="T:Microsoft.ReportingServices.DataProcessing.IDataParameter" />.</summary>
+      <returns>A string containing the name of the parameter.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDataParameter.Value">
+      <summary>Gets or sets the value of the parameter.</summary>
+      <returns>An Object that is the value of the parameter. The default value is Null.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDataReader.FieldCount">
+      <summary>Gets the number of fields in the data reader.</summary>
+      <returns>When not positioned in a valid recordset, 0; otherwise the number of columns in the current record. The default value is -1.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension.AggregationFieldCount">
+      <summary>Gets the number of fields by which the data is aggregated.</summary>
+      <returns>When not positioned in a valid record set, 0; otherwise the number of aggregation columns in the current record. The default is -1.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension.IsAggregateRow">
+      <summary>Indicates whether the current row contains aggregate data.</summary>
+      <returns>A value of true if the current row contains aggregate data; otherwise, false.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbCommand.CommandText">
+      <summary>Gets or sets the text command to run against the data source.</summary>
+      <returns>The text command to execute. The default value is an empty string ("").</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbCommand.CommandTimeout">
+      <summary>Gets or sets the wait time before terminating the attempt to execute a command and generating an error.</summary>
+      <returns>The time (in seconds) to wait for the command to execute. The default value is 30 seconds.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbCommand.CommandType">
+      <summary>Indicates or specifies how the <see cref="P:Microsoft.ReportingServices.DataProcessing.IDbCommand.CommandText" /> property is interpreted (as text, a stored procedure, etc.).</summary>
+      <returns>One of the <see cref="P:Microsoft.ReportingServices.DataProcessing.IDbCommand.CommandType" /> values. The default is Text.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbCommand.Parameters">
+      <summary>Gets the <see cref="T:Microsoft.ReportingServices.DataProcessing.IDataParameterCollection" />.</summary>
+      <returns>The parameters of the query or stored procedure.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbCommand.Transaction">
+      <summary>Gets or sets the transaction in which the Command object of a SQL Server Reporting Services data provider executes.</summary>
+      <returns>The transaction object of a Reporting Services data provider execution. The default value is a null reference (Nothing in Visual Basic).</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbCommandRewriter.RewrittenCommandText">
+      <summary>Gets a rewritten command text.</summary>
+      <returns>A string value that represents a rewritten command text.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString">
+      <summary>Gets or sets the string used to open a database.</summary>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionTimeout">
+      <summary>Gets the time to wait, while trying to establish a connection, before terminating the attempt and generating an error.</summary>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.Impersonate">
+      <summary>Sets the username of the user that is impersonated while queries are executed. This property is ignored by the report server if impersonation is not supported by the data provider.</summary>
+      <returns>The username of the user that is impersonated while queries are executed.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.IntegratedSecurity">
+      <summary>Indicates whether the connection should use integrated security rather than supply a username and password.</summary>
+      <returns>A value of true if the connection should use integrated security for authentication; otherwise, false.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.Password">
+      <summary>Gets or sets the password to use when connecting to the database. Overrides any password specified in the connection string.</summary>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.UserName">
+      <summary>Gets or sets the username to use when connecting to the database. Overrides any username specified in the connection string.</summary>
+      <returns>The user name to use when authenticating the client.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbConnectionWrapper.Connection">
+      <summary>Gets a connection to a data source.</summary>
+      <returns>An <see cref="T:System.Data.IDbConnection" /> object that represents a connection to a data source.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.DataProcessing.IDbTransactionExtension.AllowMultiConnection">
+      <summary>Indicates whether the provider extension allows a single transaction to be used across multiple connections.</summary>
+      <returns>A value of true if the provider allows a single transaction to be used across multiple connections; otherwise, false.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.AceCollection.Item(System.Int32)">
+      <summary>Gets or sets the element at the specified index. In C#, this property is the indexer for the <see cref="T:Microsoft.ReportingServices.Interfaces.AceCollection" /> class.</summary>
+      <param name="index">The zero-based index of the element to get or set.</param>
+      <returns>The element at the specified index.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.CatalogOperationsCollection.Item(System.Int32)">
+      <summary>Gets or sets the element at the specified index. In C#, this property is the indexer for the <see cref="T:Microsoft.ReportingServices.Interfaces.CatalogOperationsCollection" /> class.</summary>
+      <param name="index">The zero-based index of the element to get or set.</param>
+      <returns>The element at the specified index.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.DatasourceOperationsCollection.Item(System.Int32)">
+      <summary>Gets or sets the element at the specified index. In C#, this property is the indexer for the <see cref="T:Microsoft.ReportingServices.Interfaces.DatasourceOperationsCollection" /> class.</summary>
+      <param name="index">The zero-based index of the element to get or set.</param>
+      <returns>The element at the specified index.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Extension.LocalizedName">
+      <summary>Gets the localized name of the extension to be used for display purposes in a user interface.</summary>
+      <returns>The localized name of the extension.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Extension.Name">
+      <summary>Gets the name of the extension as defined in the configuration file. For example, a delivery extension can return a value of Report Server E-mail.</summary>
+      <returns>The name of the extension as defined in the report server configuration file.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Extension.Visible">
+      <summary>Indicates whether an extension is visible in a user interface.</summary>
+      <returns>A Boolean value indicating whether the extension is visible.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.FolderOperationsCollection.Item(System.Int32)">
+      <summary>Gets or sets the element at the specified index. In C#, this property is the indexer for the <see cref="T:Microsoft.ReportingServices.Interfaces.FolderOperationsCollection" /> class. In JScript, you can use the default indexed properties defined by a type, but you cannot explicitly define your own. However, specifying the expando attribute on a class automatically provides a default indexed property whose type is Object and whose index type is String.</summary>
+      <param name="index">The zero-based index of the element to get or set.</param>
+      <returns>The element at the specified index.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ExtensionSettings">
+      <summary>Gets a list of settings that are used by the delivery extension to create a notification or report.</summary>
+      <returns>The settings of a delivery extension.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.IsPrivilegedUser">
+      <summary>Indicates whether the user is allowed access to all the functionality of the extension. </summary>
+      <returns>A Boolean value that indicates whether the user is allowed access to all the functionality of the extension. When set to false, the extension prevents the user from accessing functionality as defined by the report server. The default value is false. If a user that creates the subscription has Manage All Subscriptions permission as part of his or her defined role, the value of the property is true.This property is never set by your delivery extension. You must implement the <see cref="P:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.IsPrivilegedUser" /> property so that the report server can properly manage it, but it is never used by your delivery extension code.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ReportServerInformation">
+      <summary>Gets information about the report server that the delivery extension requires in order to perform deliveries.</summary>
+      <returns>An <see cref="T:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation" /> interface that can be used to obtain specific information about a report server prior to delivering report notifications, for example, the list of installed rendering extensions.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation.RenderingExtension">
+      <summary>An array of <see cref="P:Microsoft.ReportingServices.Interfaces.RenderedOutputFile.Extension" /> objects representing the rendering extensions currently deployed on a report server.</summary>
+      <returns>A list of rendering extensions that are currently available on the report server.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation.ServerSettings">
+      <summary>Gets the setting values for the current extension.</summary>
+      <returns>An array of <see cref="T:Microsoft.ReportingServices.Interfaces.Setting" /> objects.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IExtension.LocalizedName">
+      <summary>Gets the localized name of the extension to be displayed in a user interface.</summary>
+      <returns>The localized name of the extension.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IParameter.IsMultiValue">
+      <summary>Gets the value that specifies whether the parameter is a multivalue parameter.</summary>
+      <returns>A value that specifies whether the parameter is a multivalue parameter.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IParameter.Name">
+      <summary>Gets the value that specifies the name of the parameter.</summary>
+      <returns>A value that specifies the name of the parameter.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IParameter.Values">
+      <summary>Gets the value that specifies an array of parameter values.</summary>
+      <returns>A value that specifies an array.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IReportContext.IsLinkedReport">
+      <summary>Gets the value that specifies whether the report is a linked report.</summary>
+      <returns>A value that specifies whether the report is a linked report.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IReportContext.IsSubreport">
+      <summary>Gets the value that specifies whether the report is a subreport.</summary>
+      <returns>A value that specifies whether the report is a subreport.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IReportContext.LinkedReportTargetName">
+      <summary>Gets the value that specifies the name of the link target.</summary>
+      <returns>A value that specifies the name of the link target.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IReportContext.LinkedReportTargetPath">
+      <summary>Gets the value that specifies the path of the link target.</summary>
+      <returns>A value that specifies the path of the link target.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IReportContext.ParentReportName">
+      <summary>Gets the value that specifies the name of the parent report.</summary>
+      <returns>A value that specifies the name of the parent report.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IReportContext.ParentReportPath">
+      <summary>Gets a value that specifies the path of the parent report.</summary>
+      <returns>A value that specifies the path of the parent report.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IReportContext.QueryParameters">
+      <summary>Gets a value that specifies the query parameters of the report.</summary>
+      <returns>A value that specifies the query parameters of the report.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IReportContext.ReportName">
+      <summary>Gets a value that specifies the name of the report.</summary>
+      <returns>A value that specifies the name of the report.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IReportContext.ReportPath">
+      <summary>Gets a value that specifies the path of the report.</summary>
+      <returns>A value that specifies the path of the report.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IRSRequestContext.Cookies">
+      <summary />
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IRSRequestContext.Headers">
+      <summary />
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IRSRequestContext.User">
+      <summary />
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl.Description">
+      <summary>Gets the description of the delivery that is displayed in Report Manager.</summary>
+      <returns>The description of the delivery that is displayed in Report Manager.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl.IsPrivilegedUser">
+      <summary>Indicates whether the user is allowed access to all the functionality of the extension.</summary>
+      <returns>A Boolean that indicates whether the user is allowed access to all the functionality of the extension. When set to false, the extension prevents the user from accessing functionality as defined by the extension. The default value is false.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl.ReportServerInformation">
+      <summary>Gets information about the report server that the delivery extension requires in order to perform deliveries.</summary>
+      <returns>An <see cref="T:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation" /> interface that can be used to obtain specific information about a report server prior to delivering report notifications, for example, the list of installed rendering extensions.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl.UserData">
+      <summary>An array of <see cref="T:Microsoft.ReportingServices.Interfaces.Setting" /> objects that define the extension settings for a notification.</summary>
+      <returns>An array of <see cref="T:Microsoft.ReportingServices.Interfaces.Setting" /> objects set by the subscription owner.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IUserContext.AuthenticationType">
+      <summary>Gets the value that specifies the authentication mode.</summary>
+      <returns>A <see cref="T:Microsoft.ReportingServices.Interfaces.AuthenticationType" /> object.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IUserContext.Token">
+      <summary>Gets the value that specifies the security token.</summary>
+      <returns>A value that specifies the security token.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.IUserContext.UserName">
+      <summary>Gets the value that specifies the user name.</summary>
+      <returns>A value that specifies the user name.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.LocalizedNameAttribute.Name">
+      <summary>Gets the localized name of the extension.</summary>
+      <returns>A string containing the localized name of the extension.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.ModelItemOperationsCollection.Item(System.Int32)">
+      <summary>Returns a <see cref="T:Microsoft.ReportingServices.Interfaces.ModelItemOperation" /> in the <see cref="T:Microsoft.ReportingServices.Interfaces.ModelItemOperationsCollection" />.</summary>
+      <param name="index">The zero-based index of the <see cref="T:Microsoft.ReportingServices.Interfaces.ModelItemOperation" /> to get.</param>
+      <returns>A <see cref="T:Microsoft.ReportingServices.Interfaces.ModelItemOperation" /> object.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.ModelOperationsCollection.Item(System.Int32)">
+      <summary>Returns a <see cref="T:Microsoft.ReportingServices.Interfaces.ModelOperation" /> in the <see cref="T:Microsoft.ReportingServices.Interfaces.ModelOperationsCollection" />.</summary>
+      <param name="index">The zero-based index of the <see cref="T:Microsoft.ReportingServices.Interfaces.ModelOperation" /> to get.</param>
+      <returns>A <see cref="T:Microsoft.ReportingServices.Interfaces.ModelOperation" /> object from the collection.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Notification.Attempt">
+      <summary>Indicates how many times the report server has attempted to deliver the notification.</summary>
+      <returns>A Boolean value that indicates how many times the report server has attempted to deliver the notification.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Notification.MaxNumberOfRetries">
+      <summary>Indicates the maximum number of times the report server attempts to deliver the notification. This value is based on information contained in the delivery extension's configuration file.</summary>
+      <returns>The maximum number of times the report server retries to deliver the notification.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Notification.Owner">
+      <summary>The user name of the owner who generated the notification. User name is in the form of domain\alias.</summary>
+      <returns>The user name of the owner who generated the subscription.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Notification.Report">
+      <summary>A <see cref="P:Microsoft.ReportingServices.Interfaces.Notification.Report" /> object containing information about the report that is associated with the subscription.</summary>
+      <returns>Information about the report that is associated with the notification.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Notification.Retry">
+      <summary>Indicates that the report server should retry delivering the notification.</summary>
+      <returns>A Boolean value indicating whether the report server should retry delivering the notification.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Notification.Status">
+      <summary>The status of the notification. Displayed in the subscription user interface.</summary>
+      <returns>The status of the notification.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Notification.UserData">
+      <summary>An array of <see cref="T:Microsoft.ReportingServices.Interfaces.Setting" /> objects that defines the values of the extension settings for the notification.</summary>
+      <returns>The setting values for the notification.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.NotificationWithResult.SubscriptionResult">
+      <summary />
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.RenderedOutputFile.Data">
+      <summary>The data stream that contains the report that is output by the rendering extension.</summary>
+      <returns>A data stream representing the rendered report.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.RenderedOutputFile.Encoding">
+      <summary>The type of encoding for the file stream returned by the <see cref="P:Microsoft.ReportingServices.Interfaces.RenderedOutputFile.Data" /> property.</summary>
+      <returns>The encoding of the report file stream.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.RenderedOutputFile.Extension">
+      <summary>The extension of the file returned by the <see cref="P:Microsoft.ReportingServices.Interfaces.RenderedOutputFile.Data" /> property. The extension matches the file type specified in the <see cref="P:Microsoft.ReportingServices.Interfaces.RenderedOutputFile.Type" /> property.</summary>
+      <returns>The file extension of the encoded data stream. Common file extensions for reports are HTM, XLS, and TIF.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.RenderedOutputFile.FileName">
+      <summary>The name of the report file in which the stream should be saved.</summary>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.RenderedOutputFile.Type">
+      <summary>The MIME type of the stream in the <see cref="P:Microsoft.ReportingServices.Interfaces.RenderedOutputFile.Data" /> property.</summary>
+      <returns>The MIME type of the stream.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Report.Date">
+      <summary>Gets the server date and time at which the report was executed.</summary>
+      <returns>The date and time at which the report was executed.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Report.Name">
+      <summary>Gets the name of the report that is associated with the notification.</summary>
+      <returns>The name of the report that is associated with the notification.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Report.URL">
+      <summary>Gets the URL to the report on the report server.</summary>
+      <returns>The URL to the report. The URL is the full URL access string to the report. For more information, see URL Access (SSRS).</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.ReportOperationsCollection.Item(System.Int32)">
+      <summary>Gets or sets the element at the specified index. In C#, this property is the indexer for the <see cref="T:Microsoft.ReportingServices.Interfaces.ReportOperationsCollection" /> class.</summary>
+      <param name="index">The zero-based index of the element to get or set.</param>
+      <returns>The element at the specified index.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.ResourceOperationsCollection.Item(System.Int32)">
+      <summary>Gets or sets the element at the specified index. In C#, this property is the indexer for the <see cref="T:Microsoft.ReportingServices.Interfaces.ResourceOperationsCollection" /> class.</summary>
+      <param name="index">The zero-based index of the element to get or set.</param>
+      <returns>The element at the specified index.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Setting.DisplayName">
+      <summary>The localized name of the extension setting that is displayed to the user.</summary>
+      <returns>A String representing the name of the setting that is displayed in a user interface, such as Report Manager.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Setting.Encrypted">
+      <summary>Indicates whether the extension setting value should be encrypted in the report server database.</summary>
+      <returns>A Boolean value indicating whether a value for the setting should be encrypted in the report server database.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Setting.Error">
+      <summary>An error that describes a problem with the value of the setting.</summary>
+      <returns>An error message that describes a problem with the value of the setting.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Setting.Field">
+      <summary>The name of the field used to derive the value of the setting.</summary>
+      <returns>A String value representing the name of the field that is used to derive the value of the setting.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Setting.IsPassword">
+      <summary>Indicates whether the setting value should be returned in calls to the SOAP API.</summary>
+      <returns>A Boolean value indicating whether the setting value should be returned in calls to the SOAP API.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Setting.Name">
+      <summary>Gets the name of the setting.</summary>
+      <returns>A String value representing the name of the setting.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Setting.ReadOnly">
+      <summary>Indicates whether a setting is read-only.</summary>
+      <returns>A Boolean value indicating whether a setting is read-only.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Setting.Required">
+      <summary>Indicates whether a value for the setting is required by the extension.</summary>
+      <returns>A Boolean value indicating whether a value for the setting is required.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Setting.ValidValues">
+      <summary>A set of values that can be configured for the setting.</summary>
+      <returns>A collection of <see cref="T:Microsoft.ReportingServices.Interfaces.ValidValue" /> objects containing the valid values for the setting.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.Setting.Value">
+      <summary>Gets or sets the value for the setting.</summary>
+      <returns>A String value containing the value of thesetting.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.ValidValue.Label">
+      <summary>The label of the setting value.</summary>
+      <returns>A String representing the label of the setting that is displayed in a user interface, such as Report Manager.</returns>
+    </member>
+    <member name="P:Microsoft.ReportingServices.Interfaces.ValidValue.Value">
+      <summary>A valid value for the setting.</summary>
+      <returns>A String representing a valid value for the setting that is used by the delivery extension to deliver notifications.</returns>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.CommandBehavior">
+      <summary>Describes of the results of the query and its effect on the database.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.DataProcessing.CommandBehavior.SchemaOnly">
+      <summary>The query returns column information only, and does not affect the database state.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.DataProcessing.CommandBehavior.SingleResult">
+      <summary>The query returns a single result set. Execution of the query may affect the database state.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.CommandType">
+      <summary>Specifies how a command string is interpreted.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.DataProcessing.CommandType.Text">
+      <summary>A text command.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.DataProcessing.CommandType.StoredProcedure">
+      <summary>The name of a stored procedure.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.DataProcessing.CommandType.TableDirect">
+      <summary>When the <see cref="T:Microsoft.ReportingServices.DataProcessing.CommandType" /> property is set to TableDirect, the <see cref="P:Microsoft.ReportingServices.DataProcessing.IDbCommand.CommandText" /> property should be set to the name of the table or tables to be accessed. The user may be required to use escape character syntax or include qualifying characters if any of the tables named contain any special characters. All rows and columns of the named table or tables will be returned when you call one of the Execute methods.  In order to access multiple tables, use a comma-delimited list, without spaces or padding, containing the names of the tables to access. When the <see cref="P:Microsoft.ReportingServices.DataProcessing.IDbCommand.CommandText" /> property names multiple tables, a join of the specified tables is returned.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDataMultiValueParameter">
+      <summary>Represents a multivalued parameter to a Command object.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDataParameter">
+      <summary>Represents a parameter to a Command object.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDataParameterCollection">
+      <summary>Represents a collection of all parameters relevant to a Command object.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDataReader">
+      <summary>Provides a means of reading one or more forward-only streams of result sets obtained by executing a command at a data source, and is implemented by Reporting Services Data Processing Extensions that access relational databases.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension">
+      <summary>Provides a means of reading one or more forward-only streams of result sets obtained by executing a command at a data source, and is used by SQL Server Reporting Services to retrieve aggregation-specific information about a result set.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDataReaderFieldProperties">
+      <summary>Provides a means of reading field properties from result sets obtained using the <see cref="T:Microsoft.ReportingServices.DataProcessing.IDataReader" /> or <see cref="T:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension" /> interfaces.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDbCollationProperties">
+      <summary>Represents the collation properties for a connection to a data source, and is implemented by SQL Server Reporting Services data processing extensions that access relational databases.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDbCommand">
+      <summary>Represents a statement that is executed while an open connection to a data source exists.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDbCommandAnalysis">
+      <summary>Represents additional command information for analyzing a query and returning a list of parameter names used in the query.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDbCommandRewriter">
+      <summary>Provides a rewritten command text.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDbConnection">
+      <summary>Represents an open connection to a data source, and is implemented by SQL Server Reporting Services data processing extensions that access relational databases.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension">
+      <summary>Represents additional connection properties that can be implemented by SQL Server Reporting Services data processing extensions.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDbConnectionWrapper">
+      <summary>Provides a wrapper to an <see cref="T:System.Data.IDbConnection" /> object.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDbTransaction">
+      <summary>Represents a transaction to be performed at a data source.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.IDbTransactionExtension">
+      <summary>Represents additional transaction properties that can be implemented by SQL Server Reporting Services data processing extensions.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.DataProcessing.ITokenDataExtension">
+      <summary>Defines support for a data processing extension to use a SharePoint user token to access a SharePoint data source.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.AceCollection">
+      <summary>Represents a collection of access control entries specifying access rights for one or more trustees.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.AceStruct">
+      <summary>Represents an access control entry for a trustee (user, group, or computer) that specifies the operations that a trustee can perform on items in the report server database.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.AuthenticationType">
+      <summary>Defines the modes of authentication.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AuthenticationType.None">
+      <summary>Specifies no authentication. (Value = 0)</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AuthenticationType.Windows">
+      <summary>Specifies Windows as the authentication mode. This mode applies when using Basic, NTLM, or Negotiate.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AuthenticationType.Passport">
+      <summary>Specifies Microsoft Passport as the authentication mode. This authentication mode is not supported out-of-the box. (Value = 2)</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AuthenticationType.Forms">
+      <summary>Specifies ASP.NET forms-based authentication as the authentication mode. (Value = 3)</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AuthenticationType.SharePointTrustedUser">
+      <summary>Specifies SharePoint trusted user as the authentication mode. (Value = 4)</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.AuthenticationType.Federation">
+      <summary>Specifies federated authentication.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.CatalogOperation">
+      <summary>Describes the operations that a user can perform on the catalog.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.CreateRoles">
+      <summary>The user may create roles.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.DeleteRoles">
+      <summary>The user may delete roles.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.ReadRoleProperties">
+      <summary>The user may read role-specific properties which include the individual tasks associated with the roles.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.UpdateRoleProperties">
+      <summary>The user may modify role-specific properties, which include the individual tasks associated with the roles.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.ReadSystemProperties">
+      <summary>The user may read system properties.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.UpdateSystemProperties">
+      <summary>The user may modify system-level properties.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.GenerateEvents">
+      <summary>The user may generate events within the report server.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.ReadSystemSecurityPolicy">
+      <summary>The user may read security policies set at the system level.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.UpdateSystemSecurityPolicy">
+      <summary>The user may modify security policies set at the system level.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.CreateSchedules">
+      <summary>The user may create schedules.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.DeleteSchedules">
+      <summary>The user may delete schedules.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.ReadSchedules">
+      <summary>The user may read schedules.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.UpdateSchedules">
+      <summary>The user may modify schedules.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.ListJobs">
+      <summary>The user may retrieve a list of running jobs.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.CancelJobs">
+      <summary>The user may cancel running jobs.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.CatalogOperation.ExecuteReportDefinition">
+      <summary>The user may execute report definitions within the report server.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.CatalogOperationsCollection">
+      <summary>Represents a collection of catalog operations.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.CreateAndRegisterStream">
+      <summary>Creates and registers a stream and is called by a report server to retrieve the stream to which to render a report.</summary>
+      <param name="name">The name of the stream. The first stream asked for must be the main body of the report, for example, the HTML for an HTML rendering, or the first page for a page-based rendering. The names must be unique within a report and must use only the characters 0-9, a-z (lower case only) and underscore (_). The underscore may not be used as the first character of the name.</param>
+      <param name="extension">The file extension of the stream.</param>
+      <param name="encoding">The character encoding of the stream. This can be null if the stream does not contain characters.</param>
+      <param name="mimeType">The MIME type of the stream.</param>
+      <param name="willSeek">Whether the stream needs to be seek-enabled. If false, the stream is forward only and is sent to the client in chunks, as created. If true, the stream is spooled to disk and not sent until it is closed. The default value is false.</param>
+      <param name="operation">Indicates the operation (a <see cref="T:Microsoft.ReportingServices.Interfaces.StreamOper" /> value) that the method performs.</param>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.DatasourceOperation">
+      <summary>Describes the operations that a user can perform on a shared data source.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.DatasourceOperation.Delete">
+      <summary>The user may delete a shared data source.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.DatasourceOperation.ReadProperties">
+      <summary>The user may read properties associated with a shared data source.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.DatasourceOperation.UpdateProperties">
+      <summary>The user may modify the properties associated with a shared data source.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.DatasourceOperation.ReadContent">
+      <summary>The user may read the contents of a shared data source.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.DatasourceOperation.UpdateContent">
+      <summary>The user may modify the contents of a shared data source.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.DatasourceOperation.ReadAuthorizationPolicy">
+      <summary>The user may read the security policies associated with a shared data source.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.DatasourceOperation.UpdateDeleteAuthorizationPolicy">
+      <summary>The user may modify or delete the security policies associated with a shared data source.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.DatasourceOperationsCollection">
+      <summary>Represents a collection of data source operations.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.Extension">
+      <summary>Represents an extension in SQL Server Reporting Services.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.FolderOperation">
+      <summary>Describes the operations that a user can perform on a folder.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.FolderOperation.CreateFolder">
+      <summary>The user may add a subfolder to the specified folder.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.FolderOperation.Delete">
+      <summary>The user may delete the specified folder. The user may delete the contents of the folder if the user has delete permissions on all items.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.FolderOperation.ReadProperties">
+      <summary>The user may read the extended folder properties.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.FolderOperation.UpdateProperties">
+      <summary>The user may update or modify extended folder properties.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.FolderOperation.CreateReport">
+      <summary>The user may create a report in the specified folder.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.FolderOperation.CreateResource">
+      <summary>The user may create a resource in the specified folder.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.FolderOperation.ReadAuthorizationPolicy">
+      <summary>The user may read the security policies associated with the folder.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.FolderOperation.UpdateDeleteAuthorizationPolicy">
+      <summary>The user may update or delete the security policy associated with the folder.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.FolderOperation.CreateDatasource">
+      <summary>The user may create a shared data source in the specified folder.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.FolderOperation.CreateModel">
+      <summary>The user may create a model in the specified folder.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.FolderOperationsCollection">
+      <summary>Represents a collection of folder operations.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension">
+      <summary>Represents an authentication extension in SQL Server Reporting Services.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2">
+      <summary />
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension">
+      <summary>Represents an extension that can be used to extend the authorization feature of SQL Server Reporting Services.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IDeliveryExtension">
+      <summary>Represents a delivery extension in SQL Server Reporting Services.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation">
+      <summary>Contains information about the report server that is required by delivery extensions. For example, a list of the available rendering extensions.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IExtension">
+      <summary>Represents an extension in SQL Server Reporting Services.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IParameter">
+      <summary>Defines the parameter properties.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IRenderStream">
+      <summary>Provides support for rendering multiple streams from a rendering extension.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IReportContext">
+      <summary>Defines the properties of the report context.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IReportDefinitionCustomizationExtension">
+      <summary>Defines the <see cref="M:Microsoft.ReportingServices.Interfaces.IReportDefinitionCustomizationExtension.ProcessReportDefinition" /> method that is used to process a report definition.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IRSRequestContext">
+      <summary />
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.ISemanticModelGenerator">
+      <summary>Defines the properties and methods for generating a semantic model of a report.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl">
+      <summary>Represents the means to retrieve delivery extension-specific subscription information from the user (for example, e-mail addresses).</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IUserContext">
+      <summary>Defines the properties of the context of the user session.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IWindowsAuthenticationExtension">
+      <summary>Represents a Windows Authentication extension in SQL Server Reporting Services.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.IWindowsAuthenticationExtension2">
+      <summary />
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.LocalizedNameAttribute">
+      <summary>Provides the localized name of an extension.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.ModelItemOperation">
+      <summary>Describes the types of operations allowed on a model item.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ModelItemOperation.ReadProperties">
+      <summary>Allows the user to read properties for a model item.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.ModelItemOperationsCollection">
+      <summary>Represents a collection of <see cref="T:Microsoft.ReportingServices.Interfaces.ModelItemOperationsCollection" />.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.ModelOperation">
+      <summary>Describes the operations that a user may perform on a model.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ModelOperation.Delete">
+      <summary>A user may delete a model.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ModelOperation.ReadProperties">
+      <summary>A user may read the properties associated with a model. </summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ModelOperation.UpdateProperties">
+      <summary>A user may update the properties associated with a given model. </summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ModelOperation.ReadDatasource">
+      <summary>A user may read properties associated with the model's data source.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ModelOperation.UpdateDatasource">
+      <summary>A user may update  the data source associated with a given model. </summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ModelOperation.ReadContent">
+      <summary>A user may read the content of a given model. </summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ModelOperation.UpdateContent">
+      <summary>A user may update the content of a given model. </summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ModelOperation.ReadAuthorizationPolicy">
+      <summary>A user may read the security policy associated with a model.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ModelOperation.UpdateDeleteAuthorizationPolicy">
+      <summary>A user may modify or delete the security policy associated with a given model. </summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ModelOperation.ReadModelItemAuthorizationPolicies">
+      <summary>A user may read the security policy associated with a given model.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ModelOperation.UpdateModelItemAuthorizationPolicies">
+      <summary>A user may update the security policy associated with a given model item.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.ModelOperationsCollection">
+      <summary>Represents a collection of <see cref="T:Microsoft.ReportingServices.Interfaces.ModelOperation" /> objects.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.Notification">
+      <summary>Represents subscription information that delivery extensions use to deliver reports.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.NotificationWithResult">
+      <summary />
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.OperationNames">
+      <summary>Contains the field names and corresponding values for operations that users can perform on items in SQL Server Reporting Services.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.RdceCustomizableElementId">
+      <summary>Defines the report elements that can be customized.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.RdceCustomizableElementId.Body">
+      <summary>Specifies the body element of the report.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.RdceCustomizableElementId.PageHeader">
+      <summary>Specifies the page header element of the report.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.RdceCustomizableElementId.PageFooter">
+      <summary>Specifies the page footer element of the report.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.RdceCustomizableElementId.Page">
+      <summary>Specifies the page element of the report.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.RdceCustomizableElementId.DataSets">
+      <summary>Specifies the datasets used in the report definition.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.RenderedOutputFile">
+      <summary>Represents the output from a rendering extension. A <see cref="T:Microsoft.ReportingServices.Interfaces.RenderedOutputFile" /> object contains the associated filename and type information that is required by the delivery extension in order to process the stream returned by the rendering extension.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.Report">
+      <summary>Represents report-specific information and methods that enable delivery extensions to deliver reports to users.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.ReportOperation">
+      <summary>Describes the operations that a user can perform on a report.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.Delete">
+      <summary>The user may delete a report.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.ExecuteAndView">
+      <summary>A user may execute and view and report.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.ReadProperties">
+      <summary>A user may read the properties associated with a report.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.UpdateProperties">
+      <summary>A user may modify or update the properties associated with a given report.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.UpdateParameters">
+      <summary>A user may update or modify the parameter values associated with a given report.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.ReadDatasource">
+      <summary>A user may read properties associated with a report's data sources.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.UpdateDatasource">
+      <summary>A user may update or modify single data sources associated with a given report. This does not include shared data source.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.ReadReportDefinition">
+      <summary>A user may read the report definition of a given report.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.UpdateReportDefinition">
+      <summary>A user may modify or update the report definition of a report.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.CreateSubscription">
+      <summary>The user may create a subscription associated with a given report.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.DeleteSubscription">
+      <summary>Users may delete subscriptions of which they are owners.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.ReadSubscription">
+      <summary>Users may read the properties associated with report subscriptions of which they are the owners.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.ReadAuthorizationPolicy">
+      <summary>A user may read the security policy associated with a given report.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.UpdateDeleteAuthorizationPolicy">
+      <summary>A user may modify or delete the security policy associated with a given report.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.UpdateSubscription">
+      <summary>A user may modify or update report subscriptions of which he or she is the owner.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.CreateAnySubscription">
+      <summary>The user may create any subscription associated with a given report.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.DeleteAnySubscription">
+      <summary>The user may delete any subscription associated with a given report.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.ReadAnySubscription">
+      <summary>Users may read the properties of any subscription associated with a given report.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.UpdateAnySubscription">
+      <summary>A user may update or modify any subscription associated with a given report.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.UpdatePolicy">
+      <summary>A user may modify or update the cache or snapshot policies associated with a given report.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.ReadPolicy">
+      <summary>A user may read the cache and snapshot policies associated with a given report.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.DeleteHistory">
+      <summary>The user may delete report history snapshots associated with a given report.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.ListHistory">
+      <summary>A user may view the report history associated with a given report.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.CreateResource">
+      <summary>The user may create a resource in a given folder.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.CreateSnapshot">
+      <summary>The user may create a report history snapshot associated with the given report.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.Execute">
+      <summary>A user may execute a report, but not view it.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ReportOperation.CreateLink">
+      <summary>The user may link to a given report.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.ReportOperationsCollection">
+      <summary>Represents a collection of report operations.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.ResourceOperation">
+      <summary>Describes the operations that a user can perform on a resource.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ResourceOperation.Delete">
+      <summary>The user may delete a given resource.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ResourceOperation.ReadProperties">
+      <summary>The user may read resource properties.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ResourceOperation.UpdateProperties">
+      <summary>The user may modify or update resource properties.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ResourceOperation.ReadContent">
+      <summary>The user may read the MIME content of a resource.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ResourceOperation.UpdateContent">
+      <summary>The user may update or modify the MIME content of a resource.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ResourceOperation.ReadAuthorizationPolicy">
+      <summary>The user may read the security policy associated with a resource.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.ResourceOperation.UpdateDeleteAuthorizationPolicy">
+      <summary>The user may update or delete the security policy associated with a resource.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.ResourceOperationsCollection">
+      <summary>Represents a collection of resource operations.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.SecurityItemType">
+      <summary>Describes the item associated with a specific authorization request.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.SecurityItemType.Unknown">
+      <summary>Represents an unknown item type.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.SecurityItemType.Catalog">
+      <summary>Represents the entire report server database.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.SecurityItemType.Folder">
+      <summary>Represents a folder item type.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.SecurityItemType.Report">
+      <summary>Represents a report item type.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.SecurityItemType.Resource">
+      <summary>Represents a resource item type.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.SecurityItemType.Datasource">
+      <summary>Represents a data source item type.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.SecurityItemType.Model">
+      <summary>Represents a model type.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.SecurityItemType.ModelItem">
+      <summary>Represents a model item type.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.Setting">
+      <summary>Represents a setting for an extension.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.StreamOper">
+      <summary>Defines the operation that is used by the <see cref="T:Microsoft.ReportingServices.Interfaces.CreateAndRegisterStream" /> method. Rendering extensions may request a stream that is available for client applications through SOAP or URL access or a temporary stream to be used during the rendering process.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.StreamOper.CreateAndRegister">
+      <summary>Create a stream and register its name so that it can be returned through the SOAP API for subsequent client requests. The first stream registered is the primary output stream.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.StreamOper.CreateOnly">
+      <summary>Only create a stream. This feature is used to create temporary streams that can be used by the rendering extension to handle large memory requirements. This temporary stream is not available for subsequent client requests.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.StreamOper.RegisterOnly">
+      <summary>Register the stream as a secondary stream for the rendering extension. The method does not create a stream, but instead, the callback returns null and registers the name.</summary>
+    </member>
+    <member name="F:Microsoft.ReportingServices.Interfaces.StreamOper.CreateForPersistedStreams">
+      <summary>Create a single persisted stream for users who use the rs:PersistStream=true URL access option. When this option is used, no secondary streams are registered. Instead, the stream data is transmitted one chunk at a time, and user access the next data chunk in the persisted stream by using the same URL access command with the rs:GetNextStream=true option. This option is only applicable to URL access.</summary>
+    </member>
+    <member name="T:Microsoft.ReportingServices.Interfaces.ValidValue">
+      <summary>Represents a valid value for an extension setting.</summary>
+    </member>
+  </members>
+</doc>

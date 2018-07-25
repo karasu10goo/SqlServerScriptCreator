@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.SqlServer.RegSvrEnum</name>
+  </assembly>
+  <members>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.XmlAdvancedOptions">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.XmlAuthenticationType">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.XmlDisplayName">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.XmlItemTypeAttribute">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.XmlPassword">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.XmlServerName">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.XmlServerType">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.XmlStart">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。</summary>
+    </member>
+    <member name="F:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.XmlUserName">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.RegisteredServerException.#ctor">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.RegisteredServerException" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.RegisteredServerException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>指定したメッセージと内部例外を使用して、<see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.RegisteredServerException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="info">登録済みサーバーの例外のシリアル化情報を示す <see cref="T:System.Runtime.Serialization.SerializationInfo" /> システム オブジェクトの値です。</param>
+      <param name="context">登録済みサーバーの例外のストリーム コンテキストを示す <see cref="T:System.Runtime.Serialization.StreamingContext" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.RegisteredServerException.#ctor(System.String)">
+      <summary>指定されたメッセージを使用して <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.RegisteredServerException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">登録済みサーバーの例外のメッセージ文字列を示す <see cref="T:System.String" /> 値です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.RegisteredServerException.#ctor(System.String,System.Exception)">
+      <summary>指定したメッセージと内部例外を使用して、<see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.RegisteredServerException" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="message">登録済みサーバーの例外のメッセージ文字列を示す <see cref="T:System.String" /> 値です。</param>
+      <param name="previous">登録済みサーバーの例外の内部例外を示す <see cref="T:System.Exception" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo.#ctor">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。<see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo.#ctor(Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo)">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 指定したその他の情報を使用して、<see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="other">その他の接続情報を表します。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo.#ctor(Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo)">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 指定した接続情報を使用して、<see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="connectionInfo">接続情報です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo.#ctor(System.Collections.Generic.IEnumerable{Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo})">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 指定したコレクションを使用して、<see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="collection">コレクションを表します。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo.#ctor(System.Int32)">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 指定した容量パラメーターを使用して、<see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo" /> クラスの新しいインスタンスを初期化します。</summary>
+      <param name="capacity">接続の容量を表す整数です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo.DeepCopy(System.Boolean)">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 現在の UIConnectionGroupInfo オブジェクトからのオブジェクトのコピーを含む <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo" /> オブジェクトを返します。</summary>
+      <param name="withNewConnectionIds">新しいコレクション内のオブジェクトの ID が現在のコレクション内のオブジェクトの ID と同じかどうかを示す <see cref="T:System.Boolean" /> です。</param>
+      <returns>現在の UIConnectionGroupInfo オブジェクトからのオブジェクトのコピーを含む <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo.ShallowCopy">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 現在の UIConnectionGroupInfo オブジェクトからのオブジェクトを含む <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo" /> オブジェクトを返します。</summary>
+      <returns>現在の UIConnectionGroupInfo からのオブジェクトを含む <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.#ctor">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 SQL Server Management Studio の接続ダイアログに対して既定の <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトを初期化します。</summary>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.#ctor(Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo)">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> クラスの新しいインスタンスを既存の <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトと同じプロパティで初期化し、関連付けられているサーバーへの別の接続を作成します。</summary>
+      <param name="lhs">新しい <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトのプロパティを提供する <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトです。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.#ctor(Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo,System.Boolean)">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 新しい <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトを既存の <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトのプロパティで初期化し、関連付けられているサーバーへの別の接続を作成します。</summary>
+      <param name="lhs">新しい <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトのプロパティを提供する <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトです。</param>
+      <param name="generateNewId">新しい接続ダイアログが指定されたダイアログと同じ ID を取得する必要がある場合には true を示す <see cref="T:System.Boolean" /> 値、それ以外の場合には false です。</param>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.CompareTo(Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo)">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 別の <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトに対する現在の <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトの並べ替え順を決定するために使用します。</summary>
+      <param name="other">現在のオブジェクトと比較する <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトです。</param>
+      <returns>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 現在のオブジェクトが <paramref name="other" /> オブジェクトより前に並べ替えられる場合には負の値、同じ位置に並べ替えられる場合には 0、現在のオブジェクトが <paramref name="other" /> オブジェクトより後に並べ替えられる場合には正の値となる <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.Copy">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 現在のオブジェクトのプロパティに基づく新しい <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトを作成します。</summary>
+      <returns>現在のオブジェクトのプロパティに基づく <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.Equals(System.Object)">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 指定したオブジェクトが現在のオブジェクトと等しいかどうかを示します。</summary>
+      <param name="obj">現在のオブジェクトと比較するオブジェクトです。</param>
+      <returns>指定したオブジェクトが現在のオブジェクトと等しい場合は true、異なる場合は false です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.GetHashCode">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 指定した型のハッシュ コードを返します。</summary>
+      <returns>32 ビットの符号付き整数のハッシュ コードです。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.LoadFromStream(System.Xml.XmlReader)">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 指定されたストリームから接続を読み込みます。</summary>
+      <param name="reader">ストリームから次のコードを読み取ります。</param>
+      <returns>読み込まれた接続です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.op_Equality(Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo,Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo)">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 指定された 2 つの <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトが等しいかどうかを確認します。</summary>
+      <param name="infoA">最初のオブジェクトを示す <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトです。</param>
+      <param name="infoB">2 番目のオブジェクトを示す <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトです。</param>
+      <returns>2 つのオブジェクトが等しい場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.op_Equality(Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo,System.Object)">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 指定した <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトが指定した <see cref="T:System.Object" /> と同じかどうかを示します。</summary>
+      <param name="infoA">最初のオブジェクトを示す <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトです。</param>
+      <param name="infoB">2 番目のオブジェクトを示す <see cref="T:System.Object" /> です。</param>
+      <returns>2 つのオブジェクトが等しい場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.op_Equality(System.Object,Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo)">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 指定した <see cref="T:System.Object" /> が指定した <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトと同じかどうかを示します。</summary>
+      <param name="infoA">最初のオブジェクトを示す <see cref="T:System.Object" /> です。</param>
+      <param name="infoB">2 番目のオブジェクトを示す <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトです。</param>
+      <returns>2 つのオブジェクトが等しい場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.op_Inequality(Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo,Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo)">
+      <summary>2 つの <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトが異なるかどうかを示します。</summary>
+      <param name="infoA">最初のオブジェクトを示す <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトです。</param>
+      <param name="infoB">2 番目のオブジェクトを示す <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトです。</param>
+      <returns>接続が等しくない場合は true、それ以外の場合は false です。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.op_Inequality(Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo,System.Object)">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 指定した <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトが指定した <see cref="T:System.Object" /> と異なるかどうかを示します。</summary>
+      <param name="infoA">最初のオブジェクトを示す <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトです。</param>
+      <param name="infoB">2 番目のオブジェクトを示す <see cref="T:System.Object" /> です。</param>
+      <returns>2 つのオブジェクトが異なる場合は true、それ以外の場合は false。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.op_Inequality(System.Object,Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo)">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 指定した <see cref="T:System.Object" /> が指定した <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトと異なるかどうかを示します。</summary>
+      <param name="infoA">最初のオブジェクトを示す <see cref="T:System.Object" /> です。</param>
+      <param name="infoB">2 番目のオブジェクトを示す <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> オブジェクトです。</param>
+      <returns>2 つのオブジェクトが異なる場合は true、それ以外の場合は false。</returns>
+    </member>
+    <member name="M:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.SaveToStream(System.Xml.XmlWriter,System.Boolean)">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 接続情報を指定された XML ストリームに永続化します。</summary>
+      <param name="writer">ストリームの XmlWriter。</param>
+      <param name="saveName">
+        <see cref="T:System.Boolean" /> プロパティをストリームに含めるかどうかを示す <see cref="P:Microsoft.SqlServer.Managment.Smo.RegSvrEnum.UIConnectionInfo.UserName" /> です。</param>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo.Name">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 コレクションの名前を示す <see cref="T:System.String" /> を取得または設定します。</summary>
+      <returns>コレクションの名前を示す <see cref="T:System.String" /> です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.AdvancedOptions">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 接続ダイアログで設定された詳細オプションを取得します。</summary>
+      <returns>接続ダイアログで設定された詳細オプションを示す NameVlaueCollection オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.ApplicationName">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 接続ダイアログ内のアプリケーションの名前を取得または設定します。</summary>
+      <returns>接続ダイアログ内のアプリケーションの名前。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.AuthenticationType">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 接続ダイアログが SQL Server 認証と Windows 認証のどちらを使用する必要があるかを示す <see cref="T:System.Int32" /> 値を取得または設定します。</summary>
+      <returns>接続ダイアログが SQL Server 認証を使用する必要がある場合には 1、Windows 認証を使用する必要がある場合には 0 を示す <see cref="T:System.Int32" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.DisplayName">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 接続の表示名を示す <see cref="T:System.String" /> 値を取得または設定します。</summary>
+      <returns>接続の表示名を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.EncryptedPassword">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 UIConnectionInfo の暗号化されたパスワードを取得または設定します。</summary>
+      <returns>UIConnectionInfo の暗号化されたパスワードです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.Id">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 接続識別子を取得します。</summary>
+      <returns>この接続を一意に識別する識別子です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.OtherParams">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 接続のためのその他のパラメーターを取得または設定します。</summary>
+      <returns>接続のためのその他のパラメーターです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.Password">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 SQL Server 認証を使用している場合に接続のログイン パスワードを示す <see cref="T:System.String" /> 値を取得または設定します。</summary>
+      <returns>接続のログイン パスワードを示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.PersistPassword">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 UIConnectionInfo のパスワードを永続化する必要があるかどうかを示す <see cref="T:System.Boolean" /> 値を取得または設定します。</summary>
+      <returns>パスワードを永続化する必要がある場合には true、そうでない場合には false を示す <see cref="T:System.Boolean" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.ServerName">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 接続のデータベース エンジンのインスタンスの名前を示す <see cref="T:System.String" /> 値を取得または設定します。</summary>
+      <returns>接続のデータベース エンジンのインスタンスの名前を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.ServerNameNoDot">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 接続のデータベース エンジンのインスタンスの名前を示す <see cref="T:System.String" /> 値を取得します。 ピリオド (.) のみが ダイアログで指定されていた場合は、ServerNameNoDot が返されます (ローカル)。</summary>
+      <returns>接続のデータベース エンジンのインスタンスの名前を示す <see cref="T:System.String" /> 値です。 ピリオド (.) のみが ダイアログで指定されていた場合は、ServerNameNoDot が返されます (ローカル)。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.ServerType">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 接続で使用されるサーバーの種類を示す GUID を取得または設定します。</summary>
+      <returns>接続で使用されるサーバーの種類を示す GUID です。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.ServerVersion">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 接続のデータベース エンジンのインスタンスのバージョンを示す <see cref="T:Microsoft.SqlServer.Management.Common.ServerVersion" /> オブジェクトを取得または設定します。</summary>
+      <returns>接続のデータベース エンジンのインスタンスのバージョンを示す <see cref="T:Microsoft.SqlServer.Management.Common.ServerVersion" /> オブジェクトです。</returns>
+    </member>
+    <member name="P:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo.UserName">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 接続のログイン名を示す <see cref="T:System.String" /> 値を取得または設定します。</summary>
+      <returns>接続のログイン名を示す <see cref="T:System.String" /> 値です。</returns>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.RegisteredServerException">
+      <summary>
+        <see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.RegisteredServerException" /> クラスは、サーバーの登録中にエラーが発生すると生成される例外を表します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionGroupInfo">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。 UIConnectionInfo オブジェクトの名前指定可能な一覧を実装します。</summary>
+    </member>
+    <member name="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo">
+      <summary>このメンバーをコード内で直接参照しないでください。このメンバーは、SQL Server インフラストラクチャをサポートしています。<see cref="T:Microsoft.SqlServer.Management.Smo.RegSvrEnum.UIConnectionInfo" /> クラスは、SQL Server Management Studio の接続ダイアログで設定された情報と、SQL Server データベース エンジンのインスタンスに関連付けられた接続を表します。</summary>
+    </member>
+  </members>
+</doc>
